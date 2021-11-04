@@ -1,7 +1,7 @@
 <template>
     <v-container grid-list-lg>
         <v-layout row>
-            <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5">Usecases</v-flex>
+            <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5 color pink lighten-5">Usecases</v-flex>
         </v-layout>
         <v-layout row wrap>
             <v-flex xs12 sm12 md4>
@@ -19,7 +19,7 @@
                     <v-card-title primary-title>
                         <div>
                             <h3 class="headline mb-0">Air quaity</h3>
-                            <div>
+                            <div style="word-break: break-word">
                               Chart the history of air quality in communities and workplaces.
                             </div>
                         </div>
@@ -41,7 +41,7 @@
                     <v-card-title primary-title>
                         <div>
                             <h3 class="headline mb-0">Water</h3>
-                            <div>Chart historical water and rainfall of rivers.
+                            <div style="word-break: break-word">Chart historical water and rainfall of rivers.
                             </div>
                         </div>
                     </v-card-title>
@@ -62,7 +62,7 @@
                     <v-card-title primary-title>
                         <div>
                             <h3 class="headline mb-0">Wearables</h3>
-                            <div>
+                            <div style="word-break: break-word">
                               Take control of your activity and heart data and combine with other indoor or outside environmental data.
                             </div>
                         </div>

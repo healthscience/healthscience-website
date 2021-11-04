@@ -1,19 +1,27 @@
 <template>
-  <div class="hop-waves">
-    <menu-navigation />
-    <hopsite-content></hopsite-content>
-  </div>
+  <v-container fluid fill-height>
+    <div class="hop-waves">
+      <hop-protocol></hop-protocol>
+      <hop-learn></hop-learn>
+      <hop-toolkits></hop-toolkits>
+      <hop-usecases></hop-usecases>
+    </div>
+  </v-container>
 </template>
 
 <script>
-import MenuNavigation from '@/components/MenuNavigation'
-import HopsiteContent from '@/components/HopsiteContent'
+import HopProtocol from '@/components/HopProtocol'
+import HopLearn from '@/components/HopLearn'
+import HopToolkits from '@/components/HopToolkits'
+import HopUsecases from '@/components/HopUsecases'
 
 export default {
   name: 'Hopsite-Content',
   components: {
-    MenuNavigation,
-    HopsiteContent
+    HopProtocol,
+    HopLearn,
+    HopToolkits,
+    HopUsecases
   }
 }
 </script>
@@ -21,7 +29,8 @@ export default {
 <style>
 .hop-waves {
   background: url('../assets/waves-meet-network.png');
-  background-repeat: repeat;
+  background-position: center center;
+  background-repeat: repeat-y;
   width: 100%;
   height: 100%;
 }

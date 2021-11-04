@@ -6,5 +6,5 @@ module.exports = {
     ? '/'
     : '/'
     // ? '/healthscience/code/healthscience-website/dist/'
-    //: '/healthscience/code/healthscience-website/dist/'
+    // : '/healthscience/code/healthscience-website/dist/'
 }
