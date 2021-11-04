@@ -29,8 +29,8 @@ export default {
 <style>
 .hop-waves {
   background: url('../assets/waves-meet-network.png');
-  background-position: center center;
-  background-repeat: repeat-y;
+  background-position: top center;
+  background-repeat: repeat;
   width: 100%;
   height: 100%;
 }

@@ -6,11 +6,11 @@
         <v-layout row wrap>
             <v-flex xs12 sm12 md4>
                 <v-card>
-                    <v-img src="../assets/logo.png" width="100px">
+                    <v-img src="../assets/usecase-1.png" width="500px">
                         <v-container fill-height fluid>
                             <v-layout fill-height>
                                 <v-flex xs12 align-end flexbox>
-                                    <span class="headline white--text">Air Quality</span>
+                                    <span class="headline white--text color pink dark pa-2">Air Quality</span>
                                 </v-flex>
                             </v-layout>
                         </v-container>
@@ -29,11 +29,11 @@
 
             <v-flex xs12 sm12 md4>
                 <v-card>
-                    <v-img src="../assets/logo.png" width="100px">
+                    <v-img src="../assets/usecase-2.png" width="500px">
                         <v-container fill-height fluid>
                             <v-layout fill-height>
                                 <v-flex xs12 align-end flexbox>
-                                    <span class="headline white--text">Water</span>
+                                    <span class="headline white--text color pink dark pa-2">Water</span>
                                 </v-flex>
                             </v-layout>
                         </v-container>
@@ -50,11 +50,11 @@
 
             <v-flex xs12 sm12 md4>
                 <v-card>
-                    <v-img src="../assets/logo.png" width="100px">
+                    <v-img src="../assets/usecase-3.png" width="500px">
                         <v-container fill-height fluid>
                             <v-layout fill-height>
                                 <v-flex xs12 align-end flexbox>
-                                    <span class="headline white--text">Wearables</span>
+                                    <span class="headline white--text color pink dark pa-2">Wearables</span>
                                 </v-flex>
                             </v-layout>
                         </v-container>
