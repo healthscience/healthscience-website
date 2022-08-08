@@ -2,9 +2,9 @@
   <v-container fluid fill-height>
     <div class="hop-waves">
       <hop-protocol></hop-protocol>
-      <hop-learn></hop-learn>
       <hop-toolkits></hop-toolkits>
       <hop-usecases></hop-usecases>
+      <hop-learn></hop-learn>
     </div>
   </v-container>
 </template>
@@ -29,8 +29,9 @@ export default {
 <style>
 .hop-waves {
   background: url('../assets/waves-meet-network.png');
-  background-position: top center;
-  background-repeat: repeat;
+  background-color: 'purple lighten-5';
+  background-position: center center;
+  background-repeat: repeat-y;
   width: 100%;
   height: 100%;
 }

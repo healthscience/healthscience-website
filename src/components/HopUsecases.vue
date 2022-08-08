@@ -10,7 +10,7 @@
                         <v-container fill-height fluid>
                             <v-layout fill-height>
                                 <v-flex xs12 align-end flexbox>
-                                    <span class="headline white--text color pink dark pa-2">Air Quality</span>
+                                    <span class="headline white--text color pink dark">Air Quality</span>
                                 </v-flex>
                             </v-layout>
                         </v-container>

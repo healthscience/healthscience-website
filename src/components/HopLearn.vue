@@ -51,7 +51,7 @@
           <v-card-title primary-title>
             <div>
                 <h3 class="headline mb-0 font-weight-bold">Modular Reference (smart) Contracts</h3>
-                <div class="spacing-playground pa-3">
+                <div style="word-break: break-word" class="spacing-playground pa-3">
                   A limited set of data structures to desribe datatypes, datapacking, compute and visualisation information. These are used by utilty modules to produce network experiment ref. contracts that give guarantees on data interoperabilty.
                 </div>
             </div>

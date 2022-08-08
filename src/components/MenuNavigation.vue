@@ -17,8 +17,8 @@
     </div>
 
     <v-spacer></v-spacer>
-      <!-- <v-btn flat>SIGN IN</v-btn>
-      <v-btn color="brown lighten-3">JOIN</v-btn> -->
+      <v-btn text><a href="https://github.com/healthscience/node-safeflow">code</a></v-btn>
+      <!-- <v-btn color="brown lighten-3"></v-btn> -->
   </v-app-bar>
 </template>
 
