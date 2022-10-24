@@ -1,11 +1,37 @@
 <template>
   <v-container grid-list-lg>
     <v-layout row>
-      <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5 color pink lighten-5">Peer to Peer Data Science</v-flex>
+      <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5 color pink lighten-5">Peer to Peer Data Science
+      <h6 class="text-center mt-4">Control, understand & participate in data that shapes the world.</h6>
+      <p class="body-1 mt-6 mx-6">
+        We are working on an open source coherence protocol HOP (Health Oracle Protocol) and a non-coding graphical interface toolkit that enables more people to participate in controlling and understanding data that shapes the health of individuals, communities & nature.
+      </p>
+      <p>
+        <v-row class="mt-8">
+          <v-spacer />
+          <v-col md="4">
+            <v-card href="#toolkit" class="pink--text darken-4--text text-center">
+              Toolkits
+            </v-card>
+          </v-col>
+          <v-col md="4">
+            <v-card href="#learn" class="pink--text darken-4--text text-center">
+              Learn
+            </v-card>
+          </v-col>
+          <v-col md="4">
+            <v-card href="#community" class="pink--text darken-4--text text-center">
+              Community
+            </v-card>
+          </v-col>
+          <v-spacer />
+        </v-row>
+      </p>
+      </v-flex>
     </v-layout>
     <v-layout row wrap>
       <v-flex xs12 sm12 md12>
-        <v-card>
+        <v-card class="back-transparent">
           <v-card-title primary-title>
             <v-flex xs12 sm12 md6>
                  <v-row
@@ -13,7 +39,7 @@
                   justify="center"
                 >
                   <v-card
-                    height="300"
+                    height="00"
                     width="250"
                   >
                     <v-row justify="center">
@@ -23,17 +49,20 @@
                         @click="overlay = !overlay"
                       >
                         Get-ALPHA--{{ userOs }}
+                        <div id="nocodeavaiable" v-if="oscodemiss === true">
+                          Code NOT available
+                        </div>
                       </v-btn>
-
+                      <p class="subtitle-1">Mobile AI Apps coming soon</p>
                       <v-overlay
-                        :absolute="relative"
+                        :absolute="absolute"
                         :value="overlay"
                       >
                         <v-btn
                           color="success"
-                          @click="downloadWithAxios('test/alpha/BentoBox-x86_64.AppImage', 'BentoBox')"
+                          @click="downloadLink"
                         >
-                          <div id="download">
+                          <div id="downloadsection">
                             BBHOP-Download-ALPHA--{{ userOs }}
                             <v-icon class="downloadicon"
                               large
@@ -44,7 +73,8 @@
                           </div>
                         </v-btn>
                         <div id="checksumterms" class="downloadsection">
-                          <a href="https://www.healthscience.network/test/alpha/BentoBox-x86_64.AppImage" target="_blank">Checksum</a> --- Note Experimental software
+                          <router-link class="downspace" to="/checksum">Checksum</router-link>
+                          <router-link class="downspace" to="/terms">Terms & Conditions</router-link>
                         </div>
                         <v-btn
                           color="grey"
@@ -57,11 +87,15 @@
                 </v-row>
             </v-flex>
             <v-flex xs12 sm12 md6>
-                <h3 class="headline mb-0 font-weight-bold">BentoBox DS</h3>
+                <h3 class="headline mb-0 font-weight-bold">Toolkit & HOP in action</h3>
+                <v-flex xs12 sm12 md5 class="open-left">
+                  <!-- <v-img src="../assets/bbtoolkit.png" max-width="500" class="left-perspective">
+                  </v-img> -->
+                  <iframe width="500" height="315" src="https://www.youtube.com/embed/OZXilez2hK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </v-flex>
                 <div style="word-break: break-word" class="spacing-playground pa-3 font-weight-regular">
-                  Chart data and share.  Learn <a href="https://bentobox.healthscience.network">more</a>
-                  <v-card href="https://youtube.com/playlist?list=PLNaKqNNZpYPNBA9rN-E34CFWu_3rPdy9p">
-                    <v-card-title>video demos</v-card-title>
+                  <v-card href="https://bentobox.healthscience.network">
+                    <v-card-title>Learn more & usecases</v-card-title>
                   </v-card>
                 </div>
             </v-flex>
@@ -98,31 +132,40 @@ export default {
   data: () => ({
     userAgent: '',
     userOs: '',
-    absolute: true,
-    overlay: false
+    absolute: false,
+    overlay: false,
+    oscodemiss: true
   }),
   mounted () {
     this.userAgent = navigator.userAgent || ''
     this.userOs = navigator.platform || ''
+    this.codeavailable()
   },
   methods: {
-    linkClick () {
-      console.log('go to webpage')
+    codeavailable () {
+      if (this.userOs === 'Linux x86_64') {
+        this.oscodemiss = false
+      } else if (this.userOs === 'IOS') {
+        this.oscodemiss = true
+      } else if (this.userOs === 'WIN32') {
+        this.oscodemiss = true
+      }
     },
-    downloadCode () {
-      console.log('download a file')
-      axios({
-        url: 'http://localhost/hop/code/BentoBox-x86_64.AppImage',
-        method: 'GET',
-        responseType: 'blob'
-      }).then((res) => {
-        var FILE = window.URL.createObjectURL(new Blob([res.data]))
-        var docUrl = document.createElement('x')
-        docUrl.href = FILE
-        docUrl.setAttribute('download', 'file.pdf')
-        document.body.appendChild(docUrl)
-        docUrl.click()
-      })
+    downloadLink () {
+      console.log('go to webpage')
+      console.log(this.userOs)
+      // which os for download?
+      if (this.userOs === 'Linux x86_64') {
+        console.log('llinsu')
+        this.oscodemiss = true
+        window.open('https://www.healthscience.network/test/alpha/BentoBox-x86_64.AppImage', '_blank')
+      } else if (this.userOs === 'IOS') {
+        this.oscodemiss = true
+        window.open('https://www.healthscience.network', '_blank')
+      } else if (this.userOs === 'WIN32') {
+        window.open('https://www.healthscience.network', '_blank')
+        this.oscodemiss = true
+      }
     },
     forceFileDownload (response, title) {
       console.log(title)
@@ -149,6 +192,15 @@ export default {
 </script>
 
 <style scoped>
+  .back-transparent {
+    opacity: 0.9;
+  }
+
+  .downloadsection {
+    width: 400px;
+    border: 2px solid blue;
+  }
+
   .downloadicon {
     transform: rotate(180deg);
   }
@@ -156,5 +208,21 @@ export default {
   .downloadsection {
     background-color: lightgrey;
     border: 1px solid red;
+    padding-top: 1em;
+    padding-left: .6em;
+    height: 80px;
+  }
+
+  .downspace {
+    padding-right: 1em;
+  }
+
+  .open-left {
+    perspective: 1000px;
+  }
+
+  .left-perspective {
+    width: 360px;
+    transform: rotateY(-14deg);
   }
 </style>

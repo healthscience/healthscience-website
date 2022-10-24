@@ -3,17 +3,19 @@
     <div class="hop-waves">
       <hop-protocol></hop-protocol>
       <hop-toolkits></hop-toolkits>
-      <hop-usecases></hop-usecases>
+      <!-- <hop-usecases></hop-usecases> -->
       <hop-learn></hop-learn>
+      <hop-community></hop-community>
     </div>
   </v-container>
 </template>
 
 <script>
 import HopProtocol from '@/components/HopProtocol'
-import HopLearn from '@/components/HopLearn'
 import HopToolkits from '@/components/HopToolkits'
-import HopUsecases from '@/components/HopUsecases'
+import HopLearn from '@/components/HopLearn'
+import HopCommunity from '@/components/HopCommunity'
+// import HopUsecases from '@/components/HopUsecases'
 
 export default {
   name: 'Hopsite-Content',
@@ -21,7 +23,8 @@ export default {
     HopProtocol,
     HopLearn,
     HopToolkits,
-    HopUsecases
+    HopCommunity
+    // HopUsecases
   }
 }
 </script>
