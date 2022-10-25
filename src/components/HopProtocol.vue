@@ -147,23 +147,20 @@ export default {
         this.oscodemiss = false
       } else if (this.userOs === 'IOS') {
         this.oscodemiss = true
-      } else if (this.userOs === 'WIN32') {
-        this.oscodemiss = true
+      } else if (this.userOs === 'Win32') {
+        this.oscodemiss = false
       }
     },
     downloadLink () {
-      console.log('go to webpage')
-      console.log(this.userOs)
       // which os for download?
       if (this.userOs === 'Linux x86_64') {
-        console.log('llinsu')
         this.oscodemiss = true
-        window.open('https://www.healthscience.network/test/alpha/BentoBox-x86_64.AppImage', '_blank')
+        window.open('https://github.com/healthscience/diyhstoolkit/releases/download/v0.7.6/BentoBox-x86_64.AppImage', '_blank')
       } else if (this.userOs === 'IOS') {
         this.oscodemiss = true
-        window.open('https://www.healthscience.network', '_blank')
-      } else if (this.userOs === 'WIN32') {
-        window.open('https://www.healthscience.network', '_blank')
+        window.open('', '_blank')
+      } else if (this.userOs === 'Win32') {
+        window.open('https://github.com/healthscience/diyhstoolkit/releases/download/v0.7.6/BentoBox-DS-alpha.exe', '_blank')
         this.oscodemiss = true
       }
     },
