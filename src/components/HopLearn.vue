@@ -10,7 +10,7 @@
             <div>
                 <h3 class="headline mb-0 font-weight-bold">About</h3>
                 <div style="word-break: break-word" class="spacing-playground pa-6 ">
-                  We are building a peer to peer choherence protocol based on open source software and toolkits that empower everyone to control & understand data that shapes our world.
+                  We are building a choherence protocol based on peer to peer open source software and toolkits that empower everyone to have data sovereignity over data that shapes the health of the world.
                 </div>
             </div>
           </v-card-title>
@@ -22,9 +22,9 @@
         <v-card>
           <v-card-title primary-title>
             <div>
-                <h3 class="headline mb-0 font-weight-bold">safeFLOW-ECS</h3>
+                <h3 class="headline mb-0 font-weight-bold">SafeFlow-ECS</h3>
                 <div style="word-break: break-word" class="spacing-playground pa-3">
-                  A novel combination of an entity component system design and a data science computation engine. This engine takes in data, tidies and categories it before applying a computation and preparing the data format for presentation e.g. charting.
+                  A novel combination of an entity component system design and a data science computation engine. The engine takes in data, tidies and categories it before applying a computation and preparing the data format for presentation e.g. charting.
                 </div>
             </div>
           </v-card-title>
@@ -50,9 +50,9 @@
         <v-card>
           <v-card-title primary-title>
             <div>
-                <h3 class="headline mb-0 font-weight-bold">Modular Reference Contracts</h3>
+                <h3 class="headline mb-0 font-weight-bold">Module & Reference Contracts</h3>
                 <div style="word-break: break-word" class="spacing-playground pa-3">
-                  A set of graphical non-coding tools allows data to be described, computed and visualised. This provides guarantee on data interoperability amongst peers.
+                  A limited set of data building block contracts that can be combined to describe data, what computation should be applied and which visualisation style is required.  These contracts provide guarantees on data interoperability amongst peers.
                 </div>
             </div>
           </v-card-title>
@@ -64,9 +64,9 @@
         <v-card>
           <v-card-title primary-title>
             <div>
-                <h3 class="headline mb-0 font-weight-bold">Datastore Independent</h3>
+                <h3 class="headline mb-0 font-weight-bold">Peer to Peer Data Infrastructure</h3>
                 <div style="word-break: break-word" class="spacing-playground pa-3">
-                  HOP is datastore API independent.  The reference implementation uses the <a href="https://hypercore-protocol.org/">Hypercore Protocol</a>.
+                  HOP works on peer to peer data infrastructure from the <a href="https://docs.holepunch.to/">Holepunch</a>  open source project.
                 </div>
             </div>
           </v-card-title>

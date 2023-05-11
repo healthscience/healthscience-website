@@ -2,9 +2,9 @@
   <v-container fluid fill-height>
     <div class="hop-waves">
       <hop-protocol></hop-protocol>
+      <hop-learn></hop-learn>
       <hop-toolkits></hop-toolkits>
       <!-- <hop-usecases></hop-usecases> -->
-      <hop-learn></hop-learn>
       <hop-community></hop-community>
     </div>
   </v-container>

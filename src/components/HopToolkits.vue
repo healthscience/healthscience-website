@@ -14,7 +14,7 @@
             <v-flex xs12 sm12 md8>
                 <h3 class="headline mb-0 font-weight-bold">BentoBox DS</h3>
                 <div style="word-break: break-word" class="spacing-playground pa-3 font-weight-regular">
-                  A graphical interface to connect to the Health Oracle Network and manage visualisation. No coding skills are required. Learn <a href="https://bentobox.healthscience.network">more</a>
+                  A graphical interface to connect to the Health Oracle Network and manage visualisation. No coding skills are required. Learn <a href="https://bentoboxds.org">more</a>
                   <v-card href="https://youtu.be/OZXilez2hK8">
                     <v-card-title>video demos</v-card-title>
                   </v-card>
@@ -42,12 +42,18 @@
         </v-card>
       </v-flex>
     </v-layout>
+    <toolkit-download></toolkit-download>
   </v-container>
 </template>
 
 <script>
+import ToolkitDownload from '@/components/demoDownload.vue'
+
 export default {
-  name: 'HopLearn'
+  name: 'HopLearn',
+  components: {
+    ToolkitDownload
+  }
 }
 </script>
 
