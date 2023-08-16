@@ -9,8 +9,11 @@
           <v-card-title primary-title>
             <div>
                 <h3 class="headline mb-0 font-weight-bold">About</h3>
-                <div style="word-break: break-word" class="spacing-playground pa-6 ">
-                  We are building a choherence protocol based on peer to peer open source software and toolkits that empower everyone to have data sovereignity over data that shapes the health of the world.
+                <div style="word-break: break-word" class="spacing-playground pa-3">
+                  Our mission is to build technologies that empowers data ownership, control & agency - peer to peer
+                </div>
+                <div style="word-break: break-word" class="spacing-playground pa-3">
+                  Build networks for: self, community, bioregions or for the whole earth.
                 </div>
             </div>
           </v-card-title>

@@ -17,7 +17,8 @@
     </div>
 
     <v-spacer></v-spacer>
-      <v-btn text><a href="https://discord.gg/RNryFG9F">Community</a></v-btn>
+      <v-btn text><a href="https://discord.gg/JhdkXX54Xk">Community</a></v-btn>
+      <v-btn text><a href="https://bentobox-ds.gitbook.io/bentobox-ds-hop/">Docs</a></v-btn>
       <v-btn text><a href="https://github.com/healthscience">code</a></v-btn>
       <!-- <v-btn color="brown lighten-3"></v-btn> -->
   </v-app-bar>
