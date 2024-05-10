@@ -13,7 +13,7 @@
                   Our mission is to build technologies that empowers data ownership, control & agency - peer to peer
                 </div>
                 <div style="word-break: break-word" class="spacing-playground pa-3">
-                  Build networks for: self, community, bioregions or for the whole earth.
+                  Build collective intelligence networks to the scale required to solve problems: self, community, bioregions or for the whole earth.
                 </div>
             </div>
           </v-card-title>
@@ -25,9 +25,12 @@
         <v-card>
           <v-card-title primary-title>
             <div>
-                <h3 class="headline mb-0 font-weight-bold">SafeFlow-ECS</h3>
+                <h3 class="headline mb-0 font-weight-bold">SafeFlow-ECS & DML</h3>
                 <div style="word-break: break-word" class="spacing-playground pa-3">
                   A novel combination of an entity component system design and a data science computation engine. The engine takes in data, tidies and categories it before applying a computation and preparing the data format for presentation e.g. charting.
+                </div>
+                <div style="word-break: break-word" class="spacing-playground pa-3">
+                  DML - Decentralised Machine Learning: evolutionary or genetic algorithms are designed for being distributed and HOP specialises in their use.  Combined with a proof of work challenge protocol the network coheres machine learning models to scale to the reach needed to solve problems.
                 </div>
             </div>
           </v-card-title>
@@ -69,7 +72,7 @@
             <div>
                 <h3 class="headline mb-0 font-weight-bold">Peer to Peer Data Infrastructure</h3>
                 <div style="word-break: break-word" class="spacing-playground pa-3">
-                  HOP works on peer to peer data infrastructure from the <a href="https://docs.holepunch.to/">Holepunch</a>  open source project.
+                  HOP works on any peer to peer data infrastructure e.g. <a href="https://docs.holepunch.to/">Holepunch</a>  open source project.
                 </div>
             </div>
           </v-card-title>

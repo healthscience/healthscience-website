@@ -7,7 +7,7 @@
         We are building a choherence protocol based on peer to peer open source software and toolkit that empower everyone to have sovereignity over data that shapes the health of the world.
       </div>
       <div style="word-break: break-word" class="spacing-playground body-1 mt-2 mx-6 pa-6 ">
-        Bitcoin is healing the world of money and financial services.  The healthcare systems and bioregions of the world also need healing. Massive misallocation of fiat money has created misaligned incentives that reward treating disease and over exploiting nature. Bitcoin fixes the money, now we can also focus on fixing the data that shapes the health of our world too.
+        Our monetary system needs healing, healthcare systems and bioregions of the world also need healing. Massive misallocation of fiat money has created misaligned incentives that reward treating disease and over exploiting nature. Our focus is on fixing the data that shapes the health of our world.
       </div>
       <p>
         <v-row class="mt-8">
