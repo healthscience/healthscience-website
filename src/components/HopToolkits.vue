@@ -1,48 +1,42 @@
 <template>
   <v-container grid-list-lg>
-    <v-layout row id="toolkit">
-        <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5 color pink lighten-5">Toolkits</v-flex>
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex xs12 sm12 md12>
-        <v-card>
-          <v-card-title primary-title>
-            <v-flex xs12 sm12 md4>
-                <v-img src="../assets/bb-ds-toolkit.png" width="300px">
-                </v-img>
-            </v-flex>
-            <v-flex xs12 sm12 md8>
-                <h3 class="headline mb-0 font-weight-bold">BentoBox DS</h3>
-                <div style="word-break: break-word" class="spacing-playground pa-3 font-weight-regular">
-                  A graphical interface to connect to the Health Oracle Network and manage visualisation. No coding skills are required. Learn <a href="https://bentoboxds.org">more</a>
-                  <v-card href="https://youtu.be/OZXilez2hK8">
-                    <v-card-title>video demos</v-card-title>
-                  </v-card>
-                </div>
-            </v-flex>
-          </v-card-title>
-        </v-card>
-      </v-flex>
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex xs12 sm12 md12>
-        <v-card>
-          <v-card-title primary-title>
-            <v-flex xs12 sm12 md8>
-                <h3 class="headline mb-0 font-weight-bold">Network Library</h3>
-                <div style="word-break: break-word" class="spacing-playground pa-3 font-weight-regular">
-                  A graphical interface to desribe new reference contracts entering the network.  <a href="https://youtu.be/vHA9TExaKBA">Demo</a> video. The Network Library is a <a href="https://github.com/DaMaHub/networklibrary">DaMaHub</a> project.
-                </div>
-            </v-flex>
-            <v-flex xs12 sm12 md4>
-              <v-img src="../assets/damahub-logo.png" width="150px">
-              </v-img>
-            </v-flex>
-          </v-card-title>
-        </v-card>
-      </v-flex>
-    </v-layout>
-    <toolkit-download></toolkit-download>
+    <v-responsive class="d-flex align-top text-center fill-height" width="100%">
+      <v-row
+        no-gutters
+        id="toolkit"
+      >
+        <v-col
+         cols="12"
+          align-self="center"
+        >
+          <v-sheet xs12 class="text-h6 pa-2" color="pink-darken-4">Toolkit BentoBoxDS</v-sheet>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col
+          cols="12"
+        >     
+          <v-card color="indigo-lighten-5 ma-2">
+            <v-card-title primary-title align="center">
+              <v-sheet  xs12 class="rounded-lx" color="indigo-lighten-5">
+                  <v-img src="../assets/logo-bentobox.png" width="300px">
+                  </v-img>
+              </v-sheet>
+            </v-card-title>
+              <v-sheet xs12 class="rounded-lx" color="indigo-lighten-5">
+                  <h3 class="headline mb-0 font-weight-bold">BentoBoxDS</h3>
+                  <div style="word-break: break-word" class="spacing-playground pa-3 font-weight-regular">
+                    A graphical interface to connect to the Health Oracle Network, manage visualisation and conribute to network. No coding skills are required. Learn <a href="https://bentoboxds.org">more</a>
+                    <v-card href="https://youtu.be/OZXilez2hK8" color="indigo-lighten-5">
+                      <v-card-title>video demos</v-card-title>
+                    </v-card>
+                  </div>
+              </v-sheet>
+              <toolkit-download></toolkit-download>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-responsive>
   </v-container>
 </template>
 

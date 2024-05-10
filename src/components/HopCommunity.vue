@@ -1,65 +1,66 @@
 <template>
   <v-container grid-list-lg>
-    <v-layout row id="community">
-        <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5 color pink lighten-5">Community</v-flex>
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex xs12 sm12 md12>
-        <v-card>
-          <v-card-title primary-title>
-            <div>
-                <h3 class="headline mb-0 font-weight-bold">Developers</h3>
-                <div style="word-break: break-word" class="spacing-playground pa-6 ">
-                  The open source code can be found on <a href="https://github.com/healthscience">github</a> There are two main projects, the HOP protocol and the graphical desktop toolkit. Introductory slides to <a href="https://docs.google.com/presentation/d/1ApGHuiZKoXf3bih7InCP85XcG5S1S79bV74bz2O5dK8/edit?usp=sharing">HOP</a> and the <a href="https://bentoboxds.org">BentoBox-DS toolkit</a>. An overview <a href="https://docs.google.com/presentation/d/1ApGHuiZKoXf3bih7InCP85XcG5S1S79bV74bz2O5dK8/edit?usp=sharing">diagram</a> on the key concepts and architecture are on penpot.
-                </div>
-            </div><!-- <a href=""></a> -->
-          </v-card-title>
-        </v-card>
-      </v-flex>
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex xs12 sm12 md12>
-        <v-card>
-          <v-card-title primary-title>
-            <div>
-                <h3 class="headline mb-0 font-weight-bold">Collaborate</h3>
-                <div style="word-break: break-word" class="spacing-playground pa-3">
-                  The main messaging & video collaboration space uses <a href="https://keet.io/">Keet.io</a> See community discord for gathering times.
-                </div>
+    <v-responsive class="d-flex align-top text-center fill-height">
+      <v-row
+        no-gutters
+        id="community"
+      >
+        <v-col
+          align-self="center"
+        >
+          <v-sheet xs12 class="text-h6 pa-2" color="pink-darken-4">Community</v-sheet>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col col="12">
+          <v-card xs12 class="rounded-lx ma-2" color="indigo-lighten-5">
+            <v-card-title primary-title>
+              <h3 class="headline mb-0 font-weight-bold">Social network is health</h3>
+            </v-card-title>
+            <div style="word-break: break-word" class="spacing-playground pa-6 ">
+              We need to experiment with initial usese cases, in solo mode and building network experiments with peers.  Uses can be explored on the <a href="https://discord.gg/JhdkXX54Xk">forum</a>.  Download <a href="https://bentoboxds.org">BentoBoxDS</a> or build from source.
             </div>
-          </v-card-title>
-        </v-card>
-      </v-flex>
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex xs12 sm12 md12>
-        <v-card>
-          <v-card-title primary-title>
-            <div>
-                <h3 class="headline mb-0 font-weight-bold">Datapreneurs</h3>
-                <div style="word-break: break-word" class="spacing-playground pa-3">
-                  We are looking to support early adopter entrepreneurs to setup new businesses and uses cases.
-                </div>
+          </v-card> 
+        </v-col>
+      </v-row> 
+      <v-row>
+        <v-col col="12">
+          <v-card xs12 class="rounded-lx ma-2" color="indigo-lighten-5">
+            <v-card-title primary-title>
+              <h3 class="headline mb-0 font-weight-bold">Developers</h3>
+            </v-card-title>
+            <div style="word-break: break-word" class="spacing-playground pa-6 ">
+              The open source code can be found on <a href="https://github.com/healthscience">github</a> There are two main projects, <a href="https://github.com/healthscience/hop">HOP</a> and the graphical toolkit <a href="https://github.com/healthscience/bentoboxds">BentoBoxDS</a>. 
             </div>
-          </v-card-title>
-        </v-card>
-      </v-flex>
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex xs12 sm12 md12>
-        <v-card>
-          <v-card-title primary-title>
-            <div>
-                <h3 class="headline mb-0 font-weight-bold">AI mobile apps</h3>
-                <div style="word-break: break-word" class="spacing-playground pa-3">
-                  The toolkit has a embryonic natural language process chat interface.  We are looking to find open source models to help improve its capabilties. This will open up the opportunity for mobile app developers to access the protocol and use it.
-                </div>
+          </v-card> 
+        </v-col>
+      </v-row> 
+      <v-row>
+        <v-col col="12">
+          <v-card xs12 class="rounded-lx ma-2" color="indigo-lighten-5">
+            <v-card-title primary-title>
+              <h3 class="headline mb-0 font-weight-bold">Documentation</h3>
+            </v-card-title>
+            <div style="word-break: break-word" class="spacing-playground pa-3">
+              <a href="https://bentobox-ds.gitbook.io/bentobox-ds-hop">Documenation</a> is taking shape.  Introductory slides to the project <a href="https://design.penpot.app/#/view/af2058fc-4f53-80f4-8004-0aa0de9860e9?page-id=54a57300-7af0-8082-8004-3389f4f18d39&section=interactions&index=0&share-id=1119b522-e725-81a5-8004-338f1577876d">HOP</a> and the <a href="https://bentoboxds.org">BentoBox-DS toolkit</a>. An overview architecture <a href="https://design.penpot.app/#/view/9c5ceddf-c68c-8036-8001-c4a8028297f1?page-id=9c5ceddf-c68c-8036-8001-c4a8028297f2&section=interactions&index=0&share-id=d5fc0283-ef1c-80fa-8002-38a7c22fe740">diagram</a> on the key concepts and components.
             </div>
-          </v-card-title>
-        </v-card>
-      </v-flex>
-    </v-layout>
-   </v-container>
+          </v-card>
+        </v-col>  
+      </v-row>
+      <v-row>
+        <v-col col="12">
+          <v-card xs12 class="rounded-lx ma-2" color="indigo-lighten-5">
+            <v-card-title primary-title>
+              <h3 class="headline mb-0 font-weight-bold">Peer to Peer</h3>
+            </v-card-title>
+            <div style="word-break: break-word" class="spacing-playground pa-3">
+              The main messaging & video collaboration space uses <a href="https://keet.io/">Keet.io</a> See community discord for gathering times.
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-responsive>
+  </v-container>
 </template>
 
 <script>

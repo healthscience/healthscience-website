@@ -1,84 +1,94 @@
 <template>
   <v-container grid-list-lg>
-    <v-layout row id="learn">
-        <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5 color pink lighten-5">Learn</v-flex>
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex xs12 sm12 md12>
-        <v-card>
+    <v-responsive class="d-flex align-top text-center fill-height">
+      <v-row
+        no-gutters
+        id="learn"
+      >
+        <v-col
+          align-self="center"
+        >
+          <v-sheet xs12 class="text-h6 pa-2" color="pink-darken-4">Learning</v-sheet>
+        </v-col>
+      </v-row>
+      <v-row
+        no-gutters
+      >
+        <v-card color="indigo-lighten-5 ma-2">
           <v-card-title primary-title>
-            <div>
-                <h3 class="headline mb-0 font-weight-bold">About</h3>
-                <div style="word-break: break-word" class="spacing-playground pa-3">
-                  Our mission is to build technologies that empowers data ownership, control & agency - peer to peer
-                </div>
-                <div style="word-break: break-word" class="spacing-playground pa-3">
-                  Build collective intelligence networks to the scale required to solve problems: self, community, bioregions or for the whole earth.
-                </div>
-            </div>
-          </v-card-title>
+            <h3 class="pa-2 m-1">BentoBoxDS - Open to all</h3>      
+          </v-card-title> 
+          <div style="word-break: break-word" class="spacing-playground pa-3">
+            BentoBoxDS is a no-code graphical toolkit that opens up and lowers the barrier to using HOP.  From the founding of the project this was given an equal priority to ensure the widest early and equality of access to the technology.  See the Tookit section for more information.
+          </div>
         </v-card>
-      </v-flex>
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex xs12 sm12 md12>
-        <v-card>
+      </v-row>
+      <v-row
+        no-gutters
+      >
+        <v-card color="indigo-lighten-5 ma-2">
           <v-card-title primary-title>
-            <div>
-                <h3 class="headline mb-0 font-weight-bold">SafeFlow-ECS & DML</h3>
-                <div style="word-break: break-word" class="spacing-playground pa-3">
-                  A novel combination of an entity component system design and a data science computation engine. The engine takes in data, tidies and categories it before applying a computation and preparing the data format for presentation e.g. charting.
-                </div>
-                <div style="word-break: break-word" class="spacing-playground pa-3">
-                  DML - Decentralised Machine Learning: evolutionary or genetic algorithms are designed for being distributed and HOP specialises in their use.  Combined with a proof of work challenge protocol the network coheres machine learning models to scale to the reach needed to solve problems.
-                </div>
-            </div>
-          </v-card-title>
+            <h3 class="pa-2 m-1">HOP Coherence</h3>      
+          </v-card-title> 
+          <div style="word-break: break-word" class="spacing-playground pa-3">
+            To establish coherence on health is a complex challenge.  Each peer will have a unique proof of work so we require more from a protocol than computation coordination.  We need to build the right data sets with the right peers with the right computational models.  HOP has been design to address this challenge.
+          </div>
         </v-card>
-      </v-flex>
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex xs12 sm12 md12>
-        <v-card>
+      </v-row>
+      <v-row
+        no-gutters
+      >
+        <v-card color="indigo-lighten-5 ma-2">
           <v-card-title primary-title>
-            <div>
-                <h3 class="headline mb-0 font-weight-bold">KBLedger</h3>
-                <div style="word-break: break-word" class="spacing-playground pa-3">
-                  The Knowledge Bundle Ledger stores entries that guarantees reproducibilty and opens up the opportunity to perform decentralised machine learning.
-                </div>
-            </div>
+            <h3 class="pa-2">SafeFlow-ECS & DML</h3>
           </v-card-title>
+          <div style="word-break: break-word" class="spacing-playground pa-3">
+            A novel combination of an entity component system design and a data science computation engine. The engine takes in data, tidies and categories it before applying a computation and preparing the data format for presentation e.g. charting.
+          </div>
+          <div style="word-break: break-word" class="spacing-playground pa-3">
+            DML - Decentralised Machine Learning: evolutionary or genetic algorithms are designed for being distributed and HOP specialises in their use.  Combined with a proof of work challenge protocol the network coheres machine learning models to scale to the reach needed to solve problems.
+          </div>
         </v-card>
-      </v-flex>
-    </v-layout>
-    <v-layout row wrap>
-      <v-flex xs12 sm12 md12>
-        <v-card>
+      </v-row>
+      <v-row
+        no-gutters
+      >
+        <v-card color="indigo-lighten-5 ma-2">
           <v-card-title primary-title>
-            <div>
-                <h3 class="headline mb-0 font-weight-bold">Module & Reference Contracts</h3>
-                <div style="word-break: break-word" class="spacing-playground pa-3">
-                  A limited set of data building block contracts that can be combined to describe data, what computation should be applied and which visualisation style is required.  These contracts provide guarantees on data interoperability amongst peers.
-                </div>
-            </div>
+            <h3 class="pa-2">KBLedger</h3>
           </v-card-title>
+          <div style="word-break: break-word" class="spacing-playground pa-3">
+            The Knowledge Bundle Ledger records proof of work & results and stores entries that guarantees reproducibilty. This opens up the opportunity to perform decentralised machine learning.
+          </div>
         </v-card>
-      </v-flex>
-    </v-layout>
-        <v-layout row wrap>
-      <v-flex xs12 sm12 md12>
-        <v-card>
+      </v-row>
+      <v-row
+        no-gutters
+      >
+        <v-card color="indigo-lighten-5 ma-2">
           <v-card-title primary-title>
-            <div>
-                <h3 class="headline mb-0 font-weight-bold">Peer to Peer Data Infrastructure</h3>
-                <div style="word-break: break-word" class="spacing-playground pa-3">
-                  HOP works on any peer to peer data infrastructure e.g. <a href="https://docs.holepunch.to/">Holepunch</a>  open source project.
-                </div>
-            </div>
+            <h3 class="pa-2">Library - module & reference contracts</h3>
           </v-card-title>
+          <div style="word-break: break-word" class="spacing-playground pa-3">
+            Reference contracts are the building blocks that module contracts use to build context for computations.  The reference contracts describe data, what computation should be applied and which visualisation style is required.  The purpose of the two contract design is to provide guarantees on context and on data interoperability amongst peers and over time.
+          </div>
         </v-card>
-      </v-flex>
-    </v-layout>
+      </v-row>
+      <v-row
+        no-gutters
+      >
+        <v-col cols="12">
+          <v-card color="indigo-lighten-5 ma-2">
+            <v-card-title primary-title>
+              <h3 class="">Peer to Peer Data Infrastructure</h3>
+            </v-card-title>
+            <div style="word-break: break-word" class="spacing-playground pa-3">
+              HOP works on any peer to peer data infrastructure and with personal datastores e.g. <a href="https://docs.holepunch.to/">Holepunch</a>, <a href="https://www.autonomi.com/">autonomi</a> open source projects etc.
+            </div>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-responsive>
   </v-container>
 </template>
 

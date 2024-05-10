@@ -1,10 +1,10 @@
 <template>
   <v-container grid-list-lg>
     <v-layout row wrap>
-      <v-flex xs12 sm12 md12>
+      <v-sheet xs12 sm12 md12>
         <v-card class="back-transparent">
           <v-card-title primary-title>
-            <v-flex xs12 sm12 md6>
+            <v-sheet xs12 sm12 md6>
                  <v-row
                   align="center"
                   justify="center"
@@ -56,23 +56,28 @@
                     </v-row>
                   </v-card>
                 </v-row>
-            </v-flex>
-            <v-flex xs12 sm12 md6>
+            </v-sheet>
+            <v-sheet xs12 sm12 md6>
+              <v-row
+               align="center"
+               justify="center"
+               >
                 <h3 class="headline mb-0 font-weight-bold">Toolkit & HOP in action</h3>
-                <v-flex xs12 sm12 md5 class="open-left">
+                <v-sheet xs12 sm12 md5 class="open-left">
                   <!-- <v-img src="../assets/bbtoolkit.png" max-width="500" class="left-perspective">
                   </v-img> -->
                   <iframe width="500" height="315" src="https://www.youtube.com/embed/OZXilez2hK8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </v-flex>
+                </v-sheet>
                 <div style="word-break: break-word" class="spacing-playground pa-3 font-weight-regular">
                   <v-card href="https://bentoboxds.org">
                     <v-card-title>Learn more & usecases</v-card-title>
                   </v-card>
                 </div>
-            </v-flex>
+              </v-row>
+            </v-sheet>
           </v-card-title>
         </v-card>
-      </v-flex>
+      </v-sheet>
     </v-layout>
   </v-container>
 </template>

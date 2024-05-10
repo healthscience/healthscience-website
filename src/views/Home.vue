@@ -10,23 +10,13 @@
   </v-container>
 </template>
 
-<script>
+<script setup>
 import HopProtocol from '@/components/HopProtocol'
 import HopToolkits from '@/components/HopToolkits'
 import HopLearn from '@/components/HopLearn'
 import HopCommunity from '@/components/HopCommunity'
 // import HopUsecases from '@/components/HopUsecases'
 
-export default {
-  name: 'Hopsite-Content',
-  components: {
-    HopProtocol,
-    HopLearn,
-    HopToolkits,
-    HopCommunity
-    // HopUsecases
-  }
-}
 </script>
 
 <style>
