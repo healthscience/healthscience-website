@@ -22,6 +22,8 @@
       </v-row>
     </div>
     <v-spacer></v-spacer>
+      <v-list-item link :to="'/'" title="HOME"></v-list-item>
+      <v-list-item link :to="'/lab'" title="LAB"></v-list-item>
       <v-btn text><a href="https://discord.gg/JhdkXX54Xk">Community</a></v-btn>
       <v-btn text><a href="https://bentobox-ds.gitbook.io/bentobox-ds-hop/">Docs</a></v-btn>
       <v-btn text><a href="https://github.com/healthscience">code</a></v-btn>

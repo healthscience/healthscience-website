@@ -19,7 +19,7 @@
             <h3 class="pa-2 m-1">BentoBoxDS - Open to all</h3>      
           </v-card-title> 
           <div style="word-break: break-word" class="spacing-playground pa-3">
-            BentoBoxDS is a no-code graphical toolkit that opens up and lowers the barrier to using HOP.  From the founding of the project this was given an equal priority to ensure the widest early and equality of access to the technology.  See the Tookit section for more information.
+            <a href="https://bentoboxds.org" target="_blank">BentoBoxDS</a> is a no-code graphical toolkit that opens up and lowers the barrier to using HOP.  From the founding of the project this was given an equal priority to ensure the widest early and equality of access to the technology.  See the Tookit section for more information.
           </div>
         </v-card>
       </v-row>
@@ -28,10 +28,10 @@
       >
         <v-card color="indigo-lighten-5 ma-2">
           <v-card-title primary-title>
-            <h3 class="pa-2 m-1">HOP Coherence</h3>      
+            <h3 class="pa-2 m-1">HOP</h3>      
           </v-card-title> 
           <div style="word-break: break-word" class="spacing-playground pa-3">
-            To establish coherence on health is a complex challenge.  Each peer will have a unique proof of work so we require more from a protocol than computation coordination.  We need to build the right data sets with the right peers with the right computational models.  HOP has been design to address this challenge.
+            The protocol HOP task is to establish coherence on health. This is a complex challenge.  Each peer will have a unique proof of work so we require more from a protocol than computation coordination.  We need to build the right data sets with the right peers with the right computational models.  HOP has been designed to build and scale coherence networks around health.
           </div>
         </v-card>
       </v-row>
@@ -70,7 +70,7 @@
             <h3 class="pa-2">Library - module & reference contracts</h3>
           </v-card-title>
           <div style="word-break: break-word" class="spacing-playground pa-3">
-            Reference contracts are the building blocks that module contracts use to build context for computations.  The reference contracts describe data, what computation should be applied and which visualisation style is required.  The purpose of the two contract design is to provide guarantees on context and on data interoperability amongst peers and over time.
+            Reference contracts are the building blocks that module contracts use to build context for computations. A HOPquery is build of module contracts.  The reference contracts describe data, what computation should be applied and which visualisation style is required.  The purpose of the two contract design is to provide guarantees on context and on data interoperability amongst peers and over time.
           </div>
         </v-card>
       </v-row>
