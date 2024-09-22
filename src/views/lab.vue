@@ -38,6 +38,7 @@
               <div id="nature-projects" class="pa-3">
                 <a href="https://caleai.com" target="_blank">Cale</a> -- create daisy world peer to peer.  First step in building a decentralised climate model simulation.
               </div>
+              <v-list-item class="bg-green"  link :to="'/labnetwork/nature'" title="More on Nature LAB"></v-list-item>
             </v-card>
           </v-sheet>
         </v-col>
@@ -55,6 +56,7 @@
               <div id="nature-projects" class="pa-3">
                 <a href="https://algotecture.net" target="_blank">AlgotectureLAB</a> Booking space based on cues to space utilisation and the coordination of 3D design.
               </div>
+              <v-list-item class="bg-green"  link :to="'/labnetwork/environment'" title="More on Environment LAB"></v-list-item>
             </v-card>
           </v-sheet>
         </v-col>
@@ -72,8 +74,9 @@
                 Projects that use HOP in connection with human and other forms of life.
               </div>
               <div id="nature-projects" class="pa-3">
-                <a href="#" target="_blank">ALAB</a> Besearch network building around health topics.
+                Besearch start with soverign data to set context, next research is reviewed to be grounded in the latest science, from here the search space of solutions is invetigated before simulation based on the previous three steps are played to aid decision making.
               </div>
+              <v-list-item class="bg-green"  link :to="'/labnetwork/life'" title="More on Life LAB"></v-list-item>
             </v-card>
           </v-sheet>
         </v-col>
@@ -84,13 +87,17 @@
         >
           <v-sheet class="pa-2 ma-2 bg-grey">
             <v-card style="height: 360px;">
-              <v-card-title>Culture</v-card-title>
+              <v-card-title>Sovereign Culture</v-card-title>
               <div style="word-break: break-word" class="spacing-playground pa-3">
-                Projects that use HOP in connection with cultural inventions e.g. education to the economy.
+                The foundation for sovereign data is sovereign hardware. The hardware ranges from self hosting data storage, Bitcoin nodes to advance quantum random number generators.  
+              </div>
+              <div style="word-break: break-word" class="spacing-playground pa-3">
+                Projects that use HOP in connection with cultural inventions e.g. education to money to the economy.
               </div>
               <div id="nature-projects" class="pa-3">
-                <a href="#" target="_blank">LAB</a> e-commerce time series AI agents 
+                e-commerce time series AI agents etc.
               </div>
+              <v-list-item class="bg-green" link :to="'/labnetwork/culture'" title="More on Culture LAB"></v-list-item>
             </v-card> 
           </v-sheet>
         </v-col>

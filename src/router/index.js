@@ -31,6 +31,20 @@ const routes = [
     ],
   },
   {
+    path: '/labnetwork/:id',
+    component: () => import('@/views/labNetwork.vue'),
+    children: [
+      {
+        path: '',
+        name: 'Labnetwork',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "home" */ '@/views/labNetwork.vue'),
+      },
+    ],
+  },
+  {
     path: '/terms',
     component: () => import('@/views/Terms.vue'),
     children: [

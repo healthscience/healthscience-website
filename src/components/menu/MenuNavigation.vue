@@ -6,7 +6,7 @@
   >
     <div class="d-inline align-center">
       <v-row>
-        <v-column>
+        <v-col>
           <v-img
             alt="Health Oracle Protocol"
             class="ml-4"
@@ -15,10 +15,10 @@
             transition="scale-transition"
             width="24"
           />
-        </v-column>
-        <v-column>
+        </v-col>
+        <v-col>
           <v-toolbar-title class="pink--text darken-4--text ml-2">Health Oracle Protocol</v-toolbar-title>
-        </v-column>
+        </v-col>
       </v-row>
     </div>
     <v-spacer></v-spacer>
