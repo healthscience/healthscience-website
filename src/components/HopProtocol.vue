@@ -2,9 +2,9 @@
   <v-container grid-list-lg>
     <v-layout row>
       <v-sheet xs12 class="rounded-lx" color="#ffe4e1">
-      <h6 class="text-center mt-4 text-h6 indigo">HOP - Sovereign Data that shapes health</h6>
+      <h6 class="text-center mt-4 text-h6 indigo">HOP - Sovereign Intelligences that shapes health</h6>
       <div style="word-break: break-word" class="spacing-playground mt-2 mx-6 pa-6 ">
-        Use HOP to build N=1 coherence networks peer to peer.  21st century technology opens up a new paradigm for health.  This can happen as data and scientific understanding of nature has advanced and is now combined with machine learning.  However, there is a choice to be made: Do we want to be the primary agent in our health or do we want to outsource our sovereignty to the cloud & corporations?  HOP and the no-code toolkit BentoBoxDS provides a way to choose agency and sovereignty. Through self experimentation and building networks of collective intelligence peer to peer the understanding and application of science to health will advance rigorously.
+        HOP makes it possible to build coherence networks peer to peer.  21st century technology opens up a new paradigm for health.  This can happen as data and scientific understanding of nature has advanced and is now combined with machine learning.  However, there is a choice to be made: Do we want to be the primary agent in our health or do we want to outsource our sovereignty to the cloud & corporations?  HOP and the no-code toolkit BentoBoxDS provides a way to choose agency and sovereignty. Through self experimentation and building networks of collective intelligence peer to peer the understanding and application of science to health will advance rigorously.
       </div>
       <h6 class="text-center mt-4 text-h6 indigo">Learning 24/7 @all scales</h6>
       <div style="word-break: break-word" class="spacing-playground body-1 mt-2 mx-6 pa-6 ">
