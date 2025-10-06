@@ -16,22 +16,22 @@
       >
         <v-card color="indigo-lighten-5 ma-2">
           <v-card-title primary-title>
-            <h3 class="pa-2 m-1">BentoBoxDS - Open to all</h3>      
+            <h3 class="pa-2 m-1">HOP</h3>      
           </v-card-title> 
           <div style="word-break: break-word" class="spacing-playground pa-3">
-            <a href="https://bentoboxds.org" target="_blank">BentoBoxDS</a> is a no-code graphical toolkit that opens up and lowers the barrier to using HOP.  From the founding of the project this was given an equal priority to ensure the widest early and equality of access to the technology.  See the Tookit section for more information.
+            The protocol HOP task is to establish coherence on health. This is a complex challenge. The follow sections setout the technologies and why?
           </div>
         </v-card>
       </v-row>
-      <v-row
+            <v-row
         no-gutters
       >
         <v-card color="indigo-lighten-5 ma-2">
           <v-card-title primary-title>
-            <h3 class="pa-2 m-1">HOP</h3>      
-          </v-card-title> 
+            <h3 class="pa-2">Coherence Ledger</h3>
+          </v-card-title>
           <div style="word-break: break-word" class="spacing-playground pa-3">
-            The protocol HOP task is to establish coherence on health. This is a complex challenge.  Each peer will have a unique proof of work so we require more from a protocol than computation coordination.  We need to build the right data sets with the right peers with the right computational models.  HOP has been designed to build and scale coherence networks around health.
+           Each peer has their own unique coherence ledger, a ledger construct beyond blockchain.  A ledger entry has two parts, a unique proofs of work hash and a hash of the results produced by that work.   Each peer performs a distinct task tailored to its role (e.g., heart health, to monitoring air quality or river flow), and random checks of existing proofs are shared peer-to-peer to catch bad actors. This minimizes computational overhead while maintaining trust, unlike blockchain’s uniform and resource-heavy consensus. It’s like an ecosystem where each organism contributes uniquely but is periodically audited by the collective to ensure integrity. This lightweight, adaptive approach suits a dynamic system like Gaia.
           </div>
         </v-card>
       </v-row>
@@ -43,22 +43,13 @@
             <h3 class="pa-2">SafeFlow-ECS & DML</h3>
           </v-card-title>
           <div style="word-break: break-word" class="spacing-playground pa-3">
-            A novel combination of an entity component system design and a data science computation engine. The engine takes in data, tidies and categories it before applying a computation and preparing the data format for presentation e.g. charting.
+            SafeFlow-ECS is at the heart of HOP and where a coherence ledger entry is made. It combines an entity component system design from computer games combined with a data science compute engine. The loop is akin to forth scripting in Bitcoin but reference contracts are delivered to each system e.g. data source or compute code or data visualization e.g. a chart. As each component stage is completed a hash is taken of the output ie proof of work and each components hashes are hashed together to produce on half of the coherence ledger entry. The other half is the hash of the results produce by a complete besearch cycle.
+          </div>
+          <div style="word-break: break-word;">
+            SafeFlow-ECS blends an entity-component-system (ECS) from game development with a data science compute engine.  The ECS produces a loop cycle akin to role the Forth scripting plays in Bitcoin.  A HOP-query delivers module contracts e.g. a network experiment the question being asked, data source, computation and visualization style.  Each modules holds a reference contract that Entity systems can act upon and store the data in its tied componment.
           </div>
           <div style="word-break: break-word" class="spacing-playground pa-3">
             DML - Decentralised Machine Learning: evolutionary or genetic algorithms are designed for being distributed and HOP specialises in their use.  Combined with a proof of work challenge protocol the network coheres machine learning models to scale to the reach needed to solve problems.
-          </div>
-        </v-card>
-      </v-row>
-      <v-row
-        no-gutters
-      >
-        <v-card color="indigo-lighten-5 ma-2">
-          <v-card-title primary-title>
-            <h3 class="pa-2">KBLedger</h3>
-          </v-card-title>
-          <div style="word-break: break-word" class="spacing-playground pa-3">
-            The Knowledge Bundle Ledger records proof of work & results and stores entries that guarantees reproducibilty. This opens up the opportunity to perform decentralised machine learning.
           </div>
         </v-card>
       </v-row>

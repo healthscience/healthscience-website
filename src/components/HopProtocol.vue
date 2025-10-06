@@ -5,27 +5,48 @@
         <v-card class="rounded-lg" color="pink-lighten-5">
           <div class="mission-statement-container">
             <v-card-title class="text-center text-h6 indigo--text mission-statement">
-              HOP - Sovereign intelligences shape health
+              HOP - gaia intelligences shape health
             </v-card-title>
           </div>
 
           <v-card-text class="text-body-1">
             <div class="text-center">
-              HOP makes it possible to build coherence networks peer to peer. 21st century technology opens up a new paradigm for health. This can happen as data and scientific understanding of nature has advanced and is now combined with machine learning. However, there is a choice to be made: Do we want to be the primary agent in our health or do we want to outsource our sovereignty to the cloud & corporations? HOP and the no-code toolkit BentoBoxDS provides a way to choose agency and sovereignty. Through self experimentation and building networks of collective intelligence peer to peer the understanding and application of science to health will advance rigorously.
+              <div class="sub-parag">
+                Health Oracle Protocol is Gaian Intelligences in Action
+              </div>
+            </div>
+            <div class="text">
+              <div class="sub-parag">
+              HOP embodies the principles of Gaia theory—a self-regulating, decentralized system where individual actions align with collective well-being. Coherence networks for human to bioregion to Earth as a whole  health are built peer to peer.
+              </div>
+              <div class="sub-parag">
+                As we enter the age of AGI and super intelligence, the creation of Gaia Intelligences provides an alternative to centralized AI compute chatbots and agents.  A Tiny HOP to gaia intelligences sets out the vision in more depth. https://beebeehop.any.org/a-tiny-hop-to-gaia-intelligence By enabling peers to contribute and validate data, HOP shifts power from centralized authorities (e.g., tech giants, governments) to individuals and communities. This has profound implications for equity, transparency, and trust in a local first, human-first, data-driven networks.
+              </div>
             </div>
 
             <v-divider class="my-4" />
 
-            <div class="learning-title-container">
-              <v-card-title class="text-center text-h6 indigo--text learning-title">
-                Learning 24/7 @all scales
+            <div class="text">
+              <v-card-title class="text-center text-h6 indigo--text learning-title-container">
+                Besearch cycles: learning 24/7 @all scales
               </v-card-title>
+              <v-card-text class="text-body-1">
+                <div class="text">
+                  <div class="sub-parag">
+                    Besearch is new kind of n=1 science method combined with machine learning.  See diagram and read more at https://beebeehop.any.org/besearch .
+                    </div>
+                    <div class="sub-parag">
+                    Think of Besearch as an agentic cycle: blending cutting-edge science with contextual BentoBox data to proactively explore solution spaces, running simulations for present and future outcomes (including community ripples and even second/third-order effects). It is a natural evolution of the N=1 ethos and hyper-personalized yet scalable, like a cell's metabolic cycle informing a bioregion's homeostasis in the Gaian framework.
+                  </div>
+                  <div class="sub-parag">
+                  </div>
+                </div>
+              </v-card-text>
             </div>
-
             <v-card-text class="text-body-1">
-              A sovereign peer can learn much in isolation but can learn much more in a network. The health of a bioregion to a model of the climate requires a new level of computational coherence and HOP (health oracle protocol) has be designed to make that possible. Check out the HOP <router-link to="/lab" class="text-decoration-none">
+               Learn more in the LAB<router-link to="/lab" class="text-decoration-none">
                 <v-btn variant="text" color="purple">LAB</v-btn>
-              </router-link> for projects. Lastly, the monetary incentives of health reward treating disease and exploiting nature. HOP has no monetary incentive built-in, our focus is on empowering the coherence of computations with sovereign data that shapes health.
+              </router-link>.
             </v-card-text>
 
             <v-card-actions class="justify-center">
@@ -114,6 +135,13 @@ onMounted(() => {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.sub-parag {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 1em;
+  border: 1px solid red;
 }
 
 @keyframes glow {
