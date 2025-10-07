@@ -15,18 +15,6 @@
         <v-col col="12">
           <v-card xs12 class="rounded-lx ma-2" color="indigo-lighten-5">
             <v-card-title primary-title>
-              <h3 class="headline mb-0 font-weight-bold">Social network is health</h3>
-            </v-card-title>
-            <div style="word-break: break-word" class="spacing-playground pa-6 ">
-              We need to experiment with initial usese cases, in solo mode and building network experiments with peers.  Uses can be explored on the <a href="https://discord.gg/JhdkXX54Xk">forum</a>.  Download <a href="https://bentoboxds.org">BentoBoxDS</a> or build from source.
-            </div>
-          </v-card> 
-        </v-col>
-      </v-row> 
-      <v-row>
-        <v-col col="12">
-          <v-card xs12 class="rounded-lx ma-2" color="indigo-lighten-5">
-            <v-card-title primary-title>
               <h3 class="headline mb-0 font-weight-bold">Developers</h3>
             </v-card-title>
             <div style="word-break: break-word" class="spacing-playground pa-6 ">

@@ -16,35 +16,32 @@
               </div>
             </div>
             <div class="text">
-              <div class="sub-parag">
-              HOP embodies the principles of Gaia theory—a self-regulating, decentralized system where individual actions align with collective well-being. Coherence networks for human to bioregion to Earth as a whole  health are built peer to peer.
+              <div style="word-break: break-word" class="spacing-playground pa-3">
+                HOP embodies the principles of Gaia theory—a self-regulating, decentralized system where individual actions align with collective well-being. Coherence health networks for humans to bioregions to Earth as a whole are built peer to peer.
               </div>
-              <div class="sub-parag">
-                As we enter the age of AGI and super intelligence, the creation of Gaia Intelligences provides an alternative to centralized AI compute chatbots and agents.  A Tiny HOP to gaia intelligences sets out the vision in more depth. https://beebeehop.any.org/a-tiny-hop-to-gaia-intelligence By enabling peers to contribute and validate data, HOP shifts power from centralized authorities (e.g., tech giants, governments) to individuals and communities. This has profound implications for equity, transparency, and trust in a local first, human-first, data-driven networks.
+              <div style="word-break: break-word" class="spacing-playground pa-3">
+                As we enter the age of AGI and super intelligence, the creation of Gaia Intelligences provides an alternative to centralized AI compute chatbots and agents. <a href="https://beebeehop.any.org/a-tiny-hop-to-gaia-intelligence">A Tiny HOP to gaia intelligences</a> sets out the vision in more depth. By enabling peers to contribute and validate data, HOP shifts power from centralized authorities (e.g., tech giants, governments) to individuals and communities. This has profound implications for equity, transparency, and trust in a local first, human-first, data-driven networks.
               </div>
             </div>
-
             <v-divider class="my-4" />
 
-            <div class="text">
-              <v-card-title class="text-center text-h6 indigo--text learning-title-container">
+            <div class="text-besearch">
+              <v-card-title class="text-center text-h6 learning-title-container">
                 Besearch cycles: learning 24/7 @all scales
               </v-card-title>
               <v-card-text class="text-body-1">
                 <div class="text">
-                  <div class="sub-parag">
-                    Besearch is new kind of n=1 science method combined with machine learning.  See diagram and read more at https://beebeehop.any.org/besearch .
+                  <div style="word-break: break-word" class="spacing-playground pa-3">
+                    Besearch is new kind of n=1 science method combined with machine learning.  See <a href="https://beebeehop.any.org/besearch">diagram</a> and read more.
                     </div>
-                    <div class="sub-parag">
+                    <div  style="word-break: break-word" class="spacing-playground pa-3">
                     Think of Besearch as an agentic cycle: blending cutting-edge science with contextual BentoBox data to proactively explore solution spaces, running simulations for present and future outcomes (including community ripples and even second/third-order effects). It is a natural evolution of the N=1 ethos and hyper-personalized yet scalable, like a cell's metabolic cycle informing a bioregion's homeostasis in the Gaian framework.
-                  </div>
-                  <div class="sub-parag">
                   </div>
                 </div>
               </v-card-text>
             </div>
             <v-card-text class="text-body-1">
-               Learn more in the LAB<router-link to="/lab" class="text-decoration-none">
+               Learn more in the <router-link to="/lab" class="text-decoration-none">
                 <v-btn variant="text" color="purple">LAB</v-btn>
               </router-link>.
             </v-card-text>
@@ -125,6 +122,7 @@ onMounted(() => {
   border-radius: 12px;
   margin: 1.5rem 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
 .learning-title {
@@ -141,7 +139,7 @@ onMounted(() => {
   display: grid;
   grid-template-columns: 1fr;
   margin: 1em;
-  border: 1px solid red;
+  text-wrap: wrap;
 }
 
 @keyframes glow {
