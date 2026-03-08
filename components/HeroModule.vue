@@ -1,25 +1,37 @@
 <template>
-  <div class="lego-module col-span-12 md:col-span-8 h-[60vh] flex flex-col justify-center relative">
-    <div class="z-10">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">
+  <div class="lego-module col-span-12 md:col-span-8 h-[60vh] flex flex-col justify-center relative overflow-hidden bg-transparent border-none shadow-none">
+    <div class="z-10 relative max-w-2xl">
+      <div class="inline-block px-3 py-1 border border-pine/50 rounded-full text-xs font-mono text-pine mb-6 bg-pine/5">
+        HOP PROTOCOL v1.0
+      </div>
+      <h1 class="text-5xl md:text-7xl font-light mb-6 leading-tight text-white tracking-tight">
         Gaia intelligences <br />
-        <span class="text-neon">shape health.</span>
+        <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">shape health.</span>
       </h1>
-      <p class="text-xl text-pine uppercase tracking-widest">
-        A Biological Navigation System for Sovereign Health.
+      <p class="text-lg text-gray-400 mb-10 font-light leading-relaxed">
+        A Biological Navigation System for Sovereign Health. Built on mathematics, not middlemen.
       </p>
+      <div class="flex gap-4">
+        <button class="lego-button">
+          Initialize Node
+        </button>
+        <button class="lego-button lego-button-outline">
+          Read Whitepaper
+        </button>
+      </div>
     </div>
     
-    <!-- ResonancePulse SVG -->
-    <div class="absolute inset-0 opacity-30 pointer-events-none">
-      <svg width="100%" height="100%" viewBox="0 0 800 400" preserveAspectRatio="none">
-        <path 
-          :d="wavePath" 
-          fill="none" 
-          stroke="#a9ff00" 
-          stroke-width="2"
-          class="transition-all duration-1000 ease-in-out"
-        />
+    <!-- Subtle Tech Grid SVG -->
+    <div class="absolute right-0 top-0 bottom-0 w-1/2 opacity-20 pointer-events-none">
+      <svg width="100%" height="100%" viewBox="0 0 400 400" preserveAspectRatio="xMaxYMid slice">
+        <defs>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(169, 255, 0, 0.2)" stroke-width="1"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+        <circle cx="200" cy="200" r="150" fill="none" stroke="rgba(169, 255, 0, 0.1)" stroke-width="1" stroke-dasharray="4 4"/>
+        <circle cx="200" cy="200" r="100" fill="none" stroke="rgba(169, 255, 0, 0.1)" stroke-width="1"/>
       </svg>
     </div>
   </div>

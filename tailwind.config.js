@@ -13,6 +13,7 @@ export default {
       colors: {
         forest: '#0a0f0d',
         neon: '#a9ff00',
+        leaf: '#22c55e',
         pine: '#2d4635',
         border: '#1a241e',
       },

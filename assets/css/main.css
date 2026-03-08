@@ -5,6 +5,7 @@
 :root {
   --forest-void: #0a0f0d;
   --neon-pulse: #a9ff00;
+  --leaf-green: #22c55e;
   --tactical-pine: #2d4635;
   --pine-border: #1a241e;
 }
@@ -17,21 +18,80 @@ body {
   overflow-x: hidden;
 }
 
-/* The Lego Grid */
+/* The Sleek Grid */
 .hop-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1px;
-  background-color: var(--pine-border);
-  border: 1px solid var(--pine-border);
+  gap: 1.5rem;
 }
 
 .lego-module {
-  background: var(--forest-void);
+  background: rgba(10, 15, 13, 0.6);
+  backdrop-filter: blur(12px);
   padding: 2rem;
-  border: 1px solid var(--tactical-pine);
+  border: 1px solid rgba(45, 70, 53, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lego-module:hover {
+  border-color: rgba(169, 255, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtle Top Highlight for Cards */
+.lego-module::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(169, 255, 0, 0.2), transparent);
+  z-index: 1;
+}
+
+/* Sleek Institutional Button */
+.lego-button {
+  background: var(--leaf-green);
+  color: #ffffff;
+  padding: 0.875rem 1.75rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.lego-button:hover {
+  background: #16a34a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.lego-button:active {
+  transform: translateY(0);
+}
+
+.lego-button-outline {
+  background: transparent;
+  color: var(--leaf-green);
+  border: 1px solid var(--leaf-green);
+}
+
+.lego-button-outline:hover {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--leaf-green);
 }
 
 /* Mechanical Snaps */
