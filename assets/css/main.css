@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --forest-void: #0a0f0d;
+  --neon-pulse: #a9ff00;
+  --tactical-pine: #2d4635;
+  --pine-border: #1a241e;
+}
+
+body {
+  background-color: var(--forest-void);
+  color: #e0e7e1;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* The Lego Grid */
+.hop-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1px;
+  background-color: var(--pine-border);
+  border: 1px solid var(--pine-border);
+}
+
+.lego-module {
+  background: var(--forest-void);
+  padding: 2rem;
+  border: 1px solid var(--tactical-pine);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Mechanical Snaps */
+.snap-container {
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.text-neon {
+  color: var(--neon-pulse);
+}
+
+.border-tactical {
+  border-color: var(--tactical-pine);
+}
