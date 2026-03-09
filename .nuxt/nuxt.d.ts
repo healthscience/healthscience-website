@@ -1,3 +1,4 @@
+/// <reference types="@nuxtjs/color-mode" />
 /// <reference types="@nuxt/telemetry" />
 /// <reference types="@nuxt/devtools" />
 /// <reference path="types/nitro-layouts.d.ts" />

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
   content: [
     "./components/**/*.{js,vue,ts}",
     "./layouts/**/*.vue",
@@ -11,11 +12,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        forest: '#0a0f0d',
-        neon: '#a9ff00',
-        leaf: '#22c55e',
-        pine: '#2d4635',
-        border: '#1a241e',
+        forest: 'var(--forest-void)',
+        neon: 'var(--neon-pulse)',
+        leaf: 'var(--leaf-green)',
+        pine: 'var(--tactical-pine)',
+        border: 'var(--pine-border)',
+        primary: 'var(--text-primary)',
+        secondary: 'var(--text-secondary)',
+        module: 'var(--module-bg)',
+        spiral: 'var(--spiral-bg)',
+        'pine-stroke': 'var(--spiral-stroke)',
+        'hero-from': 'var(--hero-from)',
+        'hero-to': 'var(--hero-to)',
       },
     },
   },

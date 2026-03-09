@@ -3,19 +3,50 @@
 @tailwind utilities;
 
 :root {
+  /* Light Mode Defaults */
+  --forest-void: #f8fafc;
+  --neon-pulse: #16a34a;
+  --leaf-green: #22c55e;
+  --tactical-pine: #bbf7d0;
+  --pine-border: #dcfce7;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --module-bg: rgba(255, 255, 255, 0.8);
+  --module-border: rgba(187, 247, 208, 0.8);
+  --module-hover-border: rgba(22, 163, 74, 0.5);
+  --module-hover-shadow: rgba(22, 163, 74, 0.15);
+  --spiral-bg: #f1f5f9;
+  --spiral-stroke: #cbd5e1;
+  --hero-from: #0f172a;
+  --hero-to: #64748b;
+}
+
+.dark {
+  /* Dark Mode */
   --forest-void: #0a0f0d;
   --neon-pulse: #a9ff00;
   --leaf-green: #22c55e;
   --tactical-pine: #2d4635;
   --pine-border: #1a241e;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --module-bg: rgba(10, 15, 13, 0.6);
+  --module-border: rgba(45, 70, 53, 0.4);
+  --module-hover-border: rgba(169, 255, 0, 0.3);
+  --module-hover-shadow: rgba(0, 0, 0, 0.3);
+  --spiral-bg: #050806;
+  --spiral-stroke: #2d4635;
+  --hero-from: #ffffff;
+  --hero-to: #6b7280;
 }
 
 body {
   background-color: var(--forest-void);
-  color: #e0e7e1;
+  color: var(--text-primary);
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   margin: 0;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* The Sleek Grid */
@@ -26,20 +57,24 @@ body {
 }
 
 .lego-module {
-  background: rgba(10, 15, 13, 0.6);
+  background: var(--module-bg);
   backdrop-filter: blur(12px);
   padding: 2rem;
-  border: 1px solid rgba(45, 70, 53, 0.4);
+  border: 1px solid var(--module-border);
   border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+}
+
+.dark .lego-module {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
 }
 
 .lego-module:hover {
-  border-color: rgba(169, 255, 0, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-color: var(--module-hover-border);
+  box-shadow: 0 8px 32px var(--module-hover-shadow);
 }
 
 /* Subtle Top Highlight for Cards */
@@ -50,7 +85,7 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(169, 255, 0, 0.2), transparent);
+  background: linear-gradient(90deg, transparent, var(--module-hover-border), transparent);
   z-index: 1;
 }
 
