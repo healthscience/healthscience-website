@@ -13,10 +13,13 @@
       </p>
       <div class="flex gap-4">
         <button class="lego-button">
-          Initialize Node
+          Download
         </button>
         <button class="lego-button lego-button-outline">
-          Read Whitepaper
+          Read opening dialogue
+        </button>
+        <button class="lego-button lego-button-outline">
+          Read second dialogue
         </button>
       </div>
     </div>

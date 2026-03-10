@@ -20,8 +20,11 @@
         <HeroModule />
         <div class="lego-module col-span-12 md:col-span-4 flex flex-col items-start justify-center border-l-2 border-l-neon bg-gradient-to-br from-pine/10 to-transparent">
           <div class="text-xs font-mono text-neon mb-2 tracking-widest uppercase">Network Status</div>
-          <div class="text-3xl font-light mb-1 text-primary">GAIA_01</div>
-          <div class="text-sm text-secondary">Primary Node Active</div>
+          <div class="text-3xl font-light mb-1 text-primary">Heli Clock</div>
+          <div class="text-sm text-secondary">Digital Solar Time</div>
+          <div class="bento-grid">
+            <heli-clock birth-orbital="45"></heli-clock>
+          </div>
         </div>
       </div>
     </section>
@@ -46,12 +49,12 @@
       <div class="hop-grid w-full max-w-7xl mx-auto">
         <BeeBeePrompts />
         <div class="lego-module col-span-12 md:col-span-6 flex flex-col justify-center items-start bg-gradient-to-r from-pine/10 to-transparent border-none shadow-none">
-          <h2 class="text-4xl md:text-5xl font-light mb-6 text-primary tracking-tight">Join the <br/><span class="font-bold">Consilience.</span></h2>
+          <h2 class="text-4xl md:text-5xl font-light mb-6 text-primary tracking-tight">Join the <br/><span class="font-bold">Consilience Weave.</span></h2>
           <p class="text-secondary text-lg mb-8 max-w-md">
             Secure your node in the biological navigation system and begin resonating value.
           </p>
           <button class="lego-button">
-            Initialize Node
+            Download
           </button>
         </div>
       </div>
@@ -166,3 +169,15 @@ const bentoItems = [
   }
 ]
 </script>
+
+<style scoped>
+
+.bento-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 10vw;
+  height: 10vh;
+}
+
+</style>

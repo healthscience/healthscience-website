@@ -2033,7 +2033,7 @@ const _FwaYrbGBqDqQYql9LPsL93yAWLekRevevwW72YgICA = (function(nitro) {
 
 const rootDir = "/var/www/html/hoprotocol/code/healthscience-website";
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"description","content":"The scientific authority for the Health Oracle Protocol (HOP)."}],"link":[],"style":[],"script":[],"noscript":[],"title":"healthscience.network | Gaia Intelligences Shape Health"};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"description","content":"The scientific authority for the Health Oracle Protocol (HOP)."}],"link":[],"style":[],"script":[{"src":"/js/heli-clock.js"}],"noscript":[],"title":"healthscience.network | Gaia Intelligences Shape Health"};
 
 const appRootTag = "div";
 

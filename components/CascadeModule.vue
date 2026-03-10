@@ -27,26 +27,42 @@
     <!-- Detail Section -->
     <Transition
       enter-active-class="transition duration-500 ease-out"
-      enter-from-class="opacity-0 translate-y-4"
-      enter-to-class="opacity-100 translate-y-0"
+      enter-from-class="transform translate-y-4 opacity-0"
+      enter-to-class="transform translate-y-0 opacity-100"
       leave-active-class="transition duration-300 ease-in"
-      leave-from-class="opacity-100 translate-y-0"
-      leave-to-class="opacity-0 translate-y-4"
+      leave-from-class="transform translate-y-0 opacity-100"
+      leave-to-class="transform translate-y-4 opacity-0"
       mode="out-in"
     >
-      <div :key="selectedIndex" class="mt-12 grid grid-cols-1 md:grid-cols-5 gap-8 items-start border border-pine/20 rounded-2xl p-8 bg-module/50 backdrop-blur-sm">
-        <div class="md:col-span-4 aspect-video bg-pine/10 rounded-xl overflow-hidden border border-pine/20 relative group">
-          <div class="absolute inset-0 flex items-center justify-center text-pine/40">
-            <span v-if="!cascade[selectedIndex].media">Media Placeholder for {{ cascade[selectedIndex].title }}</span>
-            <img v-else :src="cascade[selectedIndex].media" :alt="cascade[selectedIndex].title" class="w-full h-full object-cover" />
+      <div :key="selectedIndex" class="mt-16 p-8 border border-pine/20 bg-module/30 backdrop-blur-sm rounded-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h4 class="text-2xl font-serif text-primary mb-6">{{ cascade[selectedIndex].title }} Details</h4>
+            <div class="prose prose-moss max-w-none">
+              <p class="text-secondary font-mono leading-relaxed mb-6">
+                {{ cascade[selectedIndex].commentary }}
+              </p>
+              <ul class="space-y-3">
+                <li v-for="spec in cascade[selectedIndex].specs" :key="spec" class="flex items-center text-sm font-mono text-neon/80">
+                  <UIcon name="i-heroicons-chevron-right" class="mr-2 w-4 h-4" />
+                  {{ spec }}
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="md:col-span-1 space-y-4">
-          <div class="text-xs text-neon font-mono uppercase tracking-widest">Commentary</div>
-          <h4 class="text-lg text-primary font-medium">{{ cascade[selectedIndex].title }}</h4>
-          <p class="text-sm text-secondary leading-relaxed">
-            {{ cascade[selectedIndex].commentary }}
-          </p>
+          <div class="relative aspect-video bg-black/50 border border-pine/20 rounded-xl overflow-hidden group">
+            <div v-if="cascade[selectedIndex].media" class="w-full h-full">
+              <img :src="cascade[selectedIndex].media" :alt="cascade[selectedIndex].title" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity" />
+            </div>
+            <div v-else class="w-full h-full flex items-center justify-center">
+              <!-- Placeholder for video/media -->
+              <div class="text-secondary font-mono text-xs flex flex-col items-center">
+                <UIcon name="i-heroicons-play-circle" class="w-16 h-16 mb-4 text-neon animate-pulse" />
+                [ MEDIA STREAM: {{ cascade[selectedIndex].title }} ]
+              </div>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
+          </div>
         </div>
       </div>
     </Transition>
@@ -64,28 +80,32 @@ const cascade = [
     title: 'Swim for Longevity',
     description: 'How to achieve resonancePulse with metabolism cell to bioregion.',
     commentary: 'This module demonstrates the synchronization of individual metabolic rhythms with larger bioregional cycles, creating a feedback loop of health and sustainability.',
-    media: null
+    media: null,
+    specs: ['Metabolic Sync', 'Bioregional Mapping', 'Resonance Pulse']
   },
   {
     level: 'DEMO_02',
     title: 'Heart emulation',
     description: 'How from humble geometry beginnings the network learns how a heart works.',
     commentary: 'By mapping geometric primitives to biological functions, we can simulate complex organ behavior and understand the underlying principles of life-support systems.',
-    media: null
+    media: null,
+    specs: ['Geometric Primitives', 'Biological Mapping', 'Organ Simulation']
   },
   {
     level: 'DEMO_03',
     title: 'River flows in a bioregion',
     description: 'Trace a river from source to sea and add data on waterflow to rainfall.',
     commentary: 'Visualizing the hydrological cycle within a specific bioregion allows us to monitor water health and predict the impact of environmental changes on local ecosystems.',
-    media: null
+    media: null,
+    specs: ['Hydrological Cycle', 'Water Health Monitoring', 'Ecosystem Prediction']
   },
   {
     level: 'DEMO_04',
     title: 'Daisy world peer to peer',
     description: 'James Lovelock original daisy world help expliain his Gaia Hypothesis.  Emulate the earths and suns resonancePulse.',
     commentary: 'A peer-to-peer implementation of the Daisyworld model, illustrating how self-regulating systems emerge from simple interactions between life and its environment.',
-    media: null
+    media: null,
+    specs: ['Gaia Hypothesis', 'Self-Regulating Systems', 'P2P Implementation']
   }
 ]
 </script>

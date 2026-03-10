@@ -11,6 +11,9 @@ export default defineNuxtConfig({
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'The scientific authority for the Health Oracle Protocol (HOP).' }
       ],
+      script: [
+        { src: '/js/heli-clock.js' }
+      ]
     }
   },
 
@@ -33,5 +36,9 @@ export default defineNuxtConfig({
   typescript: {
     shim: false,
     typeCheck: false
+  },
+
+  experimental: {
+    treeshakeClientOnly: true
   }
 })
