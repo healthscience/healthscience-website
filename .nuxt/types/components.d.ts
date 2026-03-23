@@ -24,6 +24,7 @@ interface _GlobalComponents {
   VisionModule: typeof import("../../components/VisionModule.vue")['default']
   RoadmapVersionVision: typeof import("../../components/roadmap/versionVision.vue")['default']
   TechnicalGeometryPlayground: typeof import("../../components/technical/geometryPlayground.vue")['default']
+  TechnicalModularMap: typeof import("../../components/technical/modularMap.vue")['default']
   TechnicalOntheFly: typeof import("../../components/technical/ontheFly.vue")['default']
   TechnicalPluginHOP: typeof import("../../components/technical/pluginHOP.vue")['default']
   TechnicalResonAgentMaths: typeof import("../../components/technical/resonAgentMaths.vue")['default']
@@ -61,6 +62,7 @@ interface _GlobalComponents {
   LazyVisionModule: LazyComponent<typeof import("../../components/VisionModule.vue")['default']>
   LazyRoadmapVersionVision: LazyComponent<typeof import("../../components/roadmap/versionVision.vue")['default']>
   LazyTechnicalGeometryPlayground: LazyComponent<typeof import("../../components/technical/geometryPlayground.vue")['default']>
+  LazyTechnicalModularMap: LazyComponent<typeof import("../../components/technical/modularMap.vue")['default']>
   LazyTechnicalOntheFly: LazyComponent<typeof import("../../components/technical/ontheFly.vue")['default']>
   LazyTechnicalPluginHOP: LazyComponent<typeof import("../../components/technical/pluginHOP.vue")['default']>
   LazyTechnicalResonAgentMaths: LazyComponent<typeof import("../../components/technical/resonAgentMaths.vue")['default']>
