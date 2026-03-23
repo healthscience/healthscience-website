@@ -15,11 +15,18 @@ type LazyComponent<T> = DefineComponent<HydrationStrategies, {}, {}, {}, {}, {},
 
 interface _GlobalComponents {
   BeeBeePrompts: typeof import("../../components/BeeBeePrompts.vue")['default']
+  BorealComputation: typeof import("../../components/BorealComputation.vue")['default']
   CallToParticipate: typeof import("../../components/CallToParticipate.vue")['default']
   CascadeModule: typeof import("../../components/CascadeModule.vue")['default']
+  ContributePeers: typeof import("../../components/ContributePeers.vue")['default']
   HeroModule: typeof import("../../components/HeroModule.vue")['default']
   SpiralBackground: typeof import("../../components/SpiralBackground.vue")['default']
   VisionModule: typeof import("../../components/VisionModule.vue")['default']
+  RoadmapVersionVision: typeof import("../../components/roadmap/versionVision.vue")['default']
+  TechnicalGeometryPlayground: typeof import("../../components/technical/geometryPlayground.vue")['default']
+  TechnicalOntheFly: typeof import("../../components/technical/ontheFly.vue")['default']
+  TechnicalPluginHOP: typeof import("../../components/technical/pluginHOP.vue")['default']
+  TechnicalResonAgentMaths: typeof import("../../components/technical/resonAgentMaths.vue")['default']
   NuxtWelcome: typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']
   NuxtLayout: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
   NuxtErrorBoundary: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -45,11 +52,18 @@ interface _GlobalComponents {
   Body: typeof import("../../node_modules/nuxt/dist/head/runtime/components")['Body']
   NuxtIsland: typeof import("../../node_modules/nuxt/dist/app/components/nuxt-island")['default']
   LazyBeeBeePrompts: LazyComponent<typeof import("../../components/BeeBeePrompts.vue")['default']>
+  LazyBorealComputation: LazyComponent<typeof import("../../components/BorealComputation.vue")['default']>
   LazyCallToParticipate: LazyComponent<typeof import("../../components/CallToParticipate.vue")['default']>
   LazyCascadeModule: LazyComponent<typeof import("../../components/CascadeModule.vue")['default']>
+  LazyContributePeers: LazyComponent<typeof import("../../components/ContributePeers.vue")['default']>
   LazyHeroModule: LazyComponent<typeof import("../../components/HeroModule.vue")['default']>
   LazySpiralBackground: LazyComponent<typeof import("../../components/SpiralBackground.vue")['default']>
   LazyVisionModule: LazyComponent<typeof import("../../components/VisionModule.vue")['default']>
+  LazyRoadmapVersionVision: LazyComponent<typeof import("../../components/roadmap/versionVision.vue")['default']>
+  LazyTechnicalGeometryPlayground: LazyComponent<typeof import("../../components/technical/geometryPlayground.vue")['default']>
+  LazyTechnicalOntheFly: LazyComponent<typeof import("../../components/technical/ontheFly.vue")['default']>
+  LazyTechnicalPluginHOP: LazyComponent<typeof import("../../components/technical/pluginHOP.vue")['default']>
+  LazyTechnicalResonAgentMaths: LazyComponent<typeof import("../../components/technical/resonAgentMaths.vue")['default']>
   LazyNuxtWelcome: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
   LazyNuxtLayout: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
   LazyNuxtErrorBoundary: LazyComponent<typeof import("../../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>

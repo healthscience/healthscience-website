@@ -15,11 +15,18 @@ type LazyComponent<T> = DefineComponent<HydrationStrategies, {}, {}, {}, {}, {},
 
 
 export const BeeBeePrompts: typeof import("../components/BeeBeePrompts.vue")['default']
+export const BorealComputation: typeof import("../components/BorealComputation.vue")['default']
 export const CallToParticipate: typeof import("../components/CallToParticipate.vue")['default']
 export const CascadeModule: typeof import("../components/CascadeModule.vue")['default']
+export const ContributePeers: typeof import("../components/ContributePeers.vue")['default']
 export const HeroModule: typeof import("../components/HeroModule.vue")['default']
 export const SpiralBackground: typeof import("../components/SpiralBackground.vue")['default']
 export const VisionModule: typeof import("../components/VisionModule.vue")['default']
+export const RoadmapVersionVision: typeof import("../components/roadmap/versionVision.vue")['default']
+export const TechnicalGeometryPlayground: typeof import("../components/technical/geometryPlayground.vue")['default']
+export const TechnicalOntheFly: typeof import("../components/technical/ontheFly.vue")['default']
+export const TechnicalPluginHOP: typeof import("../components/technical/pluginHOP.vue")['default']
+export const TechnicalResonAgentMaths: typeof import("../components/technical/resonAgentMaths.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -45,11 +52,18 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const LazyBeeBeePrompts: LazyComponent<typeof import("../components/BeeBeePrompts.vue")['default']>
+export const LazyBorealComputation: LazyComponent<typeof import("../components/BorealComputation.vue")['default']>
 export const LazyCallToParticipate: LazyComponent<typeof import("../components/CallToParticipate.vue")['default']>
 export const LazyCascadeModule: LazyComponent<typeof import("../components/CascadeModule.vue")['default']>
+export const LazyContributePeers: LazyComponent<typeof import("../components/ContributePeers.vue")['default']>
 export const LazyHeroModule: LazyComponent<typeof import("../components/HeroModule.vue")['default']>
 export const LazySpiralBackground: LazyComponent<typeof import("../components/SpiralBackground.vue")['default']>
 export const LazyVisionModule: LazyComponent<typeof import("../components/VisionModule.vue")['default']>
+export const LazyRoadmapVersionVision: LazyComponent<typeof import("../components/roadmap/versionVision.vue")['default']>
+export const LazyTechnicalGeometryPlayground: LazyComponent<typeof import("../components/technical/geometryPlayground.vue")['default']>
+export const LazyTechnicalOntheFly: LazyComponent<typeof import("../components/technical/ontheFly.vue")['default']>
+export const LazyTechnicalPluginHOP: LazyComponent<typeof import("../components/technical/pluginHOP.vue")['default']>
+export const LazyTechnicalResonAgentMaths: LazyComponent<typeof import("../components/technical/resonAgentMaths.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
 export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>

@@ -1,5 +1,108 @@
 <template>
   <div class="snap-container relative bg-transparent">
+    <!-- Plugin Page Overlay -->
+    <Transition
+      enter-active-class="transition duration-500 ease-out"
+      enter-from-class="opacity-0 translate-y-full"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition duration-300 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 translate-y-full"
+    >
+      <div v-if="showPluginPage" class="fixed inset-0 z-[100] bg-forest overflow-y-auto">
+        <button 
+          @click="showPluginPage = false"
+          class="fixed top-8 right-8 z-[110] p-4 bg-neon text-forest rounded-full font-mono text-sm hover:scale-110 transition-transform shadow-2xl"
+        >
+          CLOSE [ESC]
+        </button>
+        <PluginHOP 
+          @open-reson="showResonAgentPage = true; showPluginPage = false" 
+          @open-onthefly="showOnTheFlyPage = true; showPluginPage = false"
+        />
+      </div>
+    </Transition>
+
+    <!-- ResonAgent Page Overlay -->
+    <Transition
+      enter-active-class="transition duration-500 ease-out"
+      enter-from-class="opacity-0 translate-y-full"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition duration-300 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 translate-y-full"
+    >
+      <div v-if="showResonAgentPage" class="fixed inset-0 z-[100] bg-forest overflow-y-auto">
+        <button 
+          @click="showResonAgentPage = false"
+          class="fixed top-8 right-8 z-[110] p-4 bg-neon text-forest rounded-full font-mono text-sm hover:scale-110 transition-transform shadow-2xl"
+        >
+          CLOSE [ESC]
+        </button>
+        <ResonAgentMaths @open-playground="showPlaygroundPage = true; showResonAgentPage = false" />
+      </div>
+    </Transition>
+
+    <!-- Geometry Playground Overlay -->
+    <Transition
+      enter-active-class="transition duration-500 ease-out"
+      enter-from-class="opacity-0 translate-y-full"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition duration-300 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 translate-y-full"
+    >
+      <div v-if="showPlaygroundPage" class="fixed inset-0 z-[100] bg-forest overflow-y-auto">
+        <button 
+          @click="showPlaygroundPage = false"
+          class="fixed top-8 right-8 z-[110] p-4 bg-neon text-forest rounded-full font-mono text-sm hover:scale-110 transition-transform shadow-2xl"
+        >
+          CLOSE [ESC]
+        </button>
+        <GeometryPlayground />
+      </div>
+    </Transition>
+
+    <!-- OnTheFly Page Overlay -->
+    <Transition
+      enter-active-class="transition duration-500 ease-out"
+      enter-from-class="opacity-0 translate-y-full"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition duration-300 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 translate-y-full"
+    >
+      <div v-if="showOnTheFlyPage" class="fixed inset-0 z-[100] bg-forest overflow-y-auto">
+        <button 
+          @click="showOnTheFlyPage = false"
+          class="fixed top-8 right-8 z-[110] p-4 bg-neon text-forest rounded-full font-mono text-sm hover:scale-110 transition-transform shadow-2xl"
+        >
+          CLOSE [ESC]
+        </button>
+        <OnTheFly />
+      </div>
+    </Transition>
+
+    <!-- Roadmap Page Overlay -->
+    <Transition
+      enter-active-class="transition duration-500 ease-out"
+      enter-from-class="opacity-0 translate-y-full"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition duration-300 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 translate-y-full"
+    >
+      <div v-if="showRoadmap" class="fixed inset-0 z-[100] bg-forest overflow-y-auto">
+        <button 
+          @click="showRoadmap = false"
+          class="fixed top-8 right-8 z-[110] p-4 bg-neon text-forest rounded-full font-mono text-sm hover:scale-110 transition-transform shadow-2xl"
+        >
+          CLOSE [ESC]
+        </button>
+        <VersionVision />
+      </div>
+    </Transition>
+
     <SpiralBackground />
     
     <!-- Theme Toggle -->
@@ -15,14 +118,18 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="snap-section p-4 md:p-12 relative z-10 flex items-center bg-forest/40 border-b border-pine/20">
+    <section class="snap-section p-4 md:p-12 relative z-10 bg-forest/40 border-b border-pine/20">
       <div class="hop-grid w-full max-w-7xl mx-auto">
         <HeroModule />
-        <div class="lego-module col-span-12 md:col-span-4 flex flex-col items-start justify-center border-l-2 border-l-neon bg-gradient-to-br from-pine/10 to-transparent">
+        <div class="lego-module col-span-12 md:col-span-4 flex flex-col items-center justify-center border-l-2 border-l-neon bg-gradient-to-br from-pine/10 to-transparent text-center">
+          <div class="inline-block px-3 py-1 border border-pine/50 rounded-full text-xs font-mono text-pine mb-6 bg-pine/5">
+            HOP v1.0 experimental
+          </div>
+          <div class="text-5xl md:text-2xl font-light mb-6 leading-tight text-primary tracking-tight">The Health Oracle Protocol (HOP)</div>
           <div class="text-xs font-mono text-neon mb-2 tracking-widest uppercase">Network Status</div>
           <div class="text-3xl font-light mb-1 text-primary">Heli Clock</div>
-          <div class="text-sm text-secondary">Digital Solar Time</div>
-          <div class="bento-grid">
+          <div class="text-sm text-secondary mb-4">Digital Solar Time</div>
+          <div class="bento-grid flex justify-center">
             <heli-clock birth-orbital="45"></heli-clock>
           </div>
         </div>
@@ -30,8 +137,14 @@
     </section>
 
     <!-- Call to Participate & Demos Section -->
-    <section class="snap-section p-4 md:p-12 relative z-10 flex items-center bg-forest/40 border-y border-pine/20">
-      <div class="hop-grid w-full max-w-7xl mx-auto">
+    <section class="snap-section p-4 md:p-12 relative z-10 flex items-center bg-forest/40 border-y border-pine/20 overflow-hidden">
+      <!-- Coming Soon Watermark -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 opacity-20">
+        <span class="text-8xl md:text-[14rem] font-black text-secondary uppercase tracking-[0.1em] text-center leading-none">
+          Coming<br />Soon
+        </span>
+      </div>
+      <div class="hop-grid w-full max-w-7xl mx-auto relative z-10">
         <CallToParticipate />
         <div class="lego-module col-span-12 md:col-span-4 flex flex-col items-start justify-center bg-transparent border border-pine/30">
           <div class="text-xs font-mono text-secondary/70 mb-2 tracking-widest uppercase">Orrery Status</div>
@@ -44,35 +157,24 @@
       </div>
     </section>
 
-    <!-- Interaction Section  beebee live -->
-    <section class="snap-section p-4 md:p-12 relative z-10 flex items-center bg-forest/40 border-t border-pine/20">
-      <div class="hop-grid w-full max-w-7xl mx-auto">
-        <BeeBeePrompts />
-        <div class="lego-module col-span-12 md:col-span-6 flex flex-col justify-center items-start bg-gradient-to-r from-pine/10 to-transparent border-none shadow-none">
-          <h2 class="text-4xl md:text-5xl font-light mb-6 text-primary tracking-tight">Join the <br/><span class="font-bold">Consilience Weave.</span></h2>
-          <p class="text-secondary text-lg mb-8 max-w-md">
-            Secure your node in the biological navigation system and begin resonating value.
-          </p>
-          <button class="lego-button">
-            Download
-          </button>
-        </div>
-      </div>
-    </section>
-
     <!-- Architecture Section -->
-    <section class="snap-section p-4 md:p-12 relative z-10 flex items-center">
+    <section class="snap-section p-4 md:p-12 relative z-10">
       <div class="hop-grid w-full max-w-7xl mx-auto">
         <div class="lego-module col-span-12 md:col-span-8 bg-gradient-to-b from-pine/5 to-transparent">
           <div class="flex items-center gap-4 mb-8">
             <div class="h-px flex-1 bg-pine/30"></div>
-            <h3 class="text-neon font-mono text-sm tracking-widest uppercase">TECHNICAL - HOP // BENTO_BOX_DS</h3>
+            <h3 class="text-neon font-mono text-sm tracking-widest uppercase">HEALTH ORACLE PROTOCOL - PeerStack</h3>
             <div class="h-px flex-1 bg-pine/30"></div>
           </div>
-          
-          <p class="text-secondary leading-relaxed mb-10 text-lg font-light">
-            HOP 
-          </p>
+
+          <div class="mb-12">
+            <p class="text-secondary/80 text-lg mb-8 font-light italic">
+              <span @click="showRoadmap = true" class="text-neon cursor-pointer hover:underline font-mono text-sm uppercase tracking-widest mr-2">PROTOCOL road map.</span>
+              The protocol modules & mathematics that empower the navigation.
+            </p>
+            
+
+          </div>
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div 
@@ -102,9 +204,31 @@
                 <div class="w-1 h-6 bg-neon"></div>
                 <h4 class="text-xl text-primary font-medium">{{ bentoItems[selectedBentoIndex].title }}</h4>
               </div>
-              <p class="text-secondary leading-relaxed">
-                {{ bentoItems[selectedBentoIndex].details }}
-              </p>
+
+              <!-- Conditional Rendering for 'PROTOCOL' / 'View all' -->
+              <div v-if="bentoItems[selectedBentoIndex].tag === 'PROTOCOL'" class="space-y-6">
+                <div v-for="(item, idx) in allBentoDetails" :key="idx" class="border-l border-neon/20 pl-4">
+                  <div class="text-sm font-bold text-primary/80 mb-1">{{ item.title }}</div>
+                  <p class="text-secondary leading-relaxed text-sm">
+                    {{ item.details }}
+                  </p>
+                </div>
+                <div class="mt-6 pt-6 border-t border-neon/10">
+                  <p class="text-secondary leading-relaxed italic mb-4">
+                    {{ bentoItems[selectedBentoIndex].details }}
+                  </p>
+                  <button @click="window.open('https://beebeehop.any.org/a-tiny-hop-to-gaia-intelligence', '_blank')" class="px-4 py-2 border border-neon/30 text-neon text-[10px] font-mono uppercase tracking-widest hover:bg-neon/10 transition-all rounded">
+                    Open Documentation
+                  </button>
+                </div>
+              </div>
+
+              <!-- Standard Rendering -->
+              <div v-else>
+                <p class="text-secondary leading-relaxed">
+                  {{ bentoItems[selectedBentoIndex].details }}
+                </p>
+              </div>
             </div>
           </Transition>
         </div>
@@ -112,13 +236,104 @@
       </div>
     </section>
 
+    <!-- Strategic Plugins Section -->
+    <section class="snap-section p-4 md:p-12 relative z-10">
+      <div class="hop-grid w-full max-w-7xl mx-auto">
+        <div class="lego-module col-span-12 md:col-span-8 bg-gradient-to-b from-pine/5 to-transparent">
+          <div class="flex items-center gap-4 mb-8">
+            <div class="h-px flex-1 bg-pine/30"></div>
+            <h3 class="text-neon font-mono text-sm tracking-widest uppercase">STRATEGIC PLUGINS: AUTHORING THE WORLDS</h3>
+            <div class="h-px flex-1 bg-pine/30"></div>
+          </div>
+
+          <div class="mb-12">
+            <p class="text-secondary/80 text-lg mb-8 font-light italic">
+              Each project doesn't just "send data"—it becomes an Agent that occupies the HOP skeleton.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 border border-pine/20 rounded-lg bg-pine/5 hover:border-neon/30 transition-all">
+              <h4 class="text-primary text-lg mb-3 font-medium">Capacity Docs</h4>
+              <p class="text-secondary/60 text-sm leading-relaxed">How to write to the "Battery" of a Peer (Biological reserves).</p>
+            </div>
+            <div class="p-6 border border-pine/20 rounded-lg bg-pine/5 hover:border-neon/30 transition-all">
+              <h4 class="text-primary text-lg mb-3 font-medium">Context Docs</h4>
+              <p class="text-secondary/60 text-sm leading-relaxed">How to query the Bioregion (Soil, Sunlight, Earth-coordinates).</p>
+            </div>
+            <div class="p-6 border border-pine/20 rounded-lg bg-pine/5 hover:border-neon/30 transition-all">
+              <h4 class="text-primary text-lg mb-3 font-medium">Coherence Docs</h4>
+              <p class="text-secondary/60 text-sm leading-relaxed">How to calculate the "Match" (The math of resonance between Peer and Gaia).</p>
+            </div>
+          </div>
+
+          <div class="mt-12 p-6 border border-neon/20 rounded-xl bg-forest/10 backdrop-blur-sm">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-1 h-6 bg-neon"></div>
+              <h4 class="text-xl text-primary font-medium">The "Besearch" Cycle</h4>
+            </div>
+            <p class="text-secondary leading-relaxed italic">
+              "Bring your drone map. Bring your soil DNA data. Use our Skeleton to build a 'Soil-to-Stomach' World. Ask our TINY Agents for existing knowledge. Visualize the emulation. Pulse the Coherence to the network."
+            </p>
+            <!-- Technical Navigation Buttons -->
+            <div class="mt-8 flex flex-wrap gap-4">
+              <button @click="showPluginPage = true" class="px-4 py-2 border border-neon/30 text-neon text-[10px] font-mono uppercase tracking-widest hover:bg-neon/10 transition-all rounded">
+                Plugin HOP
+              </button>
+              <button @click="showResonAgentPage = true" class="px-4 py-2 border border-neon/30 text-neon text-[10px] font-mono uppercase tracking-widest hover:bg-neon/10 transition-all rounded">
+                ResonAgent Maths
+              </button>
+              <button @click="showOnTheFlyPage = true" class="px-4 py-2 border border-neon/30 text-neon text-[10px] font-mono uppercase tracking-widest hover:bg-neon/10 transition-all rounded">
+                On The Fly
+              </button>
+              <button @click="showPlaygroundPage = true" class="px-4 py-2 border border-neon/30 text-neon text-[10px] font-mono uppercase tracking-widest hover:bg-neon/10 transition-all rounded">
+                Geometry Playground
+              </button>
+            </div>
+          </div>
+        </div>
+        <ContributePeers @open-docs="showPluginPage = true" />
+      </div>
+    </section>
+
+    <!-- Interaction Section  beebee live -->
+    <BorealComputation />
+
+    <section class="snap-section p-4 md:p-12 relative z-10 bg-forest/40 border-t border-pine/20">
+      <div class="hop-grid w-full max-w-7xl mx-auto">
+        <BeeBeePrompts />
+        <div class="lego-module col-span-12 md:col-span-6 flex flex-col justify-center items-start bg-gradient-to-r from-pine/10 to-transparent border-none shadow-none">
+          <h2 class="text-4xl md:text-5xl font-light mb-6 text-primary tracking-tight">Join the <br/><span class="font-bold">Consilience Weave.</span></h2>
+          <p class="text-secondary text-lg mb-8 max-w-md">
+            Secure your node in the biological navigation system and begin resonating value.
+          </p>
+          <button class="lego-button">
+            Download
+          </button>
+        </div>
+      </div>
+    </section>
+
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import BorealComputation from './components/BorealComputation.vue'
+import ContributePeers from './components/ContributePeers.vue'
+import PluginHOP from './components/technical/pluginHOP.vue'
+import ResonAgentMaths from './components/technical/resonAgentMaths.vue'
+import GeometryPlayground from './components/technical/geometryPlayground.vue'
+import OnTheFly from './components/technical/ontheFly.vue'
+import VersionVision from './components/roadmap/versionVision.vue'
 
 const colorMode = useColorMode()
+
+const showPluginPage = ref(false)
+const showResonAgentPage = ref(false)
+const showPlaygroundPage = ref(false)
+const showOnTheFlyPage = ref(false)
+const showRoadmap = ref(false)
 
 const toggleTheme = () => {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
@@ -126,41 +341,47 @@ const toggleTheme = () => {
 
 const selectedBentoIndex = ref(null)
 
+const allBentoDetails = computed(() => {
+  return bentoItems
+    .filter(item => item.tag !== 'PROTOCOL')
+    .map(item => ({ title: item.title, details: item.details }))
+})
+
 const bentoItems = [
   {
     tag: 'DIRECT',
     title: 'BentoBoxDS & BeeBee',
-    details: 'The core data structure and interface for the Health Science Network, enabling seamless interaction with biological data.'
+    details: 'The Atomic Interface. BeeBee is the lightweight message-bus that binds the BentoBox visual state to the underlying hardware sensors. It ensures the "View" is never decoupled from the "Vitals.'
   },
   {
     tag: 'WARM RELATE',
-    title: 'Search & Simulation: Besearch & Emulation',
-    details: 'Advanced search capabilities combined with biological emulations to discover and validate health insights.'
+    title: 'Besearch science & Emulations',
+    details: 'Moving beyond "Search" to Resonance Mapping. Emulation is the process of running a local "What If" scenario—sensing a biological state before committing the body to it.'
   },
   {
     tag: 'LEGO KNOWLEDGE',
-    title: 'The Library: Contracts & Composition',
-    details: 'A modular repository of smart contracts and composable biological logic for building complex health protocols.'
+    title: 'The Library',
+    details: 'Composable Biological Logic. This is a repository of signed scripts (Reference & Module Contracts) that Peers can "Snap" into their stack. It treats knowledge as modular, executable code that form a HOPquery that SafeFlow-ECS systems utilise.'
   },
   {
     tag: 'HEART',
-    title: 'The Metabolism: safeFLOW-ecs & Compute',
-    details: 'The engine of the network, managing data flow and computational resources with biological integrity.'
+    title: 'SafeFlow-ECS',
+    details: 'The State Engine. Using an Entity Component System (ECS) to manage biological entities. It handles the high-frequency "Pulse" of the Peer, calculating transitions in the "Energy Budget."'
   },
   {
     tag: 'TINY_REASONERS',
-    title: 'The Synthesis: Consilience Weave & Coherence Ledger',
-    details: 'Synthesizing diverse data streams into a unified coherence ledger for planetary-scale health alignment.'
+    title: 'Consilience & Coherence',
+    details: 'The Synthesis Layer. Tiny Reasoners are local agents that filter noise and extract "Cues" from raw data, feeding them into the Coherence Ledger for verification then performing a consilience weave.'
   },
   {
     tag: 'P2P_AGGREGATION',
-    title: 'The Fabric: NEAT & Warm Networking',
-    details: 'A decentralized networking layer that facilitates peer-to-peer data aggregation and warm relationship mapping.'
+    title: 'NEAT-HOP & Peer to Peer',
+    details: 'NEAT evolutionary & decentralized machine learning (DML) learning allows Peers to establish coherence across the network by establishing trust in data through "immune system" like sampling.'
   },
   {
     tag: 'GUIDE BOOK',
-    title: 'The Value Layer: Cue Currency & RGB',
-    details: 'The economic layer of the protocol, utilizing Cue Currency and RGB for sovereign value exchange.'
+    title: 'Cue Currency & RGB',
+    details: 'Cue currency is a unit of computational knowledge. The Coherence Ledger combined with parts of the RGB (beyond blockchain - client side verification) to issue "Cues." A guidebook to the best knowledge, that acts as directed.'
   },
   {
     tag: 'PROTOCOL',

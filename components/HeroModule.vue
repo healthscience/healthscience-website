@@ -1,24 +1,25 @@
 <template>
   <div class="lego-module col-span-12 md:col-span-8 h-[60vh] flex flex-col justify-center relative overflow-hidden bg-transparent border-none shadow-none">
     <div class="z-10 relative max-w-2xl">
-      <div class="inline-block px-3 py-1 border border-pine/50 rounded-full text-xs font-mono text-pine mb-6 bg-pine/5">
-        HOP PROTOCOL v1.0
-      </div>
-      <h1 class="text-5xl md:text-7xl font-light mb-6 leading-tight text-primary tracking-tight">
+      <h1 class="text-3xl md:text-4xl font-light mb-6 leading-tight text-primary tracking-tight">
         Gaia intelligences <br />
         <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-hero-from to-hero-to">shape health.</span>
       </h1>
       <p class="text-lg text-secondary mb-10 font-light leading-relaxed">
-        A Biological Navigation System for Sovereign Health. Built on mathematics, not middlemen.
+        HOP - The Infrastructure for Science’s Living Roots.
+
+        At the dawn of super-intelligence, the Health Oracle Protocol (HOP) provides the foundational physics for the living way. It is a Peer-to-Peer framework that treats biological signals as sovereign intelligence, guiding every cell toward measurable health.
+
+        In place of abstracted datasets, HOP establishes the Coherence Ledger and SafeFlow-ECS: a decentralized engine that anchors trust in the rhythmic reality of the cell, the Peer, and the bioregion. This is the Sovereign Skeleton—the high-resolution architecture that powers the PeerStack and enables a biological experience on the fly.
       </p>
       <div class="flex gap-4">
-        <button class="lego-button">
+        <button class="lego-button" @click="handleLink('#')">
           Download
         </button>
-        <button class="lego-button lego-button-outline">
+        <button class="lego-button lego-button-outline" @click="handleLink('https://beebeehop.any.org/a-tiny-hop-to-gaia-intelligence')">
           Read opening dialogue
         </button>
-        <button class="lego-button lego-button-outline">
+        <button class="lego-button lego-button-outline" @click="handleLink('https://beebeehop.any.org/another-tiny-hop-to-the-great-orbit')">
           Read second dialogue
         </button>
       </div>
@@ -61,6 +62,10 @@ const generateWave = (time) => {
   }
   
   return `M ${points.join(' L ')}`
+}
+
+const handleLink = (url) => {
+  window.open(url, '_blank')
 }
 
 const animate = (time) => {

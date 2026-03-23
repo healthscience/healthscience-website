@@ -49,6 +49,23 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.snap-container {
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.snap-section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* The Sleek Grid */
 .hop-grid {
   display: grid;
