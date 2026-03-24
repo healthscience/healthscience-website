@@ -1,1 +1,1 @@
-export { default } from "file:///var/www/html/hoprotocol/code/healthscience-website/node_modules/@nuxt/vite-builder/dist/vite-node-entry.mjs"
+export { default } from "file:///var/www/html/hoprotocol/code/healthscience-website/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"

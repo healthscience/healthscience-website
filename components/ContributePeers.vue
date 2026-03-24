@@ -1,5 +1,5 @@
 <template>
-  <div class="lego-module col-span-12 md:col-span-4 bg-forest/20 flex flex-col p-8 border-l border-pine/20">
+  <div class="lego-module col-span-12 bg-forest/20 flex flex-col p-8 border-t border-pine/20">
     <div class="mb-8">
       <h3 class="text-neon font-mono text-xs tracking-widest uppercase mb-4">The Universal Port</h3>
       <p class="text-primary text-lg font-medium leading-tight mb-4">
@@ -8,8 +8,8 @@
       </p>
     </div>
 
-    <div class="space-y-6 mb-8">
-      <div v-for="world in worlds" :key="world.title" class="group cursor-help">
+    <div class="flex flex-wrap gap-6 mb-8">
+      <div v-for="world in worlds" :key="world.title" class="group cursor-help flex-1 min-w-[200px]">
         <div class="flex items-center gap-3 mb-2">
           <div class="w-1 h-4 bg-pine/40 group-hover:bg-neon transition-colors"></div>
           <h4 class="text-primary font-mono text-sm uppercase tracking-wider">{{ world.title }}</h4>

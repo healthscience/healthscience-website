@@ -23,6 +23,7 @@ This plan outlines the migration of the "Strategic Plugins" section from [`app.v
   - `SideCarPanel.vue`: Module details, "Open in Playground" deep-links, and Supply Chain Manifests.
   - `CodeSnap.vue`: UI component for syntax-highlighted snippets.
   - `SupplyChainTile.vue`: UI component for bioregion source info.
+  - `BesearchOverlay.vue`: UI component for the visual sub-flow of the Besearch Pulse.
   - `GeometryPlayground.vue`: (Imported) The interactive sandbox.
 
 ## 3. Interaction & Logic Specification
@@ -38,6 +39,13 @@ The implementation will strictly follow these interaction rules:
 - **OnClick**: Expand the "Side-car" panel to show module details, `CodeSnap`, `SupplyChainTile`, and the "Test in Playground" link.
 - **OnDrag**: Implement a `saveLayout` function to persist node positions (simulating saving to local hyperbee).
 - **Playground Resonance Slider**: Sliding toward "High Coherence" stabilizes the Vagus-Strap pulse, makes the 3D heart beat rhythmically, and makes the Bioregion map glow green.
+
+### C. The Besearch Pulse (Execution Logic)
+The Besearch Pulse is the standard operational loop of a HOP Node, visualized via `BesearchOverlay.vue`.
+- **Stage 1: The Contextual Anchor (Origin)**: A pulse originates from the Master Key and HeliClock. (Coupling: HeliClock → SafeFlow-ECS).
+- **Stage 2: The Knowledge Grounding (Library)**: The pulse travels to the Library, changing its color to "Bone White" (Knowledge). (Coupling: Library → BeeBee LLM).
+- **Stage 3: The Evolutionary Search (Neat)**: The pulse scatters into a neural-network pattern at the NEAT-HOP node. (Coupling: NEAT-HOP → Immune-DML).
+- **Stage 4: The Decision Model (Final)**: The pulse reconvenes at the Coherence Ledger, emitting a final "Cyan Glow" (Truth). (Coupling: Emulation Engine → Coherence Ledger).
 
 ## 4. Module Data Definitions
 The following modules will be implemented as nodes in the map, categorized by their architectural layer.

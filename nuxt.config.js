@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  ssr: true,
+  ssr: false,
   
   app: {
     head: {
@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     }
   },
 
-  modules: ['@nuxtjs/color-mode'],
+  modules: ['@nuxtjs/color-mode', '@nuxt/icon'],
   colorMode: {
     classSuffix: '',
     preference: 'light', // default value of $colorMode.preference
@@ -40,5 +40,11 @@ export default defineNuxtConfig({
 
   experimental: {
     treeshakeClientOnly: true
+  },
+
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => tag === 'heli-clock'
+    }
   }
 })

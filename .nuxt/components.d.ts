@@ -1,18 +1,108 @@
 
-import type { DefineComponent, SlotsType } from 'vue'
-type IslandComponent<T> = DefineComponent<{}, {refresh: () => Promise<void>}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, SlotsType<{ fallback: { error: unknown } }>> & T
-
-type HydrationStrategies = {
-  hydrateOnVisible?: IntersectionObserverInit | true
-  hydrateOnIdle?: number | true
-  hydrateOnInteraction?: keyof HTMLElementEventMap | Array<keyof HTMLElementEventMap> | true
-  hydrateOnMediaQuery?: string
-  hydrateAfter?: number
-  hydrateWhen?: boolean
-  hydrateNever?: true
+interface _GlobalComponents {
+      'BeeBeePrompts': typeof import("../components/BeeBeePrompts.vue")['default']
+    'BorealComputation': typeof import("../components/BorealComputation.vue")['default']
+    'CallToParticipate': typeof import("../components/CallToParticipate.vue")['default']
+    'CascadeModule': typeof import("../components/CascadeModule.vue")['default']
+    'ContributePeers': typeof import("../components/ContributePeers.vue")['default']
+    'HeroModule': typeof import("../components/HeroModule.vue")['default']
+    'SpiralBackground': typeof import("../components/SpiralBackground.vue")['default']
+    'VisionModule': typeof import("../components/VisionModule.vue")['default']
+    'RoadmapVersionVision': typeof import("../components/roadmap/versionVision.vue")['default']
+    'TechnicalBaseNode': typeof import("../components/technical/BaseNode.vue")['default']
+    'TechnicalBesearchEdge': typeof import("../components/technical/BesearchEdge.vue")['default']
+    'TechnicalBesearchOverlay': typeof import("../components/technical/BesearchOverlay.vue")['default']
+    'TechnicalCodeSnap': typeof import("../components/technical/CodeSnap.vue")['default']
+    'TechnicalDocumentationPanel': typeof import("../components/technical/DocumentationPanel.vue")['default']
+    'TechnicalExpandableModule': typeof import("../components/technical/ExpandableModule.vue")['default']
+    'TechnicalFocusModeHUD': typeof import("../components/technical/FocusModeHUD.vue")['default']
+    'TechnicalSuperNode': typeof import("../components/technical/SuperNode.vue")['default']
+    'TechnicalSupplyChainTile': typeof import("../components/technical/SupplyChainTile.vue")['default']
+    'TechnicalGeometryPlayground': typeof import("../components/technical/geometryPlayground.vue")['default']
+    'TechnicalModularMap': typeof import("../components/technical/modularMap.vue")['default']
+    'TechnicalOntheFly': typeof import("../components/technical/ontheFly.vue")['default']
+    'TechnicalPluginHOP': typeof import("../components/technical/pluginHOP.vue")['default']
+    'TechnicalResonAgentMaths': typeof import("../components/technical/resonAgentMaths.vue")['default']
+    'NuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
+    'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
+    'NuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']
+    'ClientOnly': typeof import("../node_modules/nuxt/dist/app/components/client-only")['default']
+    'DevOnly': typeof import("../node_modules/nuxt/dist/app/components/dev-only")['default']
+    'ServerPlaceholder': typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']
+    'NuxtLink': typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']
+    'NuxtLoadingIndicator': typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
+    'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
+    'NuxtImg': typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']
+    'NuxtPicture': typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']
+    'ColorScheme': typeof import("../node_modules/@nuxtjs/color-mode/dist/runtime/component.vue")['default']
+    'NuxtPage': typeof import("../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']
+    'NoScript': typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']
+    'Link': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']
+    'Base': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Base']
+    'Title': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Title']
+    'Meta': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Meta']
+    'Style': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Style']
+    'Head': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Head']
+    'Html': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
+    'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
+      'LazyBeeBeePrompts': typeof import("../components/BeeBeePrompts.vue")['default']
+    'LazyBorealComputation': typeof import("../components/BorealComputation.vue")['default']
+    'LazyCallToParticipate': typeof import("../components/CallToParticipate.vue")['default']
+    'LazyCascadeModule': typeof import("../components/CascadeModule.vue")['default']
+    'LazyContributePeers': typeof import("../components/ContributePeers.vue")['default']
+    'LazyHeroModule': typeof import("../components/HeroModule.vue")['default']
+    'LazySpiralBackground': typeof import("../components/SpiralBackground.vue")['default']
+    'LazyVisionModule': typeof import("../components/VisionModule.vue")['default']
+    'LazyRoadmapVersionVision': typeof import("../components/roadmap/versionVision.vue")['default']
+    'LazyTechnicalBaseNode': typeof import("../components/technical/BaseNode.vue")['default']
+    'LazyTechnicalBesearchEdge': typeof import("../components/technical/BesearchEdge.vue")['default']
+    'LazyTechnicalBesearchOverlay': typeof import("../components/technical/BesearchOverlay.vue")['default']
+    'LazyTechnicalCodeSnap': typeof import("../components/technical/CodeSnap.vue")['default']
+    'LazyTechnicalDocumentationPanel': typeof import("../components/technical/DocumentationPanel.vue")['default']
+    'LazyTechnicalExpandableModule': typeof import("../components/technical/ExpandableModule.vue")['default']
+    'LazyTechnicalFocusModeHUD': typeof import("../components/technical/FocusModeHUD.vue")['default']
+    'LazyTechnicalSuperNode': typeof import("../components/technical/SuperNode.vue")['default']
+    'LazyTechnicalSupplyChainTile': typeof import("../components/technical/SupplyChainTile.vue")['default']
+    'LazyTechnicalGeometryPlayground': typeof import("../components/technical/geometryPlayground.vue")['default']
+    'LazyTechnicalModularMap': typeof import("../components/technical/modularMap.vue")['default']
+    'LazyTechnicalOntheFly': typeof import("../components/technical/ontheFly.vue")['default']
+    'LazyTechnicalPluginHOP': typeof import("../components/technical/pluginHOP.vue")['default']
+    'LazyTechnicalResonAgentMaths': typeof import("../components/technical/resonAgentMaths.vue")['default']
+    'LazyNuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
+    'LazyNuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
+    'LazyNuxtErrorBoundary': typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']
+    'LazyClientOnly': typeof import("../node_modules/nuxt/dist/app/components/client-only")['default']
+    'LazyDevOnly': typeof import("../node_modules/nuxt/dist/app/components/dev-only")['default']
+    'LazyServerPlaceholder': typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']
+    'LazyNuxtLink': typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']
+    'LazyNuxtLoadingIndicator': typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
+    'LazyNuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
+    'LazyNuxtImg': typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']
+    'LazyNuxtPicture': typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']
+    'LazyColorScheme': typeof import("../node_modules/@nuxtjs/color-mode/dist/runtime/component.vue")['default']
+    'LazyNuxtPage': typeof import("../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']
+    'LazyNoScript': typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']
+    'LazyLink': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']
+    'LazyBase': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Base']
+    'LazyTitle': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Title']
+    'LazyMeta': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Meta']
+    'LazyStyle': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Style']
+    'LazyHead': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Head']
+    'LazyHtml': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
+    'LazyBody': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 }
-type LazyComponent<T> = DefineComponent<HydrationStrategies, {}, {}, {}, {}, {}, {}, { hydrated: () => void }> & T
 
+declare module '@vue/runtime-core' {
+  export interface GlobalComponents extends _GlobalComponents { }
+}
+
+declare module '@vue/runtime-dom' {
+  export interface GlobalComponents extends _GlobalComponents { }
+}
+
+declare module 'vue' {
+  export interface GlobalComponents extends _GlobalComponents { }
+}
 
 export const BeeBeePrompts: typeof import("../components/BeeBeePrompts.vue")['default']
 export const BorealComputation: typeof import("../components/BorealComputation.vue")['default']
@@ -23,21 +113,29 @@ export const HeroModule: typeof import("../components/HeroModule.vue")['default'
 export const SpiralBackground: typeof import("../components/SpiralBackground.vue")['default']
 export const VisionModule: typeof import("../components/VisionModule.vue")['default']
 export const RoadmapVersionVision: typeof import("../components/roadmap/versionVision.vue")['default']
+export const TechnicalBaseNode: typeof import("../components/technical/BaseNode.vue")['default']
+export const TechnicalBesearchEdge: typeof import("../components/technical/BesearchEdge.vue")['default']
+export const TechnicalBesearchOverlay: typeof import("../components/technical/BesearchOverlay.vue")['default']
+export const TechnicalCodeSnap: typeof import("../components/technical/CodeSnap.vue")['default']
+export const TechnicalDocumentationPanel: typeof import("../components/technical/DocumentationPanel.vue")['default']
+export const TechnicalExpandableModule: typeof import("../components/technical/ExpandableModule.vue")['default']
+export const TechnicalFocusModeHUD: typeof import("../components/technical/FocusModeHUD.vue")['default']
+export const TechnicalSuperNode: typeof import("../components/technical/SuperNode.vue")['default']
+export const TechnicalSupplyChainTile: typeof import("../components/technical/SupplyChainTile.vue")['default']
 export const TechnicalGeometryPlayground: typeof import("../components/technical/geometryPlayground.vue")['default']
 export const TechnicalModularMap: typeof import("../components/technical/modularMap.vue")['default']
 export const TechnicalOntheFly: typeof import("../components/technical/ontheFly.vue")['default']
 export const TechnicalPluginHOP: typeof import("../components/technical/pluginHOP.vue")['default']
 export const TechnicalResonAgentMaths: typeof import("../components/technical/resonAgentMaths.vue")['default']
-export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
+export const NuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
-export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
+export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']
 export const ClientOnly: typeof import("../node_modules/nuxt/dist/app/components/client-only")['default']
 export const DevOnly: typeof import("../node_modules/nuxt/dist/app/components/dev-only")['default']
 export const ServerPlaceholder: typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']
 export const NuxtLink: typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']
 export const NuxtLoadingIndicator: typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
-export const NuxtTime: typeof import("../node_modules/nuxt/dist/app/components/nuxt-time.vue")['default']
-export const NuxtRouteAnnouncer: typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']
+export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtImg: typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']
 export const NuxtPicture: typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']
 export const ColorScheme: typeof import("../node_modules/@nuxtjs/color-mode/dist/runtime/component.vue")['default']
@@ -51,44 +149,50 @@ export const Style: typeof import("../node_modules/nuxt/dist/head/runtime/compon
 export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Head']
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
-export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
-export const LazyBeeBeePrompts: LazyComponent<typeof import("../components/BeeBeePrompts.vue")['default']>
-export const LazyBorealComputation: LazyComponent<typeof import("../components/BorealComputation.vue")['default']>
-export const LazyCallToParticipate: LazyComponent<typeof import("../components/CallToParticipate.vue")['default']>
-export const LazyCascadeModule: LazyComponent<typeof import("../components/CascadeModule.vue")['default']>
-export const LazyContributePeers: LazyComponent<typeof import("../components/ContributePeers.vue")['default']>
-export const LazyHeroModule: LazyComponent<typeof import("../components/HeroModule.vue")['default']>
-export const LazySpiralBackground: LazyComponent<typeof import("../components/SpiralBackground.vue")['default']>
-export const LazyVisionModule: LazyComponent<typeof import("../components/VisionModule.vue")['default']>
-export const LazyRoadmapVersionVision: LazyComponent<typeof import("../components/roadmap/versionVision.vue")['default']>
-export const LazyTechnicalGeometryPlayground: LazyComponent<typeof import("../components/technical/geometryPlayground.vue")['default']>
-export const LazyTechnicalModularMap: LazyComponent<typeof import("../components/technical/modularMap.vue")['default']>
-export const LazyTechnicalOntheFly: LazyComponent<typeof import("../components/technical/ontheFly.vue")['default']>
-export const LazyTechnicalPluginHOP: LazyComponent<typeof import("../components/technical/pluginHOP.vue")['default']>
-export const LazyTechnicalResonAgentMaths: LazyComponent<typeof import("../components/technical/resonAgentMaths.vue")['default']>
-export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
-export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
-export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
-export const LazyClientOnly: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/client-only")['default']>
-export const LazyDevOnly: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/dev-only")['default']>
-export const LazyServerPlaceholder: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
-export const LazyNuxtLink: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']>
-export const LazyNuxtLoadingIndicator: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']>
-export const LazyNuxtTime: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-time.vue")['default']>
-export const LazyNuxtRouteAnnouncer: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-route-announcer")['default']>
-export const LazyNuxtImg: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']>
-export const LazyNuxtPicture: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']>
-export const LazyColorScheme: LazyComponent<typeof import("../node_modules/@nuxtjs/color-mode/dist/runtime/component.vue")['default']>
-export const LazyNuxtPage: LazyComponent<typeof import("../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']>
-export const LazyNoScript: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']>
-export const LazyLink: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']>
-export const LazyBase: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Base']>
-export const LazyTitle: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Title']>
-export const LazyMeta: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Meta']>
-export const LazyStyle: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Style']>
-export const LazyHead: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Head']>
-export const LazyHtml: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']>
-export const LazyBody: LazyComponent<typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']>
-export const LazyNuxtIsland: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']>
+export const LazyBeeBeePrompts: typeof import("../components/BeeBeePrompts.vue")['default']
+export const LazyBorealComputation: typeof import("../components/BorealComputation.vue")['default']
+export const LazyCallToParticipate: typeof import("../components/CallToParticipate.vue")['default']
+export const LazyCascadeModule: typeof import("../components/CascadeModule.vue")['default']
+export const LazyContributePeers: typeof import("../components/ContributePeers.vue")['default']
+export const LazyHeroModule: typeof import("../components/HeroModule.vue")['default']
+export const LazySpiralBackground: typeof import("../components/SpiralBackground.vue")['default']
+export const LazyVisionModule: typeof import("../components/VisionModule.vue")['default']
+export const LazyRoadmapVersionVision: typeof import("../components/roadmap/versionVision.vue")['default']
+export const LazyTechnicalBaseNode: typeof import("../components/technical/BaseNode.vue")['default']
+export const LazyTechnicalBesearchEdge: typeof import("../components/technical/BesearchEdge.vue")['default']
+export const LazyTechnicalBesearchOverlay: typeof import("../components/technical/BesearchOverlay.vue")['default']
+export const LazyTechnicalCodeSnap: typeof import("../components/technical/CodeSnap.vue")['default']
+export const LazyTechnicalDocumentationPanel: typeof import("../components/technical/DocumentationPanel.vue")['default']
+export const LazyTechnicalExpandableModule: typeof import("../components/technical/ExpandableModule.vue")['default']
+export const LazyTechnicalFocusModeHUD: typeof import("../components/technical/FocusModeHUD.vue")['default']
+export const LazyTechnicalSuperNode: typeof import("../components/technical/SuperNode.vue")['default']
+export const LazyTechnicalSupplyChainTile: typeof import("../components/technical/SupplyChainTile.vue")['default']
+export const LazyTechnicalGeometryPlayground: typeof import("../components/technical/geometryPlayground.vue")['default']
+export const LazyTechnicalModularMap: typeof import("../components/technical/modularMap.vue")['default']
+export const LazyTechnicalOntheFly: typeof import("../components/technical/ontheFly.vue")['default']
+export const LazyTechnicalPluginHOP: typeof import("../components/technical/pluginHOP.vue")['default']
+export const LazyTechnicalResonAgentMaths: typeof import("../components/technical/resonAgentMaths.vue")['default']
+export const LazyNuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
+export const LazyNuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
+export const LazyNuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary")['default']
+export const LazyClientOnly: typeof import("../node_modules/nuxt/dist/app/components/client-only")['default']
+export const LazyDevOnly: typeof import("../node_modules/nuxt/dist/app/components/dev-only")['default']
+export const LazyServerPlaceholder: typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']
+export const LazyNuxtLink: typeof import("../node_modules/nuxt/dist/app/components/nuxt-link")['default']
+export const LazyNuxtLoadingIndicator: typeof import("../node_modules/nuxt/dist/app/components/nuxt-loading-indicator")['default']
+export const LazyNuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
+export const LazyNuxtImg: typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtImg']
+export const LazyNuxtPicture: typeof import("../node_modules/nuxt/dist/app/components/nuxt-stubs")['NuxtPicture']
+export const LazyColorScheme: typeof import("../node_modules/@nuxtjs/color-mode/dist/runtime/component.vue")['default']
+export const LazyNuxtPage: typeof import("../node_modules/nuxt/dist/pages/runtime/page-placeholder")['default']
+export const LazyNoScript: typeof import("../node_modules/nuxt/dist/head/runtime/components")['NoScript']
+export const LazyLink: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Link']
+export const LazyBase: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Base']
+export const LazyTitle: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Title']
+export const LazyMeta: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Meta']
+export const LazyStyle: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Style']
+export const LazyHead: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Head']
+export const LazyHtml: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
+export const LazyBody: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 
 export const componentNames: string[]

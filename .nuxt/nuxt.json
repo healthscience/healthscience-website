@@ -1,9 +1,9 @@
 {
-  "_hash": "wKepOVmpFEdaA7AIGuN3e4nGSuQciK9cl94phpDFTIg",
+  "_hash": "omf60bhWV1P1ZEvTnwTz6r1ufoD-xOH_7bMgMwX2cc0",
   "project": {
     "rootDir": "/var/www/html/hoprotocol/code/healthscience-website"
   },
   "versions": {
-    "nuxt": "3.21.1"
+    "nuxt": "3.11.2"
   }
 }

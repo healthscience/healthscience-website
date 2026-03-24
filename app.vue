@@ -237,64 +237,12 @@
     </section>
 
     <!-- Strategic Plugins Section -->
-    <section class="snap-section p-4 md:p-12 relative z-10">
-      <div class="hop-grid w-full max-w-7xl mx-auto">
-        <div class="lego-module col-span-12 md:col-span-8 bg-gradient-to-b from-pine/5 to-transparent">
-          <div class="flex items-center gap-4 mb-8">
-            <div class="h-px flex-1 bg-pine/30"></div>
-            <h3 class="text-neon font-mono text-sm tracking-widest uppercase">STRATEGIC PLUGINS: AUTHORING THE WORLDS</h3>
-            <div class="h-px flex-1 bg-pine/30"></div>
-          </div>
-
-          <div class="mb-12">
-            <p class="text-secondary/80 text-lg mb-8 font-light italic">
-              Each project doesn't just "send data"—it becomes an Agent that occupies the HOP skeleton.
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="p-6 border border-pine/20 rounded-lg bg-pine/5 hover:border-neon/30 transition-all">
-              <h4 class="text-primary text-lg mb-3 font-medium">Capacity Docs</h4>
-              <p class="text-secondary/60 text-sm leading-relaxed">How to write to the "Battery" of a Peer (Biological reserves).</p>
-            </div>
-            <div class="p-6 border border-pine/20 rounded-lg bg-pine/5 hover:border-neon/30 transition-all">
-              <h4 class="text-primary text-lg mb-3 font-medium">Context Docs</h4>
-              <p class="text-secondary/60 text-sm leading-relaxed">How to query the Bioregion (Soil, Sunlight, Earth-coordinates).</p>
-            </div>
-            <div class="p-6 border border-pine/20 rounded-lg bg-pine/5 hover:border-neon/30 transition-all">
-              <h4 class="text-primary text-lg mb-3 font-medium">Coherence Docs</h4>
-              <p class="text-secondary/60 text-sm leading-relaxed">How to calculate the "Match" (The math of resonance between Peer and Gaia).</p>
-            </div>
-          </div>
-
-          <div class="mt-12 p-6 border border-neon/20 rounded-xl bg-forest/10 backdrop-blur-sm">
-            <div class="flex items-center gap-3 mb-4">
-              <div class="w-1 h-6 bg-neon"></div>
-              <h4 class="text-xl text-primary font-medium">The "Besearch" Cycle</h4>
-            </div>
-            <p class="text-secondary leading-relaxed italic">
-              "Bring your drone map. Bring your soil DNA data. Use our Skeleton to build a 'Soil-to-Stomach' World. Ask our TINY Agents for existing knowledge. Visualize the emulation. Pulse the Coherence to the network."
-            </p>
-            <!-- Technical Navigation Buttons -->
-            <div class="mt-8 flex flex-wrap gap-4">
-              <button @click="showPluginPage = true" class="px-4 py-2 border border-neon/30 text-neon text-[10px] font-mono uppercase tracking-widest hover:bg-neon/10 transition-all rounded">
-                Plugin HOP
-              </button>
-              <button @click="showResonAgentPage = true" class="px-4 py-2 border border-neon/30 text-neon text-[10px] font-mono uppercase tracking-widest hover:bg-neon/10 transition-all rounded">
-                ResonAgent Maths
-              </button>
-              <button @click="showOnTheFlyPage = true" class="px-4 py-2 border border-neon/30 text-neon text-[10px] font-mono uppercase tracking-widest hover:bg-neon/10 transition-all rounded">
-                On The Fly
-              </button>
-              <button @click="showPlaygroundPage = true" class="px-4 py-2 border border-neon/30 text-neon text-[10px] font-mono uppercase tracking-widest hover:bg-neon/10 transition-all rounded">
-                Geometry Playground
-              </button>
-            </div>
-          </div>
-        </div>
-        <ContributePeers @open-docs="showPluginPage = true" />
-      </div>
-    </section>
+    <TechnicalModularMap 
+      @open-plugin="showPluginPage = true" 
+      @open-reson="showResonAgentPage = true" 
+      @open-onthefly="showOnTheFlyPage = true" 
+      @open-playground="showPlaygroundPage = true" 
+    />
 
     <!-- Interaction Section  beebee live -->
     <BorealComputation />

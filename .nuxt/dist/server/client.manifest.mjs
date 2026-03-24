@@ -1,4 +1,18 @@
-
-import { viteNodeFetch } from "file:///var/www/html/hoprotocol/code/healthscience-website/node_modules/@nuxt/vite-builder/dist/vite-node.mjs"
-export default () => viteNodeFetch.getManifest()
-    
+export default {
+  "@vite/client": {
+    "prefetch": true,
+    "isEntry": true,
+    "file": "@vite/client",
+    "css": [],
+    "module": true,
+    "resourceType": "script"
+  },
+  "/var/www/html/hoprotocol/code/healthscience-website/node_modules/nuxt/dist/app/entry.js": {
+    "resourceType": "script",
+    "module": true,
+    "prefetch": true,
+    "preload": true,
+    "isEntry": true,
+    "file": "/var/www/html/hoprotocol/code/healthscience-website/node_modules/nuxt/dist/app/entry.js"
+  }
+}
