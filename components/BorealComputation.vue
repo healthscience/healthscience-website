@@ -148,6 +148,11 @@
       </div>
     </div>
   </section>
+  <div class="bento-node">
+    <div class="daisy-anchor"></div>
+    <h3>Now Me: Vagus Tone</h3>
+    <p>25Hz Pulse Active. Coherence: 0.92</p>
+  </div>
 </template>
 
 <script setup>
@@ -157,5 +162,86 @@
 <style scoped>
 .lego-module {
   @apply bg-module backdrop-blur-md p-8 border border-white/10 rounded-xl relative overflow-hidden;
+}
+
+/* The Container */
+/* The Container - Clean, Dark, Structured */
+.bento-node {
+  position: relative;
+  padding: 2.5rem;
+  background: rgba(10, 25, 20, 0.92); /* Deep Boreal shade */
+  border-left: 2px solid #4ade80; /* The Technical Spine */
+  border-radius: 8px;
+  color: #f0fdf4;
+  margin: 30px;
+}
+
+/* 1. The 'Lovelock Daisyworld' Node (Geometric Bloom) */
+.daisy-world {
+  position: absolute;
+  top: -15px;
+  right: 25px;
+  width: 22px;
+  height: 22px;
+  z-index: 10;
+  /* Conic gradient creates 8 petals around a yellow center */
+  background: 
+    radial-gradient(circle at center, #fbbf24 4px, transparent 5px), 
+    conic-gradient(from 0deg, 
+      #fff 0deg 20deg, transparent 20deg 45deg, 
+      #fff 45deg 65deg, transparent 65deg 90deg, 
+      #fff 90deg 110deg, transparent 110deg 135deg, 
+      #fff 135deg 155deg, transparent 155deg 180deg, 
+      #fff 180deg 200deg, transparent 200deg 225deg, 
+      #fff 225deg 245deg, transparent 245deg 270deg, 
+      #fff 270deg 290deg, transparent 290deg 315deg, 
+      #fff 315deg 335deg, transparent 335deg);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+}
+
+/* 2. The Leaf Cluster - Top Left (The 'Reaching' Cluster) */
+.bento-node::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 18px;
+  height: 10px;
+  background: #2d5a27;
+  border-radius: 0 100% 0 100%;
+  transform: rotate(-30deg);
+  /* Box-shadow creates 'Shadow Leaves' to form a cluster */
+  box-shadow: 
+    8px -4px 0 -1px #1a3a17, 
+    -5px 8px 0 -2px #3d7a36,
+    15px 2px 0 -3px #2d5a27;
+  opacity: 0.95;
+}
+
+/* 3. The Leaf Cluster - Bottom Right (The 'Nesting' Cluster) */
+.bento-node::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  right: -15px;
+  width: 22px;
+  height: 12px;
+  background: #1a3a17; /* Darker green */
+  border-radius: 100% 0 100% 0; /* Mirrored leaf shape */
+  transform: rotate(15deg);
+  /* Creating a dense little cluster of 3-4 leaves */
+  box-shadow: 
+    -10px -8px 0 -2px #2d5a27,
+    -4px -12px 0 -4px #1a3a17,
+    -18px -2px 0 -3px #3d7a36;
+  opacity: 0.85;
+}
+
+/* Subtle Hover Effect for the 'Daisy Albedo' */
+.bento-node:hover .daisy-world {
+  transform: scale(1.1) rotate(10deg);
+  filter: drop-shadow(0 0 8px #fff);
+  transition: all 0.4s ease-out;
 }
 </style>
