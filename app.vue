@@ -103,10 +103,54 @@
       </div>
     </Transition>
 
+    <!-- Glossary Page Overlay -->
+    <Transition
+      enter-active-class="transition duration-500 ease-out"
+      enter-from-class="opacity-0 translate-y-full"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition duration-300 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 translate-y-full"
+    >
+      <div v-if="showGlossary" class="fixed inset-0 z-[100] bg-forest overflow-y-auto">
+        <button 
+          @click="showGlossary = false"
+          class="fixed top-8 right-8 z-[110] p-4 bg-neon text-forest rounded-full font-mono text-sm hover:scale-110 transition-transform shadow-2xl"
+        >
+          CLOSE [ESC]
+        </button>
+        <HOPglossary @close="showGlossary = false" />
+      </div>
+    </Transition>
+
+    <!-- Maths Page Overlay -->
+    <Transition
+      enter-active-class="transition duration-500 ease-out"
+      enter-from-class="opacity-0 translate-y-full"
+      enter-to-class="opacity-100 translate-y-0"
+      leave-active-class="transition duration-300 ease-in"
+      leave-from-class="opacity-100 translate-y-0"
+      leave-to-class="opacity-0 translate-y-full"
+    >
+      <div v-if="showMaths" class="fixed inset-0 z-[100] bg-forest overflow-y-auto">
+        <button 
+          @click="showMaths = false"
+          class="fixed top-8 right-8 z-[110] p-4 bg-neon text-forest rounded-full font-mono text-sm hover:scale-110 transition-transform shadow-2xl"
+        >
+          CLOSE [ESC]
+        </button>
+        <HOPmaths @close="showMaths = false" />
+      </div>
+    </Transition>
+
     <SpiralBackground />
     
-    <!-- Theme Toggle -->
-    <div class="fixed top-4 right-4 z-50">
+    <!-- Theme Toggle & Navigation -->
+    <div class="fixed top-4 right-4 z-50 flex items-center gap-6">
+      <nav class="hidden md:flex items-center gap-6 mr-2">
+        <button @click="scrollToSection('bentoboxds')" class="text-[10px] font-mono text-secondary hover:text-neon uppercase tracking-widest transition-colors">BentoBoxDS</button>
+        <button @click="scrollToSection('protocol')" class="text-[10px] font-mono text-secondary hover:text-neon uppercase tracking-widest transition-colors">Protocol</button>
+      </nav>
       <button @click="toggleTheme" class="p-2 rounded-full bg-module border border-pine/30 text-primary hover:border-neon/50 transition-colors shadow-lg">
         <svg v-if="$colorMode.value === 'dark'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
@@ -129,15 +173,21 @@
           <div class="text-xs font-mono text-neon mb-2 tracking-widest uppercase">Network Status</div>
           <div class="text-3xl font-light mb-1 text-primary">Heli Clock</div>
           <div class="text-sm text-secondary mb-4">Digital Solar Time</div>
-          <div class="bento-grid flex justify-center">
+          <div class="bento-grid flex justify-center mb-12">
             <heli-clock birth-orbital="45"></heli-clock>
           </div>
+          <button @click="showRoadmap = true" class="lego-button scale-75">
+            Roadmap
+          </button>
         </div>
       </div>
     </section>
 
+    <!-- Cues & Besearch Section -->
+    <CuesBesearch @open-glossary="showGlossary = true" @open-maths="showMaths = true" />
+
     <!-- BentoBoxDS: The Vessel of Sovereign Intelligence -->
-    <section class="snap-section p-4 md:p-12 relative z-10 bg-forest/40 border-y border-pine/20 overflow-hidden">
+    <section id="bentoboxds" class="snap-section p-4 md:p-12 relative z-10 bg-forest/40 border-y border-pine/20 overflow-hidden">
       <div class="w-full max-w-7xl mx-auto relative z-10">
         <!-- Section Header -->
         <div class="mb-16">
@@ -242,7 +292,7 @@
     </section>
 
     <!-- Architecture Section -->
-    <section class="snap-section p-4 md:p-12 relative z-10">
+    <section id="protocol" class="snap-section p-4 md:p-12 relative z-10">
       <div class="hop-grid w-full max-w-7xl mx-auto">
         <div class="lego-module col-span-12 md:col-span-8 bg-gradient-to-b from-pine/5 to-transparent">
           <div class="flex items-center gap-4 mb-8">
@@ -380,6 +430,9 @@ import GeometryPlayground from './components/technical/geometryPlayground.vue'
 import OnTheFly from './components/technical/ontheFly.vue'
 import VersionVision from './components/roadmap/versionVision.vue'
 import AnatomyDiagram from './components/AnatomyDiagram.vue'
+import CuesBesearch from './components/CuesBesearch.vue'
+import HOPglossary from './components/learn/HOPglossary.vue'
+import HOPmaths from './components/learn/HOPmaths.vue'
 
 const colorMode = useColorMode()
 const scrollContainer = ref(null)
@@ -389,10 +442,19 @@ const showResonAgentPage = ref(false)
 const showPlaygroundPage = ref(false)
 const showOnTheFlyPage = ref(false)
 const showRoadmap = ref(false)
+const showGlossary = ref(false)
+const showMaths = ref(false)
 const showTechnicalMap = ref(false)
 
 const toggleTheme = () => {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+}
+
+const scrollToSection = (id) => {
+  const element = document.getElementById(id)
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
+  }
 }
 
 const openDocs = () => {

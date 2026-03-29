@@ -14,6 +14,9 @@
     </defs>
 
     <g class="inflow">
+      <g transform="translate(50, 10)">
+        <rect width="40" height="40" rx="8" class="icon-box" /> <text y="55" class="icon-label">Tiny devices</text>
+      </g>
       <g transform="translate(50, 100)">
         <rect width="40" height="40" rx="8" class="icon-box" /> <text y="55" class="icon-label">BentoBox</text>
       </g>
@@ -39,12 +42,12 @@
       <text x="450" y="380" class="label-main">SafeFlow-ECS</text>
       <text x="450" y="400" class="label-sub">Consilience Weave</text>
 
-      <g transform="translate(380, 430)">
-        <circle cx="20" r="10" class="besearch-icon" />
-        <circle cx="50" r="10" class="besearch-icon" />
-        <circle cx="80" r="10" class="besearch-icon" />
-        <circle cx="110" r="10" class="besearch-icon" />
-        <text x="70" y="30" class="icon-label">Active Besearch Cycles</text>
+      <g transform="translate(340, 430)">
+        <image :xlink:href="besearchCycleIcon" x="0" y="-20" width="40" height="40" class="besearch-icon" />
+        <image :xlink:href="besearchCycleIcon" x="60" y="-20" width="40" height="40" class="besearch-icon" />
+        <image :xlink:href="besearchCycleIcon" x="120" y="-20" width="40" height="40" class="besearch-icon" />
+        <image :xlink:href="besearchCycleIcon" x="180" y="-20" width="40" height="40" class="besearch-icon" />
+        <text x="110" y="40" class="icon-label">Active Besearch Cycles</text>
       </g>
     </g>
 
@@ -75,6 +78,9 @@
 
 <script setup>
 defineEmits(['explore'])
+
+import besearchCycleIcon from '@/assets/besearch-cycle.png'
+import besearchCycleDiagram from '@/assets/besearch-cycle-web.png'
 </script>
 
 <style scoped>

@@ -33,6 +33,12 @@
 
         <!-- Explorer View -->
         <div v-if="activeView === 'explorer'" class="relative h-[800px] border border-pine/30 rounded-xl overflow-hidden bg-forest/40">
+          <!-- Coming Soon Watermark -->
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-[100] select-none opacity-60">
+            <span class="text-6xl md:text-9xl font-black text-secondary uppercase tracking-[0.2em] text-center leading-none">
+              Coming<br />Soon
+            </span>
+          </div>
           
           <!-- Vue Flow Canvas with Viewport States -->
           <div 
@@ -97,6 +103,13 @@
 
         <!-- Playground View -->
         <div v-else-if="activeView === 'playground'" class="relative min-h-[800px] border border-pine/30 rounded-xl overflow-hidden bg-forest/40 p-6">
+          <!-- Coming Soon Watermark -->
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-[100] select-none opacity-60">
+            <span class="text-6xl md:text-9xl font-black text-secondary uppercase tracking-[0.2em] text-center leading-none">
+              Coming<br />Soon
+            </span>
+          </div>
+
           <div class="mb-8 p-6 border border-neon/30 rounded-xl bg-neon/5 backdrop-blur-sm">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-xl text-primary font-medium">Global Resonance</h3>
