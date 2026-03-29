@@ -1,5 +1,5 @@
 <template>
-  <div class="snap-container relative bg-transparent">
+  <div ref="scrollContainer" class="snap-container relative bg-transparent">
     <!-- Plugin Page Overlay -->
     <Transition
       enter-active-class="transition duration-500 ease-out"
@@ -136,7 +136,91 @@
       </div>
     </section>
 
-    <!-- Call to Participate & Demos Section -->
+    <!-- BentoBoxDS: The Vessel of Sovereign Intelligence -->
+    <section class="snap-section p-4 md:p-12 relative z-10 bg-forest/40 border-y border-pine/20 overflow-hidden">
+      <div class="w-full max-w-7xl mx-auto relative z-10">
+        <!-- Section Header -->
+        <div class="mb-16">
+          <div class="flex items-center gap-4 mb-4">
+            <img src="/bblogo.png" alt="BentoBoxDS Logo" class="h-8 w-auto">
+            <div class="text-2xl font-mono text-neon tracking-[0.3em] uppercase">BentoBoxDS</div>
+          </div>
+          <h2 class="text-xl md:text-2xl font-light text-primary mb-8 leading-tight">
+            The Vessel of <span class="font-bold italic">Sovereign Intelligence</span>
+          </h2>
+          <div class="max-w-3xl space-y-6">
+            <p class="text-lg text-secondary leading-relaxed font-serif italic">
+              The <span class="font-mono text-sm uppercase text-neon tracking-wider">Health Oracle Protocol</span> is currently a silent <span class="font-mono text-sm uppercase text-neon tracking-wider">Orrery</span>—a high-resolution architecture waiting for a witness. To ensure uncorrupted data and true sovereignty, we begin at a <span class="font-mono text-sm uppercase text-neon tracking-wider">Baseline of Zero</span>.
+            </p>
+            <p class="text-lg text-secondary leading-relaxed">
+              <span class="font-mono text-sm text-primary uppercase">BentoBoxDS</span> is the Cellular Container where the HOP Fabric is woven into a personal reality. It is a local-first environment that "Brings to Be" a biological experience on the fly, transforming cold data into <span class="italic font-serif text-primary">Information as Medicine.</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- The Quadrant Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
+          <div 
+            v-for="brick in bentoItems" 
+            :key="brick.id"
+            @click="toggleBrick(brick.id)"
+            class="lego-module group cursor-pointer transition-all duration-500 border-pine/30 hover:border-neon/50 bg-pine/5 relative overflow-hidden"
+            :class="{ 'border-neon ring-1 ring-neon/30 bg-neon/5': snappedBricks.includes(brick.id) }"
+          >
+            <!-- Calibration Glow -->
+            <div class="absolute inset-0 bg-neon/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+            
+            <!-- Daisyworld Node -->
+            <div class="daisy-node daisy-white daisy-tr opacity-50 group-hover:opacity-100 transition-opacity"></div>
+            
+            <div class="relative z-10">
+              <div class="text-[10px] font-mono text-neon mb-4 tracking-[0.2em] uppercase">{{ brick.tag }}</div>
+              <h3 class="text-2xl font-light text-primary mb-3">{{ brick.title }}</h3>
+              <p class="text-sm text-secondary/80 leading-relaxed font-serif italic mb-6">
+                {{ brick.details }}
+              </p>
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full" :class="snappedBricks.includes(brick.id) ? 'bg-neon animate-pulse' : 'bg-secondary/30'"></span>
+                <span class="text-[10px] font-mono text-secondary uppercase tracking-widest">
+                  {{ snappedBricks.includes(brick.id) ? 'CALIBRATED' : 'WAITING FOR WITNESS' }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Secondary Narrative -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-24 border-t border-pine/10 pt-16">
+          <div class="space-y-6">
+            <h4 class="text-xs font-mono text-neon uppercase tracking-[0.2em]">II. Adopting the Bricks</h4>
+            <p class="text-secondary leading-relaxed font-serif">
+              Within this container, you do not "install software"; you adopt <span class="font-mono text-sm text-primary">Lego Bricks of Knowledge</span>.
+            </p>
+            <ul class="space-y-4 text-sm text-secondary/80">
+              <li class="pl-4 border-l border-neon/30">
+                <span class="text-primary font-medium block mb-1">The cueCube:</span>
+                Your personal navigation stone. Use it to emulate health outcomes in the physical before they even manifest.
+              </li>
+              <li class="pl-4 border-l border-neon/30">
+                <span class="text-primary font-medium block mb-1">The Library:</span>
+                A global commons of verified science. Snap these reference blueprints into your Bento to strengthen your inner architecture.
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-6">
+            <h4 class="text-xs font-mono text-neon uppercase tracking-[0.2em]">III. The Witness of the Key</h4>
+            <p class="text-secondary leading-relaxed font-serif">
+              We use <span class="italic font-serif text-primary">Sovereign Cryptography</span> not to hide from the world, but to Witness your own truth.
+            </p>
+            <p class="text-sm text-secondary/80 leading-relaxed">
+              Your <span class="font-mono text-sm text-primary uppercase">Secure ID</span> is the root of your existence in the Fabric—allowing you to find the "Lego Bricks" you need across the network without ever sacrificing your local storage or your privacy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Participate & Demos Section (Restored) -->
     <section class="snap-section p-4 md:p-12 relative z-10 flex items-center bg-forest/40 border-y border-pine/20 overflow-hidden">
       <!-- Coming Soon Watermark -->
       <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 opacity-20">
@@ -178,7 +262,7 @@
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div 
-              v-for="(item, index) in bentoItems" 
+              v-for="(item, index) in protocolItems" 
               :key="index"
               @click="selectedBentoIndex = index"
               class="p-5 border rounded-lg transition-all cursor-pointer group"
@@ -202,11 +286,11 @@
             <div v-if="selectedBentoIndex !== null" :key="selectedBentoIndex" class="mt-8 p-6 border border-neon/30 rounded-xl bg-pine/5 backdrop-blur-sm">
               <div class="flex items-center gap-3 mb-4">
                 <div class="w-1 h-6 bg-neon"></div>
-                <h4 class="text-xl text-primary font-medium">{{ bentoItems[selectedBentoIndex].title }}</h4>
+                <h4 class="text-xl text-primary font-medium">{{ protocolItems[selectedBentoIndex].title }}</h4>
               </div>
 
               <!-- Conditional Rendering for 'PROTOCOL' / 'View all' -->
-              <div v-if="bentoItems[selectedBentoIndex].tag === 'PROTOCOL'" class="space-y-6">
+              <div v-if="protocolItems[selectedBentoIndex].tag === 'PROTOCOL'" class="space-y-6">
                 <div v-for="(item, idx) in allBentoDetails" :key="idx" class="border-l border-neon/20 pl-4">
                   <div class="text-sm font-bold text-primary/80 mb-1">{{ item.title }}</div>
                   <p class="text-secondary leading-relaxed text-sm">
@@ -215,9 +299,9 @@
                 </div>
                 <div class="mt-6 pt-6 border-t border-neon/10">
                   <p class="text-secondary leading-relaxed italic mb-4">
-                    {{ bentoItems[selectedBentoIndex].details }}
+                    {{ protocolItems[selectedBentoIndex].details }}
                   </p>
-                  <button @click="window.open('https://beebeehop.any.org/a-tiny-hop-to-gaia-intelligence', '_blank')" class="px-4 py-2 border border-neon/30 text-neon text-[10px] font-mono uppercase tracking-widest hover:bg-neon/10 transition-all rounded">
+                  <button @click="openDocs" class="px-4 py-2 border border-neon/30 text-neon text-[10px] font-mono uppercase tracking-widest hover:bg-neon/10 transition-all rounded">
                     Open Documentation
                   </button>
                 </div>
@@ -226,7 +310,7 @@
               <!-- Standard Rendering -->
               <div v-else>
                 <p class="text-secondary leading-relaxed">
-                  {{ bentoItems[selectedBentoIndex].details }}
+                  {{ protocolItems[selectedBentoIndex].details }}
                 </p>
               </div>
             </div>
@@ -237,12 +321,33 @@
     </section>
 
     <!-- Strategic Plugins Section -->
-    <TechnicalModularMap 
-      @open-plugin="showPluginPage = true" 
-      @open-reson="showResonAgentPage = true" 
-      @open-onthefly="showOnTheFlyPage = true" 
-      @open-playground="showPlaygroundPage = true" 
-    />
+    <div class="snap-section p-4 md:p-12 relative z-10 bg-forest/40 border-y border-pine/20">
+      <div class="w-full max-w-7xl mx-auto">
+        <div class="mb-12">
+          <h2 class="text-xs font-mono text-neon uppercase tracking-[0.3em] mb-4">The Anatomy of the HOP Fabric</h2>
+          <h3 class="text-2xl md:text-2xl font-light text-primary mb-8">Metabolic Journey</h3>
+          <AnatomyDiagram @explore="showTechnicalMap = !showTechnicalMap" />
+        </div>
+        
+        <Transition
+          enter-active-class="transition duration-700 ease-out"
+          enter-from-class="opacity-0 max-h-0"
+          enter-to-class="opacity-100 max-h-[2000px]"
+          leave-active-class="transition duration-500 ease-in"
+          leave-from-class="opacity-100 max-h-[2000px]"
+          leave-to-class="opacity-0 max-h-0"
+        >
+          <div v-if="showTechnicalMap" class="overflow-hidden">
+            <TechnicalModularMap 
+              @open-plugin="showPluginPage = true" 
+              @open-reson="showResonAgentPage = true" 
+              @open-onthefly="showOnTheFlyPage = true" 
+              @open-playground="showPlaygroundPage = true" 
+            />
+          </div>
+        </Transition>
+      </div>
+    </div>
 
     <!-- Interaction Section  beebee live -->
     <BorealComputation />
@@ -253,11 +358,11 @@
         <div class="lego-module col-span-12 md:col-span-6 flex flex-col justify-center items-start bg-gradient-to-r from-pine/10 to-transparent border-none shadow-none">
           <h2 class="text-4xl md:text-5xl font-light mb-6 text-primary tracking-tight">Join the <br/><span class="font-bold">Consilience Weave.</span></h2>
           <p class="text-secondary text-lg mb-8 max-w-md">
-            Secure your node in the biological navigation system and begin resonating value.
+            Anchor a signature and add a life-strap story.
           </p>
-          <button class="lego-button">
-            Download
-          </button>
+          <a href="https://bentoboxds.org" target="_blank" class="lego-button">
+            Download BentoBoxDS
+          </a>
         </div>
       </div>
     </section>
@@ -266,7 +371,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import BorealComputation from './components/BorealComputation.vue'
 import ContributePeers from './components/ContributePeers.vue'
 import PluginHOP from './components/technical/pluginHOP.vue'
@@ -274,28 +379,77 @@ import ResonAgentMaths from './components/technical/resonAgentMaths.vue'
 import GeometryPlayground from './components/technical/geometryPlayground.vue'
 import OnTheFly from './components/technical/ontheFly.vue'
 import VersionVision from './components/roadmap/versionVision.vue'
+import AnatomyDiagram from './components/AnatomyDiagram.vue'
 
 const colorMode = useColorMode()
+const scrollContainer = ref(null)
 
 const showPluginPage = ref(false)
 const showResonAgentPage = ref(false)
 const showPlaygroundPage = ref(false)
 const showOnTheFlyPage = ref(false)
 const showRoadmap = ref(false)
+const showTechnicalMap = ref(false)
 
 const toggleTheme = () => {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 }
 
+const openDocs = () => {
+  if (typeof window !== 'undefined') {
+    window.open('https://beebeehop.any.org/a-tiny-hop-to-gaia-intelligence', '_blank')
+  }
+}
+
 const selectedBentoIndex = ref(null)
+const snappedBricks = ref([])
+
+const toggleBrick = (id) => {
+  if (snappedBricks.value.includes(id)) {
+    snappedBricks.value = snappedBricks.value.filter(b => b !== id)
+  } else {
+    snappedBricks.value.push(id)
+  }
+}
 
 const allBentoDetails = computed(() => {
-  return bentoItems
+  return protocolItems
     .filter(item => item.tag !== 'PROTOCOL')
     .map(item => ({ title: item.title, details: item.details }))
 })
 
 const bentoItems = [
+  {
+    id: 'now-me',
+    tag: 'PRIMARY ENERGY',
+    title: 'Now Me',
+    details: 'Your immediate metabolic pulse. The protein of your real-time existence.',
+    meta: 'Real-time metabolic pulse / Vagus tone.'
+  },
+  {
+    id: 'future-me',
+    tag: 'GROWTH ENZYME',
+    title: 'Future Me',
+    details: 'Your evolutionary growth path. The enzymes of potential and emulation.',
+    meta: 'cueCube emulations and search paths.'
+  },
+  {
+    id: 'now-us',
+    tag: 'SOCIAL FIBER',
+    title: 'Now Us',
+    details: 'Your resonance with the "Swimming Club." The fiber of peer-to-peer synchronization.',
+    meta: 'P2P Swimming Club synchronization.'
+  },
+  {
+    id: 'future-us',
+    tag: 'LEGACY MINERAL',
+    title: 'Future Us',
+    details: 'Your contribution to the Bioregional Weave. The minerals of collective wisdom.',
+    meta: 'Bioregional Weave / Shared wisdom.'
+  }
+]
+
+const protocolItems = [
   {
     tag: 'DIRECT',
     title: 'BentoBoxDS & BeeBee',
@@ -337,6 +491,44 @@ const bentoItems = [
     details: 'Explore the full technical specification and documentation of the HOP protocol.'
   }
 ]
+
+// Smart Intersection Observer for scrolling
+let observer = null
+
+onMounted(() => {
+  const options = {
+    root: scrollContainer.value,
+    threshold: 0.1,
+    rootMargin: '0px'
+  }
+
+  observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Find if user is at the bottom of the section
+        const section = entry.target
+        const isBottom = section.getBoundingClientRect().bottom <= (window.innerHeight + 50)
+        
+        // If mandatory snap is proximity, we let CSS handle it mostly, 
+        // but we can add logic here if we need to force a snap only when fully viewed.
+      }
+    })
+  }, options)
+
+  const sections = document.querySelectorAll('.snap-section')
+  sections.forEach(section => observer.observe(section))
+})
+
+onUnmounted(() => {
+  if (observer) observer.disconnect()
+})
+</script>
+
+<script>
+// For useHead/useColorMode from Nuxt
+export default {
+  inheritAttrs: false
+}
 </script>
 
 <style scoped>

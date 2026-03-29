@@ -1,10 +1,14 @@
 <template>
-  <div 
-    class="base-node p-4 border border-pine/30 rounded-lg bg-forest/80 backdrop-blur-sm transition-all duration-300"
-    :class="nodeClasses"
-    :style="nodeStyle"
-  >
-    <!-- Cyan Ripple Effect (Stage 1) -->
+    <div 
+      class="base-node p-4 border border-pine/30 rounded-lg bg-forest/80 backdrop-blur-sm transition-all duration-300 overflow-visible"
+      :class="nodeClasses"
+      :style="nodeStyle"
+    >
+      <!-- Nature Elements (Edge Anchored) -->
+      <div v-if="isActive" class="daisy-node daisy-white daisy-tr scale-75 animate-pulse"></div>
+      <div class="leaf-pair leaf-bl rotate-[-45deg] scale-50 opacity-50"></div>
+
+      <!-- Cyan Ripple Effect (Stage 1) -->
     <div v-if="isActive && currentStage === 1" class="ripple-container">
       <div class="ripple-ring"></div>
       <div class="ripple-ring ripple-ring-delay"></div>

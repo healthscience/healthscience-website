@@ -1,5 +1,5 @@
 <template>
-  <section class="snap-section p-4 md:p-12 relative z-10">
+  <div class="p-4 md:p-12 relative z-10">
     <div class="hop-grid w-full max-w-7xl mx-auto">
       <div class="lego-module col-span-12 bg-gradient-to-b from-pine/5 to-transparent">
         
@@ -27,7 +27,7 @@
 
         <div class="mb-8">
           <p class="text-secondary/80 text-lg font-light italic">
-            Each project doesn't just "send data"—it becomes an Agent that occupies the HOP skeleton.
+            Each peer directs the creation of a peer experience on the fly.  Plug in agents to the emulation worlds to enhance the resolution. 
           </p>
         </div>
 
@@ -130,7 +130,7 @@
         </div>
 
         <!-- Case Study Tiles -->
-        <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!--<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           <NuxtLink to="/besearch/vagus-strap" class="group p-6 border border-pine/20 rounded-xl bg-pine/5 hover:border-amber-500/50 hover:bg-amber-500/5 transition-all cursor-pointer">
             <div class="flex items-center gap-3 mb-4">
               <div class="w-2 h-2 rounded-full bg-amber-500 group-hover:animate-ping"></div>
@@ -157,7 +157,7 @@
             <p class="text-secondary/70 text-sm leading-relaxed mb-4">Bioregion Renderer (Soil-to-Stomach). Spatial Sovereignty through Drone-Mapping and DNA-Soil data.</p>
             <span class="text-green-500 text-xs font-mono uppercase tracking-widest group-hover:underline">View Case Study →</span>
           </NuxtLink>
-        </div>
+        </div>-->
 
         <!-- Technical Navigation Buttons -->
         <div class="mt-12 flex flex-wrap gap-4 justify-center">
@@ -176,9 +176,9 @@
         </div>
 
       </div>
-      <ContributePeers @open-docs="$emit('open-plugin')" />
+      <!--<ContributePeers @open-docs="$emit('open-plugin')" />-->
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>

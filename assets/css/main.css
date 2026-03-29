@@ -52,14 +52,14 @@ body {
 .snap-container {
   height: 100vh;
   overflow-y: auto;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   scroll-behavior: smooth;
 }
 
 .snap-section {
-  min-height: 100vh;
+  min-height: 100vh; height: auto;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
+  
   position: relative;
   display: flex;
   flex-direction: column;
@@ -148,14 +148,14 @@ body {
 
 /* Mechanical Snaps */
 .snap-container {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   height: 100vh;
   overflow-y: scroll;
 }
 
 .snap-section {
   scroll-snap-align: start;
-  min-height: 100vh;
+  min-height: 100vh; height: auto;
 }
 
 /* Typography */

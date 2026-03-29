@@ -1,19 +1,47 @@
 <template>
-  <div class="lego-module col-span-12 md:col-span-8 h-[60vh] flex flex-col justify-center relative overflow-hidden bg-transparent border-none shadow-none">
+  <div class="lego-module col-span-12 md:col-span-8 h-[60vh] flex flex-col justify-center relative !overflow-visible bg-transparent border-none shadow-none has-vines">
+    <!-- Nature Elements (Edge Anchored) -->
+    <div class="daisy-node daisy-white daisy-tr animate-pulse"></div>
+    <!-- Nature Elements (Edge Anchored - Left and Top Focus) -->
+    <!-- Top Center Cluster (Horizontal V-Shape) -->
+    <div class="leaf-pair leaf-h leaf-hero-top-1"></div>
+    <div class="leaf-pair leaf-h leaf-hero-top-2"></div>
+    <div class="leaf-pair leaf-h leaf-hero-top-3"></div>
+    
+    <!-- Top Left Corner Burst -->
+    <div class="leaf-pair leaf-h leaf-hero-tl-1"></div>
+    <div class="leaf-pair leaf-v leaf-hero-tl-2"></div>
+    <div class="leaf-pair leaf-h leaf-hero-tl-3"></div>
+    <div class="leaf-pair leaf-v leaf-hero-tl-4"></div>
+    <div class="leaf-pair leaf-h leaf-hero-tl-5"></div>
+    
+    <!-- Left Rail Clusters (Vertical V-Shape) -->
+    <div class="leaf-pair leaf-v leaf-hero-left-1"></div>
+    <div class="leaf-pair leaf-v leaf-hero-left-2"></div>
+    <div class="leaf-pair leaf-v leaf-hero-left-3"></div>
+    
+    <div class="leaf-pair leaf-v leaf-hero-left-4"></div>
+    <div class="leaf-pair leaf-v leaf-hero-left-5"></div>
+    <div class="leaf-pair leaf-v leaf-hero-left-6"></div>
+    <div class="leaf-pair leaf-v leaf-hero-left-7"></div>
+    <div class="leaf-pair leaf-v leaf-hero-left-8"></div>
+    
+    <!-- Bottom Left Anchor (Horizontal) -->
+    <div class="leaf-pair leaf-h leaf-hero-bl"></div>
+
     <div class="z-10 relative max-w-2xl">
       <h1 class="text-3xl md:text-4xl font-light mb-6 leading-tight text-primary tracking-tight">
         Gaia intelligences <br />
         <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-hero-from to-hero-to">shape health.</span>
       </h1>
-      <p class="text-lg text-secondary mb-10 font-light leading-relaxed">
+      <div class="text-lg text-secondary mb-2 font-bold leading-relaxed">
         HOP - The Infrastructure for Science’s Living Roots.
-
-        At the dawn of super-intelligence, the Health Oracle Protocol (HOP) provides the foundational physics for the living way. It is a Peer-to-Peer framework that treats biological signals as sovereign intelligence, guiding every cell toward measurable health.
-
-        In place of abstracted datasets, HOP establishes the Coherence Ledger and SafeFlow-ECS: a decentralized engine that anchors trust in the rhythmic reality of the cell, the Peer, and the bioregion. This is the Sovereign Skeleton—the high-resolution architecture that powers the PeerStack and enables a biological experience on the fly.
+      </div>
+      <p class="text-lg text-secondary mb-10 font-light leading-relaxed">
+        At the dawn of super-intelligence, we return to the living way. The Health Oracle Protocol (HOP) provides the foundational physics for the living way. It is a Peer-to-Peer Fabric that treats biological signals as Sovereign Intelligence, guiding every cell to bioregion towards health.
       </p>
       <div class="flex gap-4">
-        <button class="lego-button" @click="handleLink('#')">
+        <button class="lego-button" @click="handleLink('https://bentoboxds.org')">
           Download
         </button>
         <button class="lego-button lego-button-outline" @click="handleLink('https://beebeehop.any.org/a-tiny-hop-to-gaia-intelligence')">

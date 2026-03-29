@@ -1,6 +1,7 @@
 
 interface _GlobalComponents {
-      'BeeBeePrompts': typeof import("../components/BeeBeePrompts.vue")['default']
+      'AnatomyDiagram': typeof import("../components/AnatomyDiagram.vue")['default']
+    'BeeBeePrompts': typeof import("../components/BeeBeePrompts.vue")['default']
     'BorealComputation': typeof import("../components/BorealComputation.vue")['default']
     'CallToParticipate': typeof import("../components/CallToParticipate.vue")['default']
     'CascadeModule': typeof import("../components/CascadeModule.vue")['default']
@@ -45,7 +46,8 @@ interface _GlobalComponents {
     'Head': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Head']
     'Html': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
-      'LazyBeeBeePrompts': typeof import("../components/BeeBeePrompts.vue")['default']
+      'LazyAnatomyDiagram': typeof import("../components/AnatomyDiagram.vue")['default']
+    'LazyBeeBeePrompts': typeof import("../components/BeeBeePrompts.vue")['default']
     'LazyBorealComputation': typeof import("../components/BorealComputation.vue")['default']
     'LazyCallToParticipate': typeof import("../components/CallToParticipate.vue")['default']
     'LazyCascadeModule': typeof import("../components/CascadeModule.vue")['default']
@@ -104,6 +106,7 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
+export const AnatomyDiagram: typeof import("../components/AnatomyDiagram.vue")['default']
 export const BeeBeePrompts: typeof import("../components/BeeBeePrompts.vue")['default']
 export const BorealComputation: typeof import("../components/BorealComputation.vue")['default']
 export const CallToParticipate: typeof import("../components/CallToParticipate.vue")['default']
@@ -149,6 +152,7 @@ export const Style: typeof import("../node_modules/nuxt/dist/head/runtime/compon
 export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Head']
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
+export const LazyAnatomyDiagram: typeof import("../components/AnatomyDiagram.vue")['default']
 export const LazyBeeBeePrompts: typeof import("../components/BeeBeePrompts.vue")['default']
 export const LazyBorealComputation: typeof import("../components/BorealComputation.vue")['default']
 export const LazyCallToParticipate: typeof import("../components/CallToParticipate.vue")['default']

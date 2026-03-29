@@ -1,0 +1,303 @@
+/* Daisy Base Logic */
+.daisy-node {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 9999;
+  display: block !important;
+}
+
+/* Positioning Utilities for Section Edges */
+.daisy-tr { top: -12px; right: -12px; }
+.daisy-tl { top: -12px; left: -12px; }
+.daisy-br { bottom: -12px; right: -12px; }
+.daisy-bl { bottom: -12px; left: -12px; }
+
+/* White Daisy: High Albedo / Cooling */
+.daisy-white {
+  background: #ffffff !important;
+  box-shadow: 
+    0 8px 0 -2px #ffffff, 0 -8px 0 -2px #ffffff, 
+    8px 0 0 -2px #ffffff, -8px 0 0 -2px #ffffff,
+    6px 6px 0 -2px #ffffff, -6px -6px 0 -2px #ffffff,
+    6px -6px 0 -2px #ffffff, -6px 6px 0 -2px #ffffff !important;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+}
+
+.daisy-white::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px; height: 6px;
+  background: #fbbf24 !important;
+  border-radius: 50%;
+  z-index: 10000;
+}
+
+/* Black Daisy: Low Albedo / Absorption */
+.daisy-black {
+  background: #000000 !important;
+  box-shadow: 
+    0 8px 0 -2px #000000, 0 -8px 0 -2px #000000, 
+    8px 0 0 -2px #000000, -8px 0 0 -2px #000000,
+    6px 6px 0 -2px #000000, -6px -6px 0 -2px #000000,
+    6px -6px 0 -2px #000000, -6px 6px 0 -2px #000000 !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+.daisy-black::after {
+  content: "";
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px; height: 6px;
+  background: #4ade80 !important;
+  border-radius: 50%;
+  z-index: 10000;
+}
+
+/* Leaf Pairs: Organic Breaks - V-Shape Alignment */
+.leaf-pair {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+.leaf-pair::before,
+.leaf-pair::after {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 10px;
+  background: #2d5a27;
+  border-radius: 0 100% 0 100%;
+  top: 50%;
+  left: 50%;
+}
+
+/* Horizontal Growth (V-shape opening upward/downward) */
+.leaf-h::before { transform: translate(-100%, -50%) rotate(-30deg); transform-origin: right center; }
+.leaf-h::after { transform: translate(0%, -50%) rotate(30deg); transform-origin: left center; background: #1a3a17; }
+
+/* Vertical Growth (V-shape opening sideways) */
+.leaf-v::before { transform: translate(-50%, -100%) rotate(-60deg); transform-origin: center bottom; }
+.leaf-v::after { transform: translate(-50%, 0%) rotate(60deg); transform-origin: center top; background: #1a3a17; }
+
+/* Positioning Utilities for Section Edges */
+.leaf-tr { top: -15px; right: 10%; }
+.leaf-tl { top: -15px; left: 10%; }
+.leaf-br { bottom: -15px; right: 20%; }
+.leaf-bl { bottom: -15px; left: 20%; }
+
+/* Explicit Positioning for Hero Module Density (Clustered on Left and Top) */
+/* Cluster 1: Top Center (Dense Horizontal) */
+.leaf-hero-top-1 { top: -20px; left: 25%; }
+.leaf-hero-top-2 { top: -22px; left: 27%; scale: 0.9; }
+.leaf-hero-top-3 { top: -20px; left: 29%; scale: 1.1; }
+
+/* Cluster 2: Top Left Corner (Burst) */
+.leaf-hero-tl-1 { top: -15px; left: 2%; }
+.leaf-hero-tl-2 { top: 2%; left: -15px; }
+.leaf-hero-tl-3 { top: -20px; left: 5%; scale: 1.2; }
+.leaf-hero-tl-4 { top: 7%; left: -20px; opacity: 0.7; }
+.leaf-hero-tl-5 { top: -12px; left: 8%; scale: 0.9; }
+
+/* Cluster 3: Left Rail (Fibonacci 3-5 grouping - Vertical) */
+.leaf-hero-left-1 { top: 35%; left: -22px; }
+.leaf-hero-left-2 { top: 39%; left: -20px; scale: 1.1; }
+.leaf-hero-left-3 { top: 43%; left: -22px; scale: 0.8; }
+
+.leaf-hero-left-4 { top: 65%; left: -20px; }
+.leaf-hero-left-5 { top: 68%; left: -22px; scale: 1.2; }
+.leaf-hero-left-6 { top: 71%; left: -20px; scale: 0.7; }
+.leaf-hero-left-7 { top: 74%; left: -22px; scale: 0.9; }
+.leaf-hero-left-8 { top: 77%; left: -20px; opacity: 0.8; }
+
+/* Bottom Left Anchor */
+.leaf-hero-bl { bottom: -15px; left: 10%; }
+
+
+/* Positioning Utilities for Leaves */
+.leaf-tr { top: -15px; right: 10%; }
+.leaf-tl { top: -15px; left: 10%; }
+.leaf-br { bottom: -15px; right: 20%; }
+.leaf-bl { bottom: -15px; left: 20%; }
+
+/* Explicit Positioning for Hero Module Density (Clustered on Left and Top) */
+/* Cluster 1: Top Center (Dense) */
+.leaf-hero-top-1 { top: -18px; left: 25%; transform: rotate(190deg); }
+.leaf-hero-top-2 { top: -20px; left: 27%; transform: rotate(175deg); scale: 0.9; }
+.leaf-hero-top-3 { top: -18px; left: 29%; transform: rotate(205deg); scale: 1.1; }
+
+/* Cluster 2: Top Left Corner (Burst) */
+.leaf-hero-tl-1 { top: -10px; left: 2%; transform: rotate(145deg); }
+.leaf-hero-tl-2 { top: 2%; left: -10px; transform: rotate(-45deg); scale: 0.8; }
+.leaf-hero-tl-3 { top: -15px; left: 5%; transform: rotate(160deg); scale: 1.2; }
+.leaf-hero-tl-4 { top: 5%; left: -15px; transform: rotate(-60deg); opacity: 0.7; }
+.leaf-hero-tl-5 { top: -8px; left: 8%; transform: rotate(180deg); scale: 0.9; }
+
+/* Cluster 3: Left Rail (Fibonacci 3-5 grouping) */
+.leaf-hero-left-1 { top: 35%; left: -22px; transform: rotate(-90deg); }
+.leaf-hero-left-2 { top: 39%; left: -20px; transform: rotate(-105deg); scale: 1.1; }
+.leaf-hero-left-3 { top: 43%; left: -22px; transform: rotate(-75deg); scale: 0.8; }
+
+.leaf-hero-left-4 { top: 65%; left: -20px; transform: rotate(-95deg); }
+.leaf-hero-left-5 { top: 68%; left: -22px; transform: rotate(-80deg); scale: 1.2; }
+.leaf-hero-left-6 { top: 71%; left: -20px; transform: rotate(-110deg); scale: 0.7; }
+.leaf-hero-left-7 { top: 74%; left: -22px; transform: rotate(-65deg); scale: 0.9; }
+.leaf-hero-left-8 { top: 77%; left: -20px; transform: rotate(-100deg); opacity: 0.8; }
+
+/* Bottom Left Anchor */
+.leaf-hero-bl { bottom: -15px; left: 10%; transform: rotate(15deg); }
+
+
+/* Boreal Computation Section - Fibonacci Clusters (Top and Left only) */
+/* Cluster Top: Fibonacci 8 grouping - HORIZONTAL ALIGNMENT */
+.boreal-top-1 { top: -20px; left: 15%; transform: rotate(0deg); }
+.boreal-top-2 { top: -22px; left: 17%; transform: rotate(5deg); scale: 0.8; }
+.boreal-top-3 { top: -19px; left: 19%; transform: rotate(-5deg); scale: 1.1; }
+.boreal-top-4 { top: -21px; left: 21%; transform: rotate(10deg); scale: 0.7; }
+.boreal-top-5 { top: -20px; left: 23%; transform: rotate(-10deg); scale: 1.2; }
+.boreal-top-6 { top: -18px; left: 25%; transform: rotate(3deg); scale: 0.9; }
+.boreal-top-7 { top: -22px; left: 27%; transform: rotate(-7deg); scale: 1.0; }
+.boreal-top-8 { top: -20px; left: 29%; transform: rotate(15deg); scale: 0.8; opacity: 0.8; }
+
+/* Cluster Left Rail: Fibonacci 5+3 grouping - VERTICAL ALIGNMENT */
+.boreal-left-1 { top: 20%; left: -22px; transform: rotate(0deg); }
+.boreal-left-2 { top: 23%; left: -20px; transform: rotate(10deg); scale: 1.1; }
+.boreal-left-3 { top: 26%; left: -22px; transform: rotate(-15deg); scale: 0.8; }
+.boreal-left-4 { top: 29%; left: -20px; transform: rotate(5deg); scale: 1.2; }
+.boreal-left-5 { top: 32%; left: -22px; transform: rotate(-10deg); scale: 0.9; }
+
+.boreal-left-6 { bottom: 20%; left: -22px; transform: rotate(0deg); }
+.boreal-left-7 { bottom: 23%; left: -20px; transform: rotate(15deg); scale: 1.1; }
+.boreal-left-8 { bottom: 26%; left: -22px; transform: rotate(-20deg); scale: 0.8; }
+
+/* Top Left Corner Convergence */
+.boreal-tl-1 { top: -15px; left: 2%; transform: rotate(10deg); }
+.boreal-tl-2 { top: 2%; left: -15px; transform: rotate(80deg); }
+.boreal-tl-3 { top: -20px; left: 5%; transform: rotate(-15deg); scale: 1.2; }
+
+.daisy-boreal-tr { top: -14px; right: -14px; }
+.daisy-boreal-tl { top: -14px; left: 10%; }
+
+.leaf-pair::before,
+.leaf-pair::after {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 10px;
+  background: #2d5a27;
+  border-radius: 0 100% 0 100%;
+}
+
+.leaf-pair::after {
+  background: #1a3a17;
+  transform: rotate(35deg);
+  left: 12px;
+  top: 6px;
+  opacity: 0.9;
+}
+
+/* Positioning Utilities for Leaves */
+.leaf-tr { top: -10px; right: 10%; }
+.leaf-tl { top: -10px; left: 10%; }
+.leaf-br { bottom: -10px; right: 20%; }
+.leaf-bl { bottom: -10px; left: 20%; }
+
+/* Explicit Positioning for Hero Module Density */
+.leaf-pos-1 { top: 20%; left: -12px; transform: rotate(-90deg); }
+.leaf-pos-2 { top: 60%; left: -12px; transform: rotate(-70deg); }
+.leaf-pos-3 { bottom: -10px; left: 40%; transform: rotate(10deg); }
+.leaf-pos-4 { top: -10px; right: 40%; transform: rotate(190deg); }
+.leaf-pos-5 { bottom: 20%; right: -12px; transform: rotate(90deg); }
+
+/* Boreal Computation Section Positioning */
+.boreal-edge-1 { top: 5%; left: -15px; transform: rotate(-80deg); }
+.boreal-edge-2 { top: 25%; right: -15px; transform: rotate(85deg); }
+.boreal-edge-3 { bottom: 10%; left: -15px; transform: rotate(-100deg); }
+.boreal-edge-4 { bottom: -12px; left: 25%; transform: rotate(15deg); }
+.boreal-edge-5 { top: -12px; right: 35%; transform: rotate(195deg); }
+.boreal-edge-6 { top: 45%; left: -15px; transform: rotate(-95deg); }
+.boreal-edge-7 { bottom: 35%; right: -15px; transform: rotate(75deg); }
+.boreal-edge-8 { bottom: -12px; right: 30%; transform: rotate(-5deg); }
+
+/* Boreal Computation Section - Triple Density */
+.boreal-dense-1 { top: 15%; left: -15px; transform: rotate(-45deg); }
+.boreal-dense-2 { top: 35%; left: -15px; transform: rotate(-120deg); }
+.boreal-dense-3 { top: 55%; left: -15px; transform: rotate(-15deg); }
+.boreal-dense-4 { top: 75%; left: -15px; transform: rotate(-160deg); }
+.boreal-dense-5 { top: 85%; left: -15px; transform: rotate(-30deg); }
+
+.boreal-dense-6 { top: 10%; right: -15px; transform: rotate(45deg); }
+.boreal-dense-7 { top: 30%; right: -15px; transform: rotate(120deg); }
+.boreal-dense-8 { top: 50%; right: -15px; transform: rotate(15deg); }
+.boreal-dense-9 { top: 70%; right: -15px; transform: rotate(160deg); }
+.boreal-dense-10 { top: 90%; right: -15px; transform: rotate(30deg); }
+
+.boreal-dense-11 { top: -12px; left: 5%; transform: rotate(185deg); }
+.boreal-dense-12 { top: -12px; left: 25%; transform: rotate(165deg); }
+.boreal-dense-13 { top: -12px; left: 45%; transform: rotate(195deg); }
+.boreal-dense-14 { top: -12px; left: 65%; transform: rotate(175deg); }
+.boreal-dense-15 { top: -12px; left: 85%; transform: rotate(205deg); }
+
+.boreal-dense-16 { bottom: -12px; left: 10%; transform: rotate(-5deg); }
+.boreal-dense-17 { bottom: -12px; left: 35%; transform: rotate(25deg); }
+.boreal-dense-18 { bottom: -12px; left: 55%; transform: rotate(-15deg); }
+.boreal-dense-19 { bottom: -12px; left: 75%; transform: rotate(45deg); }
+.boreal-dense-20 { bottom: -12px; left: 95%; transform: rotate(-25deg); }
+
+.daisy-boreal-1 { top: 15%; right: -14px; }
+.daisy-boreal-2 { bottom: 20%; left: -14px; }
+.daisy-boreal-3 { top: -14px; left: 15%; }
+
+.leaf-pair::before,
+.leaf-pair::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 7px;
+  background: #2d5a27;
+  border-radius: 0 100% 0 100%;
+}
+
+.leaf-pair::after {
+  background: #1a3a17;
+  transform: rotate(35deg);
+  left: 8px;
+  top: 4px;
+  opacity: 0.9;
+}
+
+/* Interactions */
+.lego-module:hover .daisy-node,
+.base-node:hover .daisy-node,
+.snap-section:hover .daisy-node {
+  transform: rotate(45deg) scale(1.25) !important;
+  filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.4)) !important;
+}
+
+/* Techno-Vine Border Growth */
+.has-vines::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, transparent 75%, #2d5a27 90%, #4ade80 100%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  padding: 1px;
+  pointer-events: none;
+  filter: drop-shadow(0 0 4px rgba(74, 222, 128, 0.3));
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.has-vines:hover::before {
+  opacity: 1;
+}

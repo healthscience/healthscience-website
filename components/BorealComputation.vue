@@ -1,6 +1,37 @@
 <template>
-  <section class="snap-section p-4 md:p-12 relative z-10 bg-forest/40 border-t border-white/10 overflow-hidden">
-    <div class="w-full max-w-7xl mx-auto">
+  <section class="snap-section p-4 md:p-12 relative z-10 bg-forest/40 border-t border-white/10 !overflow-visible">
+    <!-- Section Edge Nature (Top and Left Focus - Fibonacci Clustering) -->
+    <!-- Daisies -->
+    <div class="daisy-node daisy-white daisy-boreal-tr animate-pulse"></div>
+    <div class="daisy-node daisy-white daisy-boreal-tl scale-90"></div>
+    
+    <!-- Top Cluster (Horizontal V-Shape - Group of 8) -->
+    <div class="leaf-pair leaf-h boreal-top-1"></div>
+    <div class="leaf-pair leaf-h boreal-top-2"></div>
+    <div class="leaf-pair leaf-h boreal-top-3"></div>
+    <div class="leaf-pair leaf-h boreal-top-4"></div>
+    <div class="leaf-pair leaf-h boreal-top-5"></div>
+    <div class="leaf-pair leaf-h boreal-top-6"></div>
+    <div class="leaf-pair leaf-h boreal-top-7"></div>
+    <div class="leaf-pair leaf-h boreal-top-8"></div>
+    
+    <!-- Left Rail Clusters (Vertical V-Shape - Group of 5+3) -->
+    <div class="leaf-pair leaf-v boreal-left-1"></div>
+    <div class="leaf-pair leaf-v boreal-left-2"></div>
+    <div class="leaf-pair leaf-v boreal-left-3"></div>
+    <div class="leaf-pair leaf-v boreal-left-4"></div>
+    <div class="leaf-pair leaf-v boreal-left-5"></div>
+    
+    <div class="leaf-pair leaf-v boreal-left-6"></div>
+    <div class="leaf-pair leaf-v boreal-left-7"></div>
+    <div class="leaf-pair leaf-v boreal-left-8"></div>
+
+    <!-- Top Left Corner Burst -->
+    <div class="leaf-pair leaf-h boreal-tl-1"></div>
+    <div class="leaf-pair leaf-v boreal-tl-2"></div>
+    <div class="leaf-pair leaf-h boreal-tl-3"></div>
+
+    <div class="w-full max-w-7xl mx-auto relative z-20">
       <!-- Header -->
       <div class="mb-16 max-w-3xl">
         <div class="text-xs font-mono text-neon mb-4 tracking-[0.3em] uppercase">The Boreal Horizon</div>
@@ -24,7 +55,9 @@
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Phase 1 -->
-          <div class="lego-module group hover:border-neon/40 transition-all duration-500">
+          <div class="lego-module group hover:border-neon/40 transition-all duration-500 has-vines !overflow-visible">
+            <div class="daisy-node daisy-white daisy-tr"></div>
+            <div class="leaf-pair leaf-bl rotate-[210deg]"></div>
             <div class="flex justify-between items-start mb-6">
               <span class="text-4xl font-light text-neon/20 group-hover:text-neon/40 transition-colors font-mono">01</span>
               <span class="px-2 py-1 text-[10px] font-mono border border-neon/20 text-neon uppercase tracking-tighter">Alignment</span>
@@ -36,7 +69,8 @@
           </div>
 
           <!-- Phase 2 -->
-          <div class="lego-module group hover:border-neon/40 transition-all duration-500">
+          <div class="lego-module group hover:border-neon/40 transition-all duration-500 has-vines !overflow-visible">
+            <div class="leaf-pair leaf-tr rotate-[45deg]"></div>
             <div class="flex justify-between items-start mb-6">
               <span class="text-4xl font-light text-neon/20 group-hover:text-neon/40 transition-colors font-mono">02</span>
               <span class="px-2 py-1 text-[10px] font-mono border border-neon/20 text-neon uppercase tracking-tighter">Conformity</span>
@@ -48,7 +82,8 @@
           </div>
 
           <!-- Phase 3 -->
-          <div class="lego-module group hover:border-neon/40 transition-all duration-500">
+          <div class="lego-module group hover:border-neon/40 transition-all duration-500 has-vines !overflow-visible">
+            <div class="daisy-node daisy-black daisy-br"></div>
             <div class="flex justify-between items-start mb-6">
               <span class="text-4xl font-light text-neon/20 group-hover:text-neon/40 transition-colors font-mono">03</span>
               <span class="px-2 py-1 text-[10px] font-mono border border-neon/20 text-neon uppercase tracking-tighter">Synthesis</span>
@@ -111,7 +146,7 @@
       </div>
 
       <!-- III. The HOP-Native Reality -->
-      <div class="max-w-4xl mx-auto">
+      <!--<div class="max-w-4xl mx-auto">
         <h3 class="text-sm font-mono text-secondary/60 uppercase tracking-widest mb-8 text-center">III. The HOP-Native Reality</h3>
         <div class="overflow-hidden rounded-xl border border-white/10 bg-forest/20 backdrop-blur-sm">
           <table class="w-full text-left border-collapse">
@@ -145,14 +180,9 @@
             </tbody>
           </table>
         </div>
-      </div>
+      </div>-->
     </div>
   </section>
-  <div class="bento-node">
-    <div class="daisy-anchor"></div>
-    <h3>Now Me: Vagus Tone</h3>
-    <p>25Hz Pulse Active. Coherence: 0.92</p>
-  </div>
 </template>
 
 <script setup>
@@ -164,84 +194,5 @@
   @apply bg-module backdrop-blur-md p-8 border border-white/10 rounded-xl relative overflow-hidden;
 }
 
-/* The Container */
-/* The Container - Clean, Dark, Structured */
-.bento-node {
-  position: relative;
-  padding: 2.5rem;
-  background: rgba(10, 25, 20, 0.92); /* Deep Boreal shade */
-  border-left: 2px solid #4ade80; /* The Technical Spine */
-  border-radius: 8px;
-  color: #f0fdf4;
-  margin: 30px;
-}
 
-/* 1. The 'Lovelock Daisyworld' Node (Geometric Bloom) */
-.daisy-world {
-  position: absolute;
-  top: -15px;
-  right: 25px;
-  width: 22px;
-  height: 22px;
-  z-index: 10;
-  /* Conic gradient creates 8 petals around a yellow center */
-  background: 
-    radial-gradient(circle at center, #fbbf24 4px, transparent 5px), 
-    conic-gradient(from 0deg, 
-      #fff 0deg 20deg, transparent 20deg 45deg, 
-      #fff 45deg 65deg, transparent 65deg 90deg, 
-      #fff 90deg 110deg, transparent 110deg 135deg, 
-      #fff 135deg 155deg, transparent 155deg 180deg, 
-      #fff 180deg 200deg, transparent 200deg 225deg, 
-      #fff 225deg 245deg, transparent 245deg 270deg, 
-      #fff 270deg 290deg, transparent 290deg 315deg, 
-      #fff 315deg 335deg, transparent 335deg);
-  border-radius: 50%;
-  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
-}
-
-/* 2. The Leaf Cluster - Top Left (The 'Reaching' Cluster) */
-.bento-node::before {
-  content: "";
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  width: 18px;
-  height: 10px;
-  background: #2d5a27;
-  border-radius: 0 100% 0 100%;
-  transform: rotate(-30deg);
-  /* Box-shadow creates 'Shadow Leaves' to form a cluster */
-  box-shadow: 
-    8px -4px 0 -1px #1a3a17, 
-    -5px 8px 0 -2px #3d7a36,
-    15px 2px 0 -3px #2d5a27;
-  opacity: 0.95;
-}
-
-/* 3. The Leaf Cluster - Bottom Right (The 'Nesting' Cluster) */
-.bento-node::after {
-  content: "";
-  position: absolute;
-  bottom: 8px;
-  right: -15px;
-  width: 22px;
-  height: 12px;
-  background: #1a3a17; /* Darker green */
-  border-radius: 100% 0 100% 0; /* Mirrored leaf shape */
-  transform: rotate(15deg);
-  /* Creating a dense little cluster of 3-4 leaves */
-  box-shadow: 
-    -10px -8px 0 -2px #2d5a27,
-    -4px -12px 0 -4px #1a3a17,
-    -18px -2px 0 -3px #3d7a36;
-  opacity: 0.85;
-}
-
-/* Subtle Hover Effect for the 'Daisy Albedo' */
-.bento-node:hover .daisy-world {
-  transform: scale(1.1) rotate(10deg);
-  filter: drop-shadow(0 0 8px #fff);
-  transition: all 0.4s ease-out;
-}
 </style>

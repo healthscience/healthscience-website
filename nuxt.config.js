@@ -23,7 +23,7 @@ export default defineNuxtConfig({
     preference: 'light', // default value of $colorMode.preference
     fallback: 'light', // fallback value if not system preference found
   },
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.css', '~/assets/css/nature.css'],
 
   postcss: {
     plugins: {

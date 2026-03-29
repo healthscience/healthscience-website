@@ -1,5 +1,6 @@
 <template>
-  <div class="supply-chain-tile p-5 border border-amber-500/30 rounded-xl bg-amber-500/5 backdrop-blur-sm hover:border-amber-500/60 transition-all">
+  <div class="supply-chain-tile p-5 border border-amber-500/30 rounded-xl bg-amber-500/5 backdrop-blur-sm hover:border-amber-500/60 transition-all relative overflow-visible">
+    <div class="leaf-pair leaf-tr rotate-[15deg]"></div>
     <div class="flex items-center gap-3 mb-4">
       <div class="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center">
         <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -8,8 +8,8 @@
       </div>
     </div>
     
-    <div class="space-y-8">
-      <!-- Step 1: Capture -->
+    <div class="space-y-8">coming soon beebee
+      <!-- Step 1: Capture 
       <div v-if="step >= 1" class="animate-pulse">
         <label class="block text-xs uppercase text-secondary/70 mb-3 tracking-widest">01 // Capture</label>
         <div class="flex items-center gap-3 bg-forest border border-pine/30 px-4 py-3 rounded-md focus-within:border-neon/50 transition-colors">
@@ -22,9 +22,9 @@
             :disabled="step > 1"
           />
         </div>
-      </div>
+      </div> -->
 
-      <!-- Step 2: Context -->
+      <!-- Step 2: Context
       <div v-if="step >= 2" class="pt-2">
         <label class="block text-xs uppercase text-secondary/70 mb-3 tracking-widest">02 // Context</label>
         <div class="bg-forest border border-pine/30 p-4 rounded-md">
@@ -33,9 +33,9 @@
             <div class="h-full bg-neon w-1/2 animate-[slide_2s_infinite]"></div>
           </div>
         </div>
-      </div>
+      </div>-->
 
-      <!-- Step 3: Compose -->
+      <!-- Step 3: Compose 
       <div v-if="step >= 3" class="pt-2">
         <label class="block text-xs uppercase text-secondary/70 mb-3 tracking-widest">03 // Compose</label>
         <button 
@@ -44,7 +44,7 @@
         >
           Generate Peer-Lego Contract
         </button>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
