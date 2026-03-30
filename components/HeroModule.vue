@@ -34,6 +34,9 @@
         Gaia intelligences <br />
         <span class="font-bold text-transparent bg-clip-text bg-gradient-to-r from-hero-from to-hero-to">shape health.</span>
       </h1>
+      <h2 class="text-xl md:text-xl text-secondary mb-4 font-normal leading-tight">
+        The Health Oracle Protocol (HOP) is the computational layer for Geophysiology—the science of planetary and biological self-regulation.
+      </h2>
       <div class="text-lg text-secondary mb-2 font-bold leading-relaxed">
         HOP - The Infrastructure for Science’s Living Roots.
       </div>

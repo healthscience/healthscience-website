@@ -51,5 +51,41 @@
         Active Alignment
       </span>
     </div>
+    <div class="mt-8 pt-4 border-t border-pine/20 relative z-10 overflow-x-auto">
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="border-b border-white/10">
+            <th class="py-3 text-[10px] font-mono text-secondary uppercase tracking-widest">Boreal Term</th>
+            <th class="py-3 text-[10px] font-mono text-neon uppercase tracking-widest">Systems Science Equivalent</th>
+          </tr>
+        </thead>
+        <tbody class="text-[11px] font-mono">
+          <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+            <td class="py-2 text-primary pr-4">Gaia Intelligences</td>
+            <td class="py-2 text-secondary/70 italic">Distributed Basal Cognition</td>
+          </tr>
+          <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+            <td class="py-2 text-primary pr-4">Besearch Cycle</td>
+            <td class="py-2 text-secondary/70 italic">Bayesian Belief Updating</td>
+          </tr>
+          <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+            <td class="py-2 text-primary pr-4">HeliClock</td>
+            <td class="py-2 text-secondary/70 italic">Chronobiological Entrainment</td>
+          </tr>
+          <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+            <td class="py-2 text-primary pr-4">Consilience Weave</td>
+            <td class="py-2 text-secondary/70 italic">Decentralized Machine Learning (DML)</td>
+          </tr>
+          <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+            <td class="py-2 text-primary pr-4">Levin Bubble Sort</td>
+            <td class="py-2 text-secondary/70 italic">Algorithmic Information Theory</td>
+          </tr>
+          <tr class="hover:bg-white/5 transition-colors">
+            <td class="py-2 text-primary pr-4">Von Mises</td>
+            <td class="py-2 text-secondary/70 italic">Directional Statistics</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>

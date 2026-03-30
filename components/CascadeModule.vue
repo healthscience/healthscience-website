@@ -102,7 +102,7 @@ const cascade = [
   {
     level: 'DEMO_04',
     title: 'Daisy world peer to peer',
-    description: 'James Lovelock original daisy world help expliain his Gaia Hypothesis.  Emulate the earths and suns resonancePulse.',
+    description: 'Our Daisyworld P2P demo isn\'t a simulation; it\'s a validation of Geophysiology in action. It demonstrates how decentralized nodes maintain a self-regulating homeostasis without a central authority.',
     commentary: 'A peer-to-peer implementation of the Daisyworld model, illustrating how self-regulating systems emerge from simple interactions between life and its environment.',
     media: null,
     specs: ['Gaia Hypothesis', 'Self-Regulating Systems', 'P2P Implementation']

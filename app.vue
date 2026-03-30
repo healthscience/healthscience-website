@@ -301,6 +301,23 @@
             <div class="h-px flex-1 bg-pine/30"></div>
           </div>
 
+        <!-- bridge gaia to physics -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+          <div class="space-y-4">
+            <h4 class="text-xs font-mono text-neon uppercase tracking-[0.2em]">I. Gaia as Systems Physics</h4>
+            <p class="text-secondary leading-relaxed font-serif italic">
+              "In the Boreal, Gaia Intelligence is not a metaphor. It is the mathematical recognition of nested, self-regulating systems—from the mitochondrial pulse to the bioregional weave. The Health Oracle Protocol provides the first-ever computational interface for these feedbacks, moving science from 'Reductionist Observation' to 'Resonant Participation.'"
+            </p>
+          </div>
+          <div class="space-y-4">
+            <h4 class="text-xs font-mono text-neon uppercase tracking-[0.2em]">II. The "Gaming Engine for Life" (BentoBoxDS)</h4>
+            <p class="text-secondary leading-relaxed">
+              "BentoBoxDS is the local-first execution environment. It treats your biology not as a static record, but as a dynamic state-machine. Using SafeFlow-ECS, we apply the same high-performance logic used in world-class simulation engines to the navigation of human health."
+            </p>
+          </div>
+        </div>
+
+
           <div class="mb-12">
             <p class="text-secondary/80 text-lg mb-8 font-light italic">
               <span @click="showRoadmap = true" class="text-neon cursor-pointer hover:underline font-mono text-sm uppercase tracking-widest mr-2">PROTOCOL road map.</span>

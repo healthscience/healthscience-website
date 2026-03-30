@@ -6,6 +6,12 @@
         <div class="flex items-center gap-4 mb-4">
           <div class="text-2xl font-mono text-neon tracking-[0.3em] uppercase">Cues & Besearch</div>
         </div>
+        <h3 class="text-l md:text-l text-secondary mb-6 font-normal leading-relaxed">
+          A Cue is not a vague signal; it is a Shannon-Entropy optimized packet of signed data. By using Levin Complexity, we ensure the 'Search' stage of the metabolism finds the most mathematically probable path to health.
+        </h3>
+        <h3 class="text-l md:text-l text-secondary mb-6 font-normal leading-relaxed">
+          The Besearch Cycle is a functional implementation of Active Inference. Using tiny agents to minimize variational free energy, the protocol allows a Peer to maintain biological coherence by constantly updating their internal model against the environment.
+        </h3>
         <h2 class="text-xl md:text-3xl font-light text-primary mb-8 leading-tight italic font-serif">
           The Metabolic Logic:
         </h2>
