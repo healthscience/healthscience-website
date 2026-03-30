@@ -7,6 +7,14 @@
           <div class="text-2xl font-mono text-neon tracking-[0.3em] uppercase">Cues & Besearch</div>
         </div>
         <h2 class="text-xl md:text-3xl font-light text-primary mb-8 leading-tight italic font-serif">
+          The Metabolic Logic:
+        </h2>
+        <div class="max-w-4xl space-y-6">
+          <p class="text-secondary leading-relaxed">
+            Besearch is not a study; it is a metabolic rate. It is the speed at which your context (Now Me) meets the global library (Research) to evolve a new path (Search) and project your health forward (Emulation).
+          </p>
+        </div>
+        <h2 class="text-xl md:text-3xl font-light text-primary mt-5 mb-8 leading-tight italic font-serif">
           The Metabolism of Knowledge
         </h2>
         <div class="max-w-4xl space-y-6">

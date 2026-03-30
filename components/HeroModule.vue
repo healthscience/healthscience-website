@@ -1,5 +1,5 @@
 <template>
-  <div class="lego-module col-span-12 md:col-span-8 h-[60vh] flex flex-col justify-center relative !overflow-visible bg-transparent border-none shadow-none has-vines">
+  <div class="lego-module col-span-12 md:col-span-8 flex flex-col justify-center relative !overflow-visible bg-transparent border-none shadow-none has-vines pb-20">
     <!-- Nature Elements (Edge Anchored) -->
     <div class="daisy-node daisy-white daisy-tr animate-pulse"></div>
     <!-- Nature Elements (Edge Anchored - Left and Top Focus) -->
@@ -38,7 +38,7 @@
         HOP - The Infrastructure for Science’s Living Roots.
       </div>
       <p class="text-lg text-secondary mb-10 font-light leading-relaxed">
-        At the dawn of super-intelligence, we return to the living way. The Health Oracle Protocol (HOP) provides the foundational physics for the living way. It is a Peer-to-Peer Fabric that treats biological signals as Sovereign Intelligence, guiding every cell to bioregion towards health.
+        At the dawn of super-intelligence, we return to the living way. The Health Oracle Protocol (HOP) provides the foundational physics for the living way. It is a Peer-to-Peer Fabric that treats biological signals as Sovereign Intelligences, guiding every cell to bioregion towards health.
       </p>
       <div class="flex gap-4">
         <button class="lego-button" @click="handleLink('https://bentoboxds.org')">
@@ -66,6 +66,44 @@
         <circle cx="200" cy="200" r="100" fill="none" stroke="rgba(169, 255, 0, 0.1)" stroke-width="1"/>
       </svg>
     </div>
+
+    <!--  new section in small intelligences -->
+    <section class="mt-24 pt-16 border-t border-pine/10 w-full relative z-20">
+      <div class="mb-12">
+        <h2 class="text-2xl md:text-3xl font-light text-primary mb-6 tracking-tight">
+          The Intelligences of the Small
+        </h2>
+        <p class="text-lg text-secondary/80 font-serif italic leading-relaxed max-w-4xl">
+          "Our approach to machine learning is a decentralized metabolism. It is intelligences at the scale of the cell, the peer, and the bioregional weave. By keeping the math where the pulse is, we ensure that every Peer remains the sole witness to their own truth."
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-pine/5 border border-pine/10 rounded-lg hover:border-neon/30 transition-all group">
+          <div class="text-neon font-mono text-[10px] uppercase tracking-[0.2em] mb-4">The Molecular Scale</div>
+          <h3 class="text-primary font-medium mb-3">Tiny Devices</h3>
+          <p class="text-sm text-secondary/70 leading-relaxed">
+            Raw signals are captured at the point of origin (Vagus-Strap, Sensing Skin). There is no "upload" to a cloud; the math happens where the pulse is.
+          </p>
+        </div>
+
+        <div class="p-6 bg-pine/5 border border-pine/10 rounded-lg hover:border-neon/30 transition-all group">
+          <div class="text-neon font-mono text-[10px] uppercase tracking-[0.2em] mb-4">The Cellular Scale</div>
+          <h3 class="text-primary font-medium mb-3">Tiny Agents</h3>
+          <p class="text-sm text-secondary/70 leading-relaxed">
+            ResonAgents operate within your BentoBox. These are not generic models trained on a distant monolith; they are your personal apprentices, learning the unique geometry of your Von Mises rhythms. They are the tiny reasoners that ensure your biological context remains a private, authored truth.
+          </p>
+        </div>
+
+        <div class="p-6 bg-pine/5 border border-pine/10 rounded-lg hover:border-neon/30 transition-all group">
+          <div class="text-neon font-mono text-[10px] uppercase tracking-[0.2em] mb-4">The Mycelial Scale</div>
+          <h3 class="text-primary font-medium mb-3">Decentralized Weave</h3>
+          <p class="text-sm text-secondary/70 leading-relaxed">
+            When tiny agents communicate across the Consilience Weave, they don't trade personal data. They trade Cues—distilled insights that allow the whole forest to learn without any single tree losing its sovereignty.
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
