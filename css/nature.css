@@ -5,24 +5,24 @@
   height: 14px;
   border-radius: 50%;
   transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: 99;
+  z-index: 9999;
   display: block !important;
 }
 
-/* Positioning Utilities */
-.daisy-tr { top: -7px; right: -7px; }
-.daisy-tl { top: -7px; left: -7px; }
-.daisy-br { bottom: -7px; right: -7px; }
-.daisy-bl { bottom: -7px; left: -7px; }
+/* Positioning Utilities for Section Edges */
+.daisy-tr { top: -12px; right: -12px; }
+.daisy-tl { top: -12px; left: -12px; }
+.daisy-br { bottom: -12px; right: -12px; }
+.daisy-bl { bottom: -12px; left: -12px; }
 
 /* White Daisy: High Albedo / Cooling */
 .daisy-white {
   background: #ffffff !important;
   box-shadow: 
-    0 4px 0 -1px #ffffff, 0 -4px 0 -1px #ffffff, 
-    4px 0 0 -1px #ffffff, -4px 0 0 -1px #ffffff,
-    3px 3px 0 -1px #ffffff, -3px -3px 0 -1px #ffffff,
-    3px -3px 0 -1px #ffffff, -3px 3px 0 -1px #ffffff !important;
+    0 8px 0 -2px #ffffff, 0 -8px 0 -2px #ffffff, 
+    8px 0 0 -2px #ffffff, -8px 0 0 -2px #ffffff,
+    6px 6px 0 -2px #ffffff, -6px -6px 0 -2px #ffffff,
+    6px -6px 0 -2px #ffffff, -6px 6px 0 -2px #ffffff !important;
   border: 1px solid rgba(0,0,0,0.1) !important;
 }
 
@@ -31,19 +31,20 @@
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: 4px; height: 4px;
+  width: 6px; height: 6px;
   background: #fbbf24 !important;
   border-radius: 50%;
+  z-index: 10000;
 }
 
 /* Black Daisy: Low Albedo / Absorption */
 .daisy-black {
   background: #000000 !important;
   box-shadow: 
-    0 4px 0 -1px #000000, 0 -4px 0 -1px #000000, 
-    4px 0 0 -1px #000000, -4px 0 0 -1px #000000,
-    3px 3px 0 -1px #000000, -3px -3px 0 -1px #000000,
-    3px -3px 0 -1px #000000, -3px 3px 0 -1px #000000 !important;
+    0 8px 0 -2px #000000, 0 -8px 0 -2px #000000, 
+    8px 0 0 -2px #000000, -8px 0 0 -2px #000000,
+    6px 6px 0 -2px #000000, -6px -6px 0 -2px #000000,
+    6px -6px 0 -2px #000000, -6px 6px 0 -2px #000000 !important;
   border: 1px solid rgba(255, 255, 255, 0.4) !important;
 }
 
@@ -52,26 +53,27 @@
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: 4px; height: 4px;
+  width: 6px; height: 6px;
   background: #4ade80 !important;
   border-radius: 50%;
+  z-index: 10000;
 }
 
-/* Leaf Pairs */
+/* Leaf Pairs: Organic Breaks - V-Shape Alignment */
 .leaf-pair {
   position: absolute;
   width: 20px;
   height: 20px;
   pointer-events: none;
-  z-index: 98;
+  z-index: 9998;
 }
 
 .leaf-pair::before,
 .leaf-pair::after {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 5px;
+  width: 14px;
+  height: 7px;
   background: #2d5a27;
   border-radius: 0 100% 0 100%;
 }
@@ -79,24 +81,47 @@
 .leaf-pair::after {
   background: #1a3a17;
   transform: rotate(35deg);
-  left: 6px;
-  top: 3px;
+  left: 8px;
+  top: 4px;
   opacity: 0.9;
 }
+
+/* Fibonacci Cluster Utilities */
+.leaf-cluster-8 { display: contents; }
+.leaf-cluster-8 .leaf-pair:nth-child(1) { top: -10px; left: 10%; transform: rotate(0deg); }
+.leaf-cluster-8 .leaf-pair:nth-child(2) { top: -12px; left: 12%; transform: rotate(5deg); scale: 0.8; }
+.leaf-cluster-8 .leaf-pair:nth-child(3) { top: -9px; left: 14%; transform: rotate(-5deg); scale: 1.1; }
+.leaf-cluster-8 .leaf-pair:nth-child(4) { top: -11px; left: 16%; transform: rotate(10deg); scale: 0.7; }
+.leaf-cluster-8 .leaf-pair:nth-child(5) { top: -10px; left: 18%; transform: rotate(-10deg); scale: 1.2; }
+.leaf-cluster-8 .leaf-pair:nth-child(6) { top: -8px; left: 20%; transform: rotate(3deg); scale: 0.9; }
+.leaf-cluster-8 .leaf-pair:nth-child(7) { top: -12px; left: 22%; transform: rotate(-7deg); scale: 1.0; }
+.leaf-cluster-8 .leaf-pair:nth-child(8) { top: -10px; left: 24%; transform: rotate(15deg); scale: 0.8; opacity: 0.8; }
+
+.leaf-cluster-5-v { display: contents; }
+.leaf-cluster-5-v .leaf-pair:nth-child(1) { top: 20%; left: -18px; transform: rotate(-90deg); }
+.leaf-cluster-5-v .leaf-pair:nth-child(2) { top: 23%; left: -16px; transform: rotate(-80deg); scale: 1.1; }
+.leaf-cluster-5-v .leaf-pair:nth-child(3) { top: 26%; left: -18px; transform: rotate(-105deg); scale: 0.8; }
+.leaf-cluster-5-v .leaf-pair:nth-child(4) { top: 29%; left: -16px; transform: rotate(-85deg); scale: 1.2; }
+.leaf-cluster-5-v .leaf-pair:nth-child(5) { top: 32%; left: -18px; transform: rotate(-100deg); scale: 0.9; }
+
+.leaf-cluster-3-v { display: contents; }
+.leaf-cluster-3-v .leaf-pair:nth-child(1) { bottom: 20%; left: -18px; transform: rotate(-90deg); }
+.leaf-cluster-3-v .leaf-pair:nth-child(2) { bottom: 23%; left: -16px; transform: rotate(-75deg); scale: 1.1; }
+.leaf-cluster-3-v .leaf-pair:nth-child(3) { bottom: 26%; left: -18px; transform: rotate(-110deg); scale: 0.8; }
 
 /* Techno-Vine Border Growth */
 .has-vines::before {
   content: "";
   position: absolute;
-  inset: -2px;
+  inset: -1px;
   border-radius: inherit;
   background: linear-gradient(135deg, transparent 75%, #2d5a27 90%, #4ade80 100%);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
-  padding: 2px;
+  padding: 1px;
   pointer-events: none;
   filter: drop-shadow(0 0 4px rgba(74, 222, 128, 0.3));
-  opacity: 0.4;
+  opacity: 0;
   transition: opacity 0.6s ease;
 }
 

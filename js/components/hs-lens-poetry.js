@@ -24,6 +24,8 @@ class HsLensPoetry extends HTMLElement {
                 scroll-behavior: smooth;
                 font-family: 'Inter', -apple-system, sans-serif;
                 position: relative;
+                padding-top: 80px; /* Offset for top menu header (60px) + tri-axis (20px) */
+                box-sizing: border-box;
             }
 
             /* Spiral Background */

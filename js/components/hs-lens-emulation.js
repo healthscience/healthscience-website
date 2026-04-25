@@ -22,6 +22,7 @@ class HsLensEmulation extends HTMLElement {
                 background: radial-gradient(circle at center, #101010 0%, #000 100%);
                 color: var(--color-emulation);
                 padding: 2rem;
+                padding-top: calc(80px + 2rem); /* Offset for top menu header (60px) + tri-axis (20px) */
                 height: 100%;
                 overflow: hidden;
                 box-sizing: border-box;

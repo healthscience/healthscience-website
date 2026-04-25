@@ -35,17 +35,30 @@ class HsLensSkeleton extends HTMLElement {
                 font-family: 'Georgia', serif;
                 scroll-behavior: smooth;
                 line-height: 1.8;
+                padding-top: 80px; /* Offset for top menu header (60px) + tri-axis (20px) */
+                box-sizing: border-box;
             }
 
             .container {
                 max-width: 900px;
                 margin: 0 auto;
-                padding: 4rem 2rem;
+                padding: 8rem 2rem;
                 border-left: 1px solid #dcd3c1;
                 border-right: 1px solid #dcd3c1;
                 min-height: 100vh;
                 background: white;
                 position: relative;
+            }
+
+            @media (max-width: 768px) {
+                .container {
+                    padding: 2rem 1rem;
+                    border-left: none;
+                    border-right: none;
+                }
+                h1 { font-size: 1.8rem; }
+                h2 { font-size: 1.4rem; }
+                .scale-grid { grid-template-columns: 1fr; }
             }
 
             header {
@@ -73,7 +86,7 @@ class HsLensSkeleton extends HTMLElement {
                 margin-bottom: 8rem;
                 scroll-margin-top: 80px;
                 position: relative;
-                padding: 2rem;
+                padding: 2.5rem;
                 border: 1px solid transparent;
                 transition: border-color 0.3s ease;
             }
@@ -88,6 +101,7 @@ class HsLensSkeleton extends HTMLElement {
                 letter-spacing: 2px;
                 margin-bottom: 1.5rem;
                 color: #1a2a22;
+                position: relative;
             }
 
             h1 { 
@@ -169,51 +183,54 @@ class HsLensSkeleton extends HTMLElement {
                 margin: 1rem 0;
             }
 
-            /* Nature CSS classes need to be applied to elements */
-            .daisy-node {
-                position: absolute;
-                width: 14px;
-                height: 14px;
-                border-radius: 50%;
-                z-index: 10;
-            }
-            .daisy-white { background: #fff; border: 1px solid #ddd; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
-            .daisy-white::after { content: ''; position: absolute; inset: 4px; background: #fbbf24; border-radius: 50%; }
-            
-            .daisy-black { background: #000; border: 1px solid #333; }
-            .daisy-black::after { content: ''; position: absolute; inset: 4px; background: #4ade80; border-radius: 50%; }
+            /* Porting daisy/leaf logic from nature.css for shadow DOM visibility */
+            .daisy-node { position: absolute; width: 14px; height: 14px; border-radius: 50%; z-index: 100; display: block !important; }
+            .daisy-white { background: #fff !important; box-shadow: 0 8px 0 -2px #fff, 0 -8px 0 -2px #fff, 8px 0 0 -2px #fff, -8px 0 0 -2px #fff, 6px 6px 0 -2px #fff, -6px -6px 0 -2px #fff, 6px -6px 0 -2px #fff, -6px 6px 0 -2px #fff !important; border: 1px solid rgba(0,0,0,0.1) !important; }
+            .daisy-white::after { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 6px; height: 6px; background: #fbbf24 !important; border-radius: 50%; }
+            .daisy-black { background: #000 !important; box-shadow: 0 8px 0 -2px #000, 0 -8px 0 -2px #000, 8px 0 0 -2px #000, -8px 0 0 -2px #000, 6px 6px 0 -2px #000, -6px -6px 0 -2px #000, 6px -6px 0 -2px #000, -6px 6px 0 -2px #000 !important; border: 1px solid rgba(255, 255, 255, 0.4) !important; }
+            .daisy-black::after { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 6px; height: 6px; background: #4ade80 !important; border-radius: 50%; }
+            .daisy-tr { top: -12px; right: -12px; }
+            .daisy-tl { top: -12px; left: -12px; }
 
-            .daisy-tr { top: -7px; right: -7px; }
-            .daisy-tl { top: -7px; left: -7px; }
-            
-            .leaf-pair {
-                position: absolute;
-                width: 20px;
-                height: 20px;
-                opacity: 0.6;
-            }
-            .leaf-pair::before, .leaf-pair::after {
-                content: '';
-                position: absolute;
-                width: 10px; height: 6px;
-                background: #2d5a27;
-                border-radius: 0 100% 0 100%;
-            }
-            .leaf-pair::after { background: #1a3a17; transform: rotate(35deg); left: 6px; top: 3px; }
+            .leaf-pair { position: absolute; width: 20px; height: 20px; pointer-events: none; z-index: 99; }
+            .leaf-pair::before, .leaf-pair::after { content: ""; position: absolute; width: 14px; height: 7px; background: #2d5a27; border-radius: 0 100% 0 100%; }
+            .leaf-pair::after { background: #1a3a17; transform: rotate(35deg); left: 8px; top: 4px; opacity: 0.9; }
 
-            .leaf-tl { top: -10px; left: 20px; }
-            .leaf-tr { top: -10px; right: 20px; }
+            /* Cluster Positioning */
+            .leaf-cluster-8 .leaf-pair:nth-child(1) { top: -10px; left: 15%; transform: rotate(0deg); }
+            .leaf-cluster-8 .leaf-pair:nth-child(2) { top: -12px; left: 17%; transform: rotate(5deg); scale: 0.8; }
+            .leaf-cluster-8 .leaf-pair:nth-child(3) { top: -9px; left: 19%; transform: rotate(-5deg); scale: 1.1; }
+            .leaf-cluster-8 .leaf-pair:nth-child(4) { top: -11px; left: 21%; transform: rotate(10deg); scale: 0.7; }
+            .leaf-cluster-8 .leaf-pair:nth-child(5) { top: -10px; left: 23%; transform: rotate(-10deg); scale: 1.2; }
+            .leaf-cluster-8 .leaf-pair:nth-child(6) { top: -8px; left: 25%; transform: rotate(3deg); scale: 0.9; }
+            .leaf-cluster-8 .leaf-pair:nth-child(7) { top: -12px; left: 27%; transform: rotate(-7deg); scale: 1.0; }
+            .leaf-cluster-8 .leaf-pair:nth-child(8) { top: -10px; left: 29%; transform: rotate(15deg); scale: 0.8; opacity: 0.8; }
+
+            .leaf-cluster-5-v .leaf-pair:nth-child(1) { top: 20%; left: -18px; transform: rotate(-90deg); }
+            .leaf-cluster-5-v .leaf-pair:nth-child(2) { top: 23%; left: -16px; transform: rotate(-80deg); scale: 1.1; }
+            .leaf-cluster-5-v .leaf-pair:nth-child(3) { top: 26%; left: -18px; transform: rotate(-105deg); scale: 0.8; }
+            .leaf-cluster-5-v .leaf-pair:nth-child(4) { top: 29%; left: -16px; transform: rotate(-85deg); scale: 1.2; }
+            .leaf-cluster-5-v .leaf-pair:nth-child(5) { top: 32%; left: -18px; transform: rotate(-100deg); scale: 0.9; }
+
+            .leaf-cluster-3-v .leaf-pair:nth-child(1) { bottom: 20%; left: -18px; transform: rotate(-90deg); }
+            .leaf-cluster-3-v .leaf-pair:nth-child(2) { bottom: 23%; left: -16px; transform: rotate(-75deg); scale: 1.1; }
+            .leaf-cluster-3-v .leaf-pair:nth-child(3) { bottom: 26%; left: -18px; transform: rotate(-110deg); scale: 0.8; }
         </style>
 
         <div class="container">
             <header>
                 <div class="daisy-node daisy-white daisy-tl"></div>
                 <div>SKELETON // Repository of Truth</div>
-                <div class="version-tag">SYSTEM_CORE v2.0.0-SOLARPUNK</div>
+                <div class="version-tag">SYSTEM_CORE v2.1.0-FIBONACCI</div>
             </header>
 
             <section id="intro" class="has-vines">
-                <div class="leaf-pair leaf-tl"></div>
+                <div class="leaf-cluster-8">
+                    <div class="leaf-pair"></div><div class="leaf-pair"></div>
+                    <div class="leaf-pair"></div><div class="leaf-pair"></div>
+                    <div class="leaf-pair"></div><div class="leaf-pair"></div>
+                    <div class="leaf-pair"></div><div class="leaf-pair"></div>
+                </div>
                 <h1>Gaia Intelligences Shape Health</h1>
                 <div class="infobox">
                     <p>
@@ -230,6 +247,11 @@ class HsLensSkeleton extends HTMLElement {
 
             <section id="heliclock" class="has-vines">
                 <div class="daisy-node daisy-black daisy-tr"></div>
+                <div class="leaf-cluster-5-v">
+                    <div class="leaf-pair"></div><div class="leaf-pair"></div>
+                    <div class="leaf-pair"></div><div class="leaf-pair"></div>
+                    <div class="leaf-pair"></div>
+                </div>
                 <h2>I. THE HELICLOCK & VON MISES</h2>
                 <p>
                     Health is not linear; it is periodic. We don't measure time; we map phase. 
@@ -246,7 +268,10 @@ class HsLensSkeleton extends HTMLElement {
             </section>
 
             <section id="lensing" class="has-vines">
-                <div class="leaf-pair leaf-tr"></div>
+                <div class="leaf-cluster-3-v">
+                    <div class="leaf-pair"></div><div class="leaf-pair"></div>
+                    <div class="leaf-pair"></div>
+                </div>
                 <h2>II. TEXTURE PATTERN LENSING</h2>
                 <p>
                     The Life-Strap expands beyond the wrist. We use Pattern Extraction to see the same 
@@ -288,6 +313,12 @@ class HsLensSkeleton extends HTMLElement {
 
             <section id="emulation-worlds" class="has-vines">
                 <div class="daisy-node daisy-white daisy-tl"></div>
+                <div class="leaf-cluster-8">
+                    <div class="leaf-pair"></div><div class="leaf-pair"></div>
+                    <div class="leaf-pair"></div><div class="leaf-pair"></div>
+                    <div class="leaf-pair"></div><div class="leaf-pair"></div>
+                    <div class="leaf-pair"></div><div class="leaf-pair"></div>
+                </div>
                 <h2>III. THE EMULATION WORLDS</h2>
                 <p>
                     The "Emulation" lens is a three-layer sandbox for <em>Future Me</em> projections. 
@@ -304,7 +335,7 @@ class HsLensSkeleton extends HTMLElement {
 
                 <div class="trinity-grid">
                     <div class="trinity-item">
-                        <div class="leaf-pair leaf-tl" style="left: -10px; top: -10px;"></div>
+                        <div class="leaf-pair" style="left: -10px; top: -10px; transform: rotate(-45deg);"></div>
                         <h4>Bio-Cellular</h4>
                         <p>Individual longevity via Orgo/Gelle state machines.</p>
                     </div>
@@ -317,7 +348,11 @@ class HsLensSkeleton extends HTMLElement {
             </section>
 
             <section id="resonagents" class="has-vines">
-                <div class="leaf-pair leaf-tr"></div>
+                <div class="leaf-cluster-5-v">
+                    <div class="leaf-pair"></div><div class="leaf-pair"></div>
+                    <div class="leaf-pair"></div><div class="leaf-pair"></div>
+                    <div class="leaf-pair"></div>
+                </div>
                 <h2>IV. RESONAGENTS TRINITY</h2>
                 <p>
                     The thinking substrate: <strong>Beebee</strong> agents and <strong>NEAT-HOP</strong>. 
