@@ -60,6 +60,37 @@ body {
     filter: blur(0px);
 }
 
+/* Playground Split View Layout */
+body.playground-open #lens-container {
+    display: flex;
+}
+
+body.playground-open .lens.active:not(#playground) {
+    width: 40%;
+    position: relative;
+    transform: none;
+    transition: width 0.8s var(--pulse-ease);
+}
+
+body.playground-open #playground.active {
+    width: 60%;
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    filter: none;
+    transition: width 0.8s var(--pulse-ease);
+}
+
+#playground {
+    z-index: 100;
+}
+
+/* Ensure other lenses are hidden when playground is full screen */
+body:not(.playground-open) #playground.active {
+    width: 100%;
+}
+
 /* Resonance Pulse Animation */
 @keyframes breathe {
     0%, 100% { opacity: 0.8; transform: scale(1); }

@@ -37,6 +37,7 @@ class HsLensSkeleton extends HTMLElement {
                 line-height: 1.8;
                 padding-top: 80px; /* Offset for top menu header (60px) + tri-axis (20px) */
                 box-sizing: border-box;
+                transition: all 0.8s ease;
             }
 
             .container {
@@ -48,6 +49,7 @@ class HsLensSkeleton extends HTMLElement {
                 min-height: 100vh;
                 background: white;
                 position: relative;
+                transition: all 0.8s ease;
             }
 
             @media (max-width: 768px) {
@@ -80,6 +82,45 @@ class HsLensSkeleton extends HTMLElement {
                 font-size: 0.7rem;
                 opacity: 0.6;
                 color: #1a2a22;
+            }
+
+            .btn-playground {
+                background: #2d5a27;
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                font-family: sans-serif;
+                font-size: 0.7rem;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin-bottom: 5px;
+            }
+
+            .btn-playground:hover {
+                background: #1a3a17;
+                box-shadow: 0 0 15px rgba(45, 90, 39, 0.4);
+            }
+
+            .graft-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 24px;
+                height: 24px;
+                background: #e67e22;
+                color: white;
+                border-radius: 4px;
+                font-size: 0.6rem;
+                cursor: pointer;
+                margin-left: 10px;
+                vertical-align: middle;
+                transition: transform 0.2s ease;
+            }
+
+            .graft-icon:hover {
+                transform: scale(1.2);
             }
 
             section {
@@ -220,8 +261,11 @@ class HsLensSkeleton extends HTMLElement {
         <div class="container">
             <header>
                 <div class="daisy-node daisy-white daisy-tl"></div>
-                <div>SKELETON // Repository of Truth</div>
-                <div class="version-tag">SYSTEM_CORE v2.1.0-FIBONACCI</div>
+                <div>
+                    <div>SKELETON // Repository of Truth</div>
+                    <div class="version-tag">HOP v1.0.0 experimental</div>
+                </div>
+                <button class="btn-playground" id="playground-toggle" onclick="window.app.togglePlayground('grafting')">[ OPEN GRAFTING BENCH ]</button>
             </header>
 
             <section id="intro" class="has-vines">
@@ -231,7 +275,7 @@ class HsLensSkeleton extends HTMLElement {
                     <div class="leaf-pair"></div><div class="leaf-pair"></div>
                     <div class="leaf-pair"></div><div class="leaf-pair"></div>
                 </div>
-                <h1>Gaia Intelligences Shape Health</h1>
+                <h1>Gaia Intelligences Shape Health <span class="graft-icon" onclick="window.app.togglePlayground('coupling')">G</span></h1>
                 <div class="infobox">
                     <p>
                         This lens sets out how HOP and BentoBoxDS work. We are creating a peer experience on the fly by 
@@ -252,7 +296,7 @@ class HsLensSkeleton extends HTMLElement {
                     <div class="leaf-pair"></div><div class="leaf-pair"></div>
                     <div class="leaf-pair"></div>
                 </div>
-                <h2>I. THE HELICLOCK & VON MISES</h2>
+                <h2>I. THE HELICLOCK & VON MISES <span class="graft-icon" onclick="window.app.togglePlayground('grafting')">G</span></h2>
                 <p>
                     Health is not linear; it is periodic. We don't measure time; we map phase. 
                     Standard statistics fail because they assume a flat line. We use <strong>Von Mises Statistics</strong> 
@@ -272,7 +316,7 @@ class HsLensSkeleton extends HTMLElement {
                     <div class="leaf-pair"></div><div class="leaf-pair"></div>
                     <div class="leaf-pair"></div>
                 </div>
-                <h2>II. TEXTURE PATTERN LENSING</h2>
+                <h2>II. TEXTURE PATTERN LENSING <span class="graft-icon" onclick="window.app.togglePlayground('melding')">G</span></h2>
                 <p>
                     The Life-Strap expands beyond the wrist. We use Pattern Extraction to see the same 
                     "texture" of health at every scale. From the mitochondrial pulse to the bioregional weave.
