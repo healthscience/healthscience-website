@@ -21,286 +21,340 @@ class HsLensSkeleton extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = `
         <style>
+            @import url('css/nature.css');
+
             :host {
                 display: block;
-                background: #050505;
-                color: var(--color-skeleton);
+                background: #fcfaf2;
+                background-image: 
+                    radial-gradient(circle at 2px 2px, rgba(0,0,0,0.02) 1px, transparent 0);
+                background-size: 40px 40px;
+                color: #1a2a22;
                 height: 100%;
                 overflow-y: auto;
-                font-family: 'Courier New', Courier, monospace;
+                font-family: 'Georgia', serif;
                 scroll-behavior: smooth;
+                line-height: 1.8;
             }
 
-            .engine-room {
-                max-width: 1000px;
+            .container {
+                max-width: 900px;
                 margin: 0 auto;
                 padding: 4rem 2rem;
-                border-left: 1px solid rgba(0, 255, 136, 0.1);
-                border-right: 1px solid rgba(0, 255, 136, 0.1);
+                border-left: 1px solid #dcd3c1;
+                border-right: 1px solid #dcd3c1;
                 min-height: 100vh;
+                background: white;
+                position: relative;
             }
 
             header {
-                border-bottom: 2px solid var(--color-skeleton);
+                border-bottom: 2px solid #2d5a27;
                 padding-bottom: 1rem;
                 margin-bottom: 4rem;
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-end;
+                font-family: sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-weight: bold;
+                color: #2d5a27;
+                position: relative;
             }
 
             .version-tag {
                 font-size: 0.7rem;
                 opacity: 0.6;
+                color: #1a2a22;
             }
 
             section {
-                margin-bottom: 6rem;
+                margin-bottom: 8rem;
                 scroll-margin-top: 80px;
+                position: relative;
+                padding: 2rem;
+                border: 1px solid transparent;
+                transition: border-color 0.3s ease;
+            }
+
+            section.has-vines:hover {
+                border-color: rgba(45, 90, 39, 0.1);
             }
 
             h1, h2, h3 {
+                font-family: sans-serif;
                 text-transform: uppercase;
                 letter-spacing: 2px;
                 margin-bottom: 1.5rem;
+                color: #1a2a22;
             }
 
-            h1 { font-size: 2rem; border-left: 4px solid var(--color-skeleton); padding-left: 1rem; }
-            h2 { font-size: 1.5rem; color: #fff; }
-            h3 { font-size: 1.1rem; opacity: 0.9; }
-
-            .code-block {
-                background: rgba(0, 255, 136, 0.05);
-                border: 1px solid rgba(0, 255, 136, 0.2);
-                padding: 1.5rem;
-                margin: 1.5rem 0;
-                font-size: 0.85rem;
-                line-height: 1.5;
-                position: relative;
-                overflow-x: auto;
+            h1 { 
+                font-size: 2.5rem; 
+                border-bottom: 4px solid #e67e22; 
+                display: inline-block;
+                margin-bottom: 3rem;
             }
-
-            .code-block::before {
-                content: 'RAW_INSPECT';
-                position: absolute;
-                top: 0; right: 0;
-                font-size: 0.6rem;
-                padding: 2px 6px;
-                background: rgba(0, 255, 136, 0.2);
-            }
-
-            .roadmap-grid {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 1rem;
-                margin-top: 2rem;
-            }
-
-            .roadmap-item {
-                border: 1px solid rgba(0, 255, 136, 0.3);
-                padding: 1rem;
-                cursor: pointer;
-                transition: all 0.2s ease;
-                text-decoration: none;
-                color: inherit;
-            }
-
-            .roadmap-item:hover {
-                background: var(--color-skeleton);
-                color: #000;
-            }
-
-            .roadmap-item .tag {
-                font-size: 0.6rem;
-                display: block;
-                margin-bottom: 0.5rem;
-                opacity: 0.7;
-            }
-
-            .roadmap-item .label {
-                font-weight: bold;
-                font-size: 0.9rem;
-            }
-
-            .pillar {
-                border-top: 1px dashed rgba(0, 255, 136, 0.3);
-                padding-top: 2rem;
-                margin-top: 2rem;
-            }
-
-            .pillar-num {
-                font-size: 3rem;
-                font-weight: 900;
-                opacity: 0.1;
-                line-height: 1;
-            }
-
-            .permalink {
-                font-size: 0.7rem;
-                color: var(--color-skeleton);
-                text-decoration: none;
-                opacity: 0.5;
-                margin-left: 10px;
-            }
-
-            .permalink:hover { opacity: 1; }
-
-            .terminal-footer {
-                margin-top: 4rem;
-                border-top: 1px solid rgba(0, 255, 136, 0.2);
-                padding-top: 2rem;
-                display: flex;
-                gap: 1rem;
-            }
-
-            .terminal-input {
-                background: transparent;
-                border: 1px solid rgba(0, 255, 136, 0.5);
-                color: var(--color-skeleton);
-                padding: 0.5rem;
-                font-family: inherit;
-                outline: none;
-                flex: 1;
-            }
-
-            .swarm-btn {
-                background: var(--color-skeleton);
-                color: black;
-                border: none;
-                padding: 0.5rem 1rem;
-                cursor: pointer;
-                font-weight: bold;
-            }
+            h2 { font-size: 1.8rem; color: #2d5a27; border-left: 4px solid #2d5a27; padding-left: 1rem; }
+            h3 { font-size: 1.3rem; opacity: 0.9; margin-top: 2rem; }
 
             p {
-                line-height: 1.6;
-                margin-bottom: 1rem;
-                color: #ccc;
+                margin-bottom: 1.5rem;
+                font-size: 1.1rem;
             }
 
-            strong { color: var(--color-skeleton); }
+            strong { color: #2d5a27; }
+
+            .infobox {
+                background: #fdfaf6;
+                border: 1px solid #dcd3c1;
+                padding: 2rem;
+                margin: 2rem 0;
+                position: relative;
+            }
+
+            .scale-grid {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                gap: 2rem;
+                align-items: center;
+                margin-top: 2rem;
+            }
+
+            .trinity-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+
+            .trinity-item {
+                border: 1px solid #dcd3c1;
+                padding: 1.5rem;
+                background: white;
+                transition: all 0.3s ease;
+                position: relative;
+            }
+
+            .trinity-item:hover {
+                transform: translateY(-5px);
+                border-color: #2d5a27;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            }
+
+            .trinity-item h4 {
+                color: #2d5a27;
+                text-transform: uppercase;
+                margin-bottom: 0.5rem;
+            }
+
+            .footer-note {
+                margin-top: 6rem;
+                padding-top: 2rem;
+                border-top: 1px solid #dcd3c1;
+                font-size: 0.9rem;
+                opacity: 0.7;
+                font-style: italic;
+                text-align: center;
+            }
+
+            .code-snippet {
+                font-family: monospace;
+                background: #f4f4f4;
+                padding: 1rem;
+                border-radius: 4px;
+                font-size: 0.9rem;
+                overflow-x: auto;
+                margin: 1rem 0;
+            }
+
+            /* Nature CSS classes need to be applied to elements */
+            .daisy-node {
+                position: absolute;
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                z-index: 10;
+            }
+            .daisy-white { background: #fff; border: 1px solid #ddd; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+            .daisy-white::after { content: ''; position: absolute; inset: 4px; background: #fbbf24; border-radius: 50%; }
+            
+            .daisy-black { background: #000; border: 1px solid #333; }
+            .daisy-black::after { content: ''; position: absolute; inset: 4px; background: #4ade80; border-radius: 50%; }
+
+            .daisy-tr { top: -7px; right: -7px; }
+            .daisy-tl { top: -7px; left: -7px; }
+            
+            .leaf-pair {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                opacity: 0.6;
+            }
+            .leaf-pair::before, .leaf-pair::after {
+                content: '';
+                position: absolute;
+                width: 10px; height: 6px;
+                background: #2d5a27;
+                border-radius: 0 100% 0 100%;
+            }
+            .leaf-pair::after { background: #1a3a17; transform: rotate(35deg); left: 6px; top: 3px; }
+
+            .leaf-tl { top: -10px; left: 20px; }
+            .leaf-tr { top: -10px; right: 20px; }
         </style>
 
-        <div class="engine-room">
+        <div class="container">
             <header>
-                <div>SKELETON // REPOSITORY_OF_TRUTH</div>
-                <div class="version-tag">SYSTEM_CORE v1.0.42</div>
+                <div class="daisy-node daisy-white daisy-tl"></div>
+                <div>SKELETON // Repository of Truth</div>
+                <div class="version-tag">SYSTEM_CORE v2.0.0-SOLARPUNK</div>
             </header>
 
-            <section id="intro">
-                <h1>The Repository of Truth</h1>
-                <p>
-                    Everything discussed on the site is backed by open, verifiable code and deep documentation. 
-                    This signals that our foundations are grounded in the <strong>"Repository of Truth."</strong>
-                </p>
-                <div class="code-block">
-                    > git clone https://github.com/healthscience/protocol
-                    > status: VERIFIED_BUILD
-                    > integrity: 0xFF92A1
+            <section id="intro" class="has-vines">
+                <div class="leaf-pair leaf-tl"></div>
+                <h1>Gaia Intelligences Shape Health</h1>
+                <div class="infobox">
+                    <p>
+                        This lens sets out how HOP and BentoBoxDS work. We are creating a peer experience on the fly by 
+                        <strong>Coupling</strong> interfaces, <strong>Grafting</strong> metabolic logic, and 
+                        <strong>Melding</strong> tiny devices into a singular, resonant whole.
+                    </p>
+                    <p>
+                        From the Von Mises geometry of your daily pulse to the Daisyworld feedback loops of the planet, 
+                        the Skeleton is the verifiable proof that health is a planetary attunement.
+                    </p>
                 </div>
             </section>
 
-            <section id="peerstack">
-                <header style="border:none; margin-bottom: 2rem;">
-                    <h2>HEALTH ORACLE PROTOCOL - PeerStack</h2>
-                </header>
-
-                <div id="physics">
-                    <h3>I. Gaia as Systems Physics</h3>
+            <section id="heliclock" class="has-vines">
+                <div class="daisy-node daisy-black daisy-tr"></div>
+                <h2>I. THE HELICLOCK & VON MISES</h2>
+                <p>
+                    Health is not linear; it is periodic. We don't measure time; we map phase. 
+                    Standard statistics fail because they assume a flat line. We use <strong>Von Mises Statistics</strong> 
+                    (Directional Statistics) to map the "Circular Gaussian."
+                </p>
+                <hs-von-mises-viz></hs-von-mises-viz>
+                <div class="infobox">
                     <p>
-                        "In the Boreal, Gaia Intelligence is not a metaphor. It is the mathematical recognition of nested, self-regulating systems—from the mitochondrial pulse to the bioregional weave. The Health Oracle Protocol provides the first-ever computational interface for these feedbacks, moving science from 'Reductionist Observation' to 'Resonant Participation.'"
+                        By wrapping noisy biological data around a 24-hour circle, we reveal the resonance. 
+                        This ensures your SafeFlow-ECS is always in sync with the solar day.
                     </p>
                 </div>
+            </section>
 
-                <div id="bentobox" class="pillar">
-                    <h3>II. The "Gaming Engine for Life" (BentoBoxDS)</h3>
-                    <p>
-                        "BentoBoxDS is the local-first execution environment. It treats your biology not as a static record, but as a dynamic state-machine. Using SafeFlow-ECS, we apply the same high-performance logic used in world-class simulation engines to the navigation of human health."
-                    </p>
-                    <div class="code-block">
-// SafeFlow-ECS Implementation
-class BiomeEntity {
-    constructor() {
-        this.components = new Map();
-        this.tags = new Set(['LIVING', 'RESONANT']);
-    }
-    
-    update(metabolic_rate) {
-        // High-performance state transitions
-    }
-}
+            <section id="lensing" class="has-vines">
+                <div class="leaf-pair leaf-tr"></div>
+                <h2>II. TEXTURE PATTERN LENSING</h2>
+                <p>
+                    The Life-Strap expands beyond the wrist. We use Pattern Extraction to see the same 
+                    "texture" of health at every scale. From the mitochondrial pulse to the bioregional weave.
+                </p>
+                
+                <div class="scale-grid">
+                    <div>
+                        <hs-scale-slider id="texture-slider"></hs-scale-slider>
+                    </div>
+                    <div>
+                        <hs-texture-extractor></hs-texture-extractor>
+                    </div>
+                </div>
+
+                <table style="width:100%; margin-top: 2rem; border-collapse: collapse; font-family: sans-serif; font-size: 0.9rem;">
+                    <tr style="border-bottom: 1px solid #dcd3c1; text-align: left;">
+                        <th style="padding: 10px;">Scale</th>
+                        <th style="padding: 10px;">Lens Name</th>
+                        <th style="padding: 10px;">Witnessing</th>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 10px;">Cell / Body</td>
+                        <td style="padding: 10px;">Internal Texture</td>
+                        <td style="padding: 10px;">Metabolic rates, HRV, resonance.</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #eee;">
+                        <td style="padding: 10px;">Building</td>
+                        <td style="padding: 10px;">Proximal Texture</td>
+                        <td style="padding: 10px;">Light cycles, air flow, rhythms.</td>
+                    </tr>
+                    <tr style="border-bottom: 10px solid #fff;">
+                        <td style="padding: 10px;">Earth</td>
+                        <td style="padding: 10px;">Gaia Texture</td>
+                        <td style="padding: 10px;">Planetary geophysiology.</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="emulation-worlds" class="has-vines">
+                <div class="daisy-node daisy-white daisy-tl"></div>
+                <h2>III. THE EMULATION WORLDS</h2>
+                <p>
+                    The "Emulation" lens is a three-layer sandbox for <em>Future Me</em> projections. 
+                    It proves that the same self-regulating feedback loops that keep the Earth habitable 
+                    are the ones that keep the Cell healthy.
+                </p>
+                
+                <h3>Layer 3: The Daisyworld</h3>
+                <hs-daisy-engine></hs-daisy-engine>
+                <p>
+                    A direct implementation of the Lovelock Daisyworld model. We simulate global geophysiology 
+                    to understand how individual resonance contributes to planetary stability.
+                </p>
+
+                <div class="trinity-grid">
+                    <div class="trinity-item">
+                        <div class="leaf-pair leaf-tl" style="left: -10px; top: -10px;"></div>
+                        <h4>Bio-Cellular</h4>
+                        <p>Individual longevity via Orgo/Gelle state machines.</p>
+                    </div>
+                    <div class="trinity-item">
+                        <div class="daisy-node daisy-black daisy-tr" style="top: -7px; right: -7px;"></div>
+                        <h4>Bioregional</h4>
+                        <p>Community resonance where data meets ecological signals.</p>
                     </div>
                 </div>
             </section>
 
-            <section id="roadmap">
-                <h2>PROTOCOL ROAD MAP</h2>
-                <p>The protocol modules & mathematics that empower the navigation.</p>
+            <section id="resonagents" class="has-vines">
+                <div class="leaf-pair leaf-tr"></div>
+                <h2>IV. RESONAGENTS TRINITY</h2>
+                <p>
+                    The thinking substrate: <strong>Beebee</strong> agents and <strong>NEAT-HOP</strong>. 
+                    Your agents don't just follow rules; they evolve to fit your pulse.
+                </p>
                 
-                <div class="roadmap-grid">
-                    <a href="#skeleton/bentobox" class="roadmap-item">
-                        <span class="tag">DIRECT</span>
-                        <span class="label">BentoBoxDS & BeeBee</span>
-                    </a>
-                    <a href="#skeleton/besearch" class="roadmap-item">
-                        <span class="tag">WARM RELATE</span>
-                        <span class="label">Besearch science & Emulations</span>
-                    </a>
-                    <a href="#skeleton/library" class="roadmap-item">
-                        <span class="tag">LEGO KNOWLEDGE</span>
-                        <span class="label">The Library</span>
-                    </a>
-                    <a href="#skeleton/safeflow" class="roadmap-item">
-                        <span class="tag">HEART</span>
-                        <span class="label">SafeFlow-ECS</span>
-                    </a>
-                    <a href="#skeleton/reasoners" class="roadmap-item">
-                        <span class="tag">TINY_REASONERS</span>
-                        <span class="label">Consilience & Coherence</span>
-                    </a>
-                    <a href="#skeleton/p2p" class="roadmap-item">
-                        <span class="tag">P2P_AGGREGATION</span>
-                        <span class="label">NEAT-HOP & Peer to Peer</span>
-                    </a>
-                    <a href="#skeleton/guide" class="roadmap-item">
-                        <span class="tag">GUIDE BOOK</span>
-                        <span class="label">Cue Currency & RGB</span>
-                    </a>
-                    <a href="#skeleton/protocol" class="roadmap-item">
-                        <span class="tag">PROTOCOL</span>
-                        <span class="label">View all</span>
-                    </a>
+                <div class="trinity-grid">
+                    <div class="trinity-item">
+                        <h4>Search</h4>
+                        <p>Locating resonant peers and biological signals across the P2P swarm.</p>
+                    </div>
+                    <div class="trinity-item">
+                        <h4>Research</h4>
+                        <p>Distilling Consilience Weaves into actionable health cues.</p>
+                    </div>
+                    <div class="trinity-item">
+                        <h4>Emulate</h4>
+                        <p>Predicting state transitions using SafeFlow-ECS.</p>
+                    </div>
+                </div>
+
+                <div class="infobox" style="margin-top: 3rem;">
+                    <h3>NeuroEvolution (NEAT-HOP)</h3>
+                    <p>
+                        Using NeuroEvolution of Augmenting Topologies, our protocol allows agents to learn 
+                        the Peer's biological resonance over time. It is not AI; it is <strong>Evolutionary Computation</strong>.
+                    </p>
+                    <div class="code-snippet">
+                        > swarm.initiate(peer_id)
+                        > evolution.start(fitness: resonance_score)
+                        > status: ADAPTING_TO_PULSE
+                    </div>
                 </div>
             </section>
 
-            <section id="pillars">
-                <h2>PILLARS OF THE PROTOCOL</h2>
-                
-                <div id="gaia-intelligences" class="pillar">
-                    <div class="pillar-num">01</div>
-                    <h3>Gaia Intelligences</h3>
-                    <p>
-                        We recognize that mind is everywhere—from the basal cognition of a cell to the self-regulating flow of a river. 
-                        HOP provides the protocol for these nested intelligences to communicate without corruption. 
-                        It is the language of <strong>Resonance</strong>, not just data.
-                    </p>
-                    <a href="#skeleton/gaia-intelligences" class="permalink">#permalink</a>
-                </div>
-
-                <div id="sovereign-math" class="pillar">
-                    <div class="pillar-num">02</div>
-                    <h3>Sovereign Mathematics</h3>
-                    <p>
-                        Privacy is not a feature; it is a topological requirement. By using Local-First computation, 
-                        your biological secrets never leave the BentoBox unless explicitly shared via Cue-distillation.
-                    </p>
-                    <a href="#skeleton/sovereign-math" class="permalink">#permalink</a>
-                </div>
-            </section>
-
-            <div class="terminal-footer">
-                <input type="text" class="terminal-input" placeholder="HOPquery: graft --branch main">
-                <button class="swarm-btn" onclick="alert('Swarm initiated: Peers connecting...')">SWARM</button>
+            <div class="footer-note">
+                "We move from Reductionist Observation to Resonant Participation."
             </div>
         </div>
         `;

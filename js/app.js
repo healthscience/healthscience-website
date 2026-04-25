@@ -3,6 +3,12 @@ import './components/hs-lens-emulation.js';
 import './components/hs-lens-poetry.js';
 import './components/hs-lens-skeleton.js';
 
+// New sub-components for Skeleton Lens
+import './components/hs-von-mises-viz.js';
+import './components/hs-scale-slider.js';
+import './components/hs-daisy-engine.js';
+import './components/hs-texture-extractor.js';
+
 class StateController {
     constructor() {
         this.state = {
