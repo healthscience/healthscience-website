@@ -191,12 +191,34 @@ class HsPlayground extends HTMLElement {
 
             header {
                 display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
                 justify-content: space-between;
                 align-items: center;
                 padding: 1rem 2rem;
                 background: rgba(0, 0, 0, 0.8);
                 border-bottom: 1px solid rgba(0, 255, 204, 0.3);
                 z-index: 10;
+            }
+
+            @media (max-width: 768px) {
+                header {
+                    padding: 0.5rem 1rem;
+                }
+                .modes {
+                    width: 100%;
+                    justify-content: space-between;
+                    order: 2;
+                }
+                .bench-title {
+                    font-size: 0.6rem !important;
+                    order: 1;
+                }
+                .close-btn {
+                    order: 3;
+                    font-size: 0.6rem !important;
+                    padding: 2px 8px !important;
+                }
             }
 
             .modes {
@@ -224,6 +246,23 @@ class HsPlayground extends HTMLElement {
                 display: flex;
                 flex: 1;
                 z-index: 1;
+                overflow: hidden;
+            }
+
+            @media (max-width: 768px) {
+                .main-view {
+                    flex-direction: column;
+                    overflow-y: auto;
+                }
+                .editor-pane, .viz-pane {
+                    flex: none;
+                    width: 100%;
+                    min-height: 300px;
+                }
+                .editor-pane {
+                    border-right: none;
+                    border-bottom: 1px solid rgba(0, 255, 204, 0.2);
+                }
             }
 
             .editor-pane {
@@ -329,7 +368,8 @@ class HsPlayground extends HTMLElement {
                 <div class="mode-tab ${this.state.mode === 'grafting' ? 'active' : ''}" onclick="this.getRootNode().host.setMode('grafting')">Grafting</div>
                 <div class="mode-tab ${this.state.mode === 'melding' ? 'active' : ''}" onclick="this.getRootNode().host.setMode('melding')">Melding</div>
             </div>
-            <div style="font-size: 0.8rem; font-weight: bold; letter-spacing: 2px;">GRAFTING_BENCH // ZERO_DRAFT</div>
+            <div class="bench-title" style="font-size: 0.8rem; font-weight: bold; letter-spacing: 2px;">GRAFTING_BENCH // ZERO_DRAFT</div>
+            <button class="btn-action close-btn" style="border-color: #ff3366; color: #ff3366;" onclick="window.app.togglePlayground()">[ CLOSE BENCH ]</button>
         </header>
 
         <div class="main-view">

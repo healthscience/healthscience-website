@@ -132,6 +132,24 @@ class HsLensPoetry extends HTMLElement {
                 gap: 2rem;
             }
 
+            @media (max-width: 768px) {
+                :host {
+                    padding-top: 60px;
+                }
+                .content-wrapper {
+                    padding: 2rem 1.5rem;
+                }
+                section {
+                    margin-bottom: 4rem;
+                }
+                h1 { font-size: 2.2rem; line-height: 1.2; }
+                h2 { font-size: 1.6rem; }
+                .serif { font-size: 1.1rem; }
+                .lego-module { padding: 1.5rem; }
+                .grid { grid-template-columns: 1fr; }
+                .spiral-container { opacity: 0.2; }
+            }
+
             /* Decorative elements */
             .daisy-node {
                 position: absolute;

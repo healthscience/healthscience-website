@@ -58,6 +58,27 @@ class HsLensEmulation extends HTMLElement {
                 font-weight: 200;
                 letter-spacing: 10px;
             }
+            @media (max-width: 768px) {
+                :host {
+                    padding-top: 80px;
+                }
+                h1 {
+                    font-size: 1.5rem;
+                    letter-spacing: 5px;
+                }
+                heli-clock {
+                    top: auto;
+                    bottom: 2rem;
+                    right: 50%;
+                    transform: translateX(50%);
+                    width: 100px;
+                    opacity: 0.8;
+                }
+                canvas {
+                    width: 100%;
+                    height: auto;
+                }
+            }
         </style>
         <div class="content">
             <h1>EMULATION</h1>

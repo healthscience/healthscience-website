@@ -40,6 +40,16 @@ body {
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+    #app {
+        height: auto;
+        min-height: 100vh;
+    }
+}
+
 .lens {
     position: absolute;
     top: 0;
@@ -66,14 +76,11 @@ body.playground-open #lens-container {
 }
 
 body.playground-open .lens.active:not(#playground) {
-    width: 40%;
-    position: relative;
-    transform: none;
-    transition: width 0.8s var(--pulse-ease);
+    display: none;
 }
 
 body.playground-open #playground.active {
-    width: 60%;
+    width: 100%;
     position: relative;
     opacity: 1;
     pointer-events: auto;

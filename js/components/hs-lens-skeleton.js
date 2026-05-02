@@ -53,14 +53,29 @@ class HsLensSkeleton extends HTMLElement {
             }
 
             @media (max-width: 768px) {
+                :host {
+                    padding-top: 60px;
+                }
                 .container {
-                    padding: 2rem 1rem;
+                    padding: 4rem 1.5rem;
                     border-left: none;
                     border-right: none;
                 }
-                h1 { font-size: 1.8rem; }
+                h1 { font-size: 1.8rem; margin-bottom: 2rem; }
                 h2 { font-size: 1.4rem; }
+                section { 
+                    margin-bottom: 4rem; 
+                    padding: 1.5rem 0; 
+                }
                 .scale-grid { grid-template-columns: 1fr; }
+                .infobox { padding: 1.5rem; }
+                
+                /* Responsive table */
+                table {
+                    display: block;
+                    overflow-x: auto;
+                    white-space: nowrap;
+                }
             }
 
             header {
@@ -68,6 +83,8 @@ class HsLensSkeleton extends HTMLElement {
                 padding-bottom: 1rem;
                 margin-bottom: 4rem;
                 display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
                 justify-content: space-between;
                 align-items: flex-end;
                 font-family: sans-serif;

@@ -3,14 +3,21 @@ class HsHubNavigator extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
         this.activeLens = null;
+        this.isMenuOpen = false;
     }
 
     connectedCallback() {
         this.render();
     }
 
+    toggleMenu() {
+        this.isMenuOpen = !this.isMenuOpen;
+        this.render();
+    }
+
     setActive(lens) {
         this.activeLens = lens;
+        this.isMenuOpen = false;
         this.render();
     }
 
@@ -32,8 +39,8 @@ class HsHubNavigator extends HTMLElement {
                 justify-content: space-between;
                 align-items: center;
                 padding: 10px 20px;
-                background: rgba(5, 5, 5, 0.8);
-                backdrop-filter: blur(10px);
+                background: rgba(5, 5, 5, 0.85);
+                backdrop-filter: blur(15px);
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
                 pointer-events: auto;
                 font-family: 'Inter', monospace;
@@ -129,6 +136,22 @@ class HsHubNavigator extends HTMLElement {
                 box-shadow: 0 0 5px currentColor;
             }
 
+            /* Mobile Menu Toggle */
+            .menu-toggle {
+                display: none;
+                flex-direction: column;
+                gap: 5px;
+                cursor: pointer;
+                padding: 5px;
+            }
+
+            .menu-toggle span {
+                width: 25px;
+                height: 2px;
+                background: white;
+                transition: all 0.3s ease;
+            }
+
             /* The Tri-Axis Indicator (Visual Motif) */
             .tri-axis {
                 position: absolute;
@@ -160,11 +183,56 @@ class HsHubNavigator extends HTMLElement {
             .axis-poetry.active { background: var(--color-poetry); box-shadow: 0 0 10px var(--color-poetry); }
             .axis-skeleton.active { background: var(--color-skeleton); box-shadow: 0 0 10px var(--color-skeleton); }
 
+            @media (max-width: 768px) {
+                .hud-center {
+                    display: ${this.isMenuOpen ? 'flex' : 'none'};
+                    position: fixed;
+                    top: 60px;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: calc(100vh - 60px);
+                    background: rgba(5, 5, 5, 0.95);
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 30px;
+                    transform: none;
+                    pointer-events: auto;
+                    z-index: 2000;
+                }
+
+                .nav-item {
+                    font-size: 1.2rem;
+                }
+
+                .hud-right {
+                    display: none;
+                }
+
+                .version {
+                    display: none;
+                }
+
+                .menu-toggle {
+                    display: flex;
+                }
+
+                .menu-toggle.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+                .menu-toggle.open span:nth-child(2) { opacity: 0; }
+                .menu-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+                
+                .tri-axis {
+                    display: none;
+                }
+            }
+
         </style>
         <div class="hud-bar">
             <div class="hud-left">
                 <div class="logo">HOP</div>
-                <div class="version">v1.0.0 experimental</div>
+                <div class="version">v0.7.5 experimental</div>
             </div>
             
             <div class="hud-center">
@@ -185,6 +253,12 @@ class HsHubNavigator extends HTMLElement {
                     <div class="status-dot"></div>
                     LOCAL-FIRST
                 </div>
+            </div>
+
+            <div class="menu-toggle ${this.isMenuOpen ? 'open' : ''}" onclick="this.getRootNode().host.toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
         <div class="tri-axis">
