@@ -476,12 +476,28 @@ class HsLensPoetry extends HTMLElement {
             .bg-forest\/20 { background-color: rgba(20, 40, 30, 0.4); }
             .bg-neon\/5 { background-color: rgba(169, 255, 0, 0.05); }
             .bg-neon\/10 { background-color: rgba(169, 255, 0, 0.1); }
+            .bg-module { background-color: rgba(13, 25, 20, 0.6); }
+            .border-white\/10 { border-color: rgba(255, 255, 255, 0.1); }
+            .border-white\/5 { border-color: rgba(255, 255, 255, 0.05); }
+            .hover\:bg-white\/5:hover { background-color: rgba(255, 255, 255, 0.05); }
+            .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+            @keyframes pulse {
+                0%, 100% { opacity: 1; }
+                50% { opacity: .5; }
+            }
+            .overflow-x-auto { overflow-x: auto; }
+            .border-collapse { border-collapse: collapse; }
+            .text-left { text-align: left; }
+            .py-3 { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+            .py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+            .pr-4 { padding-right: 1rem; }
+            .pl-6 { padding-left: 1.5rem; }
+            .border-l { border-left-width: 1px; }
             .border-pine\/30 { border-color: rgba(45, 70, 53, 0.3); }
             .border-pine\/20 { border-color: rgba(45, 70, 53, 0.2); }
-            .border-neon\/30 { border-color: rgba(169, 255, 0, 0.3); }
-            .border-neon\/50 { border-color: rgba(169, 255, 0, 0.5); }
+            .text-secondary\/70 { color: rgba(156, 163, 175, 0.7); }
 
-            /* Diagram Styles */
+            .lego-module.active-bento {
             .fabric-svg {
                 width: 100%;
                 height: 100%;
@@ -1017,11 +1033,96 @@ class HsLensPoetry extends HTMLElement {
                         ` : ''}
                     </div>
                     <div class="col-span-12 md:col-span-4">
-                        <div class="lego-module h-full flex flex-col items-center justify-center text-center p-8 bg-forest/20 border-l-2 border-neon" style="margin: 0;">
-                            <h3 class="text-neon font-mono text-xs tracking-widest uppercase mb-4">Vision Module</h3>
-                            <p class="text-sm text-secondary italic mb-6">"The architecture of health is the architecture of life itself. We are building the scaffolding for a new biology."</p>
-                            <div class="daisy-node" style="position: relative; top: 0; right: 0; margin-bottom: 1rem;"></div>
-                            <div class="text-xs font-mono text-pine">CALIBRATED: CORE_PHYSICS</div>
+                        <div class="lego-module h-full flex flex-col justify-between border border-pine/30 bg-module relative overflow-hidden" style="margin: 0;">
+                            <div class="relative z-10">
+                                <div class="text-xs font-mono text-secondary/70 mb-4 tracking-widest uppercase">HOP</div>
+                                <h2 class="text-2xl font-light text-primary mb-6" style="margin: 0;">PILLARS OF THE PROTOCOL</h2>
+                                <div class="grid grid-cols-1 gap-8">
+                                    <div class="space-y-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-neon font-mono text-xs">01</span>
+                                            <h4 class="text-primary font-medium uppercase tracking-wider" style="margin: 0;">Gaia Intelligences</h4>
+                                        </div>
+                                        <p class="text-sm text-secondary/70 leading-relaxed pl-6 border-l border-pine/20">
+                                            We recognize that mind is everywhere—from the basal cognition of a cell to the self-regulating flow of a river. HOP provides the protocol for these nested intelligences to communicate without corruption. It is the language of Resonance, not just data.
+                                        </p>
+                                    </div>
+
+                                    <div class="space-y-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-neon font-mono text-xs">02</span>
+                                            <h4 class="text-primary font-medium uppercase tracking-wider" style="margin: 0;">SafeFlow-ECS</h4>
+                                        </div>
+                                        <p class="text-sm text-secondary/70 leading-relaxed pl-6 border-l border-pine/20">
+                                            Life is a transition between states. HOP utilizes an Entity Component System (ECS) to map biological rhythms into verifiable state machines. This ensures that a Peer’s health data is an authored flow of "Physics-of-the-Commonplace," rather than a static record in a database.
+                                        </p>
+                                    </div>
+
+                                    <div class="space-y-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-neon font-mono text-xs">03</span>
+                                            <h4 class="text-primary font-medium uppercase tracking-wider" style="margin: 0;">The Coherence Ledger</h4>
+                                        </div>
+                                        <p class="text-sm text-secondary/70 leading-relaxed pl-6 border-l border-pine/20">
+                                            In a post-monetary society, trust is the only currency. The Coherence Ledger allows Peers to generate "Proof of Coherence"—cryptographic signals that demonstrate alignment with biological and solar cycles. We trade in Cues, moving resources toward resonance rather than debt.
+                                        </p>
+                                    </div>
+
+                                    <div class="space-y-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-neon font-mono text-xs">04</span>
+                                            <h4 class="text-primary font-medium uppercase tracking-wider" style="margin: 0;">The Consilience Weave</h4>
+                                        </div>
+                                        <p class="text-sm text-secondary/70 leading-relaxed pl-6 border-l border-pine/20">
+                                            Sovereignty does not mean isolation. Through the Consilience Weave, individual pulses are aggregated into a shared, living map of planetary wellness. This is a new form of science (Besearch) where the observer and the observed are in a constant, honest flow.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 pt-4 border-t border-pine/20 relative z-10">
+                                <span class="text-xs font-mono text-primary uppercase tracking-widest flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-neon animate-pulse"></span>
+                                    Active Alignment
+                                </span>
+                            </div>
+                            
+                            <div class="mt-8 pt-4 border-t border-pine/20 relative z-10 overflow-x-auto">
+                                <table class="w-full text-left border-collapse">
+                                    <thead>
+                                        <tr class="border-b border-white/10">
+                                            <th class="py-3 text-[10px] font-mono text-secondary uppercase tracking-widest">Boreal Term</th>
+                                            <th class="py-3 text-[10px] font-mono text-neon uppercase tracking-widest">Systems Science Equivalent</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-[11px] font-mono">
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Gaia Intelligences</td>
+                                            <td class="py-2 text-secondary/70 italic">Distributed Basal Cognition</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Besearch Cycle</td>
+                                            <td class="py-2 text-secondary/70 italic">Bayesian Belief Updating</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">HeliClock</td>
+                                            <td class="py-2 text-secondary/70 italic">Chronobiological Entrainment</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Consilience Weave</td>
+                                            <td class="py-2 text-secondary/70 italic">Decentralized Machine Learning (DML)</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Levin Bubble Sort</td>
+                                            <td class="py-2 text-secondary/70 italic">Algorithmic Information Theory</td>
+                                        </tr>
+                                        <tr class="hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Von Mises</td>
+                                            <td class="py-2 text-secondary/70 italic">Directional Statistics</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
