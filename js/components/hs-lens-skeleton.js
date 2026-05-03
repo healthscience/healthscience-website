@@ -115,6 +115,25 @@ class HsLensSkeleton extends HTMLElement {
                 margin-bottom: 5px;
             }
 
+            .btn-explorer {
+                background: transparent;
+                color: #2d5a27;
+                border: 1px solid #2d5a27;
+                padding: 7px 15px;
+                font-family: sans-serif;
+                font-size: 0.7rem;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                margin-bottom: 5px;
+            }
+
+            .btn-explorer:hover {
+                background: #2d5a27;
+                color: white;
+            }
+
             .btn-playground:hover {
                 background: #1a3a17;
                 box-shadow: 0 0 15px rgba(45, 90, 39, 0.4);
@@ -282,7 +301,10 @@ class HsLensSkeleton extends HTMLElement {
                     <div>SKELETON // Repository of Truth</div>
                     <div class="version-tag">HOP v1.0.0 experimental</div>
                 </div>
-                <button class="btn-playground" id="playground-toggle" onclick="window.app.togglePlayground('grafting')">[ OPEN GRAFTING BENCH ]</button>
+                <div style="display: flex; gap: 10px;">
+                    <button class="btn-explorer" onclick="window.location.hash='#explorer'">[ EXPLORER ]</button>
+                    <button class="btn-playground" id="playground-toggle" onclick="window.app.togglePlayground('grafting')">[ OPEN GRAFTING BENCH ]</button>
+                </div>
             </header>
 
             <section id="intro" class="has-vines">
