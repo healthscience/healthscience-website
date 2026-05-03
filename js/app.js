@@ -2,6 +2,7 @@ import './components/hs-hub-navigator.js';
 import './components/hs-lens-emulation.js';
 import './components/hs-lens-poetry.js';
 import './components/hs-lens-skeleton.js';
+import './components/hs-lens-roadmap.js';
 import './components/hs-playground.js';
 import './components/hs-lens-explorer.js';
 
@@ -19,7 +20,7 @@ class StateController {
             playgroundActive: false
         };
         
-        this.lenses = ['emulation', 'poetry', 'skeleton', 'playground', 'explorer'];
+        this.lenses = ['emulation', 'poetry', 'skeleton', 'playground', 'explorer', 'roadmap'];
         this.init();
     }
 

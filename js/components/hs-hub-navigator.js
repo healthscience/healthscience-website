@@ -112,6 +112,7 @@ class HsHubNavigator extends HTMLElement {
             .item-emulation.active { color: var(--color-emulation); }
             .item-poetry.active { color: var(--color-poetry); }
             .item-skeleton.active { color: var(--color-skeleton); }
+            .item-roadmap.active { color: #00ff88; }
 
             .hud-right {
                 display: flex;
@@ -182,6 +183,7 @@ class HsHubNavigator extends HTMLElement {
             .axis-emulation.active { background: var(--color-emulation); box-shadow: 0 0 10px var(--color-emulation); }
             .axis-poetry.active { background: var(--color-poetry); box-shadow: 0 0 10px var(--color-poetry); }
             .axis-skeleton.active { background: var(--color-skeleton); box-shadow: 0 0 10px var(--color-skeleton); }
+            .axis-roadmap.active { background: #00ff88; box-shadow: 0 0 10px #00ff88; }
 
             @media (max-width: 768px) {
                 .hud-center {
@@ -242,6 +244,8 @@ class HsHubNavigator extends HTMLElement {
                      onclick="window.location.hash = '#poetry'">Poetry</div>
                 <div class="nav-item item-skeleton ${this.activeLens === 'skeleton' ? 'active' : ''}" 
                      onclick="window.location.hash = '#skeleton'">Skeleton</div>
+                <div class="nav-item item-roadmap ${this.activeLens === 'roadmap' ? 'active' : ''}" 
+                     onclick="window.location.hash = '#roadmap'">Road Map</div>
             </div>
 
             <div class="hud-right">
@@ -265,6 +269,7 @@ class HsHubNavigator extends HTMLElement {
             <div class="axis-line axis-poetry ${this.activeLens === 'poetry' ? 'active' : ''}"></div>
             <div class="axis-line axis-emulation ${this.activeLens === 'emulation' ? 'active' : ''}"></div>
             <div class="axis-line axis-skeleton ${this.activeLens === 'skeleton' ? 'active' : ''}"></div>
+            <div class="axis-line axis-roadmap ${this.activeLens === 'roadmap' ? 'active' : ''}"></div>
         </div>
         `;
     }
