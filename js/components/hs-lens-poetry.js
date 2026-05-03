@@ -8,10 +8,80 @@ class HsLensPoetry extends HTMLElement {
             { name: 'Search', details: 'NEAT-HOP exploration for optimal health paths.' },
             { name: 'Emulation', details: 'Implementation of chosen cues in the Peer context.' }
         ];
+
+        this.protocolItems = [
+            {
+                tag: 'DIRECT',
+                title: 'BentoBoxDS & BeeBee',
+                details: 'The Atomic Interface. BeeBee is the lightweight message-bus that binds the BentoBox visual state to the underlying hardware sensors. It ensures the "View" is never decoupled from the "Vitals.'
+            },
+            {
+                tag: 'WARM RELATE',
+                title: 'Besearch science & Emulations',
+                details: 'Moving beyond "Search" to Resonance Mapping. Emulation is the process of running a local "What If" scenario—sensing a biological state before committing the body to it.'
+            },
+            {
+                tag: 'LEGO KNOWLEDGE',
+                title: 'The Library',
+                details: 'Composable Biological Logic. This is a repository of signed scripts (Reference & Module Contracts) that Peers can "Snap" into their stack. It treats knowledge as modular, executable code that form a HOPquery that SafeFlow-ECS systems utilise.'
+            },
+            {
+                tag: 'HEART',
+                title: 'SafeFlow-ECS',
+                details: 'The State Engine. Using an Entity Component System (ECS) to manage biological entities. It handles the high-frequency "Pulse" of the Peer, calculating transitions in the "Energy Budget."'
+            },
+            {
+                tag: 'TINY_REASONERS',
+                title: 'Consilience & Coherence',
+                details: 'The Synthesis Layer. Tiny Reasoners are local agents that filter noise and extract "Cues" from raw data, feeding them into the Coherence Ledger for verification then performing a consilience weave.'
+            },
+            {
+                tag: 'P2P_AGGREGATION',
+                title: 'NEAT-HOP & Peer to Peer',
+                details: 'NEAT evolutionary & decentralized machine learning (DML) learning allows Peers to establish coherence across the network by establishing trust in data through "immune system" like sampling.'
+            },
+            {
+                tag: 'GUIDE BOOK',
+                title: 'Cue Currency & RGB',
+                details: 'Cue currency is a unit of computational knowledge. The Coherence Ledger combined with parts of the RGB (beyond blockchain - client side verification) to issue "Cues." A guidebook to the best knowledge, that acts as directed.'
+            },
+            {
+                tag: 'PROTOCOL',
+                title: 'View all',
+                details: 'Explore the full technical specification and documentation of the HOP protocol.'
+            }
+        ];
+
+        this.allBentoDetails = this.protocolItems
+            .filter(item => item.tag !== 'PROTOCOL')
+            .map(item => ({ title: item.title, details: item.details }));
+
+        this.selectedBentoIndex = null;
+        this.showTechnicalMap = false;
+        this.showRoadmap = false;
     }
 
     connectedCallback() {
         this.render();
+    }
+
+    selectBentoIndex(index) {
+        this.selectedBentoIndex = index;
+        this.render();
+    }
+
+    toggleTechnicalMap() {
+        this.showTechnicalMap = !this.showTechnicalMap;
+        this.render();
+    }
+
+    toggleRoadmap() {
+        this.showRoadmap = !this.showRoadmap;
+        this.render();
+    }
+
+    openDocs() {
+        window.open('https://beebeehop.any.org/a-tiny-hop-to-gaia-intelligence', '_blank');
     }
 
     onActivate(subState) {
@@ -245,8 +315,157 @@ class HsLensPoetry extends HTMLElement {
             .gap-6 { gap: 1.5rem; }
             .gap-4 { gap: 1rem; }
             .gap-3 { gap: 0.75rem; }
+
+            .hop-grid {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                gap: 2rem;
+            }
+
+            .col-span-12 { grid-column: span 12; }
+            .md\:col-span-8 { grid-column: span 8; }
+            .max-w-7xl { max-width: 80rem; }
+            .mx-auto { margin-left: auto; margin-right: auto; }
+            .relative { position: relative; }
+            .z-10 { z-index: 10; }
+            .p-4 { padding: 1rem; }
+            .md\:p-12 { padding: 3rem; }
+            .flex-1 { flex: 1 1 0%; }
+            .h-px { height: 1px; }
+            .bg-pine\/30 { background-color: rgba(45, 70, 53, 0.3); }
+            .mb-8 { margin-bottom: 2rem; }
+            .mb-12 { margin-bottom: 3rem; }
+            .mb-16 { margin-bottom: 4rem; }
+            .mt-8 { margin-top: 2rem; }
+            .gap-12 { gap: 3rem; }
+            .space-y-4 > * + * { margin-top: 1rem; }
+            .bg-gradient-to-b { background-image: linear-gradient(to bottom, var(--tw-gradient-stops)); }
+            .from-pine\/5 { --tw-gradient-from: rgba(45, 70, 53, 0.05); --tw-gradient-to: rgba(45, 70, 53, 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+            .to-transparent { --tw-gradient-to: transparent; }
+            .text-lg { font-size: 1.125rem; }
+            .font-bold { font-weight: 700; }
+            .cursor-pointer { cursor: pointer; }
+            .hover\:underline:hover { text-decoration: underline; }
+            .mr-2 { margin-right: 0.5rem; }
+            .border-pine\/20 { border-color: rgba(45, 70, 53, 0.2); }
+            .hover\:border-neon\/50:hover { border-color: rgba(169, 255, 0, 0.5); }
+            .hover\:bg-pine\/10:hover { background-color: rgba(45, 70, 53, 0.1); }
+            .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+            .duration-500 { transition-duration: 500ms; }
+            .ease-out { transition-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+            .backdrop-blur-sm { backdrop-filter: blur(4px); }
+            .w-1 { width: 0.25rem; }
+            .h-6 { height: 1.5rem; }
+            .bg-forest\/40 { background-color: rgba(20, 40, 30, 0.4); }
+            .border-y { border-top-width: 1px; border-bottom-width: 1px; }
+            .max-h-0 { max-height: 0; }
+            .max-h-\[2000px\] { max-height: 2000px; }
+            .overflow-hidden { overflow: hidden; }
+            .opacity-0 { opacity: 0; }
+            .opacity-100 { opacity: 1; }
+            .-translate-y-4 { transform: translateY(-1rem); }
+            .translate-y-0 { transform: translateY(0); }
             
-            /* Colors */
+            /* Specific for protocol item selection */
+            .border-neon { border-color: #a9ff00 !important; }
+            .bg-pine\/10 { background-color: rgba(45, 70, 53, 0.1) !important; }
+            
+            .lego-module.active-bento {
+                border-color: #a9ff00;
+                background-color: rgba(45, 70, 53, 0.1);
+                box-shadow: 0 0 15px rgba(169, 255, 0, 0.1);
+            }
+
+            .transition-fade {
+                transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            }
+            
+            /* Overlay styles */
+            .overlay-fixed {
+                position: fixed;
+                inset: 0;
+                z-index: 100;
+                background-color: #0a0f0d;
+                overflow-y: auto;
+                padding: 4rem 2rem;
+            }
+            
+            .btn-close {
+                position: fixed;
+                top: 2rem;
+                right: 2rem;
+                z-index: 110;
+                padding: 1rem;
+                background: #a9ff00;
+                color: #0a0f0d;
+                border-radius: 9999px;
+                font-family: monospace;
+                font-size: 0.875rem;
+                cursor: pointer;
+                border: none;
+            }
+
+            /* Anatomy & Tech Map Placeholders */
+            .placeholder-module {
+                border: 1px dashed rgba(169, 255, 0, 0.3);
+                padding: 3rem;
+                text-align: center;
+                border-radius: 12px;
+                background: rgba(169, 255, 0, 0.02);
+            }
+            
+            /* Diagram specific */
+            .anatomy-trigger {
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+            .anatomy-trigger:hover {
+                transform: scale(1.02);
+            }
+
+            /* Anatomy Diagram Internal Styles */
+            .icon-box { fill: none; stroke: #a9ff00; stroke-width: 1.5; opacity: 0.7; }
+            .icon-label { fill: #f0fdf4; font-size: 11px; font-family: 'Inter', monospace; text-anchor: middle; }
+            .mind-curve {
+                fill: none;
+                stroke: rgba(255, 255, 255, 0.2);
+                stroke-width: 1.5;
+                stroke-dasharray: 4, 4;
+            }
+            .filament-path {
+                fill: none;
+                stroke: rgba(255, 255, 255, 0.2);
+                stroke-width: 2;
+                stroke-dasharray: 10, 10;
+                animation: flow 30s linear infinite;
+            }
+            @keyframes flow {
+                to { stroke-dashoffset: -500; }
+            }
+            .anatomy-container {
+                background: #0a1914;
+                border: 1px solid rgba(169, 255, 0, 0.1);
+                border-radius: 12px;
+                padding: 40px;
+                position: relative;
+                overflow: hidden;
+                margin: 2rem 0;
+            }
+            .anatomy-container::before,
+            .anatomy-container::after {
+                content: '';
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a9ff0033'%3E%3Cpath d='M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z' /%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                pointer-events: none;
+                z-index: 1;
+            }
+            .anatomy-container::before { top: -20px; left: -20px; transform: rotate(-15deg); }
+            .anatomy-container::after { bottom: -20px; right: -20px; transform: rotate(165deg); }
+
+            @media (max-width: 768px) {
             .text-primary { color: #ffffff; }
             .text-secondary { color: #9ca3af; }
             .text-secondary\/80 { color: rgba(156, 163, 175, 0.8); }
@@ -611,9 +830,9 @@ class HsLensPoetry extends HTMLElement {
                             </svg>
 
                             <div class="diagram-footer mt-4 text-center">
-                                <button class="btn-playground group inline-flex items-center gap-3 px-6 py-3 border border-neon/50 bg-neon/5 hover:bg-neon/10 transition-all rounded-full" onclick="this.getRootNode().host.dispatchEvent(new CustomEvent('open-playground', {bubbles: true, composed: true}))">
+                                <button class="btn-playground group inline-flex items-center gap-3 px-6 py-3 border border-neon/50 bg-neon/5 hover:bg-neon/10 transition-all rounded-full" onclick="this.getRootNode().host.toggleTechnicalMap()">
                                     <span class="daisy-world"></span>
-                                    <span class="text-neon font-mono text-xs tracking-widest uppercase">Explore the Playground</span>
+                                    <span class="text-neon font-mono text-xs tracking-widest uppercase">Explore Technical Map</span>
                                 </button>
                             </div>
                         </div>
@@ -709,6 +928,239 @@ class HsLensPoetry extends HTMLElement {
                     </div>
                 </div>
             </section>
+
+            <!-- new -->
+
+                </div>
+            </section>
+
+            <!-- ARCHITECTURE SECTION -->
+            <section id="protocol" class="p-4 md:p-12 relative z-10">
+                <div class="hop-grid w-full max-w-7xl mx-auto">
+                    <div class="lego-module col-span-12 md:col-span-8 bg-gradient-to-b from-pine/5 to-transparent" style="margin: 0;">
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="h-px flex-1 bg-pine/30"></div>
+                            <h3 class="text-neon font-mono text-sm tracking-widest uppercase" style="margin: 0;">HEALTH ORACLE PROTOCOL - PeerStack</h3>
+                            <div class="h-px flex-1 bg-pine/30"></div>
+                        </div>
+
+                        <!-- bridge gaia to physics -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                            <div class="space-y-4">
+                                <h4 class="text-xs font-mono text-neon uppercase tracking-[0.2em]">I. Gaia as Systems Physics</h4>
+                                <p class="text-secondary leading-relaxed font-serif italic">
+                                    "In the Boreal, Gaia Intelligence is not a metaphor. It is the mathematical recognition of nested, self-regulating systems—from the mitochondrial pulse to the bioregional weave. The Health Oracle Protocol provides the first-ever computational interface for these feedbacks, moving science from 'Reductionist Observation' to 'Resonant Participation.'"
+                                </p>
+                            </div>
+                            <div class="space-y-4">
+                                <h4 class="text-xs font-mono text-neon uppercase tracking-[0.2em]">II. The "Gaming Engine for Life" (BentoBoxDS)</h4>
+                                <p class="text-secondary leading-relaxed">
+                                    "BentoBoxDS is the local-first execution environment. It treats your biology not as a static record, but as a dynamic state-machine. Using SafeFlow-ECS, we apply the same high-performance logic used in world-class simulation engines to the navigation of human health."
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="mb-12">
+                            <p class="text-secondary/80 text-lg mb-8 font-light italic">
+                                <span onclick="this.getRootNode().host.toggleRoadmap()" class="text-neon cursor-pointer hover:underline font-mono text-sm uppercase tracking-widest mr-2">PROTOCOL road map.</span>
+                                The protocol modules & mathematics that empower the navigation.
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            ${this.protocolItems.map((item, index) => `
+                                <div 
+                                    onclick="this.getRootNode().host.selectBentoIndex(${index})"
+                                    class="p-5 border rounded-lg transition-all cursor-pointer group ${this.selectedBentoIndex === index ? 'border-neon bg-pine/10' : 'border-pine/20 hover:border-neon/50 hover:bg-pine/10'}"
+                                >
+                                    <div class="text-xs font-mono text-pine group-hover:text-neon mb-2">${item.tag}</div>
+                                    <div class="text-lg text-primary font-medium">${item.title}</div>
+                                </div>
+                            `).join('')}
+                        </div>
+
+                        <!-- Bento Detail Reveal -->
+                        ${this.selectedBentoIndex !== null ? `
+                            <div class="mt-8 p-6 border border-neon/30 rounded-xl bg-pine/5 backdrop-blur-sm transition-fade">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="w-1 h-6 bg-neon"></div>
+                                    <h4 class="text-xl text-primary font-medium" style="margin: 0;">${this.protocolItems[this.selectedBentoIndex].title}</h4>
+                                </div>
+
+                                ${this.protocolItems[this.selectedBentoIndex].tag === 'PROTOCOL' ? `
+                                    <div class="space-y-6">
+                                        ${this.allBentoDetails.map((item) => `
+                                            <div class="border-l border-neon/20 pl-4">
+                                                <div class="text-sm font-bold text-primary/80 mb-1">${item.title}</div>
+                                                <p class="text-secondary leading-relaxed text-sm">
+                                                    ${item.details}
+                                                </p>
+                                            </div>
+                                        `).join('')}
+                                        <div class="mt-6 pt-6 border-t border-neon/10">
+                                            <p class="text-secondary leading-relaxed italic mb-4">
+                                                ${this.protocolItems[this.selectedBentoIndex].details}
+                                            </p>
+                                            <button onclick="this.getRootNode().host.openDocs()" class="px-4 py-2 border border-neon/30 text-neon text-[10px] font-mono uppercase tracking-widest hover:bg-neon/10 transition-all rounded">
+                                                Open Documentation
+                                            </button>
+                                        </div>
+                                    </div>
+                                ` : `
+                                    <div>
+                                        <p class="text-secondary leading-relaxed">
+                                            ${this.protocolItems[this.selectedBentoIndex].details}
+                                        </p>
+                                    </div>
+                                `}
+                            </div>
+                        ` : ''}
+                    </div>
+                    <div class="col-span-12 md:col-span-4">
+                        <div class="lego-module h-full flex flex-col items-center justify-center text-center p-8 bg-forest/20 border-l-2 border-neon" style="margin: 0;">
+                            <h3 class="text-neon font-mono text-xs tracking-widest uppercase mb-4">Vision Module</h3>
+                            <p class="text-sm text-secondary italic mb-6">"The architecture of health is the architecture of life itself. We are building the scaffolding for a new biology."</p>
+                            <div class="daisy-node" style="position: relative; top: 0; right: 0; margin-bottom: 1rem;"></div>
+                            <div class="text-xs font-mono text-pine">CALIBRATED: CORE_PHYSICS</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STRATEGIC PLUGINS SECTION -->
+            <section class="p-4 md:p-12 relative z-10 bg-forest/40 border-y border-pine/20">
+                <div class="w-full max-w-7xl mx-auto">
+                    <div class="mb-12">
+                        <h2 class="text-xs font-mono text-neon uppercase tracking-[0.3em] mb-4">The Anatomy of the HOP Fabric</h2>
+                        <h3 class="text-2xl md:text-2xl font-light text-primary mb-8">Metabolic Journey</h3>
+                        
+                        <div class="anatomy-trigger" onclick="this.getRootNode().host.toggleTechnicalMap()">
+                            <div class="anatomy-container bento-node">
+                                <svg viewBox="0 0 900 500" class="fabric-svg" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <filter id="besearchGlow" x="-20%" y="-20%" width="140%" height="140%">
+                                            <feGaussianBlur stdDeviation="3" result="blur" />
+                                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                        </filter>
+                                        
+                                        <pattern id="weavePattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                                            <path d="M0 5h10M5 0v10" stroke="rgba(169, 255, 0, 0.2)" stroke-width="0.5"/>
+                                        </pattern>
+                                    </defs>
+
+                                    <g class="inflow">
+                                        <g transform="translate(50, 10)">
+                                            <rect width="40" height="40" rx="8" class="icon-box" /> <text y="55" class="icon-label">Tiny devices</text>
+                                        </g>
+                                        <g transform="translate(50, 100)">
+                                            <rect width="40" height="40" rx="8" class="icon-box" /> <text y="55" class="icon-label">BentoBox</text>
+                                        </g>
+                                        <g transform="translate(50, 180)">
+                                            <circle cx="20" cy="20" r="18" class="icon-box" /> <text y="55" class="icon-label">Bio-Signals</text>
+                                        </g>
+                                        <g transform="translate(50, 260)">
+                                            <path d="M5 5h30v20l-15 10l-15-10z" class="icon-box" /> <text y="55" class="icon-label">BeeBee Talk</text>
+                                        </g>
+                                        <g transform="translate(50, 340)">
+                                            <rect width="40" height="20" rx="2" class="icon-box" /> <text y="35" class="icon-label">cueSpace</text>
+                                        </g>
+                                    </g>
+
+                                    <g class="heart-core">
+                                        <rect x="350" y="100" width="200" height="250" rx="100" fill="url(#weavePattern)" stroke="rgba(169, 255, 0, 0.3)" />
+                                        
+                                        <g transform="translate(450, 200) scale(0.8)">
+                                            <ellipse cx="0" cy="0" rx="40" ry="80" stroke="#a9ff00" stroke-width="3" fill="none" opacity="0.6" />
+                                            <circle cx="0" cy="-30" r="45" stroke="#a9ff00" stroke-width="2" fill="none" opacity="0.4" />
+                                        </g>
+                                        
+                                        <text x="450" y="380" class="label-main" fill="#ffffff">SafeFlow-ECS</text>
+                                        <text x="450" y="400" class="label-sub" fill="#a9ff00">Consilience Weave</text>
+
+                                        <g transform="translate(340, 430)">
+                                            <circle cx="20" cy="0" r="15" fill="rgba(169, 255, 0, 0.2)" stroke="#a9ff00" />
+                                            <circle cx="80" cy="0" r="15" fill="rgba(169, 255, 0, 0.2)" stroke="#a9ff00" />
+                                            <circle cx="140" cy="0" r="15" fill="rgba(169, 255, 0, 0.2)" stroke="#a9ff00" />
+                                            <circle cx="200" cy="0" r="15" fill="rgba(169, 255, 0, 0.2)" stroke="#a9ff00" />
+                                            <text x="110" y="40" class="icon-label">Active Besearch Cycles</text>
+                                        </g>
+                                    </g>
+
+                                    <g class="intelligence">
+                                        <path d="M650 150 Q750 150 800 120" class="mind-curve" />
+                                        <text x="810" y="125" class="icon-label">BeeBee Translator</text>
+                                        
+                                        <path d="M650 225 Q750 225 800 225" class="mind-curve" />
+                                        <text x="810" y="230" class="icon-label">ResonAgents</text>
+                                        
+                                        <path d="M650 300 Q750 300 800 350" class="mind-curve" />
+                                        <text x="810" y="355" class="icon-label">NEAT-HOP / DML</text>
+                                    </g>
+
+                                    <path d="M120 225 L350 225" class="filament-path pulse" />
+                                    <path d="M550 225 L650 225" class="filament-path pulse" />
+                                </svg>
+
+                                <div class="diagram-footer mt-6">
+                                    <div class="btn-playground group inline-flex items-center gap-3 px-6 py-3 border border-neon/50 bg-neon/5 hover:bg-neon/10 transition-all rounded-full">
+                                        <span class="daisy-world"></span>
+                                        <span class="text-neon font-mono text-xs tracking-widest uppercase">Explore Technical Map</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="${this.showTechnicalMap ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-700 ease-out">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 py-12">
+                            <div class="lego-module p-6 bg-pine/10 border-neon/30" style="margin: 0;">
+                                <div class="text-neon font-mono text-[10px] uppercase mb-2">PLUGIN_HOP</div>
+                                <div class="text-primary font-medium mb-2">ResonAgent Kernel</div>
+                                <p class="text-[10px] text-secondary">The core mathematical engine for active inference.</p>
+                            </div>
+                            <div class="lego-module p-6 bg-pine/10 border-neon/30" style="margin: 0;">
+                                <div class="text-neon font-mono text-[10px] uppercase mb-2">PLUGIN_FABRIC</div>
+                                <div class="text-primary font-medium mb-2">P2P Weave</div>
+                                <p class="text-[10px] text-secondary">Decentralized transport for biological cues.</p>
+                            </div>
+                            <div class="lego-module p-6 bg-pine/10 border-neon/30" style="margin: 0;">
+                                <div class="text-neon font-mono text-[10px] uppercase mb-2">PLUGIN_BENTO</div>
+                                <div class="text-primary font-medium mb-2">SafeFlow-ECS</div>
+                                <p class="text-[10px] text-secondary">High-performance state management for life.</p>
+                            </div>
+                            <div class="lego-module p-6 bg-pine/10 border-neon/30" style="margin: 0;">
+                                <div class="text-neon font-mono text-[10px] uppercase mb-2">PLUGIN_GEOM</div>
+                                <div class="text-primary font-medium mb-2">HeliClock v2</div>
+                                <p class="text-[10px] text-secondary">Geometric time and orbital resonance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ROADMAP OVERLAY -->
+            ${this.showRoadmap ? `
+                <div class="overlay-fixed">
+                    <button class="btn-close" onclick="this.getRootNode().host.toggleRoadmap()">CLOSE [ESC]</button>
+                    <div class="max-w-4xl mx-auto">
+                        <h2 class="text-neon font-mono text-xl tracking-widest uppercase mb-12">Protocol Roadmap</h2>
+                        <div class="space-y-12">
+                            <div class="border-l-2 border-neon pl-8">
+                                <h3 class="text-primary uppercase tracking-wider">Phase 01: The Silent Orrery</h3>
+                                <p class="text-secondary italic">Establish the high-resolution architecture and core physics.</p>
+                            </div>
+                            <div class="border-l-2 border-pine/30 pl-8">
+                                <h3 class="text-primary/50 uppercase tracking-wider">Phase 02: Resonant Participation</h3>
+                                <p class="text-secondary/50 italic">Deployment of ResonAgents and decentralized P2P weave.</p>
+                            </div>
+                            <div class="border-l-2 border-pine/30 pl-8">
+                                <h3 class="text-primary/50 uppercase tracking-wider">Phase 03: The Bioregional Weave</h3>
+                                <p class="text-secondary/50 italic">Collective health navigation and planetary self-regulation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ` : ''}
 
             <!-- BOREAL HORIZON -->
             <section id="boreal">
