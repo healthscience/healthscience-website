@@ -886,6 +886,57 @@ class HsLensSkeleton extends HTMLElement {
                 text-align: center;
             }
 
+            .leaf-cluster-5-h {
+                border-top: 1px solid #dcd3c1;
+                margin-top: 6rem;
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
+            .matrix-header {
+                font-family: 'Georgia', serif;
+                font-style: italic;
+                font-size: 1.2rem;
+                color: #1a2a22;
+                margin-bottom: 2.5rem;
+                text-align: center;
+            }
+
+            .matrix-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 1.5rem;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .matrix-btn {
+                background: #fdfaf6;
+                border: 1px solid #dcd3c1;
+                padding: 1.5rem 1rem;
+                font-family: 'Courier New', monospace;
+                font-size: 0.75rem;
+                color: #2d5a27;
+                cursor: pointer;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 80px;
+                line-height: 1.4;
+            }
+
+            .matrix-btn:hover {
+                background: #2d5a27;
+                color: white;
+                border-color: #2d5a27;
+                transform: translateY(-3px);
+                box-shadow: 0 6px 15px rgba(45, 90, 39, 0.15);
+            }
+
             .code-snippet {
                 font-family: monospace;
                 background: #f4f4f4;
@@ -1000,6 +1051,15 @@ class HsLensSkeleton extends HTMLElement {
                 </div>
                 <h2>The Three Strata of Participation</h2>
                 <p>
+                    We move from Soil to Metabolism to Reality:
+
+                    Story (The Soil): The sovereign, localized substrate. The raw data of the bioregion and the peer.
+
+                    Interplay (The Metabolism): The innovated center. This is where SafeFlow-ECS, ResonAgents, and beebee digest the strands, find consilience, and weave the Pulse.
+
+                    Emulation (The Living Logic): The deterministic result. The Sealed Orgo and the Gelle texture unified. Information as Attunement
+                </p>
+                <p>
                     To navigate HOP is to move through three interwoven layers. Each layer depends on the resonance of the one beneath it.
                 </p>
 
@@ -1024,6 +1084,21 @@ class HsLensSkeleton extends HTMLElement {
                         <p>Orgo & Gelle</p>
                         <div class="focus">Focus: On-the-fly Experience</div>
                         <div class="status-tag">[STORY]</div>
+                    </div>
+                </div>
+                <div class="leaf-cluster-5-h">
+                    <div class="matrix-header">
+                      Core Parts of HOP that enable Story, Interplay, and Emulation.
+                    </div> 
+
+                    <div class="matrix-grid">
+                        <button class="matrix-btn" onclick="window.location.hash='#coherence-ledger'">Coherence Ledger</button>
+                        <button class="matrix-btn" onclick="window.location.hash='#besearch'">Besearch</button>
+                        <button class="matrix-btn" onclick="window.location.hash='#resonagents'">ResonAgents</button>
+                        <button class="matrix-btn" onclick="window.location.hash='#library'">Library</button>
+                        <button class="matrix-btn" onclick="window.location.hash='#cue-currency'">Cue Currency</button>
+                        <button class="matrix-btn" onclick="window.location.hash='#safeflow-ecs'">SafeFlow-ECS</button>
+                        <button class="matrix-btn" onclick="window.location.hash='#consilience-weave'">Consilience Weave</button>
                     </div>
                 </div>
             </section>

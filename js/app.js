@@ -11,6 +11,13 @@ import './components/hs-von-mises-viz.js';
 import './components/hs-scale-slider.js';
 import './components/hs-daisy-engine.js';
 import './components/hs-texture-extractor.js';
+import './components/hs-coherence-ledger.js';
+import './components/hs-besearch.js';
+import './components/hs-resonagents.js';
+import './components/hs-library.js';
+import './components/hs-cue-currency.js';
+import './components/hs-safeflow-ecs.js';
+import './components/hs-consilience-weave.js';
 
 class StateController {
     constructor() {
@@ -20,7 +27,11 @@ class StateController {
             playgroundActive: false
         };
         
-        this.lenses = ['emulation', 'poetry', 'skeleton', 'playground', 'explorer', 'roadmap'];
+        this.lenses = [
+            'emulation', 'poetry', 'skeleton', 'playground', 'explorer', 'roadmap',
+            'coherence-ledger', 'besearch', 'resonagents', 'library', 'cue-currency', 
+            'safeflow-ecs', 'consilience-weave'
+        ];
         this.init();
     }
 
