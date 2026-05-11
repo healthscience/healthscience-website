@@ -671,7 +671,7 @@ class HsLensPoetry extends HTMLElement {
                     <div class="daisy-node"></div>
                     <div class="mono">HOP - The Infrastructure for Science’s Living Roots. </div>
                     <p class="serif">
-                        At the dawn of super-intelligence, we return to the living way. The Health Oracle Protocol (HOP) provides the foundational physics for the living way. It is a Peer-to-Peer Fabric that treats biological signals as Sovereign Intelligences, guiding every cell to bioregion towards health.
+                        At the dawn of super-intelligence, we return to the living way. The Health Oracle Protocol (HOP) provides the foundational physics for the living way. It is a Peer-to-Peer Fabric that treats biological signals as Conductive Intelligences, guiding every cell to bioregion towards health.
                     </p>
                     <div class="download-section">
                         <a href="https://bentoboxds.org" target="_blank" class="lego-button">Download</a>
@@ -697,12 +697,12 @@ class HsLensPoetry extends HTMLElement {
                     <div class="lego-module">
                         <div class="mono">The Cellular Scale</div>
                         <h3>Tiny Agents</h3>
-                        <p>ResonAgents operate within your BentoBox. They are your personal apprentices, learning the unique geometry of your Von Mises rhythms.</p>
+                        <p>ResonAgents operate within BentoBox. They are tiny personal apprentices, learning the unique geometry of each peers Von Mises rhythms.</p>
                     </div>
                     <div class="lego-module">
                         <div class="mono">The Mycelial Scale</div>
                         <h3>Decentralized Weave</h3>
-                        <p>When tiny agents communicate, they don't trade personal data. They trade Cues—distilled insights that allow the whole forest to learn without any single tree losing its sovereignty.</p>
+                        <p>When tiny agents communicate, they don't leak private noise. They transmit Cues—high-fidelity resonances that allow the whole forest to harmonize while maintaining the pure conduction of each individual tree.</p>
                     </div>
                 </div>
             </section>
@@ -721,8 +721,15 @@ class HsLensPoetry extends HTMLElement {
                 <div class="section-tag">THE METABOLIC LOGIC</div>
                 <h2>Cues & Besearch</h2>
                 <div class="lego-module" style="background: rgba(169, 255, 0, 0.05);">
-                    <p>A Cue is not a vague signal; it is a Shannon-Entropy optimized packet of signed data. By using Levin Complexity, we ensure the 'Search' stage of the metabolism finds the most mathematically probable path to health.</p>
-                    <p>The Besearch Cycle is a functional implementation of Active Inference. Using tiny agents to minimize variational free energy, the protocol allows a Peer to maintain biological coherence by constantly updating their internal model against the environment.</p>
+                    <p>The Conductive Synthesis</p>
+                    
+                    <p>The Cue: High-Fidelity Density</p>
+
+                    <p>A Cue draws on the spirit of Shannon-Entropy to act as a highly optimized, signed packet of insight. By moving toward the mathematical elegance suggested by Levin Complexity, the Besearch metabolism seeks the most efficient, "low-friction" path to health. It isn’t just data; it is the distilled essence of a biological signal, shaped for perfect conduction.</p>
+
+                    <p>The Besearch Cycle: Informed by Active Inference</p>
+
+                    <p>The Besearch Cycle resonates with the principles of Active Inference, building upon the foundational idea of minimizing variational free energy. In the HOP context, this becomes a metabolic process: using tiny agents to help a Peer maintain biological coherence by constantly tuning their internal model to the rhythms of the environment.</p>
                 </div>
                 
                 <!-- simplified version of the diagram -->
@@ -786,70 +793,24 @@ class HsLensPoetry extends HTMLElement {
                         </div>
                     </div>
 
-                    <!-- Bottom Right: Diagram -->
-                    <div class="flex items-center justify-center">
-                        <div class="anatomy-container bento-node w-full h-full min-h-[400px] flex flex-col">
-                            <svg viewBox="0 0 900 600" class="fabric-svg flex-1" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                                        <feGaussianBlur stdDeviation="4" result="blur" />
-                                        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                                    </filter>
-                                    
-                                    <pattern id="weavePattern" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
-                                        <path d="M0 7h15M7 0v15" stroke="rgba(74, 222, 128, 0.15)" stroke-width="0.5"/>
-                                    </pattern>
-                                </defs>
-
-                                <g class="spine-group">
-                                    <line x1="450" y1="50" x2="450" y2="520" class="spine-line" filter="url(#glow)" />
-                                    <circle cx="450" cy="120" r="6" class="proof-node" />
-                                    <circle cx="450" cy="240" r="6" class="proof-node" />
-                                    <circle cx="450" cy="360" r="6" class="proof-node" />
-                                    <text x="465" y="80" class="label-sub">Digital Immune System</text>
-                                </g>
-
-                                <g class="heart-core">
-                                    <rect x="350" y="140" width="200" height="200" rx="100" fill="url(#weavePattern)" stroke="rgba(169, 255, 0, 0.3)" />
-                                    <g transform="translate(450, 240) scale(0.7)">
-                                        <ellipse cx="0" cy="0" rx="40" ry="80" stroke="#a9ff00" stroke-width="3" fill="none" opacity="0.6" />
-                                        <circle cx="0" cy="-30" r="45" stroke="#a9ff00" stroke-width="2" fill="none" opacity="0.4" />
-                                    </g>
-                                    <text x="450" y="360" class="label-main">SafeFlow-ECS</text>
-                                </g>
-
-                                <g class="besearch-group" transform="translate(450, 480)">
-                                    <g transform="translate(-180, 0)">
-                                        <circle r="12" class="besearch-icon stage-1" />
-                                        <text y="30" class="icon-label">1. Context</text>
-                                    </g>
-                                    <g transform="translate(-60, 0)">
-                                        <circle r="12" class="besearch-icon stage-2" />
-                                        <text y="30" class="icon-label">2. Research</text>
-                                    </g>
-                                    <g transform="translate(60, 0)">
-                                        <circle r="12" class="besearch-icon stage-3" />
-                                        <text y="30" class="icon-label">3. Search</text>
-                                    </g>
-                                    <g transform="translate(180, 0)">
-                                        <circle r="12" class="besearch-icon stage-4" />
-                                        <text y="30" class="icon-label">4. Emulation</text>
-                                    </g>
-                                    <path d="M-180 -20 Q0 -80 180 -20" fill="none" stroke="rgba(169, 255, 0, 0.2)" stroke-dasharray="5,5" />
-                                </g>
-
-                                <path d="M100 240 Q250 240 350 240" class="filament-path pulse-left" />
-                                <text x="100" y="220" class="label-sub">Sensing Skin (BentoBox/Bio)</text>
-                                
-                                <path d="M550 240 Q700 240 800 240" class="filament-path pulse-right" />
-                                <text x="800" y="220" class="label-sub" text-anchor="end">Living Mind (BeeBee/ResonAgents)</text>
-                            </svg>
-
-                            <div class="diagram-footer mt-4 text-center">
-                                <button class="btn-playground group inline-flex items-center gap-3 px-6 py-3 border border-neon/50 bg-neon/5 hover:bg-neon/10 transition-all rounded-full" onclick="this.getRootNode().host.toggleTechnicalMap()">
-                                    <span class="daisy-world"></span>
-                                    <span class="text-neon font-mono text-xs tracking-widest uppercase">Explore Technical Map</span>
-                                </button>
+                    <!-- Bottom Right: SafeFlow-ECS Resonance -->
+                    <div class="lego-module p-6 bg-pine/5 border-pine/30 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-light text-primary mb-6">SafeFlow-ECS Resonance</h3>
+                            <div class="space-y-6">
+                                <p class="text-secondary text-sm leading-relaxed italic font-serif">
+                                    The high-frequency pulse of biological conductivity. SafeFlow-ECS manages the transition between states, ensuring that every biological signal is resonant with the Peer's intent.
+                                </p>
+                                <div class="pl-4 border-l-2 border-neon/30 space-y-6">
+                                    <div class="space-y-2">
+                                        <span class="text-primary font-medium block font-mono text-xs uppercase tracking-wider">State Transition Logic:</span> 
+                                        <p class="text-xs text-secondary/80 leading-relaxed">Life is never static. By treating health as a set of dynamic entities and components, we can simulate and verify health paths in real-time before they are committed to the body.</p>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <span class="text-primary font-medium block font-mono text-xs uppercase tracking-wider">Kinetic Coherence:</span>
+                                        <p class="text-xs text-secondary/80 leading-relaxed">As the ECS cycles through biological data, it maintains kinetic coherence—a state where energy expenditure and recovery are perfectly balanced within the Energy Budget.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -876,18 +837,18 @@ class HsLensPoetry extends HTMLElement {
                         </div>
                     </div>
 
-                    <!-- Section 6: The Sovereign Skeleton -->
+                    <!-- Section 6: The Conductive Skeleton -->
                     <div class="lego-module p-6 bg-pine/5 border-pine/30 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-xl font-light text-primary mb-6">The Sovereign Skeleton: Cryptography as Skin</h3>
+                            <h3 class="text-xl font-light text-primary mb-6">The Conductive Skeleton: Cryptography as Skin</h3>
                             <div class="space-y-6">
                                 <p class="text-secondary text-sm leading-relaxed italic font-serif">
-                                    The Fabric of Gaia Intelligence is held together by a Sovereign Skeleton of mathematics. This isn't just about "security"—it is about Identity and Integrity.
+                                    The Fabric of Gaia Intelligence is held together by a Conductive Skeleton of mathematics. This isn't about "security" in the old defensive sense—it is about Signal Integrity and Identity.
                                 </p>
                                 <div class="pl-4 border-l-2 border-neon/30 space-y-6">
                                     <div class="space-y-2">
                                         <span class="text-primary font-medium block font-mono text-xs uppercase tracking-wider">The Merkle-Spine (Hyperbees):</span> 
-                                        <p class="text-xs text-secondary/80 leading-relaxed">Your data isn't a messy file; it’s a structured, cryptographic tree. Every pulse is hashed and signed, allowing for rapid, local-first search and retrieval without ever exposing the root to the swarm.</p>
+                                        <p class="text-xs text-secondary/80 leading-relaxed">Peer data isn't a messy file; it’s a structured, cryptographic tree. Every pulse is hashed and signed, allowing for rapid, local-first search and retrieval without ever exposing the root to the swarm.</p>
                                     </div>
                                     <div class="space-y-2">
                                         <span class="text-primary font-medium block font-mono text-xs uppercase tracking-wider">Swarm Noise & Privacy:</span>
@@ -895,13 +856,81 @@ class HsLensPoetry extends HTMLElement {
                                     </div>
                                     <div class="space-y-2">
                                         <span class="text-primary font-medium block font-mono text-xs uppercase tracking-wider">Account Identity:</span>
-                                        <p class="text-xs text-secondary/80 leading-relaxed">You are not a username on a server. You are a Key. Your Secure ID is the mathematical root of your existence in the fabric, giving you total ownership of your BentoBox.</p>
+                                        <p class="text-xs text-secondary/80 leading-relaxed">Peers are not a username on a server. You are a Key. Each peers has a  Secure ID is the mathematical root of their existence in the fabric, giving peers total ownership of BentoBox.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                </div>
+
+                <!-- Bottom Full-Width Diagram -->
+                <div class="mt-12">
+                    <div class="anatomy-container bento-node w-full min-h-[400px] flex flex-col">
+                        <svg viewBox="0 0 900 600" class="fabric-svg flex-1" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="4" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                                
+                                <pattern id="weavePattern" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
+                                    <path d="M0 7h15M7 0v15" stroke="rgba(74, 222, 128, 0.15)" stroke-width="0.5"/>
+                                </pattern>
+                            </defs>
+
+                            <g class="spine-group">
+                                <line x1="450" y1="50" x2="450" y2="520" class="spine-line" filter="url(#glow)" />
+                                <circle cx="450" cy="120" r="6" class="proof-node" />
+                                <circle cx="450" cy="240" r="6" class="proof-node" />
+                                <circle cx="450" cy="360" r="6" class="proof-node" />
+                                <text x="465" y="80" class="label-sub">Digital Immune System</text>
+                            </g>
+
+                            <g class="heart-core">
+                                <rect x="350" y="140" width="200" height="200" rx="100" fill="url(#weavePattern)" stroke="rgba(169, 255, 0, 0.3)" />
+                                <g transform="translate(450, 240) scale(0.7)">
+                                    <ellipse cx="0" cy="0" rx="40" ry="80" stroke="#a9ff00" stroke-width="3" fill="none" opacity="0.6" />
+                                    <circle cx="0" cy="-30" r="45" stroke="#a9ff00" stroke-width="2" fill="none" opacity="0.4" />
+                                </g>
+                                <text x="450" y="360" class="label-main">SafeFlow-ECS</text>
+                            </g>
+
+                            <g class="besearch-group" transform="translate(450, 480)">
+                                <g transform="translate(-180, 0)">
+                                    <circle r="12" class="besearch-icon stage-1" />
+                                    <text y="30" class="icon-label">1. Context</text>
+                                </g>
+                                <g transform="translate(-60, 0)">
+                                    <circle r="12" class="besearch-icon stage-2" />
+                                    <text y="30" class="icon-label">2. Research</text>
+                                </g>
+                                <g transform="translate(60, 0)">
+                                    <circle r="12" class="besearch-icon stage-3" />
+                                    <text y="30" class="icon-label">3. Search</text>
+                                </g>
+                                <g transform="translate(180, 0)">
+                                    <circle r="12" class="besearch-icon stage-4" />
+                                    <text y="30" class="icon-label">4. Emulation</text>
+                                </g>
+                                <path d="M-180 -20 Q0 -80 180 -20" fill="none" stroke="rgba(169, 255, 0, 0.2)" stroke-dasharray="5,5" />
+                            </g>
+
+                            <path d="M100 240 Q250 240 350 240" class="filament-path pulse-left" />
+                            <text x="100" y="220" class="label-sub">Sensing Skin (BentoBox/Bio)</text>
+                            
+                            <path d="M550 240 Q700 240 800 240" class="filament-path pulse-right" />
+                            <text x="800" y="220" class="label-sub" text-anchor="end">Living Mind (BeeBee/ResonAgents)</text>
+                        </svg>
+
+                        <div class="diagram-footer mt-4 text-center">
+                            <button class="btn-playground group inline-flex items-center gap-3 px-6 py-3 border border-neon/50 bg-neon/5 hover:bg-neon/10 transition-all rounded-full" onclick="this.getRootNode().host.toggleTechnicalMap()">
+                                <span class="daisy-world"></span>
+                                <span class="text-neon font-mono text-xs tracking-widest uppercase">Explore Technical Map</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Repository of Truth Section -->
@@ -965,13 +994,13 @@ class HsLensPoetry extends HTMLElement {
                             <div class="space-y-4">
                                 <h4 class="text-xs font-mono text-neon uppercase tracking-[0.2em]">I. Gaia as Systems Physics</h4>
                                 <p class="text-secondary leading-relaxed font-serif italic">
-                                    "In the Boreal, Gaia Intelligence is not a metaphor. It is the mathematical recognition of nested, self-regulating systems—from the mitochondrial pulse to the bioregional weave. The Health Oracle Protocol provides the first-ever computational interface for these feedbacks, moving science from 'Reductionist Observation' to 'Resonant Participation.'"
+                                    "In the Boreal, Gaia Intelligence is not a metaphor. It is the mathematical recognition of nested, self-regulating systems—from the mitochondrial pulse to the bioregional weave. The Health Oracle Protocol provides a computational interface for these feedbacks, moving science from 'Reductionist Observation' to 'Resonant Participation.'"
                                 </p>
                             </div>
                             <div class="space-y-4">
                                 <h4 class="text-xs font-mono text-neon uppercase tracking-[0.2em]">II. The "Gaming Engine for Life" (BentoBoxDS)</h4>
                                 <p class="text-secondary leading-relaxed">
-                                    "BentoBoxDS is the local-first execution environment. It treats your biology not as a static record, but as a dynamic state-machine. Using SafeFlow-ECS, we apply the same high-performance logic used in world-class simulation engines to the navigation of human health."
+                                    "BentoBoxDS is the local-first execution environment. It treats each peers biology not as a static record, but as a dynamic state-machine. Using SafeFlow-ECS, we apply the same high-performance logic used in world-class simulation engines to the navigation of human health."
                                 </p>
                             </div>
                         </div>
@@ -1074,7 +1103,7 @@ class HsLensPoetry extends HTMLElement {
                                             <h4 class="text-primary font-medium uppercase tracking-wider" style="margin: 0;">The Consilience Weave</h4>
                                         </div>
                                         <p class="text-sm text-secondary/70 leading-relaxed pl-6 border-l border-pine/20">
-                                            Sovereignty does not mean isolation. Through the Consilience Weave, individual pulses are aggregated into a shared, living map of planetary wellness. This is a new form of science (Besearch) where the observer and the observed are in a constant, honest flow.
+                                            Conduction does not happen in isolation. Through the Consilience Weave, individual pulses are aggregated into a shared, living map of planetary wellness. This is a new form of science (Besearch) where the observer and the observed are in a constant, honest flow.
                                         </p>
                                     </div>
                                 </div>
@@ -1285,7 +1314,7 @@ class HsLensPoetry extends HTMLElement {
                 <div class="lego-module">
                     <div class="daisy-node"></div>
                     <p class="serif">
-                        At the dawn of super-intelligence, we return to the living way. The Health Oracle Protocol (HOP) provides the foundational physics for the living way. It is a Peer-to-Peer Fabric that treats biological signals as Sovereign Intelligences, guiding every cell to bioregion towards health.
+                        At the dawn of super-intelligence, we return to the living way. The Health Oracle Protocol (HOP) provides the foundational physics for the living way. It is a Peer-to-Peer Fabric that treats biological signals as Conductive Intelligences, guiding every cell to bioregion towards health.
                     </p>
                     <div class="download-section">
                         <a href="https://bentoboxds.org" target="_blank" class="lego-button">Download</a>

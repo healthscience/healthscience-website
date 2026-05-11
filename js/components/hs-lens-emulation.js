@@ -1,4 +1,6 @@
 import '../heli-clock.js';
+import './hs-heart-resonance.js';
+import './hs-emulation-trinity.js';
 
 class HsLensEmulation extends HTMLElement {
     constructor() {
@@ -24,26 +26,27 @@ class HsLensEmulation extends HTMLElement {
                 padding: 2rem;
                 padding-top: calc(80px + 2rem); /* Offset for top menu header (60px) + tri-axis (20px) */
                 height: 100%;
-                overflow: hidden;
+                overflow-y: auto;
                 box-sizing: border-box;
             }
             .content {
-                height: 100%;
+                min-height: 100%;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
                 position: relative;
             }
-            canvas {
-                border: 1px solid rgba(0, 242, 255, 0.2);
-                box-shadow: 0 0 50px rgba(0, 242, 255, 0.1);
+            hs-heart-resonance {
+                width: 800px;
+                height: 600px;
                 max-width: 90%;
                 max-height: 70vh;
+                border: 1px solid rgba(0, 242, 255, 0.2);
+                box-shadow: 0 0 50px rgba(0, 242, 255, 0.1);
             }
             heli-clock {
                 position: absolute;
-                top: 4rem;
+                top: calc(4rem + 80px);
                 right: 2rem;
                 width: 150px;
                 opacity: 0.5;
@@ -74,15 +77,17 @@ class HsLensEmulation extends HTMLElement {
                     width: 100px;
                     opacity: 0.8;
                 }
-                canvas {
+                hs-heart-resonance {
                     width: 100%;
                     height: auto;
+                    aspect-ratio: 4/3;
                 }
             }
         </style>
         <div class="content">
             <h1>EMULATION</h1>
-            <canvas id="orgos-canvas" width="800" height="600"></canvas>
+            <hs-heart-resonance color="#00f2ff"></hs-heart-resonance>
+            <hs-emulation-trinity></hs-emulation-trinity>
             <heli-clock></heli-clock>
         </div>
         `;
