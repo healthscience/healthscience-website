@@ -7,6 +7,12 @@ import './components/hs-playground.js';
 import './components/hs-lens-explorer.js';
 
 // New sub-components for Skeleton Lens
+import './components/hs-gaia-protocol.js';
+import './components/hs-strata-participation.js';
+import './components/hs-emulation-section.js';
+import './components/hs-interplay-section.js';
+import './components/hs-story-section.js';
+import './components/hs-resonagents-trinity.js';
 import './components/hs-von-mises-viz.js';
 import './components/hs-scale-slider.js';
 import './components/hs-daisy-engine.js';
