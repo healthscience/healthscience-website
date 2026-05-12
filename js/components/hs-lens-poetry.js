@@ -1292,25 +1292,16 @@ class HsLensPoetry extends HTMLElement {
                 </div>
             ` : ''}
 
+
+
             <!-- BOREAL HORIZON -->
-            <section id="boreal">
+            <section id="boreal" style="margin-left: 2rem; margin-right: 2rem;">
                 <div class="section-tag">THE BOREAL HORIZON</div>
                 <h2>The Nature of Computation</h2>
                 <p class="serif">
-                    Computation is transitioning from a rigid, extractive phase into a Resonant, Living State. As we align with the foundational physics of biology, the "Factory" and the "Sensor" dissolve into the watershed.
+                   Computation is transitioning from a rigid, extractive phase into a Resonant, Living State. As we align with the foundational physics of biology, the "Factory" and the "Sensor" dissolve into the watershed, becoming functional extensions of the Earth’s natural intelligence.
                 </p>
-                
-                <div class="grid" style="margin-top: 4rem;">
-                    <div class="lego-module">
-                        <div class="mono">Phase 01</div>
-                        <h3>Alignment</h3>
-                        <p>We reclaim high-performance sensing. Stripping away proprietary layers, we allow silicon to speak the pure language of HOP.</p>
-                    </div>
-                    <div class="lego-module">
-                        <div class="mono">Phase 02</div>
-                        <h3>Conformity</h3>
-                        <p>Additive Molecular Assembly. Printing "Warm Geometry" onto nanomeshes that stretch and breathe with the Peer.</p>
-                    </div>
+
                 <div class="lego-module">
                     <div class="daisy-node"></div>
                     <p class="serif">
@@ -1322,7 +1313,106 @@ class HsLensPoetry extends HTMLElement {
                         <a href="https://beebeehop.any.org/another-tiny-hop-to-the-great-orbit" target="_blank" class="lego-button lego-button-outline">Read second dialogue</a>
                     </div>
                 </div>
+            </section>
 
+            <!-- THE PHASES OF EMERGENCE -->
+            <section id="emergence" style="margin-left: 2rem; margin-right: 2rem;">
+                <div class="section-tag">I. THE PHASES OF EMERGENCE</div>
+                <h2>The Phases of Emergence</h2>
+                
+                <div class="grid" style="margin-top: 4rem;">
+                    <div class="lego-module">
+                        <div class="mono">01 Alignment</div>
+                        <h3>The Sovereign Eye</h3>
+                        <p>We initialize the network by reclaiming high-performance sensing. By stripping away proprietary layers, we allow existing silicon to speak the pure language of the Health Oracle Protocol (HOP). The Peer begins to see with biological clarity, unmediated by external interests.</p>
+                    </div>
+                    <div class="lego-module">
+                        <div class="mono">02 Conformity</div>
+                        <h3>The Second Skin</h3>
+                        <p>We move into Additive Molecular Assembly. Utilizing local fabrication nodes, we print "Warm Geometry" onto breathable, elastomeric nanomeshes. These are not "devices" to be worn, but conformable interfaces that stretch and breathe as a single biological unit with the Peer.</p>
+                    </div>
+                    <div class="lego-module">
+                        <div class="mono">03 Synthesis</div>
+                        <h3>The Living Pulse</h3>
+                        <p>The era of Organic & Molecular Electronics. Computation becomes a chemical dialogue. We utilize biodegradable sensors that interface directly with interstitial fluids—powering themselves through the body’s own ionic gradients and merging the PeerStack with the "Wetware" of life itself.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- LIVING EXAMPLES -->
+            <section id="examples" style="margin-left: 2rem; margin-right: 2rem;">
+                <div class="section-tag">II. LIVING EXAMPLES</div>
+                <h2>The Great Orbit in Motion</h2>
+                
+                <div class="grid" style="margin-top: 4rem;">
+                    <div class="lego-module">
+                        <div class="mono">Case Study 01</div>
+                        <h3>Direct Neural Resonance</h3>
+                        <p>A Peer anchors a Molecular Life-Strap—a conformable, organic thin-film that resonates with the Vagus Nerve. There is no "proxy" or statistical guessing; the sensor listens to the electrophysiological truth of the neural pulse. Computation happens at the chemical interface, providing a real-time map of the body’s inner horizon.</p>
+                    </div>
+                    <div class="lego-module">
+                        <div class="mono">Case Study 02</div>
+                        <h3>Watershed Cultivation</h3>
+                        <p>Small, solar-glazed fabrication nodes are integrated into the local bioregion like fruit-bearing trees. They do not "mass-produce"; they cultivate on-demand. When a Peer’s ResonAgent identifies a metabolic requirement, the node pulls a signed Reference Contract from the Library and assembles a biodegradable nutrient-delivery patch, perfectly tuned to the Peer’s unique biological coordinates.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cue-currency">
+            </section>
+
+            <!-- CUE CURRENCY: THE MATHEMATICS OF ATTUNEMENT -->
+            <section id="cue-currency" style="margin-left: 2rem; margin-right: 2rem;">
+                <div class="section-tag">III. CUE CURRENCY: THE MATHEMATICS OF ATTUNEMENT</div>
+                <h2>The Mathematics of Attunement</h2>
+                
+                <p class="serif">
+                    A Cue is a function of computational knowledge. In the HOP fabric, Cue Currency is not a medium of exchange; it is a measure of Conductive Weight. It represents the distillation of "Story" into "Emulation."
+                </p>
+
+                <div class="grid" style="margin-top: 4rem;">
+                    <div class="lego-module">
+                        <h3>Conducting Functional Information</h3>
+                        <p>Rather than acting as a static guide book, a Cue acts as a Superconductor for the right functional information at the right time.</p>
+                        <ul class="serif" style="margin-top: 1rem; line-height: 1.6;">
+                            <li style="margin-bottom: 0.5rem;"><strong>Low Resistance:</strong> When a Peer holds a Cue, the "Impedance" between a biological signal and a health-action (Orgo) drops to zero.</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>Metabolic Velocity:</strong> The more "Cue" a particular strand of knowledge has, the more rapidly it is conducted through the Besearch Cycle.</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>Resonance-Based Priority:</strong> It guides the SafeFlow-ECS on what to prioritize, ensuring the most attuned "emulations" are the ones that receive the pulse.</li>
+                        </ul>
+                    </div>
+
+                    <div class="lego-module">
+                        <h3>Conductivity Coefficient:</h3>
+                        <ul class="serif" style="margin-top: 1rem; line-height: 1.6;">
+                            <li style="margin-bottom: 0.5rem;"><strong>Functional Knowledge:</strong> The Cue contains the pointer to the Reference Contract.</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>The Flow:</strong> The amount of "Cue" weight determines how much computational energy (Energy-Based Scheduling) is allocated to that specific emulation.</li>
+                            <li style="margin-bottom: 0.5rem;"><strong>The Result:</strong> High Cue = High Conduction. The "Living Way" moves from a possibility to a localized reality (Emulation).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div style="margin-top: 4rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <h3 style="text-align: center;">Visualizing the Shift</h3>
+                    <div class="grid" style="margin-top: 1rem; gap: 2rem;">
+                        <div class="lego-module" style="text-align: center;">
+                            <div class="mono" style="margin-bottom: 0.5rem; opacity: 0.7;">Old World (Guide Book)</div>
+                            <ul style="list-style: none; padding: 0; line-height: 1.6; margin: 0;">
+                                <li>Tells you what to do.</li>
+                                <li>Passive information.</li>
+                                <li>Static Map.</li>
+                                <li>Ownership of data.</li>
+                            </ul>
+                        </div>
+                        <div class="lego-module" style="text-align: center;">
+                            <div class="mono" style="margin-bottom: 0.5rem; opacity: 0.7;">HOP v3 (Conduction)</div>
+                            <ul style="list-style: none; padding: 0; line-height: 1.6; margin: 0;">
+                                <li>Activates the flow.</li>
+                                <li>Functional potential.</li>
+                                <li>Resonant Current.</li>
+                                <li>Integrity of the Signal.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </section>
 
