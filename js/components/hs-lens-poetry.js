@@ -63,6 +63,11 @@ class HsLensPoetry extends HTMLElement {
 
     connectedCallback() {
         this.render();
+        // Check for initial hash if this lens is active
+        const hash = window.location.hash;
+        if (hash === '#poetry/diagram') {
+            this.onActivate('diagram');
+        }
     }
 
     selectBentoIndex(index) {
@@ -86,6 +91,19 @@ class HsLensPoetry extends HTMLElement {
 
     onActivate(subState) {
         console.log('Poetry Lens Activated', subState);
+        if (subState === 'diagram') {
+            // Use setTimeout to ensure the DOM is fully rendered before scrolling
+            setTimeout(() => {
+                const diagramComp = this.shadowRoot.getElementById('diagram');
+                const el = diagramComp ? diagramComp.shadowRoot.getElementById('diagram-content') : null;
+                if (el) {
+                    console.log('Scrolling to diagram element', el);
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                    console.warn('Diagram element not found in hs-hop-diagram shadowRoot');
+                }
+            }, 100);
+        }
     }
 
     render() {
@@ -733,7 +751,7 @@ class HsLensPoetry extends HTMLElement {
                 </div>
                 
                 <!-- simplified version of the diagram -->
-                <h3 style="margin-top: 4rem;">The Anatomy of the HOP Fabric</h3>
+                <h3 id="diagram" style="margin-top: 4rem; scroll-margin-top: 100px;">The Anatomy of the HOP Fabric</h3>
                 
                 <!-- 4-Section Grid -->
                 <div class="grid-1-2 mb-20 items-stretch">
@@ -934,44 +952,7 @@ class HsLensPoetry extends HTMLElement {
                 </div>
 
                 <!-- Repository of Truth Section -->
-                <div class="mt-20 pt-12 border-t border-pine/20">
-                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-                        <div class="max-w-xl">
-                            <h3 class="text-xs font-mono text-neon uppercase tracking-[0.3em] mb-4">The Repository of Truth</h3>
-                            <p class="text-secondary text-sm leading-relaxed italic font-serif">
-                                Everything discussed on the site is backed by open, verifiable code and deep documentation. This signals that our foundations are grounded in the "Repository of Truth."
-                            </p>
-                            <div class="flex gap-4 mt-6">
-                                <button 
-                                    onclick="this.getRootNode().host.dispatchEvent(new CustomEvent('open-glossary', {bubbles: true, composed: true}))"
-                                    class="text-neon font-mono text-[10px] uppercase tracking-widest border border-neon/30 px-4 py-2 rounded bg-transparent hover:bg-neon/10 transition-all cursor-pointer"
-                                >
-                                    Explore the Glossary
-                                </button>
-                                <button 
-                                    onclick="this.getRootNode().host.dispatchEvent(new CustomEvent('open-maths', {bubbles: true, composed: true}))"
-                                    class="text-neon font-mono text-[10px] uppercase tracking-widest border border-neon/30 px-4 py-2 rounded bg-transparent hover:bg-neon/10 transition-all cursor-pointer"
-                                >
-                                    View Maths
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); width: 100%;">
-                            <a href="https://github.com/healthscience" target="_blank" class="group p-6 border border-pine/20 bg-pine/5 hover:bg-pine/10 transition-all rounded-lg block" style="text-decoration: none;">
-                                <div class="text-neon font-mono text-[10px] mb-2 uppercase tracking-widest">The Repository</div>
-                                <div class="text-primary font-medium mb-2 group-hover:text-neon transition-colors">github.com/healthscience</div>
-                                <p class="text-[10px] text-secondary/70 leading-relaxed">The raw mechanics of the Fabric, SafeFlow-ECS, and the PeerStack.</p>
-                            </a>
-                            
-                            <a href="https://bentobox-ds.gitbook.io" target="_blank" class="group p-6 border border-pine/20 bg-pine/5 hover:bg-pine/10 transition-all rounded-lg block" style="text-decoration: none;">
-                                <div class="text-neon font-mono text-[10px] mb-2 uppercase tracking-widest">The Specification</div>
-                                <div class="text-primary font-medium mb-2 group-hover:text-neon transition-colors">bentobox-ds.gitbook.io</div>
-                                <p class="text-[10px] text-secondary/70 leading-relaxed">The deep-dive documentation for BentoBoxDS and the Health Oracle Protocol.</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <hs-repository-truth></hs-repository-truth>
             </section>
 
             <!-- new -->
@@ -1158,115 +1139,7 @@ class HsLensPoetry extends HTMLElement {
             </section>
 
             <!-- STRATEGIC PLUGINS SECTION -->
-            <section class="p-4 md:p-12 relative z-10 bg-forest/40 border-y border-pine/20">
-                <div class="w-full max-w-7xl mx-auto">
-                    <div class="mb-12">
-                        <h2 class="text-xs font-mono text-neon uppercase tracking-[0.3em] mb-4">The Anatomy of the HOP Fabric</h2>
-                        <h3 class="text-2xl md:text-2xl font-light text-primary mb-8">Metabolic Journey</h3>
-                        
-                        <div class="anatomy-trigger" onclick="this.getRootNode().host.toggleTechnicalMap()">
-                            <div class="anatomy-container bento-node">
-                                <svg viewBox="0 0 900 500" class="fabric-svg" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <filter id="besearchGlow" x="-20%" y="-20%" width="140%" height="140%">
-                                            <feGaussianBlur stdDeviation="3" result="blur" />
-                                            <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                                        </filter>
-                                        
-                                        <pattern id="weavePattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
-                                            <path d="M0 5h10M5 0v10" stroke="rgba(169, 255, 0, 0.2)" stroke-width="0.5"/>
-                                        </pattern>
-                                    </defs>
-
-                                    <g class="inflow">
-                                        <g transform="translate(50, 10)">
-                                            <rect width="40" height="40" rx="8" class="icon-box" /> <text y="55" class="icon-label">Tiny devices</text>
-                                        </g>
-                                        <g transform="translate(50, 100)">
-                                            <rect width="40" height="40" rx="8" class="icon-box" /> <text y="55" class="icon-label">BentoBox</text>
-                                        </g>
-                                        <g transform="translate(50, 180)">
-                                            <circle cx="20" cy="20" r="18" class="icon-box" /> <text y="55" class="icon-label">Bio-Signals</text>
-                                        </g>
-                                        <g transform="translate(50, 260)">
-                                            <path d="M5 5h30v20l-15 10l-15-10z" class="icon-box" /> <text y="55" class="icon-label">BeeBee Talk</text>
-                                        </g>
-                                        <g transform="translate(50, 340)">
-                                            <rect width="40" height="20" rx="2" class="icon-box" /> <text y="35" class="icon-label">cueSpace</text>
-                                        </g>
-                                    </g>
-
-                                    <g class="heart-core">
-                                        <rect x="350" y="100" width="200" height="250" rx="100" fill="url(#weavePattern)" stroke="rgba(169, 255, 0, 0.3)" />
-                                        
-                                        <g transform="translate(450, 200) scale(0.8)">
-                                            <ellipse cx="0" cy="0" rx="40" ry="80" stroke="#a9ff00" stroke-width="3" fill="none" opacity="0.6" />
-                                            <circle cx="0" cy="-30" r="45" stroke="#a9ff00" stroke-width="2" fill="none" opacity="0.4" />
-                                        </g>
-                                        
-                                        <text x="450" y="380" class="label-main" fill="#ffffff">SafeFlow-ECS</text>
-                                        <text x="450" y="400" class="label-sub" fill="#a9ff00">Consilience Weave</text>
-
-                                        <g transform="translate(340, 430)">
-                                            <circle cx="20" cy="0" r="15" fill="rgba(169, 255, 0, 0.2)" stroke="#a9ff00" />
-                                            <circle cx="80" cy="0" r="15" fill="rgba(169, 255, 0, 0.2)" stroke="#a9ff00" />
-                                            <circle cx="140" cy="0" r="15" fill="rgba(169, 255, 0, 0.2)" stroke="#a9ff00" />
-                                            <circle cx="200" cy="0" r="15" fill="rgba(169, 255, 0, 0.2)" stroke="#a9ff00" />
-                                            <text x="110" y="40" class="icon-label">Active Besearch Cycles</text>
-                                        </g>
-                                    </g>
-
-                                    <g class="intelligence">
-                                        <path d="M650 150 Q750 150 800 120" class="mind-curve" />
-                                        <text x="810" y="125" class="icon-label">BeeBee Translator</text>
-                                        
-                                        <path d="M650 225 Q750 225 800 225" class="mind-curve" />
-                                        <text x="810" y="230" class="icon-label">ResonAgents</text>
-                                        
-                                        <path d="M650 300 Q750 300 800 350" class="mind-curve" />
-                                        <text x="810" y="355" class="icon-label">NEAT-HOP / DML</text>
-                                    </g>
-
-                                    <path d="M120 225 L350 225" class="filament-path pulse" />
-                                    <path d="M550 225 L650 225" class="filament-path pulse" />
-                                </svg>
-
-                                <div class="diagram-footer mt-6">
-                                    <div class="btn-playground group inline-flex items-center gap-3 px-6 py-3 border border-neon/50 bg-neon/5 hover:bg-neon/10 transition-all rounded-full">
-                                        <span class="daisy-world"></span>
-                                        <span class="text-neon font-mono text-xs tracking-widest uppercase">Explore Technical Map</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="${this.showTechnicalMap ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-700 ease-out">
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 py-12">
-                            <div class="lego-module p-6 bg-pine/10 border-neon/30" style="margin: 0;">
-                                <div class="text-neon font-mono text-[10px] uppercase mb-2">PLUGIN_HOP</div>
-                                <div class="text-primary font-medium mb-2">ResonAgent Kernel</div>
-                                <p class="text-[10px] text-secondary">The core mathematical engine for active inference.</p>
-                            </div>
-                            <div class="lego-module p-6 bg-pine/10 border-neon/30" style="margin: 0;">
-                                <div class="text-neon font-mono text-[10px] uppercase mb-2">PLUGIN_FABRIC</div>
-                                <div class="text-primary font-medium mb-2">P2P Weave</div>
-                                <p class="text-[10px] text-secondary">Decentralized transport for biological cues.</p>
-                            </div>
-                            <div class="lego-module p-6 bg-pine/10 border-neon/30" style="margin: 0;">
-                                <div class="text-neon font-mono text-[10px] uppercase mb-2">PLUGIN_BENTO</div>
-                                <div class="text-primary font-medium mb-2">SafeFlow-ECS</div>
-                                <p class="text-[10px] text-secondary">High-performance state management for life.</p>
-                            </div>
-                            <div class="lego-module p-6 bg-pine/10 border-neon/30" style="margin: 0;">
-                                <div class="text-neon font-mono text-[10px] uppercase mb-2">PLUGIN_GEOM</div>
-                                <div class="text-primary font-medium mb-2">HeliClock v2</div>
-                                <p class="text-[10px] text-secondary">Geometric time and orbital resonance.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <hs-hop-diagram id="diagram"></hs-hop-diagram>
 
             <!-- ROADMAP OVERLAY -->
             ${this.showRoadmap ? `

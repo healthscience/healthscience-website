@@ -8,15 +8,20 @@ import './components/hs-lens-explorer.js';
 
 // New sub-components for Skeleton Lens
 import './components/hs-gaia-protocol.js';
+import './components/hs-beebee.js';
 import './components/hs-strata-participation.js';
 import './components/hs-emulation-section.js';
 import './components/hs-interplay-section.js';
 import './components/hs-story-section.js';
+import './components/hs-repository-truth.js';
+import './components/hs-glossary.js';
+import './components/hs-maths.js';
 import './components/hs-resonagents-trinity.js';
 import './components/hs-von-mises-viz.js';
 import './components/hs-scale-slider.js';
 import './components/hs-daisy-engine.js';
 import './components/hs-texture-extractor.js';
+import './components/hs-hop-diagram.js';
 import './components/hs-coherence-ledger.js';
 import './components/hs-besearch.js';
 import './components/hs-resonagents.js';
@@ -30,25 +35,42 @@ class StateController {
         this.state = {
             activeLens: null,
             subState: null,
-            playgroundActive: false
+            playgroundActive: false,
+            glossaryActive: false
         };
         
         this.lenses = [
             'emulation', 'poetry', 'skeleton', 'playground', 'explorer', 'roadmap',
-            'coherence-ledger', 'besearch', 'resonagents', 'library', 'cue-currency', 
-            'safeflow-ecs', 'consilience-weave'
+            'hop-diagram', 'coherence-ledger', 'besearch', 'resonagents', 'library', 'cue-currency', 
+            'safeflow-ecs', 'consilience-weave', 'beebee', 'glossary', 'maths'
         ];
         this.init();
     }
 
     init() {
         window.addEventListener('hashchange', () => this.handleRoute());
+        window.addEventListener('open-glossary', () => {
+            window.location.hash = '#glossary';
+        });
+        window.addEventListener('open-maths', () => {
+            window.location.hash = '#maths';
+        });
+        window.addEventListener('close', (e) => {
+            if (this.state.activeLens === 'glossary' || this.state.activeLens === 'maths') {
+                window.history.back();
+            }
+        });
         this.handleRoute();
     }
 
     handleRoute() {
         const hash = window.location.hash.slice(1) || 'emulation';
-        const [lens, ...rest] = hash.split('/');
+        let [lens, ...rest] = hash.split('/');
+        
+        // Handle query params in hash (e.g. #glossary?term=BeeBee)
+        if (lens.includes('?')) {
+            lens = lens.split('?')[0];
+        }
         
         if (lens === 'playground') {
             this.setPlayground(true, rest[0]);

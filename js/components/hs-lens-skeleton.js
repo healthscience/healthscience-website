@@ -209,6 +209,7 @@ class HsLensSkeleton extends HTMLElement {
                     <button class="btn-explorer" onclick="window.location.hash='#roadmap'">[ ROAD MAP ]</button>
                     <button class="btn-explorer" onclick="window.location.hash='#explorer'">[ EXPLORER ]</button>
                     <button class="btn-playground" id="playground-toggle" onclick="window.app.togglePlayground('grafting')">[ OPEN GRAFTING BENCH ]</button>
+                    <button class="btn-explorer" onclick="window.open('https://healthscience.network/docs/', '_blank')">[ DOCUMENTATION ]</button>
                 </div>
             </header>
 
@@ -248,12 +249,15 @@ class HsLensSkeleton extends HTMLElement {
                 </div>
             </section>
 
+            <!-- access to code and documentation -->
+            <hs-repository-truth></hs-repository-truth>
+
+            <hs-beebee></hs-beebee>
             <hs-gaia-protocol></hs-gaia-protocol>
             <hs-strata-participation></hs-strata-participation>
             <hs-emulation-section></hs-emulation-section>
             <hs-interplay-section></hs-interplay-section>
             <hs-story-section></hs-story-section>
-            <hs-resonagents-trinity></hs-resonagents-trinity>
 
             <div class="footer-note">
                 "We move from Reductionist Observation to Resonant Participation."

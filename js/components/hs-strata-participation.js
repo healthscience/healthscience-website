@@ -121,6 +121,25 @@ class HsStrataParticipation extends HTMLElement {
                 transform: translateY(-3px);
                 box-shadow: 0 6px 15px rgba(45, 90, 39, 0.15);
             }
+            .close-overlay {
+                position: absolute;
+                top: 2rem;
+                right: 2rem;
+                background: transparent;
+                border: 1px solid #2d5a27;
+                color: #2d5a27;
+                padding: 0.5rem 1rem;
+                font-family: monospace;
+                cursor: pointer;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                z-index: 100;
+                transition: all 0.3s ease;
+            }
+            .close-overlay:hover {
+                background: #2d5a27;
+                color: white;
+            }
             .leaf-cluster-5-v { position: relative; }
             .leaf-cluster-5-v .leaf-pair { position: absolute; width: 20px; height: 20px; pointer-events: none; z-index: 99; }
             .leaf-cluster-5-v .leaf-pair::before, .leaf-cluster-5-v .leaf-pair::after { content: ""; position: absolute; width: 14px; height: 7px; background: #2d5a27; border-radius: 0 100% 0 100%; }
@@ -187,12 +206,13 @@ class HsStrataParticipation extends HTMLElement {
 
                 <div class="matrix-grid">
                     <button class="matrix-btn" onclick="window.location.hash='#coherence-ledger'">Coherence Ledger</button>
-                    <button class="matrix-btn" onclick="window.location.hash='#besearch'">Besearch</button>
+                    <button class="matrix-btn" onclick="window.location.hash='#beebee'">BeeBee</button>
+                    <button class="matrix-btn" onclick="window.location.hash='#besearch'">Besearch</button> 
                     <button class="matrix-btn" onclick="window.location.hash='#resonagents'">ResonAgents</button>
                     <button class="matrix-btn" onclick="window.location.hash='#library'">Library</button>
-                    <button class="matrix-btn" onclick="window.location.hash='#cue-currency'">Cue Currency</button>
                     <button class="matrix-btn" onclick="window.location.hash='#safeflow-ecs'">SafeFlow-ECS</button>
                     <button class="matrix-btn" onclick="window.location.hash='#consilience-weave'">Consilience Weave</button>
+                    <button class="matrix-btn" onclick="window.location.hash='#hop-diagram'">HOP Diagram</button>
                 </div>
             </div>
         </section>
