@@ -61,6 +61,8 @@ body {
     transition: opacity 1.2s var(--pulse-ease), transform 1.2s var(--pulse-ease), filter 1.2s var(--pulse-ease);
     transform: scale(1.5) rotate(5deg);
     filter: blur(20px);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .lens.active {
@@ -68,6 +70,7 @@ body {
     pointer-events: auto;
     transform: scale(1) rotate(0deg);
     filter: blur(0px);
+    z-index: 50;
 }
 
 /* Playground Split View Layout */

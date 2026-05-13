@@ -18,7 +18,7 @@ class HsCoherenceLedger extends HTMLElement {
                 min-height: 100vh;
                 padding-top: 80px;
             }
-            :host(.active) { display: block; }
+            :host(.active) { display: block !important; }
             
             .container {
                 max-width: 1200px;
@@ -38,7 +38,7 @@ class HsCoherenceLedger extends HTMLElement {
 
             .close-btn {
                 position: absolute;
-                top: 2rem;
+                top: 8rem;
                 right: 2rem;
                 background: transparent;
                 border: 1px solid #2d5a27;
@@ -49,6 +49,7 @@ class HsCoherenceLedger extends HTMLElement {
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 transition: all 0.3s ease;
+                z-index: 1000;
             }
 
             .close-btn:hover {
@@ -122,7 +123,7 @@ class HsCoherenceLedger extends HTMLElement {
             .daisy-tr { top: -12px; right: -12px; }
         </style>
         <div class="container">
-            <button class="close-btn" onclick="window.location.hash='#skeleton'">[ CLOSE ]</button>
+            <button class="close-btn" onclick="window.history.back();">[ CLOSE ]</button>
             <section class="has-vines">
                 <div class="daisy-node daisy-black daisy-tr"></div>
                 <h2>Coherence Ledger: The Witness of Alignment</h2>
@@ -144,9 +145,10 @@ class HsCoherenceLedger extends HTMLElement {
                 <div class="status-tag">
                     <h3>Status & Resources</h3>
                     <ul>
-                        <li><strong>Status:</strong> [HARDENING / AUDIT] — Finalizing the cryptographic signing rituals for V1.</li>
-                        <li><strong>Focus:</strong> High-integrity witness protocols for decentralized pattern recognition.</li>
-                        <li><strong>Code:</strong> <code>hop-core/ledger/witness.js</code></li>
+                        <li><strong>Status:</strong> [HARDENING / AUDIT] — Work in progress</li>
+                        <li><strong>Focus:</strong>An entity component system with chain proof of evidence.</li>
+                        <li><strong>Documentation:</strong> <a href="https://healthscience.network/docs" target="_blank">Introduction</a></li>
+                        <li><strong>Code:</strong> <code><a href="https://github.com/healthscience/node-safeflow" target="_blank"></a></code></li>
                     </ul>
                 </div>
             </section>

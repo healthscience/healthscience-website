@@ -18,7 +18,7 @@ class HsResonAgents extends HTMLElement {
                 min-height: 100vh;
                 padding-top: 80px;
             }
-            :host(.active) { display: block; }
+            :host(.active) { display: block !important; }
             
             .container {
                 max-width: 1200px;
@@ -38,7 +38,7 @@ class HsResonAgents extends HTMLElement {
 
             .close-btn {
                 position: absolute;
-                top: 2rem;
+                top: 5rem;
                 right: 2rem;
                 background: transparent;
                 border: 1px solid #2d5a27;
@@ -49,6 +49,7 @@ class HsResonAgents extends HTMLElement {
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 transition: all 0.3s ease;
+                z-index: 1000;
             }
 
             .close-btn:hover {
@@ -118,7 +119,7 @@ class HsResonAgents extends HTMLElement {
             strong { color: #2d5a27; }
         </style>
         <div class="container">
-            <button class="close-btn" onclick="window.location.hash='#skeleton'">[ CLOSE ]</button>
+            <button class="close-btn" onclick="window.history.back();">[ CLOSE ]</button>
             <section class="has-vines">
                 <h2>ResonAgents: The Bio-Translators</h2>
                 
@@ -141,7 +142,8 @@ class HsResonAgents extends HTMLElement {
                     <ul>
                         <li><strong>Status:</strong> [STORY / INTERPLAY] — Hardening the Basal Cognition logic for V1.</li>
                         <li><strong>Focus:</strong> Peer-Agent attunement and low-latency response.</li>
-                        <li><strong>Code:</strong> <code>hop-core/agents/basal-logic.js</code></li>
+                        <li><strong>Documentation:</strong> <a href="https://healthscience.network/docs" target="_blank">Introduction</a></li>
+                        <li><strong>Code:</strong> <code><a href="https://github.com/healthscience/hop-learn" target="_blank">hop-learn</a></code></li>
                     </ul>
                 </div>
             </section>

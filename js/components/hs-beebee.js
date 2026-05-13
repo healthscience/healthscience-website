@@ -13,13 +13,12 @@ class HsBeebee extends HTMLElement {
         <style>
             @import url('css/nature.css');
             :host { 
-                display: block; 
+                display: none; 
                 background: #fcfaf2;
                 min-height: 100vh;
                 padding-top: 80px;
             }
-            :host(.lens) { display: none; }
-            :host(.lens.active) { display: block; }
+            :host(.active) { display: block !important; }
             
             .container {
                 max-width: 1200px;
@@ -39,7 +38,7 @@ class HsBeebee extends HTMLElement {
 
             .close-btn {
                 position: absolute;
-                top: 2rem;
+                top: 5rem;
                 right: 2rem;
                 background: transparent;
                 border: 1px solid #2d5a27;
@@ -50,7 +49,7 @@ class HsBeebee extends HTMLElement {
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 transition: all 0.3s ease;
-                z-index: 100;
+                z-index: 1000;
             }
 
             .close-btn:hover {
@@ -149,7 +148,7 @@ class HsBeebee extends HTMLElement {
             }
         </style>
         <div class="container">
-            <button class="close-btn" onclick="window.location.hash='#skeleton'">[ CLOSE ]</button>
+            <button class="close-btn" onclick="window.history.back();">[ CLOSE ]</button>
             <section id="beebee" class="has-vines">
                 <div class="daisy-node daisy-black daisy-tr"></div>
                 <h2>The Peer Conductor: beebee (BB)</h2>
@@ -196,8 +195,8 @@ class HsBeebee extends HTMLElement {
                     <ul>
                         <li><strong>Status:</strong> [INTERPLAY / PULSING] — Hardening the core conductor logic and ResonAgent coordination for the V1 release.</li>
                         <li><strong>Focus:</strong> Managing the rhythm and textures of the local metabolism.</li>
-                        <li><strong>Documentation:</strong> beebee: The Peer Conductor</li>
-                        <li><strong>Code:</strong> <code>hop-core/beebee.js</code></li>
+                        <li><strong>Documentation:</strong> <a href="https://healthscience.network/docs" target="_blank">Introduction</a></li>
+                        <li><strong>Code:</strong> <code><a href="https://github.com/healthscience/bbAI" target="_blank">beebee-ai</a></code></li>
                     </ul>
                 </div>
             </section>

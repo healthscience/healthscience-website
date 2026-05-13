@@ -118,7 +118,7 @@ class HsRepositoryTruth extends HTMLElement {
                         <p class="text-[10px] text-secondary/70 leading-relaxed">The raw mechanics of the Fabric, SafeFlow-ECS, and the PeerStack.</p>
                     </a>
                     
-                    <a href="https://bentobox-ds.gitbook.io" target="_blank" class="group p-6 border border-pine/20 bg-pine/5 hover:bg-pine/10 transition-all rounded-lg block">
+                    <a href="https://healthscience.network/docs" target="_blank" class="group p-6 border border-pine/20 bg-pine/5 hover:bg-pine/10 transition-all rounded-lg block">
                         <div class="text-neon font-mono text-[10px] mb-2 uppercase tracking-widest">The Specification</div>
                         <div class="text-primary font-medium mb-2 group-hover:text-neon transition-colors">bentobox-ds.gitbook.io</div>
                         <p class="text-[10px] text-secondary/70 leading-relaxed">The deep-dive documentation for BentoBoxDS and the Health Oracle Protocol.</p>

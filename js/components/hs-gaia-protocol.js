@@ -113,8 +113,8 @@ class HsGaiaProtocol extends HTMLElement {
                 <h3>Status & Resources</h3>
                 <ul>
                     <li><strong>Status:</strong> [INTERPLAY / HARDENING] — Finalizing the DML (Decentralized Machine Learning) validation rituals for V1.</li>
-                    <li><strong>Documentation:</strong> Conductive Intelligence & Resonance</li>
-                    <li><strong>Code:</strong> <code>hop-dml/swarm-bridge.js</code></li>
+                    <li><strong>Documentation:</strong> <a href="https://healthscience.network/docs" target="_blank">Introduction</a></li></li>
+                    <li><strong>Code:</strong> <code><a href="https://github.com/healthscience/hop-learn" target="_blank">hop-learn</a></code></li>
                     <li><strong>Focus:</strong> Scaling collective resonance through high-integrity Cues.</li>
                 </ul>
             </div>

@@ -123,7 +123,7 @@ class HsStrataParticipation extends HTMLElement {
             }
             .close-overlay {
                 position: absolute;
-                top: 2rem;
+                top: 5rem;
                 right: 2rem;
                 background: transparent;
                 border: 1px solid #2d5a27;
@@ -212,6 +212,7 @@ class HsStrataParticipation extends HTMLElement {
                     <button class="matrix-btn" onclick="window.location.hash='#library'">Library</button>
                     <button class="matrix-btn" onclick="window.location.hash='#safeflow-ecs'">SafeFlow-ECS</button>
                     <button class="matrix-btn" onclick="window.location.hash='#consilience-weave'">Consilience Weave</button>
+                    <button class="matrix-btn" onclick="window.location.hash='#ptop-storage'">Peer to Peer & Storage</button>
                     <button class="matrix-btn" onclick="window.location.hash='#hop-diagram'">HOP Diagram</button>
                 </div>
             </div>

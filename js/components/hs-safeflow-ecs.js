@@ -18,7 +18,7 @@ class HsSafeflowEcs extends HTMLElement {
                 min-height: 100vh;
                 padding-top: 80px;
             }
-            :host(.active) { display: block; }
+            :host(.active) { display: block !important; }
             
             .container {
                 max-width: 1200px;
@@ -38,7 +38,7 @@ class HsSafeflowEcs extends HTMLElement {
 
             .close-btn {
                 position: absolute;
-                top: 2rem;
+                top: 5rem;
                 right: 2rem;
                 background: transparent;
                 border: 1px solid #2d5a27;
@@ -49,6 +49,7 @@ class HsSafeflowEcs extends HTMLElement {
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 transition: all 0.3s ease;
+                z-index: 1000;
             }
 
             .close-btn:hover {
@@ -118,7 +119,7 @@ class HsSafeflowEcs extends HTMLElement {
             strong { color: #2d5a27; }
         </style>
         <div class="container">
-            <button class="close-btn" onclick="window.location.hash='#skeleton'">[ CLOSE ]</button>
+            <button class="close-btn" onclick="window.history.back();">[ CLOSE ]</button>
             <section class="has-vines">
                 <h2>SafeFlow-ECS: The State Engine</h2>
                 
@@ -139,9 +140,10 @@ class HsSafeflowEcs extends HTMLElement {
                 <div class="status-tag">
                     <h3>Status & Resources</h3>
                     <ul>
-                        <li><strong>Status:</strong> [INTERPLAY / HARDENING] — Optimizing the system scheduling for RISC-V targets.</li>
-                        <li><strong>Focus:</strong> High-performance state transitions with zero-copy data handling.</li>
-                        <li><strong>Code:</strong> <code>hop-core/ecs/safeflow.js</code></li>
+                        <li><strong>Status:</strong> [INTERPLAY / HARDENING] — Data puless in from dialogues with beebee or tiny devices.</li>
+                        <li><strong>Focus:</strong>Work in progress</li>
+                        <li><strong>Documentation:</strong> <a href="https://healthscience.network/docs" target="_blank">Introduction</a></li>
+                        <li><strong>Code:</strong> <code><a href="https://github.com/healthscience/node-safeflow" target="_blank">SafeFlow-ECS</a></code></li>
                     </ul>
                 </div>
             </section>

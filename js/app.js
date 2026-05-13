@@ -26,6 +26,7 @@ import './components/hs-coherence-ledger.js';
 import './components/hs-besearch.js';
 import './components/hs-resonagents.js';
 import './components/hs-library.js';
+import './components/hs-ptop-storage.js';
 import './components/hs-cue-currency.js';
 import './components/hs-safeflow-ecs.js';
 import './components/hs-consilience-weave.js';
@@ -41,7 +42,7 @@ class StateController {
         
         this.lenses = [
             'emulation', 'poetry', 'skeleton', 'playground', 'explorer', 'roadmap',
-            'hop-diagram', 'coherence-ledger', 'besearch', 'resonagents', 'library', 'cue-currency', 
+            'hop-diagram', 'coherence-ledger', 'besearch', 'resonagents', 'library', 'ptop-storage', 'cue-currency', 
             'safeflow-ecs', 'consilience-weave', 'beebee', 'glossary', 'maths'
         ];
         this.init();

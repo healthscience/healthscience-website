@@ -18,7 +18,7 @@ class HsConsilienceWeave extends HTMLElement {
                 min-height: 100vh;
                 padding-top: 80px;
             }
-            :host(.active) { display: block; }
+            :host(.active) { display: block !important; }
             
             .container {
                 max-width: 1200px;
@@ -38,7 +38,7 @@ class HsConsilienceWeave extends HTMLElement {
 
             .close-btn {
                 position: absolute;
-                top: 2rem;
+                top: 5rem;
                 right: 2rem;
                 background: transparent;
                 border: 1px solid #2d5a27;
@@ -49,6 +49,7 @@ class HsConsilienceWeave extends HTMLElement {
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 transition: all 0.3s ease;
+                z-index: 1000;
             }
 
             .close-btn:hover {
@@ -118,7 +119,7 @@ class HsConsilienceWeave extends HTMLElement {
             strong { color: #2d5a27; }
         </style>
         <div class="container">
-            <button class="close-btn" onclick="window.location.hash='#skeleton'">[ CLOSE ]</button>
+            <button class="close-btn" onclick="window.history.back();">[ CLOSE ]</button>
             <section class="has-vines">
                 <h2>Consilience Weave: The Multi-Vantage Synthesis</h2>
                 
@@ -139,9 +140,10 @@ class HsConsilienceWeave extends HTMLElement {
                 <div class="status-tag">
                     <h3>Status & Resources</h3>
                     <ul>
-                        <li><strong>Status:</strong> [INTERPLAY / STORY] — Validating the multi-vantage consensus logic.</li>
-                        <li><strong>Focus:</strong> Preventing data homogenization while maintaining collective coherence.</li>
-                        <li><strong>Code:</strong> <code>hop-core/weaving/consilience.js</code></li>
+                        <li><strong>Status:</strong> [INTERPLAY / STORY] — Desgin basic concepts cascade resolution and rules .. </li>
+                        <li><strong>Focus:</strong>Experimental</li>
+                         <li><strong>Documentation:</strong> <a href="https://healthscience.network/docs" target="_blank">Introduction</a></li>
+                        <li><strong>Code:</strong> <code><a href="https://github.com/healthscience/consilience-weave" target="_blank">Consilience Weave</a></code></li>
                     </ul>
                 </div>
             </section>

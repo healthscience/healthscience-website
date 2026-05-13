@@ -1,4 +1,4 @@
-class HsLibrary extends HTMLElement {
+class HsPtopStorage extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
@@ -121,29 +121,30 @@ class HsLibrary extends HTMLElement {
         <div class="container">
             <button class="close-btn" onclick="window.history.back();">[ CLOSE ]</button>
             <section class="has-vines">
-                <h2>The Library: Levin-Bubble Storage</h2>
+                <h2>Peer to Peer & Storage: The Distributed Fabric</h2>
                 
                 <div class="infobox">
-                    <h3>Living Data Architectures</h3>
+                    <h3>The Connective Tissue</h3>
                     <p>
-                        The <strong>Library</strong> is the localized storage engine for a HOP node. Unlike static databases, the Library utilizes <strong>Hyperbee</strong> and goal-directed sorting logic where high-utility data "bubbles" to the top—a pattern we call the Levin-Bubble.
+                        The <strong>Peer to Peer & Storage</strong> layer is the resilient web that binds HOP nodes together. It ensures that sovereignty is not isolation, but a form of hyper-connectivity.
                     </p>
 
-                    <h3>Storage Rituals</h3>
+                    <h3>Core Protocols</h3>
                     <ul>
-                        <li><strong>Content-Addressable Sovereignty:</strong> Every piece of data is hashed and anchored to the Peer's root key.</li>
-                        <li><strong>Dynamic Pruning:</strong> Low-resonance data is gracefully archived or pruned to maintain the metabolic efficiency of the node.</li>
-                        <li><strong>P2P Synchronicity:</strong> The Library integrates with Hyperswarm to allow for seamless, private data conduction between trusted peers.</li>
+                        <li><strong>Hyperswarm:</strong> A DHT-based discovery and routing network that enables direct peer-to-peer connections across complex NATs.</li>
+                        <li><strong>Hypercore:</strong> The append-only log format that provides the cryptographic foundation for all data streams in HOP.</li>
+                        <li><strong>Holepunching:</strong> Advanced techniques to ensure node-to-node connectivity without centralized relay servers.</li>
                     </ul>
                 </div>
 
                 <div class="status-tag">
-                    <h3>Status & Resources</h3>
+                    <h3>Status & Technical Focus</h3>
                     <ul>
-                        <li><strong>Status:</strong> [HARDENING / STABLE] — Implementing the final Hyperbee-to-DML bridge.</li>
-                        <li><strong>Focus:</strong> Local-first persistence with global resonance capabilities.</li>
+                        <li><strong>Status:</strong> [RESEARCH / PROTOTYPING] — Optimizing swarm discovery for high-density local networks.</li>
+                        <li><strong>Focus:</strong> Content-addressed persistence and sparse replication.</li>
+                        <li><strong>Technology:</strong> Hypercore Protocol, Hyperswarm, dht-rpc.</li>
                         <li><strong>Documentation:</strong> <a href="https://healthscience.network/docs" target="_blank">Introduction</a></li>
-                        <li><strong>Code:</strong> <code><a href="https://github.com/healthscience/library-hop" target="_blank">Library</a></code></li>
+                        <li><strong>Code:</strong> <code><a href="https://github.com/healthscience/holepunch-hop" target="_blank">Holepunch-hop</a></code></li>
                     </ul>
                 </div>
             </section>
@@ -152,4 +153,4 @@ class HsLibrary extends HTMLElement {
     }
 }
 
-customElements.define('hs-library', HsLibrary);
+customElements.define('hs-ptop-storage', HsPtopStorage);

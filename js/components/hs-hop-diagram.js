@@ -97,6 +97,22 @@ class HsHopDiagram extends HTMLElement {
                 box-shadow: 0 0 20px rgba(169, 255, 0, 0.2);
             }
 
+            .close-btn {
+                position: absolute;
+                top: 5rem;
+                right: 2rem;
+                background: transparent;
+                border: 1px solid #a9ff00;
+                color: #a9ff00;
+                padding: 0.5rem 1rem;
+                font-family: monospace;
+                cursor: pointer;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                z-index: 1000;
+                transition: all 0.3s ease;
+            }
+
             .daisy-world {
                 width: 16px;
                 height: 16px;
@@ -200,6 +216,7 @@ class HsHopDiagram extends HTMLElement {
         </style>
 
         <section id="diagram-content" class="p-4 md:p-12 relative z-10 bg-forest/40 border-y border-pine/20">
+            <button class="close-btn" onclick="window.history.back();">[ CLOSE ]</button>
             <div class="w-full max-w-7xl mx-auto">
                 <div class="mb-12">
                     <h2 class="text-xs font-mono text-neon uppercase tracking-[0.3em] mb-4">The Anatomy of the HOP Fabric</h2>

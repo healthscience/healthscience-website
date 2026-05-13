@@ -18,7 +18,7 @@ class HsBesearch extends HTMLElement {
                 min-height: 100vh;
                 padding-top: 80px;
             }
-            :host(.active) { display: block; }
+            :host(.active) { display: block !important; }
             
             .container {
                 max-width: 1200px;
@@ -38,7 +38,7 @@ class HsBesearch extends HTMLElement {
 
             .close-btn {
                 position: absolute;
-                top: 2rem;
+                top: 5rem;
                 right: 2rem;
                 background: transparent;
                 border: 1px solid #2d5a27;
@@ -49,6 +49,7 @@ class HsBesearch extends HTMLElement {
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 transition: all 0.3s ease;
+                z-index: 1000;
             }
 
             .close-btn:hover {
@@ -118,7 +119,7 @@ class HsBesearch extends HTMLElement {
             strong { color: #2d5a27; }
         </style>
         <div class="container">
-            <button class="close-btn" onclick="window.location.hash='#skeleton'">[ CLOSE ]</button>
+            <button class="close-btn" onclick="window.history.back();">[ CLOSE ]</button>
             <section class="has-vines">
                 <h2>Besearch: The Metabolic Discovery</h2>
                 
@@ -139,9 +140,10 @@ class HsBesearch extends HTMLElement {
                 <div class="status-tag">
                     <h3>Status & Resources</h3>
                     <ul>
-                        <li><strong>Status:</strong> [INTERPLAY / PULSING] — Deploying the search-space optimization algorithms.</li>
-                        <li><strong>Focus:</strong> Reducing the latency between biological signal and metabolic insight.</li>
-                        <li><strong>Code:</strong> <code>hop-core/besearch/pulse-engine.js</code></li>
+                        <li><strong>Status:</strong> [INTERPLAY / PULSING] — A four part method of science: ground in context, research, search discovery sapce & emulation.</li>
+                        <li><strong>Focus:</strong> Experimental</li>
+                        <li><strong>Documentation:</strong> <a href="https://healthscience.network/docs" target="_blank">Introduction</a></li>
+                        <li><strong>Code:</strong> <code><a href="https://github.com/healthscience/hop-besearch" target="_blank">hop-besearch</a></code></li>
                     </ul>
                 </div>
             </section>

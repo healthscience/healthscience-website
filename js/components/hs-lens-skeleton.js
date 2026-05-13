@@ -199,6 +199,7 @@ class HsLensSkeleton extends HTMLElement {
         </style>
 
         <div class="container">
+            <button class="btn-explorer" style="position: absolute; top: 1rem; right: 2rem; z-index: 100;" onclick="window.location.hash='#hub'">[ CLOSE ]</button>
             <header>
                 <div class="daisy-node daisy-white daisy-tl"></div>
                 <div>
@@ -209,7 +210,7 @@ class HsLensSkeleton extends HTMLElement {
                     <button class="btn-explorer" onclick="window.location.hash='#roadmap'">[ ROAD MAP ]</button>
                     <button class="btn-explorer" onclick="window.location.hash='#explorer'">[ EXPLORER ]</button>
                     <button class="btn-playground" id="playground-toggle" onclick="window.app.togglePlayground('grafting')">[ OPEN GRAFTING BENCH ]</button>
-                    <button class="btn-explorer" onclick="window.open('https://healthscience.network/docs/', '_blank')">[ DOCUMENTATION ]</button>
+                    <button class="btn-explorer" onclick="window.open('https://healthscience.network/docs', '_blank')">[ INTRODUCTION ]</button>
                 </div>
             </header>
 
@@ -242,14 +243,15 @@ class HsLensSkeleton extends HTMLElement {
                     <h3>Status & Resources</h3>
                     <ul>
                         <li><strong>Status:</strong> [STORY / ROOTING] — The mathematical foundation is finalized; the narrative is currently being pulsed into the HOP-ECS skeleton.</li>
-                        <li><strong>Documentation:</strong> The Gaia Manifesto</li>
-                        <li><strong>Code:</strong> <code>hop-core/logic/circular-stats.js</code></li>
+                        <li><strong>Documentation:</strong> <a href="https://healthscience.network/docs" target="_blank">Introduction</a></li>
+                        <li><strong>Code:</strong> <a href="https://github.com/healthscience/hop" target="_blank">HOP Repository</a></li>
+                        <li><strong>Code:</strong> <a href="https://github.com/healthscience/bentoboxds" target="_blank">BentoBoxDS</a></li>
                         <li><strong>Design Pattern:</strong> Story &rarr; Interplay &rarr; Emulation</li>
                     </ul>
                 </div>
             </section>
 
-            <!-- access to code and documentation -->
+            <!-- access to code and documentation <a href="" target="_blank"></a> -->
             <hs-repository-truth></hs-repository-truth>
 
             <hs-beebee></hs-beebee>
