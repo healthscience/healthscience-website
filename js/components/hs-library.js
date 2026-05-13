@@ -121,19 +121,51 @@ class HsLibrary extends HTMLElement {
         <div class="container">
             <button class="close-btn" onclick="window.history.back();">[ CLOSE ]</button>
             <section class="has-vines">
-                <h2>The Library: Levin-Bubble Storage</h2>
+                <h2>The Library: The Science Building Blocks</h2>
                 
                 <div class="infobox">
-                    <h3>Living Data Architectures</h3>
+                    <h3>The Simple Message</h3>
                     <p>
-                        The <strong>Library</strong> is the localized storage engine for a HOP node. Unlike static databases, the Library utilizes <strong>Hyperbee</strong> and goal-directed sorting logic where high-utility data "bubbles" to the top—a pattern we call the Levin-Bubble.
+                        The <strong>Library</strong> is a shared collection of building blocks that allows peers to stitch together their own biological science. It doesn't hold your personal data; it holds the "blueprints" for how to understand it.
+                    </p>
+                    <p>
+                        By using a common set of blocks, peers who have never met can speak the same biological language. Some blocks are <strong>Static</strong> (the fixed rules of physics and data), while others, like <strong>Cue Contracts</strong>, are <strong>Dynamic</strong>—growing and changing as the forest learns. This ensures that every peer remains sovereign while staying perfectly compatible with the rest of the network.
                     </p>
 
-                    <h3>Storage Rituals</h3>
+                    <h3>The Technical Detail: Contract Architecture</h3>
+                    <p>
+                        The Library organizes these building blocks into a hierarchy of Contracts. These are bundled into Modules that a peer can pull from the public forest and make private.
+                    </p>
+
+                    <h4>1. The Static Blocks (Interoperability)</h4>
+                    <p>These contracts provide the "firm ground" that ensures different devices and peers can work together without errors.</p>
                     <ul>
-                        <li><strong>Content-Addressable Sovereignty:</strong> Every piece of data is hashed and anchored to the Peer's root key.</li>
-                        <li><strong>Dynamic Pruning:</strong> Low-resonance data is gracefully archived or pruned to maintain the metabolic efficiency of the node.</li>
-                        <li><strong>P2P Synchronicity:</strong> The Library integrates with Hyperswarm to allow for seamless, private data conduction between trusted peers.</li>
+                        <li><strong>Reference Contracts:</strong> The immutable definitions of biological truths and scientific standards.</li>
+                        <li><strong>Datatype Contracts:</strong> The "packaging" rules. They define how raw pulses (heart rate, movement, etc.) are structured so they can be read by any node.</li>
+                        <li><strong>Life-Strap & Lens Contracts:</strong> The hardware and interface blueprints that tell the protocol how to "graft" onto your specific devices.</li>
+                    </ul>
+
+                    <h4>2. The Dynamic Blocks (Evolution)</h4>
+                    <p>These contracts handle the active intelligence and results of the network.</p>
+                    <ul>
+                        <li><strong>Cue Contracts:</strong> The units of computational knowledge. These are dynamic; they represent the evolving "conclusions" of the forest.</li>
+                        <li><strong>Compute Contracts:</strong> The WASM-based logic engines. These are the active tools that perform the "Work" during a Besearch cycle.</li>
+                        <li><strong>Visualization Contracts:</strong> The blueprints for the Emulation—defining how your data looks and feels (e.g., Gelle textures and Orgo projections).</li>
+                    </ul>
+
+                    <h4>3. The Bundles: Modules</h4>
+                    <p>A <strong>Module</strong> is a complete "Science Kit." It bundles together the necessary Reference, Compute, and Visualization contracts into a Network Experiment.</p>
+                    <ul>
+                        <li><strong>Public:</strong> A Module exists in the Library as a public template.</li>
+                        <li><strong>Private:</strong> When a peer selects a Module, they "graft" it to their node. It becomes a private, local instance that only touches the peer's data.</li>
+                    </ul>
+
+                    <h3>The Trigger: HOPquery & SafeFlow-ECS</h3>
+                    <p>To put these blocks into motion, the peer issues a <strong>HOPquery</strong>.</p>
+                    <ul>
+                        <li><strong>The Query:</strong> This is a specific instruction sent to the SafeFlow-ECS (the metabolic engine).</li>
+                        <li><strong>The Execution:</strong> The HOPquery tells the engine which Module to use and which Compute Contracts to run against the peer's raw pulses.</li>
+                        <li><strong>The State-Change:</strong> The result isn't just a number; it’s a state-change in the peer's own Context.</li>
                     </ul>
                 </div>
 

@@ -124,17 +124,60 @@ class HsBesearch extends HTMLElement {
                 <h2>Besearch: The Metabolic Discovery</h2>
                 
                 <div class="infobox">
-                    <h3>Beyond Observation</h3>
+                    <h3>What is a Besearch Cycle?</h3>
                     <p>
-                        <strong>Besearch</strong> is the active state of inquiry within the HOP forest. It moves past traditional "research"—which often keeps the observer at a distance—and into a state of "being" with the data. It is a process of refinement where raw biological signals are pulsed and tested through collective resonance.
+                        A Besearch Cycle is a sovereign framework for biological and intentional evolution. It is an "empty engine" that allows a peer to take a subjective <strong>Story</strong> (how you feel) and <strong>Graft</strong> it onto objective science (models and logic) to produce a living <strong>Emulation</strong>. It is the bridge between a human "hunch" and a high-fidelity biological feedback loop.
                     </p>
 
-                    <h3>Methodology</h3>
+                    <h3>The Lifestrap Lens: The "3 C’s + H"</h3>
+                    <p>
+                        The Cycle begins with the Lens. This is a combination of human intent and Regex Patterns that act as a prism, focusing raw knowledge into a structured, executable format.
+                    </p>
                     <ul>
-                        <li><strong>Recursive Pulsing:</strong> Hypotheses are tested through continuous feedback loops between the Interplay and Emulation layers.</li>
-                        <li><strong>Resonant Filtering:</strong> Insights are not just filtered by logic, but by their mathematical harmony with existing bioregional patterns.</li>
-                        <li><strong>Living Evidence:</strong> Besearch generates "Cues" that act as units of living evidence, ready to be conducted across the forest.</li>
+                        <li><strong>Capacity:</strong> The "Work Level" or threshold of the intent (e.g., a 400IM swim or a 10-solar-day fast).</li>
+                        <li><strong>Context:</strong> The biological or environmental "Where" (e.g., Cardiovascular system, the local pool, or a specific joint).</li>
+                        <li><strong>Attunement:</strong> The "Why" behind the work, categorized as <strong>PHeli</strong>: The "When." The timing, frequency, and project horizons governed by solar cycles.</li>
+                        <li><strong>Coherence:</strong> The "How Well." A measure of resonance between your intent and the resulting biological state.</li>
                     </ul>
+
+                    <h3>The Workflow: From Feeling to Fact</h3>
+                    <p>The process is a movement from the fuzzy edges of human experience to the sharp reality of data-driven physics.</p>
+                    
+                    <ol>
+                        <li>
+                            <strong>The Story (Natural Language):</strong> The peer enters their "Zero-Draft" intent. You describe your current state or your desired horizon. The system uses Lens Glue (Regex) to help you categorize this raw input into the initial Capacity and Context.
+                        </li>
+                        <li>
+                            <strong>The Interplay (Grafting & Sculpting):</strong> This is the novel, experimental core of the system. You enter the Sculpting Lab to build a Braid:
+                            <ul>
+                                <li><strong>Select Strands:</strong> You layer your intent across specific contexts and attunements.</li>
+                                <li><strong>Graft the Orgo:</strong> You select a biological model (e.g., a heart or muscle model) from the peer library.</li>
+                                <li><strong>Graft the Gelle:</strong> You select the logic/math (e.g., fluid dynamics or recovery formulas) to drive the model.</li>
+                                <li><strong>Attach Tiny Devices:</strong> You link your sovereign sensors (wearables, markers) to feed real-time pulses into the Braid.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>The Emulation (Projections):</strong> Once the graft is bound, the Emulation begins. The SafeFlow-ECS (Entity Component System) pulses the data through your logic. You don't just see a graph; you see a visual projection of your biology (the Seer) and receive a summary of the feedback (the Scribe).
+                        </li>
+                    </ol>
+
+                    <h3>Why These Properties Matter</h3>
+                    <p>Traditional health tech is a "black box" that harvests your data and tells you what to do. HOP Besearch Cycles are the inverse:</p>
+                    <ul>
+                        <li><strong>Sovereign by Design:</strong> There is no central intelligence. You choose the models (Orgo) and the logic (Gelle). If you don't like the science, you change the part.</li>
+                        <li><strong>Local-First / Peer-Only:</strong> Your pulses stay in your local Hyperbee ledger. They only move to other peers if you explicitly choose to share your Braid.</li>
+                        <li><strong>Evidence-Based Intent:</strong> By separating Story from Emulation, you can see if your subjective feelings match your biological reality.</li>
+                        <li><strong>Resonant Growth:</strong> resonAgents monitor the gaps between your different Braids, ensuring that a "Speed" goal isn't physically undermining a "Repair" goal.</li>
+                    </ul>
+
+                    <h3>Evolution of the Process</h3>
+                    <p>We have moved from a rigid four-step science model to a fluid, peer-directed journey:</p>
+                    <ul>
+                        <li><strong>Story:</strong> The draft intent.</li>
+                        <li><strong>Interplay:</strong> The experimental grafting of models and logic.</li>
+                        <li><strong>Emulation:</strong> The live, evidence-based feedback loop.</li>
+                    </ul>
+                    <p>This isn't a program you "run"; it is a Life-strap you wear. It turns your daily activities into a "Loom" of biological and computational truth.</p>
                 </div>
 
                 <div class="status-tag">

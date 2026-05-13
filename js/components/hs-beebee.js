@@ -19,6 +19,7 @@ class HsBeebee extends HTMLElement {
                 padding-top: 80px;
             }
             :host(.active) { display: block !important; }
+
             
             .container {
                 max-width: 1200px;

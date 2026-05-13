@@ -121,19 +121,29 @@ class HsResonAgents extends HTMLElement {
         <div class="container">
             <button class="close-btn" onclick="window.history.back();">[ CLOSE ]</button>
             <section class="has-vines">
-                <h2>ResonAgents: The Bio-Translators</h2>
+                <h2>The ResonAgent Trinity: Sovereign Conductors</h2>
                 
                 <div class="infobox">
-                    <h3>Localized Intelligence</h3>
+                    <h3>The Goal (The Living Body)</h3>
                     <p>
-                        <strong>ResonAgents</strong> are the primary actors within the Interplay layer. They function as intelligent translators that bridge the gap between raw sensor data and biological intent. Operating based on principles of basal cognition, these agents seek resonance with the peer's biological state to provide actionable insights.
+                        To navigate this metabolism, <strong>beebee (BB)</strong> coordinates a swarm of ResonAgents. A ResonAgent is a localized, autonomous processing unit that acts as a real-time Coherence Validator. Unlike centralized AI, a ResonAgent lives in the peer’s local substrate, maintaining the resonance between a mathematical ideal (The Orgo) and a physical reality (The Pulse).
                     </p>
 
-                    <h3>Agent Rituals</h3>
+                    <h3>The Logic (The ResonAgent Trinity)</h3>
+                    <p>
+                        Agents are never generalists; they are instantiated with a specific Substrate Focus to manage the "Drift" between story and evidence:
+                    </p>
                     <ul>
-                        <li><strong>Intent Extraction:</strong> Translating JSON streams into high-level biological directives.</li>
-                        <li><strong>Collaborative Weaving:</strong> ResonAgents communicate with one another to find consilience across different sensory modalities.</li>
-                        <li><strong>Adaptive Memory:</strong> Each agent maintains a localized context, learning the unique rhythms of its host peer over time.</li>
+                        <li><strong>Language Agents (The Weave):</strong> Focused on dialogue and semantic layers. They translate human narrative and intent into structured data, managing the linguistic weave across the life-strap.</li>
+                        <li><strong>Physics Agents (The Constraints):</strong> Focused on the bio-mechanical reality. They monitor Newtonian constraints (e.g., force, friction, or bioelectric signaling) through SafeFlow-ECS, ensuring the emulation respects the physics of the living body.</li>
+                        <li><strong>Pattern Agents (The Resonance):</strong> Focused on structural and tissue-level rhythms. They utilize Circular Statistics to track recovery cycles and heart-rate variability, identifying "Truth" through the alignment of rhythms.</li>
+                    </ul>
+
+                    <h3>Core Properties (The Architecture & Design)</h3>
+                    <ul>
+                        <li><strong>Persistent State-Sync:</strong> Each agent retrieves its "Memory" from the library during a Loom Stitch, allowing it to compare current inputs against a history of "Resonance Deltas."</li>
+                        <li><strong>Coherence Engine:</strong> The primary task of a ResonAgent is to calculate Δ (Delta)—the distance between the Orgo Projection (the math) and the Instrument Pulse (the sensor data).</li>
+                        <li><strong>On-the-Fly Evolution:</strong> Utilizing DML (Decentralized Machine Learning), agents learn from results and update their memory locally. A high-performing ResonAgent can then be Gifted to the forest via the library.</li>
                     </ul>
                 </div>
 

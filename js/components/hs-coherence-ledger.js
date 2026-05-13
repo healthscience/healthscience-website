@@ -129,17 +129,31 @@ class HsCoherenceLedger extends HTMLElement {
                 <h2>Coherence Ledger: The Witness of Alignment</h2>
                 
                 <div class="infobox">
-                    <h3>The Protocol of Truth</h3>
+                    <h3>Unique proof of evidence</h3>
                     <p>
-                        The <strong>Coherence Ledger</strong> serves as the cryptographic witness for the forest. It is not a centralized authority but a distributed record of biological and environmental alignment. Every Cue conducted by a peer is signed and witnessed, ensuring that the "Soil" of the network remains fertile and honest.
+                        The Coherence Ledger serves as the cryptographic witness for the forest. It is a localized, tamper-proof record of biological and environmental alignment. By acting as a Lightweight State Machine, it verifies that the "Biological Story" told by a peer is mathematically consistent across different scales of time, ensuring that the evidence remains fertile and honest without the heavy overhead of traditional centralized systems.
+                    </p>
+
+                    <h3>Logic</h3>
+                    <p>
+                        The ledger operates as a deterministic Sign-Chain of Proof. Every entry is formed by a high-performance Key/Value pair:
+                    </p>
+                    <ul>
+                        <li><strong>The Key (Sign-Chain of Proof):</strong> A binary-encoded identity (e.g., [Context_Byte][Heli_Cycle][Solar_Theta]) that proves data provenance.</li>
+                        <li><strong>The Value (Hash of Result):</strong> The cryptographic footprint of the computation performed.</li>
+                    </ul>
+
+                    <p>
+                        <em>Note: The ledger moves in 360° Solar Arcs rather than linear timestamps. A single Solar Cycle Pulse produces 24 hours of verified data provenance, creating an immutable rhythm for the peer's record.</em>
                     </p>
 
                     <h3>Core Properties</h3>
-                    <ul>
-                        <li><strong>Immutable Resonance:</strong> Once a pattern is witnessed and recorded, its place in the historical context of the peer is preserved.</li>
-                        <li><strong>Multi-Vantage Verification:</strong> Alignment is not determined by a single observer but through the consilience of multiple nodes.</li>
-                        <li><strong>Privacy by Design:</strong> The ledger records the <em>integrity</em> of the Cue, not the raw data itself, preserving the sovereignty of the peer.</li>
-                    </ul>
+                    <p>By utilizing SafeFlow-ECS as a state machine rather than heavy ZKPs, the protocol achieves unique functional advantages:</p>
+                    <ol>
+                        <li><strong>Computational Efficiency:</strong> Peers can retrieve and reuse results within Besearch cycles without re-performing expensive computations.</li>
+                        <li><strong>Symmetric Verification:</strong> The deterministic hash-chain allows one peer to challenge another and verify 20,000 entries in milliseconds—proving that "Work" (biological compute) was actually performed.</li>
+                        <li><strong>DML Infrastructure:</strong> The ledger provides the "Proof of Health-Work" required for Decentralized Machine Learning (DML), allowing model weights to evolve based on verified evidence rather than unverified data.</li>
+                    </ol>
                 </div>
 
                 <div class="status-tag">

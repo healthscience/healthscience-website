@@ -210,7 +210,7 @@ class HsLensSkeleton extends HTMLElement {
                     <button class="btn-explorer" onclick="window.location.hash='#roadmap'">[ ROAD MAP ]</button>
                     <button class="btn-explorer" onclick="window.location.hash='#explorer'">[ EXPLORER ]</button>
                     <button class="btn-playground" id="playground-toggle" onclick="window.app.togglePlayground('grafting')">[ OPEN GRAFTING BENCH ]</button>
-                    <button class="btn-explorer" onclick="window.open('https://healthscience.network/docs', '_blank')">[ INTRODUCTION ]</button>
+                    <button class="btn-explorer" onclick="window.open('https://healthscience.network/docs', '_blank')">[ DOCUMENTATION ]</button>
                 </div>
             </header>
 
@@ -254,7 +254,7 @@ class HsLensSkeleton extends HTMLElement {
             <!-- access to code and documentation <a href="" target="_blank"></a> -->
             <hs-repository-truth></hs-repository-truth>
 
-            <hs-beebee></hs-beebee>
+            <hs-beebee-section></hs-beebee-section>
             <hs-gaia-protocol></hs-gaia-protocol>
             <hs-strata-participation></hs-strata-participation>
             <hs-emulation-section></hs-emulation-section>

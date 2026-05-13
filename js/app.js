@@ -9,6 +9,7 @@ import './components/hs-lens-explorer.js';
 // New sub-components for Skeleton Lens
 import './components/hs-gaia-protocol.js';
 import './components/hs-beebee.js';
+import './components/hs-beebee-section.js';
 import './components/hs-strata-participation.js';
 import './components/hs-emulation-section.js';
 import './components/hs-interplay-section.js';
