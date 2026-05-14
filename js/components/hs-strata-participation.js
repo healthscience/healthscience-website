@@ -162,41 +162,35 @@ class HsStrataParticipation extends HTMLElement {
                 <div class="leaf-pair"></div><div class="leaf-pair"></div>
                 <div class="leaf-pair"></div>
             </div>
-            <h2>The Three Strata of Participation</h2>
+            <h2>The Three Strata: From Story to Emulation</h2>
             <p>
-                We move from Soil to Metabolism to Reality:
-                <br><br>
-                Story (The Soil): The sovereign, localized substrate. The raw data of the bioregion and the peer.
-                <br><br>
-                Interplay (The Metabolism): The innovated center. This is where SafeFlow-ECS, ResonAgents, and beebee digest the strands, find consilience, and weave the Pulse.
-                <br><br>
-                Emulation (The Living Logic): The deterministic result. The Sealed Orgo and the Gelle texture unified. Information as Attunement
-            </p>
-            <p>
-                To navigate HOP is to move through three interwoven layers. Each layer depends on the resonance of the one beneath it.
+                To navigate the protocol is to move through three interwoven layers of reality. We don't just "process data"; we transition from the human Story through the metabolic Interplay toward a deterministic Emulation. Each layer is a prerequisite for the next, ensuring that every pulse is grounded in the "Physics-of-the-Commonplace."
             </p>
 
             <div class="strata-grid">
                 <div class="strata-item">
                     <h3>A. STORY</h3>
-                    <div class="subtitle">The Sovereign Soil</div>
-                    <p>Sovereign Tiny Data</p>
-                    <div class="focus">Focus: Dialogue & Devices</div>
-                    <div class="status-tag">[INTERPLAY]</div>
+                    <div class="subtitle">The Conductive Substrate</div>
+                    <p>The sovereign, localized root. This is where natural language intent meets raw device pulses. It is the "Zero-Draft" of your biological reality before it is tidied and conducted.</p>
+                    <div class="focus">Focus: Dialogue, Devices, and Bioregional data.</div>
+                    <p>The Output: High-frequency raw pulses and sovereign intent.</p>
+                    <div class="status-tag">Status: [INTERPLAY]</div>
                 </div>
                 <div class="strata-item">
                     <h3>B. INTERPLAY</h3>
-                    <div class="subtitle">The Metabolism</div>
-                    <p>SafeFlow-ECS & beebee</p>
-                    <div class="focus">Focus: Human/Agent Weaving</div>
-                    <div class="status-tag">[STORY / INTERPLAY]</div>
+                    <div class="subtitle">The Consilience Weave</div>
+                    <p>The innovated center where SafeFlow-ECS, ResonAgents, and beebee digest the conductive strands. This layer is responsible for finding truth through the convergence of evidence.</p>
+                    <div class="focus">Focus: Human/Agent synthesis and state-machine transitions.</div>
+                    <p>The Output: Verified weights and the Coherence Ledger.</p>
+                    <div class="status-tag">Status: [STORY / INTERPLAY]</div>
                 </div>
                 <div class="strata-item">
                     <h3>C. EMULATION</h3>
-                    <div class="subtitle">The Sculpting Lab</div>
-                    <p>Orgo & Gelle</p>
-                    <div class="focus">Focus: On-the-fly Experience</div>
-                    <div class="status-tag">[STORY]</div>
+                    <div class="subtitle">The Living Logic</div>
+                    <p>This is the deterministic result. Here, the Orgo (the mathematical ideal) and the Gelle (the sensory texture) are unified into a functional reality.</p>
+                    <div class="focus">Focus: On-the-fly experience and biological attunement.</div>
+                    <p>The Output: A state-change you can feel and verify.</p>
+                    <div class="status-tag">Status: [STORY / PULSING]</div>
                 </div>
             </div>
             <div class="leaf-cluster-5-h">
@@ -207,6 +201,7 @@ class HsStrataParticipation extends HTMLElement {
                 <div class="matrix-grid">
                     <button class="matrix-btn" onclick="window.location.hash='#coherence-ledger'">Coherence Ledger</button>
                     <button class="matrix-btn" onclick="window.location.hash='#beebee'">BeeBee</button>
+                    <button class="matrix-btn" onclick="window.location.hash='#heli'">Heli</button> 
                     <button class="matrix-btn" onclick="window.location.hash='#besearch'">Besearch</button> 
                     <button class="matrix-btn" onclick="window.location.hash='#resonagents'">ResonAgents</button>
                     <button class="matrix-btn" onclick="window.location.hash='#library'">Library</button>

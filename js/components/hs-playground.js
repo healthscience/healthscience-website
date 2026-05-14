@@ -196,6 +196,7 @@ class HsPlayground extends HTMLElement {
                 justify-content: space-between;
                 align-items: center;
                 padding: 1rem 2rem;
+                margin-top: 30px;
                 background: rgba(0, 0, 0, 0.8);
                 border-bottom: 1px solid rgba(0, 255, 204, 0.3);
                 z-index: 10;
@@ -368,7 +369,7 @@ class HsPlayground extends HTMLElement {
                 <div class="mode-tab ${this.state.mode === 'grafting' ? 'active' : ''}" onclick="this.getRootNode().host.setMode('grafting')">Grafting</div>
                 <div class="mode-tab ${this.state.mode === 'melding' ? 'active' : ''}" onclick="this.getRootNode().host.setMode('melding')">Melding</div>
             </div>
-            <div class="bench-title" style="font-size: 0.8rem; font-weight: bold; letter-spacing: 2px;">GRAFTING_BENCH // ZERO_DRAFT</div>
+            <div class="bench-title" style="font-size: 0.8rem; font-weight: bold; letter-spacing: 2px;">COMING SOON --- GRAFTING_BENCH // ZERO_DRAFT</div>
             <button class="btn-action close-btn" style="border-color: #ff3366; color: #ff3366;" onclick="window.app.togglePlayground()">[ CLOSE BENCH ]</button>
         </header>
 

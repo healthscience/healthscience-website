@@ -121,19 +121,42 @@ class HsSafeflowEcs extends HTMLElement {
         <div class="container">
             <button class="close-btn" onclick="window.history.back();">[ CLOSE ]</button>
             <section class="has-vines">
-                <h2>SafeFlow-ECS: The State Engine</h2>
+                <h2>SafeFlow-ECS: The Architecture of Biological Reality</h2>
                 
                 <div class="infobox">
-                    <h3>Deterministic Metabolism</h3>
+                    <h3>The Definition</h3>
                     <p>
-                        <strong>SafeFlow-ECS</strong> is the core architectural pattern of the HOP protocol. By utilizing an Entity Component System (ECS), the engine maps complex biological rhythms to deterministic state-machine transitions. This ensures that the metabolism of the peer remains stable, even as it processes high volumes of incoming Cues.
+                        SafeFlow is a native Entity Component System (ECS) designed for high-velocity biological state management. It is the engine of Interplay, responsible for transforming raw "Story" pulses into deterministic "Emulation" states through continuous Conduction.
                     </p>
 
-                    <h3>Engine Components</h3>
+                    <h3>The Design Choice: Why an ECS?</h3>
+                    <p>
+                        We utilize an ECS architecture because traditional databases and object-oriented models are too slow and rigid to capture the "Physics-of-the-Commonplace."
+                    </p>
                     <ul>
-                        <li><strong>Entities (The Peers):</strong> Every sovereign actor is treated as an entity within the system.</li>
-                        <li><strong>Components (The States):</strong> Biological data points (heart rate, HRV, solar position) are stored as decoupled components.</li>
-                        <li><strong>Systems (The Logic):</strong> ResonAgents and other systems operate on these components to drive the state of the entity toward Attunement.</li>
+                        <li><strong>Compute Velocity:</strong> By flattening biological data into decoupled Components, SafeFlow executes logic at the speed of the local hardware. It moves as fast as the compute can go, ensuring zero-latency feedback for the peer.</li>
+                        <li><strong>Conductive Flexibility:</strong> Biology is non-linear. An ECS allows for Permissionless Grafting—you can add a new sensor, a new biological "sense," or a new environmental signal as a component without breaking the core metabolism. It is the most effective way to capture a shifting biological reality.</li>
+                        <li><strong>Deterministic Evidence:</strong> The ECS functions as a State-Machine. Because systems are isolated logic loops that run on flat data, the output is entirely predictable. This determinism allows the Coherence Ledger to sign and verify a chain of evidence ($Raw \rightarrow Tidy \rightarrow Compute$) across the network.</li>
+                    </ul>
+
+                    <h3>The Functional Mechanics</h3>
+                    <p>
+                        SafeFlow-ECS drives the transition between biological reality and mathematical models through three strictly decoupled layers:
+                    </p>
+                    <ul>
+                        <li><strong>Entities (The Conductive Address):</strong> Lightweight, local addresses representing biological sub-systems (e.g., a specific heart-rate stream, a circadian rhythm, or a localized environment).</li>
+                        <li><strong>Components (The Facts):</strong> Pure, data-only structures defined by Module Contracts. They hold the raw facts—Pulses, Solar Theta, or Energy Balance—completely separate from the logic.</li>
+                        <li><strong>Systems (The Logic):</strong> Continuous, high-frequency logic loops that drive the state transitions. Systems monitor the components, identify shifts in the Energy Budget, and calculate the Delta ($\Delta$) between the biological pulse and the physics model.</li>
+                    </ul>
+
+                    <h3>The Output: Weighting the Physics</h3>
+                    <p>
+                        The primary role of the ECS is to authorize the "Flow." It does not just record what happened; it calculates what is happening to set the weights for the intelligence layer.
+                    </p>
+                    <ul>
+                        <li><strong>Pulse Synchronization:</strong> The engine aligns disparate data streams (from milliseconds to solar arcs) to the Heli-Clock oscillator.</li>
+                        <li><strong>Physics-Model Feedback:</strong> The systems identify the resonance of a state transition. This data provides the necessary weights to tune the ResonAgents' physics models in real-time.</li>
+                        <li><strong>The Ledger Commitment:</strong> Once a state transition is verified through the ECS pipeline, it is committed to the Coherence Ledger as a signed, immutable record of Conductive Integrity.</li>
                     </ul>
                 </div>
 

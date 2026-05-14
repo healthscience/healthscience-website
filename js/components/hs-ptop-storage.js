@@ -121,19 +121,45 @@ class HsPtopStorage extends HTMLElement {
         <div class="container">
             <button class="close-btn" onclick="window.history.back();">[ CLOSE ]</button>
             <section class="has-vines">
-                <h2>Peer to Peer & Storage: The Distributed Fabric</h2>
+                 <h2>P2P Infrastructure: The Distributed Substrate</h2>
                 
                 <div class="infobox">
-                    <h3>The Connective Tissue</h3>
+                    <h3>The Simple Message</h3>
                     <p>
-                        The <strong>Peer to Peer & Storage</strong> layer is the resilient web that binds HOP nodes together. It ensures that sovereignty is not isolation, but a form of hyper-connectivity.
+                        HOP is a biological reimagining of the P2P stack. We don't use centralized servers or "cloud" databases; we grow a decentralized, self-organizing substrate. Using <strong>Holepunch</strong> for the plumbing and <strong>hop-crypto</strong> for the cellular membrane, we treat data as an emergent anatomy. This ensures that Conduction is resilient, zero-latency, and entirely peer-driven.
                     </p>
 
-                    <h3>Core Protocols</h3>
+                    <h3>1. The Networking Layer (Hyperswarm & DHT)</h3>
+                    <p>We utilize Hyperswarm to eliminate the need for "phone books" or central authorities.</p>
                     <ul>
-                        <li><strong>Hyperswarm:</strong> A DHT-based discovery and routing network that enables direct peer-to-peer connections across complex NATs.</li>
-                        <li><strong>Hypercore:</strong> The append-only log format that provides the cryptographic foundation for all data streams in HOP.</li>
-                        <li><strong>Holepunching:</strong> Advanced techniques to ensure node-to-node connectivity without centralized relay servers.</li>
+                        <li><strong>DHT-Based Discovery:</strong> Peers find each other through a Distributed Hash Table. Every node is a first-class citizen, capable of routing and discovery.</li>
+                        <li><strong>Noise Protocol:</strong> All connections are end-to-end encrypted using the Noise Protocol Framework. "Interference" is mathematically impossible at the transport level.</li>
+                        <li><strong>Zero-Conf Networking:</strong> We demand that a peer can join the swarm and begin the Consilience Weave regardless of firewalls or local network topology.</li>
+                    </ul>
+
+                    <h3>2. The Storage Layer (Hypercore & The 18 Hyperbees)</h3>
+                    <p>We don't store data in static tables; we store it in Append-Only Logs that are cryptographically signed.</p>
+                    <ul>
+                        <li><strong>Hypercore:</strong> The foundation is a Merkle-tree-based log providing immutable provenance. You cannot change history without breaking the hashchain.</li>
+                        <li><strong>The 18 Hyperbees:</strong> We deploy 18 specialized B-tree indexes—the "internal organs" of the node.</li>
+                        <li><strong>Search Efficiency:</strong> Using Prefixed Binary Keys, we achieve $O(\log n)$ search performance directly on the peer's local compute.</li>
+                        <li><strong>Sparse Replication:</strong> Peers only download the "leaves" they actually need. You don't sync a database; you "pulse" the relevant data on demand.</li>
+                    </ul>
+
+                    <h3>3. The Privacy Layer (hop-crypto)</h3>
+                    <p>We differentiate between Physical Availability and Semantic Accessibility to ensure the integrity of conduction.</p>
+                    <ul>
+                        <li><strong>The Shared Reality:</strong> Reference contracts and the Coherence Ledger are public, allowing the swarm to reach a stable state.</li>
+                        <li><strong>The Private Membrane:</strong> Utilizing AEAD (Authenticated Encryption with Associated Data), sensitive biomarkers and private Besearch are encrypted before they hit the disk.</li>
+                        <li><strong>The Discovery Gap:</strong> We decouple the Data Host from the Data Owner. Even if an encrypted block is replicated for backup, it remains a "black box" to the host.</li>
+                    </ul>
+
+                    <h3>4. Agentic Integrity: The Self-Healing Forest</h3>
+                    <p>This is where the stack moves beyond traditional P2P and into a living metabolism.</p>
+                    <ul>
+                        <li><strong>Morphogenetic Sorting:</strong> Instead of an "Admin" enforcing rules, peers use agentic sorting. If a block is dishonest (broken hashchain), the peer calculates a Repulsion Gradient and "bubbles" that data out of its local tissue.</li>
+                        <li><strong>Crystallized Truth:</strong> When multiple Hyperbees across different peers agree on a hashchain result, the data reaches a state of "High Fitness" and is integrated into the BentoBoxDS on the fly.</li>
+                        <li><strong>Self-Healing:</strong> If a segment of the network is disconnected, the remaining peers use Sampling Challenges to re-grow the missing parts of the ledger from the most fit available sources.</li>
                     </ul>
                 </div>
 

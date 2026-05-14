@@ -10,10 +10,12 @@ import './components/hs-lens-explorer.js';
 import './components/hs-gaia-protocol.js';
 import './components/hs-beebee.js';
 import './components/hs-beebee-section.js';
+import './components/hs-heli-section.js';
 import './components/hs-strata-participation.js';
 import './components/hs-emulation-section.js';
 import './components/hs-interplay-section.js';
 import './components/hs-story-section.js';
+import './components/hs-cue-space-button.js';
 import './components/hs-repository-truth.js';
 import './components/hs-glossary.js';
 import './components/hs-maths.js';
@@ -44,7 +46,7 @@ class StateController {
         this.lenses = [
             'emulation', 'poetry', 'skeleton', 'playground', 'explorer', 'roadmap',
             'hop-diagram', 'coherence-ledger', 'besearch', 'resonagents', 'library', 'ptop-storage', 'cue-currency', 
-            'safeflow-ecs', 'consilience-weave', 'beebee', 'glossary', 'maths'
+            'safeflow-ecs', 'consilience-weave', 'beebee', 'heli', 'glossary', 'maths'
         ];
         this.init();
     }

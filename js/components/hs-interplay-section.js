@@ -21,16 +21,23 @@ class HsInterplaySection extends HTMLElement {
                 <div class="strata-intro-box">
                     <h3>The Resonance Pulse</h3>
                     <p>
-                        How does the Emulation stay alive? Through the Resonance Pulse. 
-                        It is the rhythmic exchange of state between the biological peer and the digital agents.
+                        Interplay is the stage of Dynamic Consilience. It is the rhythmic exchange of state between the biological peer and their digital agents (ResonAgents). This is not a passive experience; it is a metabolic synthesis where the peer uses tools to direct the machine in the shaping of context and the capture of knowledge.
+                    </p>
+                    <p style="font-style: italic; margin-top: 1rem; color: #555;">
+                        "We don't outsource our thinking to the machine; we use the machine to accelerate the distillation of our own truth."
                     </p>
                 </div>
                 <hs-von-mises-viz></hs-von-mises-viz>
                 <div class="strata-action-grid">
                     <div class="action-card">
                         <h4>The Process</h4>
-                        <h5>Dynamic Consilience</h5>
                         <p>Fusing noisy edge data into a coherent signal through circular phase-alignment.</p>
+                        <p>
+                            <strong>The Collaborative Pulse: Peer Direction vs. Machine Help</strong><br><br>
+                            To navigate the metabolism is to find the perfect balance between Human Intuition and Machine Precision.<br><br>
+                            <strong>Peer Direction (The Architect):</strong> The peer provides the intent, the Story, and the boundaries. The peer utilizes Bento Instruments and natural language to signal which strands of evidence carry the most metabolic weight.<br><br>
+                            <strong>Machine Help (The Weaver):</strong> beebee acts as a tireless librarian and weaver. Avoiding the hallucinations of the old world, the agent navigates sovereign data to identify the hidden connections (Braids) that lead to a stable Orgo.
+                        </p>
                     </div>
                 </div>
             `,
@@ -94,17 +101,48 @@ class HsInterplaySection extends HTMLElement {
             `,
             'besearch': `
                 <div class="strata-intro-box">
-                    <h3>besearch: Active Inquiry</h3>
+                    <h3>The Besearch Braid: Turning Soil into Logic</h3>
                     <p>
-                        Science is not a search; it is an inquiry. Weave besearch cycles into strands and braids.
+                        As you and beebee collaborate, the captured knowledge begins to crystallize into Strands and Braids.
                     </p>
                 </div>
                 <div class="strata-action-grid">
-                    <div class="action-card">
-                        <h4>Strands & Braids</h4>
-                        <h5>Knowledge Weaving</h5>
-                        <p>Individual observations (strands) are braided together to create verifiable health cues.</p>
-                    </div>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 20px; color: #1a2a22; font-family: sans-serif;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid #2d5a27;">
+                                <th style="text-align: left; padding: 12px; font-family: 'Courier New', monospace; color: #e67e22; font-size: 0.9rem;">The Element</th>
+                                <th style="text-align: left; padding: 12px; font-family: 'Courier New', monospace; color: #e67e22; font-size: 0.9rem;">The Peer's Role</th>
+                                <th style="text-align: left; padding: 12px; font-family: 'Courier New', monospace; color: #e67e22; font-size: 0.9rem;">The Machine's Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(0, 0, 0, 0.05);">
+                                <td style="padding: 12px; font-weight: bold; color: #2d5a27;">Strands</td>
+                                <td style="padding: 12px;">Identifying raw data and personal "Besearch" goals.</td>
+                                <td style="padding: 12px;">Indexing and cryptographically verifying the Hypercore streams.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0, 0, 0, 0.05);">
+                                <td style="padding: 12px; font-weight: bold; color: #2d5a27;">Braids</td>
+                                <td style="padding: 12px;">Recognizing the "Feeling" of consilience and truth.</td>
+                                <td style="padding: 12px;">Calculating the mathematical convergence of evidence.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0, 0, 0, 0.05);">
+                                <td style="padding: 12px; font-weight: bold; color: #2d5a27;">Physics</td>
+                                <td style="padding: 12px;">Tuning the Bento Sliders to match physical capacity.</td>
+                                <td style="padding: 12px;">Running the DML/NEAT simulations to predict stability.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="strata-intro-box" style="margin-top: 4rem; border-left-color: #e67e22;">
+                    <h3>The Functional Result: Deterministic Resonance</h3>
+                    <p>
+                        The goal of this collaboration is to reach the Resonance Pulse. By the time you move from Interplay to Emulation, the machine has helped you turn a vague intent into a "Sealed Machine" (the Orgo). You have successfully captured your existing knowledge and transformed it into Deterministic Attunement.
+                    </p>
+                </div>
+                <div class="status-tag" style="margin-top: 2rem; padding: 1.5rem; background: #fdfaf6; border: 1px solid #dcd3c1; font-family: 'Courier New', monospace; font-size: 0.9rem;">
+                    <p style="margin-bottom: 0.5rem;"><strong>Status:</strong> [STORY / INTERPLAY]</p>
+                    <p style="margin-bottom: 0rem;"><strong>Action:</strong> The peer directs; the agent conducts; the forest resonates.</p>
                 </div>
             `,
             'coupling': `
@@ -147,6 +185,63 @@ class HsInterplaySection extends HTMLElement {
                         <td style="text-align: right; color: #666;">[ DEFINED ]</td>
                     </tr>
                 </table>
+            `,
+            'lifestrap-lens': `
+                <div class="strata-intro-box">
+                    <h3>The Lifestrap-Lens: The 3 C’s + H</h3>
+                    <p>
+                        The Interplay begins when beebee (the agentic interface) opens a dialogue to generate the Lifestrap-Lens. 
+                        This lens acts as a cognitive filter—a protective layer of focus used to build actionable context without 
+                        falling into the "Data Cascades" and information rot of the old world.
+                    </p>
+                    <p>
+                        Instead of drowning in abstract numbers, the peer and the agent look through the lens to establish four fundamental pillars of reality:
+                    </p>
+                </div>
+                <div class="strata-action-grid">
+                    <div class="action-card">
+                        <h4>$C_1$</h4>
+                        <h5>Context</h5>
+                        <p>The immediate Bioregional and Situational boundary. Where does the peer stand in the physical forest, and what is the current environmental pressure?</p>
+                    </div>
+                    <div class="action-card">
+                        <h4>$C_2$</h4>
+                        <h5>Cue</h5>
+                        <p>The specific Biological signal or Intent being addressed. This is the "Why"—the heartbeat, the glucose spike, or the creative intent that needs to be conducted.</p>
+                    </div>
+                    <div class="action-card">
+                        <h4>$C_3$</h4>
+                        <h5>Conduction</h5>
+                        <p>The movement of that signal through the Hypercore fabric. This defines how the data flows from the peer to the local peer-network without ever touching a centralized cloud.</p>
+                    </div>
+                    <div class="action-card">
+                        <h4>$H$</h4>
+                        <h5>Heli</h5>
+                        <p>The Temporal Anchor. Every piece of data is viewed through the current solar arc. In the HOP protocol, time is not a digit; it is a position in the planetary spiral.</p>
+                    </div>
+                </div>
+                <div class="strata-intro-box" style="margin-top: 4rem; border-left-color: #e67e22;">
+                    <h3>The Purpose: Biological Honesty</h3>
+                    <p>
+                        Through the Lifestrap-Lens, the peer and their tools build a Shared State. This is a collaborative vantage point where machine precision and human intuition meet. By filtering the "Story" through the 3 C's + H, we ensure the resulting emulation is:
+                    </p>
+                    <ul style="list-style: none; padding: 0; margin-top: 1rem;">
+                        <li style="margin-bottom: 1rem;"><strong>Biologically Honest:</strong> It reflects the actual metabolic truth of the peer, not a generalized "health average."</li>
+                        <li style="margin-bottom: 1rem;"><strong>Technically Precise:</strong> It provides the SafeFlow-ECS with the exact weights needed to run a deterministic physics model.</li>
+                        <li style="margin-bottom: 1rem;"><strong>Sovereign:</strong> The lens is owned by the peer. It is the boundary that decides what information is "grafted" and what is ignored.</li>
+                    </ul>
+                    <p style="font-style: italic; margin-top: 2rem; color: #555;">
+                        "To look through the Lifestrap-Lens is to stop 'consuming' information and start Conducting it. It is the difference between reading a map and actually feeling the terrain."
+                    </p>
+                </div>
+                <div class="status-tag" style="margin-top: 2rem; padding: 1.5rem; background: #fdfaf6; border: 1px solid #dcd3c1; font-family: 'Courier New', monospace; font-size: 0.9rem;">
+                    <p style="margin-bottom: 0.5rem;"><strong>Status:</strong> [INTERPLAY / HARDENING]</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Target:</strong> V1 release as the central oscillator for the Cues Mantle.</p>
+                    <ul style="list-style: none; padding: 0; display: flex; gap: 2rem;">
+                        <li><strong>Documentation:</strong> <a href="https://healthscience.network/docs" target="_blank" style="color: #2d5a27;">Introduction</a></li>
+                        <li><strong>Code:</strong> <code><a href="https://github.com/healthscience/bbai" target="_blank" style="color: #2d5a27;">beebee-ai</a></code></li>
+                    </ul>
+                </div>
             `
         };
         return states[this.state] || states['pulse'];
@@ -268,12 +363,9 @@ class HsInterplaySection extends HTMLElement {
                     <h2>B. INTERPLAY: The Metabolism</h2>
                     <div class="sub-nav">
                         <button class="${this.state === 'pulse' ? 'active' : ''}" data-state="pulse">PULSE</button>
-                        <button class="${this.state === 'safeflow' ? 'active' : ''}" data-state="safeflow">SAFEFLOW-ECS</button>
-                        <button class="${this.state === 'beebee' ? 'active' : ''}" data-state="beebee">BEEBEE</button>
-                        <button class="${this.state === 'resonagents' ? 'active' : ''}" data-state="resonagents">RESONAGENTS</button>
+                        <button class="${this.state === 'lifestrap-lens' ? 'active' : ''}" data-state="lifestrap-lens">LIFESTRAP-LENS</button>
                         <button class="${this.state === 'besearch' ? 'active' : ''}" data-state="besearch">BESEARCH</button>
-                        <button class="${this.state === 'coupling' ? 'active' : ''}" data-state="coupling">COUPLING</button>
-                        <button class="${this.state === 'map' ? 'active' : ''}" data-state="map">MAP</button>
+                        <button class="${this.state === 'safeflow' ? 'active' : ''}" data-state="safeflow">SAFEFLOW-ECS</button>
                     </div>
                 </div>
                 <div class="section-metadata">

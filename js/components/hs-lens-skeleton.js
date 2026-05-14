@@ -188,14 +188,14 @@ class HsLensSkeleton extends HTMLElement {
             .leaf-pair::before, .leaf-pair::after { content: ""; position: absolute; width: 14px; height: 7px; background: #2d5a27; border-radius: 0 100% 0 100%; }
             .leaf-pair::after { background: #1a3a17; transform: rotate(35deg); left: 8px; top: 4px; opacity: 0.9; }
 
-            .leaf-cluster-8 .leaf-pair:nth-child(1) { top: -10px; left: 15%; transform: rotate(0deg); }
-            .leaf-cluster-8 .leaf-pair:nth-child(2) { top: -12px; left: 17%; transform: rotate(5deg); scale: 0.8; }
-            .leaf-cluster-8 .leaf-pair:nth-child(3) { top: -9px; left: 19%; transform: rotate(-5deg); scale: 1.1; }
-            .leaf-cluster-8 .leaf-pair:nth-child(4) { top: -11px; left: 21%; transform: rotate(10deg); scale: 0.7; }
-            .leaf-cluster-8 .leaf-pair:nth-child(5) { top: -10px; left: 23%; transform: rotate(-10deg); scale: 1.2; }
-            .leaf-cluster-8 .leaf-pair:nth-child(6) { top: -8px; left: 25%; transform: rotate(3deg); scale: 0.9; }
-            .leaf-cluster-8 .leaf-pair:nth-child(7) { top: -12px; left: 27%; transform: rotate(-7deg); scale: 1.0; }
-            .leaf-cluster-8 .leaf-pair:nth-child(8) { top: -10px; left: 29%; transform: rotate(15deg); scale: 0.8; opacity: 0.8; }
+            .leaf-cluster-8 .leaf-pair:nth-child(1) { top: -10px; left: 1%; transform: rotate(0deg); }
+            .leaf-cluster-8 .leaf-pair:nth-child(2) { top: -12px; left: 2%; transform: rotate(5deg); scale: 0.8; }
+            .leaf-cluster-8 .leaf-pair:nth-child(3) { top: -9px; left: 3%; transform: rotate(-5deg); scale: 1.1; }
+            .leaf-cluster-8 .leaf-pair:nth-child(4) { top: -11px; left: 4%; transform: rotate(10deg); scale: 0.7; }
+            .leaf-cluster-8 .leaf-pair:nth-child(5) { top: -10px; left: 6%; transform: rotate(-10deg); scale: 1.2; }
+            .leaf-cluster-8 .leaf-pair:nth-child(6) { top: -8px; left: 7%; transform: rotate(3deg); scale: 0.9; }
+            .leaf-cluster-8 .leaf-pair:nth-child(7) { top: -12px; left: 10%; transform: rotate(-7deg); scale: 1.0; }
+            .leaf-cluster-8 .leaf-pair:nth-child(8) { top: -10px; left: 11%; transform: rotate(15deg); scale: 0.8; opacity: 0.8; }
         </style>
 
         <div class="container">
@@ -216,8 +216,6 @@ class HsLensSkeleton extends HTMLElement {
 
             <section id="intro" class="has-vines">
                 <div class="leaf-cluster-8">
-                    <div class="leaf-pair"></div><div class="leaf-pair"></div>
-                    <div class="leaf-pair"></div><div class="leaf-pair"></div>
                     <div class="leaf-pair"></div><div class="leaf-pair"></div>
                     <div class="leaf-pair"></div><div class="leaf-pair"></div>
                 </div>

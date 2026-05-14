@@ -19,51 +19,80 @@ class HsStorySection extends HTMLElement {
         const states = {
             'rooting': `
                 <div class="strata-intro-box">
-                    <h3>The Source</h3>
+                    <h3>Lifestrap-Story / Dialogue</h3>
                     <p>
-                        The Story is the irreducible substrate of the protocol. It is the "ground truth" where biological signals and human intent meet the digital ledger. 
-                        Everything is powered by the "Intelligences of the Small." We use Pattern Extraction to see the same "texture" of health at every scale.
+                        The Story is the irreducible substrate of the protocol—the Sovereign Soil. It is the "ground truth" where biological signals and human intent meet the digital ledger. Without the unique, local Story of every peer and bioregion, the metabolism of the Interplay has nothing to process and the Emulation lab has nothing to sculpt.
                     </p>
-                </div>
-                <div class="scale-grid">
-                    <div>
-                        <hs-scale-slider id="texture-slider"></hs-scale-slider>
-                    </div>
-                    <div>
-                        <hs-texture-extractor></hs-texture-extractor>
-                    </div>
                 </div>
                 <div class="strata-action-grid">
                     <div class="action-card">
-                        <h4>Concept</h4>
-                        <h5>Rooting Reality</h5>
-                        <p>Without the unique, local Story of every peer and building, the metabolism has nothing to process and the lab has nothing to sculpt.</p>
+                        <h4>Dialogue with beebee</h4>
+                        <p>The peer provides the narrative "Texture" of health.  A chat medium but where the goal is to help a peer shape the context of a story.</p>
+                        <ul>
+                            <li><strong> Narrative:</strong> The peer provides the "texture" of health—feelings, observations, and goals.</li>
+                            <li><strong>Depth:</strong> Start follow on conversation to add to the lifestrap story and lens</li>
+                            <li><strong>Best guess:</strong> Input current scientific knowledge as a starting point.</li>
+                        </ul>
                     </div>
                     <div class="action-card">
                         <h4>Technical Focus</h4>
                         <h5>The Story Spec</h5>
-                        <p>Capturing the irreducible ground of the protocol using local-first methods.</p>
+                        <p>Everything in the Soil is powered by Local-First methods. We replace "Big Data" with Conductive Tiny Data.</p>
+                        <table style="width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.8rem;">
+                            <thead>
+                                <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                                    <th style="text-align: left; padding: 5px;">Story Form</th>
+                                    <th style="text-align: left; padding: 5px;">Origin</th>
+                                    <th style="text-align: left; padding: 5px;">Role in the Soil</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 5px;">Narrative</td>
+                                    <td style="padding: 5px;">Peer Dialogue</td>
+                                    <td style="padding: 5px;">Provides direction and meaning.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px;">Intent</td>
+                                    <td style="padding: 5px;">Cue Spaces</td>
+                                    <td style="padding: 5px;">Provides boundaries and focus.</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 5px;">Fact</td>
+                                    <td style="padding: 5px;">Tiny Devices</td>
+                                    <td style="padding: 5px;">Provides the pulse and grounding.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="margin-top: 15px; font-style: italic; font-size: 0.9rem;">The Goal: Capturing the three-part harmony of narrative, intent, and pulse to create a soil rich enough for emulation.</p>
                     </div>
+                </div>
+                <div class="status-tag">
+                    <h3>Status & Technical Focus</h3>
+                    <ul>
+                        <li><strong>Status:</strong> [ACTIVE / BentoBoxDS] — </li>
+                        <li><strong>Focus:</strong>Support peers build capacity, context, coherence.</li>
+                        <li><strong>Technology:</strong>beebee & hop-learn</li>
+                        <li><strong>Documentation:</strong> <a href="https://healthscience.network/docs" target="_blank">Introduction</a></li>
+                        <li><strong>Code:</strong> <code><a href="https://github.com/healthscience/bbai" target="_blank">beebee-ai</a></code></li>
+                    </ul>
                 </div>
             `,
             'edge': `
                 <div class="strata-intro-box">
-                    <h3>Edge Intelligence</h3>
+                    <h3>Tiny Devices (Bento Instruments)</h3>
                     <p>
-                        Intelligence originates on mobile phones, wearable sensors, and building monitors. This is the "Life-Strap." 
-                        Information is gathered at the point of existence. Data belongs exclusively to the peer and never leaves their control unless explicitly "melded."
+                        The sensors that pulse raw facts directly into the peer's node. In HOP, Data is the Third Storyteller.
                     </p>
                 </div>
                 <div class="strata-action-grid">
                     <div class="action-card">
-                        <h4>The Life-Strap</h4>
-                        <h5>Tiny Devices</h5>
-                        <p>Sovereign capture at the edge. Capturing context where it happens.</p>
+                        <h4>Conduction</h4>
+                        <p>These devices do not "process" or "judge"; they simply pulse reality. Whether it is a heart-rate sensor or a solar-meter, they provide the irreducible "Fact" that anchors the peer's narrative.</p>
                     </div>
                     <div class="action-card">
-                        <h4>Sovereignty</h4>
-                        <h5>BentoBoxDS</h5>
-                        <p>Local-first persistence. Data is encrypted and stored locally, ensuring the Story remains intact even if network connectivity is lost. [STATUS: FUNCTIONAL]</p>
+                        <h4>Bento Instruments</h4>
+                        <p>Within the BentoBoxDS, these devices manifest as specialized instruments that allow the peer to see the pulse of the environment in real-time.</p>
                     </div>
                 </div>
             `,
@@ -102,7 +131,7 @@ class HsStorySection extends HTMLElement {
                         <span class="context-tag">Identifier</span>
                         <span class="context-tag">Property</span>
                         <span class="context-tag">Peer ID</span>
-                        <span class="context-tag">Sovereign intent</span>
+                        <span class="context-tag">Peer intent</span>
                         <span class="context-tag">Building</span>
                         <span class="context-tag">Environment ID</span>
                         <span class="context-tag">Local metabolism</span>
@@ -116,7 +145,7 @@ class HsStorySection extends HTMLElement {
                 <div class="strata-intro-box">
                     <h3>Story: Status Map</h3>
                     <p>
-                        The Sovereign Soil provides the ground truth and the beginning of the scientific process. The Digital Immune System is "grown, not installed."
+                        The Soil provides the ground truth and the beginning of the scientific process. The Digital Immune System is "grown, not installed."
                     </p>
                 </div>
                 <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
@@ -137,6 +166,42 @@ class HsStorySection extends HTMLElement {
                         <td style="text-align: right; color: #666;">[ DEFINED ]</td>
                     </tr>
                 </table>
+            `,
+            'cuespace': `
+                <div class="strata-intro-box">
+                    <h3>Cue Spaces</h3>
+                    <p>
+                        The specialized environments where context is deepened. Cue Spaces are the interactive intersections of a story.
+                    </p>
+                </div>
+                <div class="strata-action-grid">
+                    <div class="action-card">
+                        <h4>Contextual Hubs</h4>
+                        <p>These are not static folders, but dynamic spaces where dialogues, specific media, and relevant links are brought together.</p>
+                    </div>
+                    <div class="action-card">
+                        <h4>Pattern Extraction</h4>
+                        <p>Within a Cue Space, the protocol looks for the same "texture" of health across multiple inputs, ensuring that a "Heart Rate Cue" and a "Mood Cue" speak the same language.</p>
+                    </div>
+                </div>
+            `,
+            'library': `
+                <div class="strata-intro-box">
+                    <h3>The Library</h3>
+                    <p>
+                        The peer’s lego bricks of knowledge repository of "captured soil."
+                    </p>
+                </div>
+                <div class="strata-action-grid">
+                    <div class="action-card">
+                        <h4>Adding New Cues</h4>
+                        <p>The Library is used to ingest external knowledge—research papers, historical health records, or environmental data—and transform them into active Cues.</p>
+                    </div>
+                    <div class="action-card">
+                        <h4>Unique Context Map</h4>
+                        <p>As the Library grows, it maps the peer's unique historical context, providing the "Long-Time" perspective necessary for the Heli-Clock to calculate life-cycles correctly.</p>
+                    </div>
+                </div>
             `
         };
         return states[this.state] || states['rooting'];
@@ -258,18 +323,17 @@ class HsStorySection extends HTMLElement {
         <section id="story-soil" class="has-vines">
             <div class="section-header-group">
                 <div>
-                    <h2>A. STORY: The Sovereign Soil</h2>
+                    <h2>A. STORY: The Soil</h2>
                     <div class="sub-nav">
-                        <button class="${this.state === 'rooting' ? 'active' : ''}" data-state="rooting">The Source</button>
-                        <button class="${this.state === 'edge' ? 'active' : ''}" data-state="edge">Edge Intelligence</button>
-                        <button class="${this.state === 'melding' ? 'active' : ''}" data-state="melding">Root System</button>
-                        <button class="${this.state === 'context' ? 'active' : ''}" data-state="context">Unique Context</button>
-                        <button class="${this.state === 'status' ? 'active' : ''}" data-state="status">Status Map</button>
+                        <button class="${this.state === 'rooting' ? 'active' : ''}" data-state="rooting">Lifestrap story</button>
+                        <hs-cue-space-button class="${this.state === 'cuespace' ? 'active' : ''}" data-state="cuespace">Cue space</hs-cue-space-button>
+                        <button class="${this.state === 'edge' ? 'active' : ''}" data-state="edge">Tiny devices</button>
+                        <button class="${this.state === 'library' ? 'active' : ''}" data-state="library">Library</button>
                     </div>
                 </div>
                 <div class="section-metadata">
-                    <div class="property">Property: Sovereign Tiny Data</div>
-                    <div class="status">Status: [STORY / ROOTING]</div>
+                    <div class="property">BentoBoxDS -  beebee-hop  experimental</div>
+                    <div class="status">Status: [STORY]</div>
                 </div>
             </div>
 
@@ -278,7 +342,7 @@ class HsStorySection extends HTMLElement {
             </div>
         </section>
         `;
-        this.shadowRoot.querySelectorAll('.sub-nav button').forEach(btn => {
+        this.shadowRoot.querySelectorAll('.sub-nav button, .sub-nav hs-cue-space-button').forEach(btn => {
             btn.addEventListener('click', () => {
                 this.setState(btn.dataset.state);
             });

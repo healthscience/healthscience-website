@@ -124,16 +124,40 @@ class HsConsilienceWeave extends HTMLElement {
                 <h2>Consilience Weave: The Multi-Vantage Synthesis</h2>
                 
                 <div class="infobox">
-                    <h3>The Fabric of Unity</h3>
-                    <p>
-                        The <strong>Consilience Weave</strong> is the final synthesis layer where multiple Cues and patterns from across the forest are unified. It prevents "data cascades"—where one false signal might corrupt the whole—by requiring multi-vantage verification before a pattern is accepted as planetary truth.
-                    </p>
+                    <p>The Consilience Weave is where the protocol moves from individual pulses to shared certainty. In any complex system, the biggest risk is a "Research Cascade"—a state where one data point triggers an infinite chain of dependencies that "explodes" and freezes the compute.</p>
 
-                    <h3>Weaving Rituals</h3>
+                    <p>The Weave is the regulatory layer that prevents this by applying hard mathematical and energetic limits to Conduction.</p>
+
+                    <h3>The Consilience Weave: Convergence of Evidence</h3>
+                    
+                    <h4>The Definition</h4>
+                    <p>Consilience is the "jumping together" of knowledge. In the forest, truth is not dictated by a central authority; it is identified through the convergence of independent lines of evidence. If the Heli-Clock, the Coherence Ledger, and the Local Buffer all point to the same state-change, the pulse is verified and moves toward Emulation.</p>
+
+                    <h3>The Design Choice: Why a Weave?</h3>
+                    <p>We use a Weave to solve the Dependency Spiral. Without rules, a single research thread can trigger a cascade of data that overwhelms a "Life-Strap" device. The Weave acts as a high-integrity filter that manages the intensity of connections to keep the node performant.</p>
+
                     <ul>
-                        <li><strong>Pattern Synthesis:</strong> Merging disparate biological intents into a coherent planetary Pulse.</li>
-                        <li><strong>Vantage Verification:</strong> Cross-referencing patterns from different bioregions to find universal biological constants.</li>
-                        <li><strong>The Living Tapestry:</strong> The resulting weave is a dynamic, ever-evolving map of the forest's collective health state.</li>
+                        <li><strong>Independent Verification:</strong> Different peers and different data streams (Gaian health, local energy, code updates) arrive as independent lines of evidence. The Weave only validates patterns that show consilience across multiple vantages.</li>
+                        <li><strong>Cascade Prevention:</strong> It applies a "Circuit Breaker" to knowledge. Instead of allowing a research pulse to trigger infinite dependencies, it enforces physical and computational limits to ensure the system never "thinks" itself into a freeze.</li>
+                    </ul>
+
+                    <h3>The Rules of Conduction (The Logic)</h3>
+                    <p>To manage the complexity of a peer-to-peer network, the Weave utilizes four primary technical constraints:</p>
+
+                    <ul>
+                        <li><strong>Energy-Based Circuit Breakers:</strong> Conduction is limited by Energy-Based Scheduling. If the "computational energy" or the peer’s contextual capacity is reached, the cascade is paused.</li>
+                        <li><strong>Contextual Buffer Geometry:</strong> We treat the local buffer as a physical space. A research pulse can only trigger a "leaf" if there is spatial room in the current geometry. If the buffer is full, the cascade is truncated, forcing the system to prioritize the most relevant evidence.</li>
+                        <li><strong>The Rule of Local Proximity:</strong> Interdependencies are restricted to the immediate bioregion or peer group unless explicitly Grafted elsewhere. By keeping the "explosion" local, we prevent a single rogue thread from destabilizing the wider network.</li>
+                        <li><strong>The Story Anchor:</strong> Every cascade must be traceable back to the original Story. If a research thread drifts too far from the initial intent (the Zero-Draft anchor), the Weave identifies it as noise and dissolves the branch.</li>
+                    </ul>
+
+                    <h3>Operational Pipeline: From Story to Emulation</h3>
+                    <p>The Consilience Weave is the core engine of the Interplay stage.</p>
+
+                    <ul>
+                        <li><strong>Story (Inception):</strong> The intent is set in natural language.</li>
+                        <li><strong>Interplay (Synthesis):</strong> The Weave tests the Story against existing peer states and technical constraints. It looks for where independent lines of knowledge "jump together."</li>
+                        <li><strong>Emulation (Result):</strong> Once consilience is reached, the pulse becomes a functional, deterministic reality in the SafeFlow-ECS.</li>
                     </ul>
                 </div>
 
