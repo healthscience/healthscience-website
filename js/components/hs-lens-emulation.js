@@ -1,6 +1,5 @@
 import '../heli-clock.js';
 import './hs-heart-resonance.js';
-import './hs-emulation-trinity.js';
 
 class HsLensEmulation extends HTMLElement {
     constructor() {
@@ -87,7 +86,6 @@ class HsLensEmulation extends HTMLElement {
         <div class="content">
             <h1>EMULATION</h1>
             <hs-heart-resonance color="#00f2ff"></hs-heart-resonance>
-            <hs-emulation-trinity></hs-emulation-trinity>
             <heli-clock></heli-clock>
         </div>
         `;

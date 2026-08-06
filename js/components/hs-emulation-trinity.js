@@ -1,171 +1,617 @@
-class HsEmulationTrinity extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
+import './hs-heart-resonance.js';
+import './hs-body-emulation.js'
+import './hs-organon-resilience.js'
+
+export class HsEmulationTrinity extends HTMLElement { 
+    constructor() { 
+        super(); 
+        this.attachShadow({ mode: 'open' }); 
+        this.activeOrganon = 'finland';
+    } 
+
+    connectedCallback() { 
+        this.render(); 
+        this.attachEventListeners();
+    } 
+
+    attachEventListeners() {
+        const tabs = this.shadowRoot.querySelectorAll('.organon-tab');
+        const panels = this.shadowRoot.querySelectorAll('.organon-panel');
+        const mapNodes = this.shadowRoot.querySelectorAll('.map-node');
+
+        const activateRegion = (region) => {
+            this.activeOrganon = region;
+            tabs.forEach(t => t.classList.toggle('active', t.getAttribute('data-region') === region));
+            panels.forEach(p => p.classList.toggle('active', p.getAttribute('data-region') === region));
+            mapNodes.forEach(n => n.classList.toggle('active', n.getAttribute('data-region') === region));
+        };
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                activateRegion(e.currentTarget.getAttribute('data-region'));
+            });
+        });
+
+        mapNodes.forEach(node => {
+            node.addEventListener('click', (e) => {
+                activateRegion(e.currentTarget.getAttribute('data-region'));
+            });
+        });
     }
 
-    connectedCallback() {
-        this.render();
-    }
+    render() { 
+        this.shadowRoot.innerHTML = ` 
+        <style> 
+            :host { 
+                --bg-loam: #0b120f;
+                --bg-loam-card: linear-gradient(145deg, rgba(20, 33, 27, 0.75) 0%, rgba(11, 18, 15, 0.9) 100%);
+                --color-jade: #3fa37c;
+                --color-jade-glow: rgba(63, 163, 124, 0.18);
+                --color-river: #5bc0a4;
+                --color-amber: #e3b341;
+                --color-parchment: #eaf0ee;
+                --color-subtle: rgba(234, 240, 238, 0.72);
+                --border-organic: rgba(91, 192, 164, 0.22);
 
-    render() {
-        this.shadowRoot.innerHTML = `
-        <style>
-            :host {
-                display: block;
-                width: 100%;
-                max-width: 1000px;
-                margin: 4rem auto;
-                color: var(--color-emulation, #00f2ff);
-                font-family: var(--font-mono, monospace);
-                line-height: 1.6;
+                --font-primary: system-ui, -apple-system, sans-serif;
+                --font-mono: "ui-monospace", "SF Mono", monospace;
+
+                display: block; 
+                width: 100%; 
+                background: var(--bg-loam);
+                color: var(--color-parchment); 
+                font-family: var(--font-primary); 
+                line-height: 1.75; 
+                box-sizing: border-box;
+                padding: 2rem 1rem 4rem;
+            } 
+
+            *, *::before, *::after {
+                box-sizing: inherit;
             }
 
-            .intro {
-                text-align: center;
-                margin-bottom: 4rem;
-                padding: 0 1rem;
+            .sanctuary {
+                max-width: 1140px;
+                margin: 0 auto;
+            }
+
+            .section-label {
+                font-family: var(--font-mono);
+                font-size: 0.75rem;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                color: var(--color-amber);
+                display: block;
+                margin-bottom: 0.5rem;
             }
 
             h2 {
-                font-weight: 200;
-                letter-spacing: 5px;
-                text-transform: uppercase;
-                margin-bottom: 0.5rem;
-                opacity: 0.9;
-            }
-
-            .sub-header {
-                font-size: 0.9rem;
-                letter-spacing: 2px;
-                opacity: 0.7;
-                margin-bottom: 2rem;
-            }
-
-            .description {
-                max-width: 600px;
-                margin: 0 auto 2rem;
-                font-size: 1rem;
+                font-size: 2rem;
                 font-weight: 300;
-                opacity: 0.8;
-            }
-
-            .cta {
-                font-style: italic;
-                font-size: 0.9rem;
-                max-width: 500px;
-                margin: 0 auto;
-                padding: 1.5rem;
-                border: 1px solid rgba(0, 242, 255, 0.1);
-                background: rgba(0, 242, 255, 0.02);
-            }
-
-            .trinity-header {
-                text-align: center;
-                margin-bottom: 3rem;
-                position: relative;
-            }
-
-            .trinity-header::after {
-                content: '';
-                display: block;
-                width: 50px;
-                height: 1px;
-                background: currentColor;
-                margin: 1rem auto 0;
-                opacity: 0.3;
-            }
-
-            .grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1/3);
-                gap: 2rem;
-                padding: 0 1rem;
-            }
-
-            .column {
-                padding: 1.5rem;
-                border-left: 1px solid rgba(0, 242, 255, 0.1);
-                transition: background 0.3s ease;
-            }
-
-            .column:hover {
-                background: rgba(0, 242, 255, 0.03);
-            }
-
-            .column h3 {
-                font-size: 1.2rem;
-                letter-spacing: 4px;
-                margin-bottom: 0.5rem;
-                font-weight: 400;
-            }
-
-            .column .tagline {
-                font-size: 0.75rem;
+                letter-spacing: 3px;
                 text-transform: uppercase;
+                margin: 0;
+            }
+
+            /* --- SECTION 1: HERO & CONSILIENCE WEAVE --- */
+            .hero-section {
+                padding: 1rem 0 5rem;
+                border-bottom: 1px solid var(--border-organic);
+                margin-bottom: 4rem;
+            }
+
+            .hero-header-grid {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                gap: 2.5rem;
+                align-items: start;
+                margin-bottom: 3.5rem;
+            }
+
+            .hero-intro {
+                text-align: left;
+                max-width: 760px;
+            }
+
+            /* Encapsulated clock container */
+            .heli-top-right {
+                width: 280px;
+                min-height: 220px;
+                border-radius: 20px;
+                background: rgba(11, 18, 15, 0.85);
+                border: 1px solid rgba(91, 192, 164, 0.3);
+                padding: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 
+                    inset 0 0 30px rgba(63, 163, 124, 0.12),
+                    0 10px 25px rgba(0, 0, 0, 0.45);
+            }
+
+            hs-lens-emulation {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+
+            .continuum-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.6rem;
+                font-family: var(--font-mono);
+                font-size: 0.75rem;
                 letter-spacing: 2px;
-                opacity: 0.6;
+                color: var(--color-river);
+                background: rgba(63, 163, 124, 0.08);
+                border: 1px solid var(--border-organic);
+                border-radius: 999px;
+                padding: 0.4rem 1.2rem;
+                margin-bottom: 1.8rem;
+            }
+
+            .continuum-badge span.arrow {
+                color: var(--color-amber);
+            }
+
+            h1 {
+                font-size: 2.6rem;
+                font-weight: 300;
+                letter-spacing: 4px;
+                text-transform: uppercase;
+                margin: 0 0 1.5rem;
+                color: var(--color-parchment);
+                line-height: 1.25;
+            }
+
+            .hero-lead {
+                font-size: 1.3rem;
+                font-weight: 300;
+                margin: 0 0 1.5rem;
+                color: var(--color-parchment);
+            }
+
+            .hero-subtext {
+                font-size: 1.05rem;
+                font-weight: 300;
+                color: var(--color-subtle);
+                margin: 0;
+            }
+
+            .pipeline-tag {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.6rem;
+                font-family: var(--font-mono);
+                font-size: 0.75rem;
+                color: var(--color-amber);
+                margin-top: 1.5rem;
+                padding: 0.4rem 1.2rem;
+                background: rgba(0, 0, 0, 0.45);
+                border-radius: 999px;
+                border: 1px solid rgba(227, 179, 65, 0.25);
+            }
+
+            .pipeline-tag strong {
+                color: var(--color-parchment);
+            }
+
+            /* Nested Emulation Cards */
+            .emulation-layers {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+                margin-bottom: 3.5rem;
+            }
+
+            .layer-card {
+                padding: 2.2rem 1.8rem;
+                border-radius: 20px;
+                background: rgba(11, 18, 15, 0.65);
+                border: 1px solid var(--border-organic);
+            }
+
+            .layer-number {
+                font-family: var(--font-mono);
+                font-size: 0.7rem;
+                color: var(--color-amber);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                display: block;
+                margin-bottom: 0.8rem;
+            }
+
+            .layer-card h3 {
+                font-size: 1.3rem;
+                font-weight: 300;
+                margin: 0 0 0.8rem;
+                color: var(--color-parchment);
+                letter-spacing: 1px;
+            }
+
+            .layer-card p {
+                font-size: 0.95rem;
+                color: var(--color-subtle);
+                margin: 0;
+            }
+
+            /* Trinity Grid */
+            .trinity-grid { 
+                display: grid; 
+                grid-template-columns: repeat(3, 1fr); 
+                gap: 2rem; 
+            } 
+
+            .column { 
+                padding: 2.5rem 2rem;
+                border-radius: 24px;
+                background: var(--bg-loam-card);
+                border: 1px solid var(--border-organic);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+                transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+            } 
+
+            .column:hover { 
+                border-color: var(--color-river);
+                transform: translateY(-4px);
+                box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5), 0 0 30px var(--color-jade-glow);
+            } 
+
+            .column h3 { 
+                font-family: var(--font-mono);
+                font-size: 1.25rem; 
+                letter-spacing: 4px; 
+                margin: 0 0 0.3rem; 
+                font-weight: 400; 
+                color: var(--color-parchment);
+            } 
+
+            .column .tagline { 
+                font-family: var(--font-mono);
+                font-size: 0.72rem; 
+                text-transform: uppercase; 
+                letter-spacing: 2px; 
+                color: var(--color-amber);
+                margin-bottom: 1.4rem; 
+                display: block; 
+            } 
+
+            .column p { 
+                font-size: 0.95rem; 
+                color: var(--color-subtle);
+                margin: 0;
+            } 
+
+            /* --- SECTION 2: INITIAL EMULATION (PLUTONIC HEART) --- */
+            .initial-emulation {
+                padding: 2rem 0 4rem;
+                border-bottom: 1px solid var(--border-organic);
+                margin-bottom: 4rem;
+            }
+
+            .emulation-copy h2 {
+                font-size: 2.2rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .emulation-sub {
+                font-family: var(--font-mono);
+                font-size: 0.85rem;
+                letter-spacing: 2px;
+                color: var(--color-river);
+                text-transform: uppercase;
                 margin-bottom: 1.5rem;
                 display: block;
             }
 
-            .column p {
-                font-size: 0.85rem;
+            .emulation-copy p {
+                font-size: 1.1rem;
+                color: var(--color-subtle);
+                margin-bottom: 1.8rem;
                 font-weight: 300;
-                opacity: 0.8;
             }
 
-            @media (max-width: 768px) {
-                .grid {
+            .cta-quote { 
+                font-style: italic; 
+                font-size: 0.95rem; 
+                padding: 1.2rem 1.6rem; 
+                border-left: 2px solid var(--color-amber);
+                background: rgba(227, 179, 65, 0.04);
+                color: var(--color-parchment);
+                max-width: 800px;
+            }
+
+            /* --- SECTION 3: MAP DIAGRAM & ORGANONS --- */
+            .organons-section {
+                padding: 2rem 0 4rem;
+            }
+
+            .section-header {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+
+            .map-container {
+                width: 100%;
+                max-width: 960px;
+                margin: 0 auto 2.5rem;
+                padding: 1.5rem;
+                border-radius: 28px;
+                background: rgba(10, 16, 13, 0.85);
+                border: 1px solid var(--border-organic);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            }
+
+            .earth-svg {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            .map-node {
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .map-node circle.pulse-ring {
+                transform-origin: center;
+                animation: mapPulse 2.5s infinite ease-out;
+            }
+
+            .map-node:hover circle.core,
+            .map-node.active circle.core {
+                fill: var(--color-amber);
+                stroke: #ffffff;
+                r: 8px;
+            }
+
+            @keyframes mapPulse {
+                0% { r: 6px; opacity: 0.8; stroke-width: 2px; }
+                100% { r: 24px; opacity: 0; stroke-width: 0.5px; }
+            }
+
+            .organon-tabs {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                flex-wrap: wrap;
+                margin-bottom: 2.5rem;
+            }
+
+            .organon-tab {
+                font-family: var(--font-mono);
+                font-size: 0.8rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                background: rgba(63, 163, 124, 0.08);
+                color: var(--color-subtle);
+                border: 1px solid var(--border-organic);
+                padding: 0.8rem 1.6rem;
+                border-radius: 999px;
+                cursor: pointer;
+                transition: all 0.25s ease;
+            }
+
+            .organon-tab:hover,
+            .organon-tab.active {
+                background: var(--color-river);
+                color: var(--bg-loam);
+                border-color: var(--color-river);
+                font-weight: 600;
+                box-shadow: 0 0 20px rgba(91, 192, 164, 0.3);
+            }
+
+            .organon-panel {
+                display: none;
+                border-radius: 24px;
+                border: 1px solid var(--border-organic);
+                padding: 3rem;
+                background: var(--bg-loam-card);
+                animation: fadeIn 0.4s ease;
+            }
+
+            .organon-panel.active {
+                display: block;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(6px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            .panel-watershed {
+                font-family: var(--font-mono);
+                font-size: 0.75rem;
+                color: var(--color-amber);
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                display: block;
+                margin-bottom: 0.5rem;
+            }
+
+            .organon-panel h3 {
+                font-size: 1.8rem;
+                font-weight: 300;
+                margin: 0 0 1rem;
+                color: var(--color-parchment);
+            }
+
+            .organon-panel p {
+                font-size: 1.05rem;
+                color: var(--color-subtle);
+                max-width: 800px;
+                margin: 0 0 1.5rem;
+            }
+
+            .cta-box { 
+                margin-top: 4rem; 
+                padding: 3.5rem 2rem; 
+                text-align: center; 
+                border-radius: 28px;
+                border: 1px solid rgba(91, 192, 164, 0.3);
+                background: linear-gradient(180deg, rgba(63, 163, 124, 0.08) 0%, rgba(11, 18, 15, 0.8) 100%);
+            } 
+
+            .cta-box p {
+                font-size: 1.15rem;
+                font-style: italic;
+                color: var(--color-parchment);
+                max-width: 640px;
+                margin: 0 auto;
+            }
+
+            @media (max-width: 900px) { 
+                .hero-header-grid {
                     grid-template-columns: 1fr;
-                    gap: 1.5rem;
                 }
-                .column {
-                    border-left: none;
-                    border-bottom: 1px solid rgba(0, 242, 255, 0.1);
-                    padding-bottom: 2rem;
+                .heli-top-right {
+                    width: 100%;
                 }
-                .column:last-child {
-                    border-bottom: none;
-                }
-            }
-        </style>
+                .emulation-layers,
+                .trinity-grid { 
+                    grid-template-columns: 1fr; 
+                    gap: 1.5rem; 
+                } 
+                h1 { font-size: 2.1rem; }
+                h2 { font-size: 1.6rem; }
+                .organon-panel { padding: 2rem 1.5rem; }
+            } 
+        </style> 
 
-        <section class="intro">
-            <h2>The Plutonic Heart</h2>
-            <div class="sub-header">Initial Emulation</div>
-            <p class="description">
-                We have implemented a foundational <strong>Plutonic solid emulation</strong> of the heart. 
-                It is the first machine-sealed logic in HOP, using geometry to map the deterministic laws of aquatic load.
-            </p>
-            <div class="cta">
-                "This is a starting point. Join, bring data, orgos, gelles and tiny device data to make it better."
-            </div>
-        </section>
+        <div class="sanctuary">
+            <!-- SECTION 1: HERO & CONSILIENCE WEAVE -->
+            <section class="hero-section">
+                <div class="hero-header-grid">
+                    <div class="hero-intro">
+                        <div class="continuum-badge">
+                            <span>CELL</span> <span class="arrow">&rarr;</span>
+                            <span>BODY</span> <span class="arrow">&rarr;</span>
+                            <span>WATERSHED</span> <span class="arrow">&rarr;</span>
+                            <span>GAIA</span>
+                        </div>
 
-        <div class="trinity-header">
-            <h2>The Emulation Trinity</h2>
+                        <h1>Gaia Intelligences Shape Health</h1>
+                        
+                        <p class="hero-lead">
+                            The Health Oracle Protocol (<strong>HOP</strong>): health is a continuous alignment across a living nested continuum: Cell -> Body -> Habitat -> Watershed -> Bioregion.  An Organon.
+
+                        </p>
+
+                        <p>
+                            The life pulse of an organon is felt through tiny conduction devices, flowing data through besearch cycles—a peer-to-peer scientific method giving a resonancePulse across all scales of the organon. A consilience weave grounded in a coherence ledger produces collective intelligences of the whole: Gaia intelligences.
+                        </p>
+                        
+                        <div class="pipeline-tag">
+                            <span>STORY</span> &rarr; <span>INTERPLAY</span> &rarr; <span><strong>EMULATION</strong></span>
+                        </div>
+                    </div>
+                    <div id="heli-clock">
+                      <heli-clock></heli-clock>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- SECTION 2: INITIAL EMULATION -->
+            <section class="initial-emulation" style="position: relative;">
+              <hs-organon-emulation></hs-organon-emulation>
+            </section>
+
+            <!-- SECTION 3: MAP DIAGRAM & ORGANONS -->
+            <section class="organons-section">
+                <div class="section-header">
+                    <span class="section-label">Bioregional Land Stewardship</span>
+                    <h2>The First Organons</h2>
+                </div>
+
+                <!-- Flattened Earth Map Diagram -->
+                <div class="map-container">
+                    <svg class="earth-svg" viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="gridGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#3fa37c" stop-opacity="0.25" />
+                                <stop offset="100%" stop-color="#5bc0a4" stop-opacity="0.08" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Latitude & Longitude Weave -->
+                        <path d="M 0,90 Q 400,120 800,90 M 0,180 Q 400,180 800,180 M 0,270 Q 400,240 800,270" fill="none" stroke="url(#gridGrad)" stroke-width="1" stroke-dasharray="6,6" />
+                        <path d="M 200,0 Q 180,180 200,360 M 400,0 Q 400,180 400,360 M 600,0 Q 620,180 600,360" fill="none" stroke="url(#gridGrad)" stroke-width="1" stroke-dasharray="6,6" />
+                        <rect x="10" y="10" width="780" height="340" rx="16" fill="none" stroke="rgba(91,192,164,0.2)" stroke-width="1" />
+
+                        <!-- Contour Outlines -->
+                        <path d="M 160,110 Q 200,80 240,110 T 320,130" fill="none" stroke="#3fa37c" stroke-width="1.5" stroke-opacity="0.3" />
+                        <path d="M 410,70 Q 450,50 490,75 T 530,95" fill="none" stroke="#3fa37c" stroke-width="1.5" stroke-opacity="0.3" />
+                        <path d="M 210,180 Q 230,220 220,270" fill="none" stroke="#3fa37c" stroke-width="1.5" stroke-opacity="0.3" />
+
+                        <!-- Node 1: Scotland -->
+                        <g class="map-node" data-region="scotland" transform="translate(380, 95)">
+                            <circle class="pulse-ring" r="16" fill="none" stroke="#5bc0a4" />
+                            <circle class="core" r="6" fill="#3fa37c" stroke="#5bc0a4" stroke-width="2" />
+                            <text x="14" y="4" fill="#eaf0ee" font-family="monospace" font-size="11" letter-spacing="1">SCOTLAND</text>
+                        </g>
+
+                        <!-- Node 2: Finland -->
+                        <g class="map-node active" data-region="finland" transform="translate(460, 68)">
+                            <circle class="pulse-ring" r="16" fill="none" stroke="#e3b341" />
+                            <circle class="core" r="6" fill="#e3b341" stroke="#ffffff" stroke-width="2" />
+                            <text x="14" y="4" fill="#e3b341" font-family="monospace" font-size="11" font-weight="bold" letter-spacing="1">FINLAND</text>
+                        </g>
+
+                        <!-- Node 3: Barichara -->
+                        <g class="map-node" data-region="barichara" transform="translate(230, 205)">
+                            <circle class="pulse-ring" r="16" fill="none" stroke="#5bc0a4" />
+                            <circle class="core" r="6" fill="#3fa37c" stroke="#5bc0a4" stroke-width="2" />
+                            <text x="14" y="4" fill="#eaf0ee" font-family="monospace" font-size="11" letter-spacing="1">BARICHARA</text>
+                        </g>
+
+                        <!-- Inter-Node Conduction Lines -->
+                        <line x1="380" y1="95" x2="460" y2="68" stroke="#5bc0a4" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="4,4" />
+                        <line x1="380" y1="95" x2="230" y2="205" stroke="#5bc0a4" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="4,4" />
+                    </svg>
+                </div>
+
+                <!-- Organon Node Tabs -->
+                <div class="organon-tabs">
+                    <button class="organon-tab active" data-region="finland">Finland</button>
+                    <button class="organon-tab" data-region="scotland">Scotland</button>
+                    <button class="organon-tab" data-region="barichara">Barichara</button>
+                </div>
+
+                <!-- Organon Panels -->
+                <div class="organon-panel active" data-region="finland">
+                    <span class="panel-watershed">Uusimaa-Kymijoki Watershed</span>
+                    <h3>Finland Organon Node</h3>
+                    <p>
+                        Our primary anchor connecting Helsinki urban peers with Kurjen tila eco-village biodynamics and Fiskars Village open-hardware fabrication. Here, peers pair local hardware conduction with ecological land stewardship to establish living coherence ledgers.
+                    </p>
+                </div>
+
+                <div class="organon-panel" data-region="scotland">
+                    <span class="panel-watershed">Caledonian Watersheds</span>
+                    <h3>Scotland Organon Node</h3>
+                    <p>
+                        Weaving regional community networks and ecological renewal across autumn landscapes. This node grounds peer-to-peer conduction in local hydrology, connecting biological health directly to Highland river basins.
+                    </p>
+                </div>
+
+                <div class="organon-panel" data-region="barichara">
+                    <span class="panel-watershed">Northern Andes Bioregion</span>
+                    <h3>Barichara Organon Node</h3>
+                    <p>
+                        Grounding the protocol alongside regenerative agroforestry, territorial watershed regeneration, and Earth Regenerator networks. We synchronize soil vitality, water retention, and human cardiac rhythm across the high forest terrace.
+                    </p>
+                </div>
+            </section>
+
+            <!-- FOOTER CTA -->
+            <div class="cta-box"> 
+                <p>
+                </p> 
+            </div> 
         </div>
-
-        <div class="grid">
-            <div class="column">
-                <h3>ORGO</h3>
-                <span class="tagline">The Logic Machine</span>
-                <p>Deterministic physics. The sealed engine that calculates systemic laws (e.g., cardiac load) identically for every peer.</p>
-            </div>
-            <div class="column">
-                <h3>GELLE</h3>
-                <span class="tagline">The Texture</span>
-                <p>Derived from Organelle. The phenomenological manifestation—the color, shape, and sensory feel of the data.</p>
-            </div>
-            <div class="column">
-                <h3>PULSE</h3>
-                <span class="tagline">The Life-Blood</span>
-                <p>Data energy that fuses Orgo and Gelle into a living body of knowledge. Without the pulse, the structure is static.</p>
-            </div>
-        </div>
-        `;
-    }
-}
+        `; 
+    } 
+} 
 
 customElements.define('hs-emulation-trinity', HsEmulationTrinity);
