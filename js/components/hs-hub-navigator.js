@@ -234,7 +234,7 @@ class HsHubNavigator extends HTMLElement {
         <div class="hud-bar">
             <div class="hud-left">
                 <div class="logo">HOP</div>
-                <div class="version">v0.7.5 experimental</div>
+                <div class="version">v0.8.3 experimental</div>
             </div>
             
             <div class="hud-center">
@@ -255,7 +255,7 @@ class HsHubNavigator extends HTMLElement {
                 </div>
                 <div class="status-item">
                     <div class="status-dot"></div>
-                    LOCAL-FIRST
+                    beebee
                 </div>
             </div>
 

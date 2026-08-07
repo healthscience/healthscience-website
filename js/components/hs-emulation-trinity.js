@@ -1,8 +1,9 @@
 import './hs-heart-resonance.js';
-import './hs-body-emulation.js'
-import './hs-organon-resilience.js'
+import './hs-body-emulation.js';
+import './hs-organon-resilience.js';
 
-export class HsEmulationTrinity extends HTMLElement { 
+export class HsEmulationTrinity extends HTMLElement {
+
     constructor() { 
         super(); 
         this.attachShadow({ mode: 'open' }); 
@@ -14,27 +15,71 @@ export class HsEmulationTrinity extends HTMLElement {
         this.attachEventListeners();
     } 
 
-    attachEventListeners() {
+    onActivate(subState) {
+        if (subState) {
+            this.showOrganonDetail(subState);
+        } else {
+            this.previewRegion(this.activeOrganon || 'finland');
+        }
+    }
+
+    previewRegion(region) {
+        if (!region) return;
+        this.activeOrganon = region;
+
+        // Shadow DOM summary updates only
         const tabs = this.shadowRoot.querySelectorAll('.organon-tab');
         const panels = this.shadowRoot.querySelectorAll('.organon-panel');
         const mapNodes = this.shadowRoot.querySelectorAll('.map-node');
 
-        const activateRegion = (region) => {
-            this.activeOrganon = region;
-            tabs.forEach(t => t.classList.toggle('active', t.getAttribute('data-region') === region));
-            panels.forEach(p => p.classList.toggle('active', p.getAttribute('data-region') === region));
-            mapNodes.forEach(n => n.classList.toggle('active', n.getAttribute('data-region') === region));
-        };
+        tabs.forEach(t => t.classList.toggle('active', t.getAttribute('data-region') === region));
+        panels.forEach(p => p.classList.toggle('active', p.getAttribute('data-region') === region));
+        mapNodes.forEach(n => n.classList.toggle('active', n.getAttribute('data-region') === region));
+
+        // Close any full organon detail view
+        const subOrganons = document.querySelectorAll('.sub-organon-panel');
+        subOrganons.forEach(el => el.classList.remove('active'));
+    }
+
+    showOrganonDetail(region) {
+        if (!region) return;
+        this.previewRegion(region);
+
+        const subOrganons = document.querySelectorAll('.sub-organon-panel');
+        subOrganons.forEach(el => {
+            const isTarget = el.getAttribute('data-region') === region || el.id === `organon-${region}`;
+            el.classList.toggle('active', isTarget);
+        });
+    }
+
+    attachEventListeners() {
+        const tabs = this.shadowRoot.querySelectorAll('.organon-tab');
+        const mapNodes = this.shadowRoot.querySelectorAll('.map-node');
+        const learnMoreBtns = this.shadowRoot.querySelectorAll('.learn-more-btn');
 
         tabs.forEach(tab => {
             tab.addEventListener('click', (e) => {
-                activateRegion(e.currentTarget.getAttribute('data-region'));
+                this.previewRegion(e.currentTarget.getAttribute('data-region'));
             });
         });
 
         mapNodes.forEach(node => {
             node.addEventListener('click', (e) => {
-                activateRegion(e.currentTarget.getAttribute('data-region'));
+                this.previewRegion(e.currentTarget.getAttribute('data-region'));
+            });
+        });
+
+        // "Learn More" buttons navigate to the full organon detail view
+        learnMoreBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const region = e.currentTarget.getAttribute('data-region');
+                this.showOrganonDetail(region);
+                window.location.hash = `#organon/${region}`;
+
+                const targetView = document.getElementById(`organon-${region}`) || document.getElementById('organon-detail-viewport');
+                if (targetView) {
+                    targetView.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
     }
@@ -93,16 +138,17 @@ export class HsEmulationTrinity extends HTMLElement {
                 margin: 0;
             }
 
-            /* --- SECTION 1: HERO & CONSILIENCE WEAVE --- */
+            /* --- HERO & CONTINUUM --- */
             .hero-section {
-                padding: 1rem 0 5rem;
+                padding: 1rem 0 4rem;
                 border-bottom: 1px solid var(--border-organic);
-                margin-bottom: 4rem;
+                margin-bottom: 3.5rem;
             }
 
             .hero-header-grid {
                 display: grid;
                 grid-template-columns: 1fr auto;
+                margin-top: 5em;
                 gap: 2.5rem;
                 align-items: start;
                 margin-bottom: 3.5rem;
@@ -110,29 +156,12 @@ export class HsEmulationTrinity extends HTMLElement {
 
             .hero-intro {
                 text-align: left;
-                max-width: 760px;
+                max-width: 820px;
             }
 
-            /* Encapsulated clock container */
-            .heli-top-right {
-                width: 280px;
-                min-height: 220px;
-                border-radius: 20px;
-                background: rgba(11, 18, 15, 0.85);
-                border: 1px solid rgba(91, 192, 164, 0.3);
-                padding: 1rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                box-shadow: 
-                    inset 0 0 30px rgba(63, 163, 124, 0.12),
-                    0 10px 25px rgba(0, 0, 0, 0.45);
-            }
-
-            hs-lens-emulation {
-                width: 100%;
-                height: 100%;
-                display: block;
+            #call-to-action {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
             }
 
             .continuum-badge {
@@ -155,7 +184,7 @@ export class HsEmulationTrinity extends HTMLElement {
             }
 
             h1 {
-                font-size: 2.6rem;
+                font-size: 2.5rem;
                 font-weight: 300;
                 letter-spacing: 4px;
                 text-transform: uppercase;
@@ -165,17 +194,10 @@ export class HsEmulationTrinity extends HTMLElement {
             }
 
             .hero-lead {
-                font-size: 1.3rem;
+                font-size: 1.25rem;
                 font-weight: 300;
                 margin: 0 0 1.5rem;
                 color: var(--color-parchment);
-            }
-
-            .hero-subtext {
-                font-size: 1.05rem;
-                font-weight: 300;
-                color: var(--color-subtle);
-                margin: 0;
             }
 
             .pipeline-tag {
@@ -185,156 +207,88 @@ export class HsEmulationTrinity extends HTMLElement {
                 font-family: var(--font-mono);
                 font-size: 0.75rem;
                 color: var(--color-amber);
-                margin-top: 1.5rem;
+                margin-top: 1rem;
                 padding: 0.4rem 1.2rem;
                 background: rgba(0, 0, 0, 0.45);
                 border-radius: 999px;
                 border: 1px solid rgba(227, 179, 65, 0.25);
             }
 
-            .pipeline-tag strong {
-                color: var(--color-parchment);
-            }
-
-            /* Nested Emulation Cards */
-            .emulation-layers {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 2rem;
-                margin-bottom: 3.5rem;
-            }
-
-            .layer-card {
-                padding: 2.2rem 1.8rem;
-                border-radius: 20px;
-                background: rgba(11, 18, 15, 0.65);
-                border: 1px solid var(--border-organic);
-            }
-
-            .layer-number {
+            .call-to-download a {
+                display: inline-flex; /* Required for align-items and gap to function */
+                align-items: center;
+                gap: 0.6rem;
                 font-family: var(--font-mono);
-                font-size: 0.7rem;
+                font-size: 0.75rem;
                 color: var(--color-amber);
-                letter-spacing: 2px;
-                text-transform: uppercase;
-                display: block;
-                margin-bottom: 0.8rem;
+                margin-top: 1rem;
+                padding: 0.4rem 1.2rem;
+                background: rgba(0, 0, 0, 0.45);
+                border-radius: 999px;
+                border: 1px solid rgba(227, 179, 65, 0.25);
+                text-decoration: none; /* Removes default anchor underline */
+                cursor: pointer;
+                transition: all 0.25s ease;
             }
 
-            .layer-card h3 {
-                font-size: 1.3rem;
-                font-weight: 300;
-                margin: 0 0 0.8rem;
-                color: var(--color-parchment);
-                letter-spacing: 1px;
-            }
-
-            .layer-card p {
-                font-size: 0.95rem;
-                color: var(--color-subtle);
-                margin: 0;
-            }
-
-            /* Trinity Grid */
-            .trinity-grid { 
-                display: grid; 
-                grid-template-columns: repeat(3, 1fr); 
-                gap: 2rem; 
-            } 
-
-            .column { 
-                padding: 2.5rem 2rem;
-                border-radius: 24px;
-                background: var(--bg-loam-card);
-                border: 1px solid var(--border-organic);
-                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-                transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
-            } 
-
-            .column:hover { 
+            .call-to-download a:hover {
                 border-color: var(--color-river);
-                transform: translateY(-4px);
-                box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5), 0 0 30px var(--color-jade-glow);
-            } 
+                color: var(--color-river);
+                background: rgba(63, 163, 124, 0.08);
+            }
 
-            .column h3 { 
-                font-family: var(--font-mono);
-                font-size: 1.25rem; 
-                letter-spacing: 4px; 
-                margin: 0 0 0.3rem; 
-                font-weight: 400; 
-                color: var(--color-parchment);
-            } 
-
-            .column .tagline { 
-                font-family: var(--font-mono);
-                font-size: 0.72rem; 
-                text-transform: uppercase; 
-                letter-spacing: 2px; 
-                color: var(--color-amber);
-                margin-bottom: 1.4rem; 
-                display: block; 
-            } 
-
-            .column p { 
-                font-size: 0.95rem; 
-                color: var(--color-subtle);
-                margin: 0;
-            } 
-
-            /* --- SECTION 2: INITIAL EMULATION (PLUTONIC HEART) --- */
+            /* --- INITIAL EMULATION --- */
             .initial-emulation {
                 padding: 2rem 0 4rem;
                 border-bottom: 1px solid var(--border-organic);
                 margin-bottom: 4rem;
             }
 
-            .emulation-copy h2 {
-                font-size: 2.2rem;
-                margin-bottom: 0.5rem;
-            }
-
-            .emulation-sub {
-                font-family: var(--font-mono);
-                font-size: 0.85rem;
-                letter-spacing: 2px;
-                color: var(--color-river);
-                text-transform: uppercase;
-                margin-bottom: 1.5rem;
-                display: block;
-            }
-
-            .emulation-copy p {
-                font-size: 1.1rem;
-                color: var(--color-subtle);
-                margin-bottom: 1.8rem;
-                font-weight: 300;
-            }
-
-            .cta-quote { 
-                font-style: italic; 
-                font-size: 0.95rem; 
-                padding: 1.2rem 1.6rem; 
-                border-left: 2px solid var(--color-amber);
-                background: rgba(227, 179, 65, 0.04);
-                color: var(--color-parchment);
-                max-width: 800px;
-            }
-
-            /* --- SECTION 3: MAP DIAGRAM & ORGANONS --- */
+            /* --- MAP & ORGANONS --- */
             .organons-section {
-                padding: 2rem 0 4rem;
+                padding: 2rem 0 2rem;
             }
 
             .section-header {
                 text-align: center;
-                margin-bottom: 3rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .organon-tabs {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                flex-wrap: wrap;
+                margin-bottom: 2.5rem;
+            }
+
+            .organon-tab {
+                font-family: var(--font-mono);
+                font-size: 0.8rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                background: rgba(63, 163, 124, 0.08);
+                color: var(--color-subtle);
+                border: 1px solid var(--border-organic);
+                padding: 0.8rem 1.6rem;
+                border-radius: 999px;
+                cursor: pointer;
+                transition: all 0.25s ease;
+            }
+
+            .organon-tab:hover,
+            .organon-tab.active {
+                background: var(--color-river);
+                color: var(--bg-loam);
+                border-color: var(--color-river);
+                font-weight: 600;
+                box-shadow: 0 0 20px rgba(91, 192, 164, 0.3);
             }
 
             .map-container {
                 width: 100%;
                 max-width: 960px;
-                margin: 0 auto 2.5rem;
+                margin: 0 auto 3rem;
                 padding: 1.5rem;
                 border-radius: 28px;
                 background: rgba(10, 16, 13, 0.85);
@@ -370,35 +324,9 @@ export class HsEmulationTrinity extends HTMLElement {
                 100% { r: 24px; opacity: 0; stroke-width: 0.5px; }
             }
 
-            .organon-tabs {
-                display: flex;
-                justify-content: center;
-                gap: 1rem;
-                flex-wrap: wrap;
-                margin-bottom: 2.5rem;
-            }
-
-            .organon-tab {
-                font-family: var(--font-mono);
-                font-size: 0.8rem;
-                letter-spacing: 2px;
-                text-transform: uppercase;
-                background: rgba(63, 163, 124, 0.08);
-                color: var(--color-subtle);
-                border: 1px solid var(--border-organic);
-                padding: 0.8rem 1.6rem;
-                border-radius: 999px;
-                cursor: pointer;
-                transition: all 0.25s ease;
-            }
-
-            .organon-tab:hover,
-            .organon-tab.active {
-                background: var(--color-river);
-                color: var(--bg-loam);
-                border-color: var(--color-river);
-                font-weight: 600;
-                box-shadow: 0 0 20px rgba(91, 192, 164, 0.3);
+            /* --- SUMMARY CONTENT PANELS --- */
+            .organon-panels {
+                margin-top: 2rem;
             }
 
             .organon-panel {
@@ -439,10 +367,53 @@ export class HsEmulationTrinity extends HTMLElement {
             .organon-panel p {
                 font-size: 1.05rem;
                 color: var(--color-subtle);
-                max-width: 800px;
+                max-width: 840px;
                 margin: 0 0 1.5rem;
             }
 
+            .cta-quote { 
+                font-style: italic; 
+                font-size: 0.95rem; 
+                padding: 1.2rem 1.6rem; 
+                border-left: 2px solid var(--color-amber);
+                background: rgba(227, 179, 65, 0.04);
+                color: var(--color-parchment);
+                max-width: 800px;
+                border-radius: 0 12px 12px 0;
+                margin-bottom: 2rem;
+            }
+
+            .panel-actions {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .learn-more-btn {
+                font-family: var(--font-mono);
+                font-size: 0.85rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                background: transparent;
+                color: var(--color-river);
+                border: 1px solid var(--color-river);
+                padding: 0.75rem 1.8rem;
+                border-radius: 999px;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.6rem;
+                transition: all 0.3s ease;
+            }
+
+            .learn-more-btn:hover {
+                background: var(--color-river);
+                color: var(--bg-loam);
+                box-shadow: 0 0 20px rgba(91, 192, 164, 0.4);
+                transform: translateX(4px);
+            }
+
+            /* --- FOOTER CTA BOX --- */
             .cta-box { 
                 margin-top: 4rem; 
                 padding: 3.5rem 2rem; 
@@ -456,30 +427,13 @@ export class HsEmulationTrinity extends HTMLElement {
                 font-size: 1.15rem;
                 font-style: italic;
                 color: var(--color-parchment);
-                max-width: 640px;
-                margin: 0 auto;
+                max-width: 680px;
+                margin: 0 auto 1rem;
             }
-
-            @media (max-width: 900px) { 
-                .hero-header-grid {
-                    grid-template-columns: 1fr;
-                }
-                .heli-top-right {
-                    width: 100%;
-                }
-                .emulation-layers,
-                .trinity-grid { 
-                    grid-template-columns: 1fr; 
-                    gap: 1.5rem; 
-                } 
-                h1 { font-size: 2.1rem; }
-                h2 { font-size: 1.6rem; }
-                .organon-panel { padding: 2rem 1.5rem; }
-            } 
         </style> 
 
         <div class="sanctuary">
-            <!-- SECTION 1: HERO & CONSILIENCE WEAVE -->
+            <!-- HERO & CONTINUUM -->
             <section class="hero-section">
                 <div class="hero-header-grid">
                     <div class="hero-intro">
@@ -493,38 +447,41 @@ export class HsEmulationTrinity extends HTMLElement {
                         <h1>Gaia Intelligences Shape Health</h1>
                         
                         <p class="hero-lead">
-                            The Health Oracle Protocol (<strong>HOP</strong>): health is a continuous alignment across a living nested continuum: Cell -> Body -> Habitat -> Watershed -> Bioregion.  An Organon.
-
+                            The Health Oracle Protocol (<strong>HOP</strong>): health is a continuous alignment across a living nested continuum: Cell -> Body -> Habitat -> Watershed -> Bioregion. An Organon.
                         </p>
 
                         <p>
                             The life pulse of an organon is felt through tiny conduction devices, flowing data through besearch cycles—a peer-to-peer scientific method giving a resonancePulse across all scales of the organon. A consilience weave grounded in a coherence ledger produces collective intelligences of the whole: Gaia intelligences.
                         </p>
-                        
-                        <div class="pipeline-tag">
-                            <span>STORY</span> &rarr; <span>INTERPLAY</span> &rarr; <span><strong>EMULATION</strong></span>
+                        <div id="call-to-action">                       
+                            <div class="pipeline-tag">
+                                <span>STORY</span> &rarr; <span>INTERPLAY</span> &rarr; <span><strong>EMULATION</strong></span>
+                            </div>
+                            <div class="call-to-download">
+                                <a href="https://bentoboxds.org">DOWNLOAD BENTOBOXDS</a>
+                            </div>
                         </div>
                     </div>
                     <div id="heli-clock">
                       <heli-clock></heli-clock>
                     </div>
                 </div>
-
             </section>
 
-            <!-- SECTION 2: INITIAL EMULATION -->
-            <section class="initial-emulation" style="position: relative;">
+            <!-- INITIAL EMULATION -->
+            <section class="initial-emulation">
               <hs-organon-emulation></hs-organon-emulation>
             </section>
 
-            <!-- SECTION 3: MAP DIAGRAM & ORGANONS -->
+            <!-- MAP DIAGRAM & ORGANON SUMMARY SECTION -->
             <section class="organons-section">
                 <div class="section-header">
-                    <span class="section-label">Bioregional Land Stewardship</span>
-                    <h2>The First Organons</h2>
+                    <span class="section-label">Place</span>
+                    <h2>The Organons</h2>
                 </div>
 
-                <!-- Flattened Earth Map Diagram -->
+
+                <!-- Bioregional Map -->
                 <div class="map-container">
                     <svg class="earth-svg" viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
                         <defs>
@@ -534,84 +491,117 @@ export class HsEmulationTrinity extends HTMLElement {
                             </linearGradient>
                         </defs>
 
-                        <!-- Latitude & Longitude Weave -->
                         <path d="M 0,90 Q 400,120 800,90 M 0,180 Q 400,180 800,180 M 0,270 Q 400,240 800,270" fill="none" stroke="url(#gridGrad)" stroke-width="1" stroke-dasharray="6,6" />
-                        <path d="M 200,0 Q 180,180 200,360 M 400,0 Q 400,180 400,360 M 600,0 Q 620,180 600,360" fill="none" stroke="url(#gridGrad)" stroke-width="1" stroke-dasharray="6,6" />
                         <rect x="10" y="10" width="780" height="340" rx="16" fill="none" stroke="rgba(91,192,164,0.2)" stroke-width="1" />
-
-                        <!-- Contour Outlines -->
-                        <path d="M 160,110 Q 200,80 240,110 T 320,130" fill="none" stroke="#3fa37c" stroke-width="1.5" stroke-opacity="0.3" />
-                        <path d="M 410,70 Q 450,50 490,75 T 530,95" fill="none" stroke="#3fa37c" stroke-width="1.5" stroke-opacity="0.3" />
-                        <path d="M 210,180 Q 230,220 220,270" fill="none" stroke="#3fa37c" stroke-width="1.5" stroke-opacity="0.3" />
 
                         <!-- Node 1: Scotland -->
                         <g class="map-node" data-region="scotland" transform="translate(380, 95)">
                             <circle class="pulse-ring" r="16" fill="none" stroke="#5bc0a4" />
                             <circle class="core" r="6" fill="#3fa37c" stroke="#5bc0a4" stroke-width="2" />
-                            <text x="14" y="4" fill="#eaf0ee" font-family="monospace" font-size="11" letter-spacing="1">SCOTLAND</text>
+                            <text x="14" y="4" fill="#eaf0ee" font-family="monospace" font-size="11">SCOTLAND</text>
                         </g>
 
                         <!-- Node 2: Finland -->
                         <g class="map-node active" data-region="finland" transform="translate(460, 68)">
                             <circle class="pulse-ring" r="16" fill="none" stroke="#e3b341" />
                             <circle class="core" r="6" fill="#e3b341" stroke="#ffffff" stroke-width="2" />
-                            <text x="14" y="4" fill="#e3b341" font-family="monospace" font-size="11" font-weight="bold" letter-spacing="1">FINLAND</text>
+                            <text x="14" y="4" fill="#e3b341" font-family="monospace" font-size="11" font-weight="bold">FINLAND</text>
                         </g>
 
-                        <!-- Node 3: Barichara -->
-                        <g class="map-node" data-region="barichara" transform="translate(230, 205)">
+                        <!-- Node 3: Andes -->
+                        <g class="map-node" data-region="andes" transform="translate(230, 205)">
                             <circle class="pulse-ring" r="16" fill="none" stroke="#5bc0a4" />
                             <circle class="core" r="6" fill="#3fa37c" stroke="#5bc0a4" stroke-width="2" />
-                            <text x="14" y="4" fill="#eaf0ee" font-family="monospace" font-size="11" letter-spacing="1">BARICHARA</text>
+                            <text x="14" y="4" fill="#eaf0ee" font-family="monospace" font-size="11">ANDES</text>
                         </g>
 
-                        <!-- Inter-Node Conduction Lines -->
-                        <line x1="380" y1="95" x2="460" y2="68" stroke="#5bc0a4" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="4,4" />
-                        <line x1="380" y1="95" x2="230" y2="205" stroke="#5bc0a4" stroke-width="1" stroke-opacity="0.3" stroke-dasharray="4,4" />
+                        <!-- Node 4: Beems -->
+                        <g class="map-node" data-region="beems" transform="translate(190, 120)">
+                            <circle class="pulse-ring" r="16" fill="none" stroke="#5bc0a4" />
+                            <circle class="core" r="6" fill="#3fa37c" stroke="#5bc0a4" stroke-width="2" />
+                            <text x="14" y="4" fill="#eaf0ee" font-family="monospace" font-size="11">BEEMS</text>
+                        </g>
                     </svg>
                 </div>
 
-                <!-- Organon Node Tabs -->
+
+                <!-- Region Selector Tabs -->
                 <div class="organon-tabs">
                     <button class="organon-tab active" data-region="finland">Finland</button>
                     <button class="organon-tab" data-region="scotland">Scotland</button>
-                    <button class="organon-tab" data-region="barichara">Barichara</button>
+                    <button class="organon-tab" data-region="andes">Andes</button>
+                    <button class="organon-tab" data-region="beems">Beems</button>
                 </div>
 
-                <!-- Organon Panels -->
-                <div class="organon-panel active" data-region="finland">
-                    <span class="panel-watershed">Uusimaa-Kymijoki Watershed</span>
-                    <h3>Finland Organon Node</h3>
-                    <p>
-                        Our primary anchor connecting Helsinki urban peers with Kurjen tila eco-village biodynamics and Fiskars Village open-hardware fabrication. Here, peers pair local hardware conduction with ecological land stewardship to establish living coherence ledgers.
-                    </p>
-                </div>
+                <!-- Organon Content Summary Panels with Learn More Buttons -->
+                <div class="organon-panels">
+                    <div class="organon-panel active" data-region="finland">
+                        <span class="panel-watershed">Northern European Boreal Shield &bull; Kymijoki Basin</span>
+                        <h3>Finland Organon</h3>
+                        <p>The Finland Organon monitors boreal peatland hydrologic pulse, forest canopy resilience, and seasonal ice-thaw cycles. Micro-conduction arrays collect real-time soil biopotentials, binding local peatland restoration into the global coherence ledger.</p>
+                        <div class="cta-quote">
+                            "Listening to the subterranean pulse of the taiga to harmonize human health with northern water tables."
+                        </div>
+                        <div class="panel-actions">
+                            <button class="learn-more-btn" data-region="finland">
+                                Learn More <span>&rarr;</span>
+                            </button>
+                        </div>
+                    </div>
 
-                <div class="organon-panel" data-region="scotland">
-                    <span class="panel-watershed">Caledonian Watersheds</span>
-                    <h3>Scotland Organon Node</h3>
-                    <p>
-                        Weaving regional community networks and ecological renewal across autumn landscapes. This node grounds peer-to-peer conduction in local hydrology, connecting biological health directly to Highland river basins.
-                    </p>
-                </div>
+                    <div class="organon-panel" data-region="scotland">
+                        <span class="panel-watershed">Caledonian Highland Waters &bull; Tay & Spey Watersheds</span>
+                        <h3>Scotland Organon</h3>
+                        <p>Focused on peatland rewetting, ancient pinewood restoration, and riverine ecosystem telemetry. Conduction sensors track watershed acidity and salmon migration corridors, reflecting mountain-to-sea vital forces.</p>
+                        <div class="cta-quote">
+                            "Rewilding the Scottish highlands through high-density ecological telemetry and community stewardship."
+                        </div>
+                        <div class="panel-actions">
+                            <button class="learn-more-btn" data-region="scotland">
+                                Learn More <span>&rarr;</span>
+                            </button>
+                        </div>
+                    </div>
 
-                <div class="organon-panel" data-region="barichara">
-                    <span class="panel-watershed">Northern Andes Bioregion</span>
-                    <h3>Barichara Organon Node</h3>
-                    <p>
-                        Grounding the protocol alongside regenerative agroforestry, territorial watershed regeneration, and Earth Regenerator networks. We synchronize soil vitality, water retention, and human cardiac rhythm across the high forest terrace.
-                    </p>
+                    <div class="organon-panel" data-region="andes">
+                        <span class="panel-watershed">Northern Andean Cloud Forests &bull; Chicamocha Canyon</span>
+                        <h3>Andes (Barichara) Organon</h3>
+                        <p>Restoring tropical dry forest hydrology, aquifer recharge, and terraced soil biology. Sensor meshes measure microclimate humidity and subterranean aquifers across deep canyon ecosystems.</p>
+                        <div class="cta-quote">
+                            "Bridging indigenous earth-knowledges with peer-to-peer planetary sensing in high-altitude watersheds."
+                        </div>
+                        <div class="panel-actions">
+                            <button class="learn-more-btn" data-region="andes">
+                                Learn More <span>&rarr;</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="organon-panel" data-region="beems">
+                        <span class="panel-watershed">Mid-Atlantic Piedmont & Appalachian Ridge & Valley &bull; Potomac River Watershed</span>
+                        <h3>Beems Organon</h3>
+                        <p>Monitoring tidal freshwater wetland dynamics, forest canopy resilience, and riparian buffer health across the Potomac basin. Integrated conduction nodes collect real-time biopotentials from source streams to the Chesapeake estuary, binding local watershed restoration into the global coherence ledger.</p>
+                        <div class="cta-quote">
+                            "Listening to the vital pulse of the Potomac from the Blue Ridge highlands to the tidal estuary."
+                        </div>
+                        <div class="panel-actions">
+                            <button class="learn-more-btn" data-region="beems">
+                                Learn More <span>&rarr;</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-            <!-- FOOTER CTA -->
-            <div class="cta-box"> 
-                <p>
-                </p> 
-            </div> 
+            <!-- Component Footer CTA -->
+            <div class="cta-box">
+                <div class="pipeline-tag">
+                    <span>HOP: GAIA INTELLIGENCES SHAPE HEALTH</span>
+                </div>
+            </div>
         </div>
         `; 
     } 
-} 
+}
 
 customElements.define('hs-emulation-trinity', HsEmulationTrinity);

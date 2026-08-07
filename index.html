@@ -13,9 +13,19 @@
         <hs-hub-navigator id="hub"></hs-hub-navigator>
         
         <main id="lens-container">
-            <!-- New Home / Organon Component -->
+            <!-- Emulation / Organon Base -->
             <hs-emulation-trinity id="emulation" class="lens active"></hs-emulation-trinity>
+            <hs-emulation-trinity id="organon" class="lens"></hs-emulation-trinity>
 
+            <!-- Dedicated section where sub-organons render in-place -->
+            <div id="organon-detail-viewport">
+                <hs-organon-finland id="organon-finland" data-region="finland" class="sub-organon-panel"></hs-organon-finland>
+                <hs-organon-scotland id="organon-scotland" data-region="scotland" class="sub-organon-panel"></hs-organon-scotland>
+                <hs-organon-andes id="organon-andes" data-region="andes" class="sub-organon-panel"></hs-organon-andes>
+                <hs-organon-beems id="organon-beems" data-region="beems" class="sub-organon-panel"></hs-organon-beems>
+            </div>
+
+            <!-- Lenses -->
             <hs-lens-poetry id="poetry" class="lens"></hs-lens-poetry>
             <hs-lens-skeleton id="skeleton" class="lens"></hs-lens-skeleton>
             <hs-lens-roadmap id="roadmap" class="lens"></hs-lens-roadmap>

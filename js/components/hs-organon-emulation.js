@@ -29,7 +29,17 @@ class HsOrganonEmulation extends HTMLElement {
                     align-items: start;
                     width: 100%;
                 }
-                .emulation-nodes-card,
+                .emulation-nodes-card {
+                    background: rgba(14, 23, 19, 0.88);
+                    border: 1px solid rgba(91, 192, 164, 0.25);
+                    border-radius: 20px;
+                    padding: 2.2rem;
+                    backdrop-filter: blur(12px);
+                    -webkit-backdrop-filter: blur(12px);
+                    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+                    box-sizing: border-box;
+                    width: 80%;
+                }
                 .heli-clock-card {
                     background: rgba(14, 23, 19, 0.88);
                     border: 1px solid rgba(91, 192, 164, 0.25);
@@ -39,7 +49,8 @@ class HsOrganonEmulation extends HTMLElement {
                     -webkit-backdrop-filter: blur(12px);
                     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
                     box-sizing: border-box;
-                    width: 100%;
+                    width: 80%;
+                    margin-left: auto;
                 }
                 .heli-small {
                     display: grid;

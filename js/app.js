@@ -37,6 +37,19 @@ import './components/hs-cue-currency.js';
 import './components/hs-safeflow-ecs.js';
 import './components/hs-consilience-weave.js';
 
+// Sub-Organons
+import './components/organon/hs-organon-finland.js';
+import './components/organon/hs-organon-scotland.js';
+import './components/organon/hs-organon-andes.js';
+import './components/organon/hs-organon-beems.js';
+
+// Organs
+import './components/organon/organs/organon-primer.js';
+import './components/organon/organs/organon-peers.js';
+import './components/organon/organs/organon-conduction.js';
+import './components/organon/organs/organon-besearch.js';
+import './components/organon/organs/organon-resonance.js';
+
 class StateController {
     constructor() {
         this.state = {
@@ -48,27 +61,24 @@ class StateController {
         
         this.lenses = [
             'emulation', 'poetry', 'skeleton', 'playground', 'explorer', 'roadmap',
-            'hop-diagram', 'coherence-ledger', 'besearch', 'resonagents', 'library', 'ptop-storage', 'cue-currency', 
-            'safeflow-ecs', 'consilience-weave', 'beebee', 'heli', 'glossary', 'maths'
+            'organon', 'hop-diagram', 'coherence-ledger', 'besearch', 'resonagents', 
+            'library', 'ptop-storage', 'cue-currency', 'safeflow-ecs', 'consilience-weave', 
+            'beebee', 'heli', 'glossary', 'maths',
+            'organon-primer', 'organon-peers', 'organon-conduction', 'organon-besearch', 'organon-resonance'
         ];
         this.init();
     }
 
     init() {
         window.addEventListener('hashchange', () => this.handleRoute());
-        window.addEventListener('open-glossary', () => {
-            window.location.hash = '#glossary';
-        });
-        window.addEventListener('open-maths', () => {
-            window.location.hash = '#maths';
-        });
-        window.addEventListener('close', (e) => {
+        window.addEventListener('open-glossary', () => { window.location.hash = '#glossary'; });
+        window.addEventListener('open-maths', () => { window.location.hash = '#maths'; });
+        window.addEventListener('close', () => {
             if (this.state.activeLens === 'glossary' || this.state.activeLens === 'maths') {
                 window.history.back();
             }
         });
         
-        // Ensure initial hash if empty
         if (!window.location.hash) {
             window.location.hash = '#emulation';
         }
@@ -87,7 +97,7 @@ class StateController {
         if (lens === 'playground') {
             this.setPlayground(true, rest[0]);
         } else if (this.lenses.includes(lens)) {
-            this.setLens(lens, rest.join('/'));
+            this.setLens(lens, rest.join('/')); 
         } else {
             window.location.hash = '#emulation';
         }
@@ -121,24 +131,43 @@ class StateController {
     }
 
     updateUI() {
+        const activeLens = this.state.activeLens;
+        const sub = this.state.subState;
+
+        // 1. Top-Level Lens Activation
         document.querySelectorAll('.lens').forEach(el => {
-            if (el.id === this.state.activeLens) {
+            const isTargetLens = el.id === activeLens || 
+                (activeLens === 'organon' && el.id === 'emulation') || 
+                (activeLens === 'emulation' && el.id === 'organon');
+
+            if (isTargetLens) {
                 el.classList.add('active');
-                if (el.onActivate) el.onActivate(this.state.subState);
+                if (el.onActivate) el.onActivate(sub);
             } else {
                 el.classList.remove('active');
             }
         });
 
-        if (this.state.playgroundActive) {
-            document.body.classList.add('playground-open');
-        } else {
-            document.body.classList.remove('playground-open');
-        }
+        // 2. Scoped Sub-Organon Panel Activation
+        const subOrganonPanels = document.querySelectorAll('.sub-organon-panel');
+        subOrganonPanels.forEach(panel => {
+            const region = panel.getAttribute('data-region');
+            const isSubTarget = sub && (
+                panel.id === `organon-${sub}` || 
+                region === sub
+            );
 
+            if (isSubTarget) {
+                panel.classList.add('active');
+            } else {
+                panel.classList.remove('active');
+            }
+        });
+
+        // 3. Update Hub Navigator
         const hub = document.getElementById('hub');
         if (hub && hub.setActive) {
-            hub.setActive(this.state.activeLens);
+            hub.setActive(activeLens);
         }
     }
 

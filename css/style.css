@@ -40,6 +40,41 @@ body {
     width: 100%;
 }
 
+/* Container for the changing section */
+#organon-detail-viewport {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 60px);
+    z-index: 60;
+    overflow-y: auto;
+    pointer-events: none;
+    margin-top: 0;
+    border-top: none;
+}
+
+#organon-detail-viewport:has(.sub-organon-panel.active) {
+    pointer-events: auto;
+    background: var(--bg-color, #050505);
+}
+
+/* Sub-organon panels inside the viewport */
+.sub-organon-panel {
+    display: none !important;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    pointer-events: auto;
+}
+
+.sub-organon-panel.active {
+    display: block !important;
+    opacity: 1;
+    min-height: 100%;
+}
+
+
 @media (max-width: 768px) {
     body {
         overflow-y: auto;
