@@ -127,37 +127,37 @@ export class HsOrganonPeers extends HTMLElement {
                 <h2>Peers & Community</h2>
                 
                 <p class="community-intro">
-                    The Organon takes root not through abstract networks, but through genuine human trust spread across the landscape. The initial triad of peers lives across different points of the bioregion—distinct in their daily work, yet fully interwoven through shared hydrology, off-grid energy, local food cycles, and long-standing friendship.
+                    The Organon takes root not through abstract networks, but through genuine human trust spread across the landscape. The initial triad of peers lives across different points of the organon—distinct in their daily work, yet fully interwoven through shared hydrology, energy, local food cycles, and long-standing friendship.
                 </p>
 
                 <div class="peers-grid">
                     <div class="peer-card">
-                        <span class="peer-role">Peer 01 — Water</span>
-                        <h3>Watershed Steward</h3>
+                        <span class="peer-role">Peer 01 — Community</span>
+                        <h3>Community Educator</h3>
                         <p>
-                            Positioned along key river catchments and lakes. Manages the tiny conduction devices monitoring hydrological flow, water temperature, and aquatic load—keeping the network attuned to the bioregion’s fluid balance.
+                            Establishes the initial peer network across the watershed. Welcomes new participants, guides local peers on system concepts, and leads community education to onboard households and local projects into the Organon
                         </p>
                     </div>
 
                     <div class="peer-card">
-                        <span class="peer-role">Peer 02 — Energy & Mesh</span>
-                        <h3>Infrastructure Steward</h3>
+                        <span class="peer-role">Peer 02 — Science</span>
+                        <h3>Science Besearcher</h3>
                         <p>
-                            Anchors off-grid solar compute nodes and local mesh communication hardware. Ensures peer-to-peer data transport and ledger consensus remain resilient, sovereign, and active regardless of grid status.
+                            Builds out and grounds the emulations in <a href="https://bentoboxds.org">BentoBoxDS</a> for the Organon. Coordinates besearch cycles, aggregates scientific models, and synchronizes data and emulation patterns with other peers to replicate.
                         </p>
                     </div>
 
                     <div class="peer-card">
-                        <span class="peer-role">Peer 03 — Soil & Food</span>
-                        <h3>Sanctuary & Land Steward</h3>
+                        <span class="peer-role">Peer 03 — Conduction</span>
+                        <h3></h3>
                         <p>
-                            Grounded in local agriculture, soil health, and community gathering spaces. Connects living food systems, micro-climates, and physical hospitality directly into the organon's metabolic feedback loops.
+                            Builds tiny conduction applications, hardware streams, and Bluetooth that flows conduction data to peers. Contributes code and fixes directly to HOP and BentoBoxDS to keep the network aligned, secured and data flowing.
                         </p>
                     </div>
                 </div>
 
                 <div class="weave-footer">
-                    <strong>The Interwoven Triad:</strong> While each peer oversees distinct hardware and land interfaces, they operate as a single organon. Energy generated at one node powers local conduction streams; watershed data informs soil cultivation; shared meals and deep friendship keep the human protocol scientifically honest and aligned.
+                    <strong>The Interwoven Triad:</strong>While each peer manages distinct roles, they operate as a single Organon. Regular community meets will be held to share stories, onboard new peers with BentoBoxDS and the conduction applications, and review future emulation projections of the Organon. Shared work, direct feedback, and hands-on calibration keep the local protocol practical and aligned.
                 </div>
             </div>
         `;

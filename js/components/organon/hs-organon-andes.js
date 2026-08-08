@@ -166,14 +166,14 @@ export class HsOrganonAndes extends HTMLElement {
 
         <div class="organon-node-container">
             <header class="watershed-header">
-                <span class="watershed-badge">Bioregional Node — Uusimaa-Kymijoki Watershed</span>
+                <span class="watershed-badge">Peers — Conduction — Watershed</span>
                 <h2>Andes Organon</h2>
                 <p class="lead-text">
-                    An anchor linking Helsinki urban peer nodes, Kurjen tila eco-village biodynamic soil cycles, and Fiskars Village open-hardware fabrication into a unified coherence ledger.
+                    This Andes Organon brings human health and land vitality into continuous, real-time harmony. By pulsing human biopotentials and ground telemetry into a local solar-cycle orrery, the node emulates the metabolic interplay between the body, shelter microclimates, and the many watersheds. This turns raw biological and environmental signals into direct, actionable health feedback—grounding daily vitality in the living rhythms of the local landscape.
                 </p>
                 <div class="header-cta-bar">
                     <button id="jump-needs-btn" class="cta-btn-amber" type="button">
-                        <span>Mitä pitää tehdä &bull; What Needs Done</span> &darr;
+                        <span>lo que hay que hacer: What Needs Done</span> &darr;
                     </button>
                 </div>
             </header>

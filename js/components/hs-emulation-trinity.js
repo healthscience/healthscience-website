@@ -142,7 +142,7 @@ export class HsEmulationTrinity extends HTMLElement {
             .hero-section {
                 padding: 1rem 0 4rem;
                 border-bottom: 1px solid var(--border-organic);
-                margin-bottom: 3.5rem;
+                margin-bottom: 0.5rem;
             }
 
             .hero-header-grid {
@@ -151,7 +151,7 @@ export class HsEmulationTrinity extends HTMLElement {
                 margin-top: 5em;
                 gap: 2.5rem;
                 align-items: start;
-                margin-bottom: 3.5rem;
+                margin-bottom: 0.5rem;
             }
 
             .hero-intro {
@@ -538,7 +538,7 @@ export class HsEmulationTrinity extends HTMLElement {
                     <div class="organon-panel active" data-region="finland">
                         <span class="panel-watershed">Northern European Boreal Shield &bull; Kymijoki Basin</span>
                         <h3>Finland Organon</h3>
-                        <p>The Finland Organon monitors boreal peatland hydrologic pulse, forest canopy resilience, and seasonal ice-thaw cycles. Micro-conduction arrays collect real-time soil biopotentials, binding local peatland restoration into the global coherence ledger.</p>
+                        <p>This Finland Organon binds human health to the Uusimaa-Kymijoki watershed. We track Nordic cellular resilience, local food systems, and peatland hydrologic pulse. This node converts biological and environmental energy signals into a unified bioregional coherence ledger, anchoring the local cohort and ecosystem into the global health orrery.</p>
                         <div class="cta-quote">
                             "Listening to the subterranean pulse of the taiga to harmonize human health with northern water tables."
                         </div>

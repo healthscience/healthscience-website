@@ -7,7 +7,7 @@ class HsOrganonEmulation extends HTMLElement {
                 :host {
                     display: block;
                     width: 100%;
-                    margin: 4rem 0;
+                    margin: 1rem 0;
                 }
                 .bioregional-canvas {
                     position: relative;

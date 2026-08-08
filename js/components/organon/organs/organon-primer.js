@@ -115,7 +115,7 @@ export class HsOrganonPrimer extends HTMLElement {
                 <span class="section-label">Foundation Primer</span>
                 <h2>How the Organon Works</h2>
                 <p class="primer-lead">
-                    An Organon is a living bioregional feedback loop. By uniting local peers, edge hardware, and collaborative scientific inquiry, the network translates land metabolism into shared protocol health.
+                    Start by seeding peers, tiny conduction devices, besearch cycles of science and bring to be emulations cell to body to bioregion.
                 </p>
 
                 <div class="pillars-grid">
@@ -123,7 +123,7 @@ export class HsOrganonPrimer extends HTMLElement {
                         <span class="pillar-number">Pillar 01</span>
                         <h3>Peers & Community</h3>
                         <p>
-                            Local participants embedded directly in the physical watershed. Running local-first JavaScript, peers hold sovereign control of their data while coordinating state pulses peer-to-peer across the landscape.
+                            Local participants embedded directly in the physical watershed. Running <a href="https://bentoboxds.org">BentoBoxDS</a>, peers start to shape the health of the organon by finding the initial network of people and technology and providing community education.
                         </p>
                     </div>
 
@@ -145,9 +145,9 @@ export class HsOrganonPrimer extends HTMLElement {
 
                     <div class="pillar-card">
                         <span class="pillar-number">Pillar 04</span>
-                        <h3>Apps & Consilience Weave</h3>
+                        <h3>resonanacePulse & Consilience Weave</h3>
                         <p>
-                            Native web apps interfacing directly with hardware streams. Governed by a coherence ledger and a consilience weave, they fuse local readings into the emergent intelligence of the whole.
+                           Emulations, cell to body to bioregion are kept honest by solar alignment and an aggregation of science via a consilience weave, where emergent intelligences of the whole come to be.
                         </p>
                     </div>
                 </div>
