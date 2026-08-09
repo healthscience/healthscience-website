@@ -170,7 +170,7 @@ export class HsOrganonGlobal extends HTMLElement {
                 <h2>Peer-to-Peer Organons & Gaia Intelligences</h2>
                 
                 <p class="global-intro">
-                    An Organon is rooted in local soil and water, but its learning is global. By linking peer-to-peer across watersheds and continents, independent communities exchange live emulation patterns, allowing resonAgents to adapt collaboratively across the entire earth.
+                    An Organon is rooted in local soil and water, but its learning is global. By linking peer-to-peer across watersheds and continents, independent communities exchange live emulation patterns, allowing resonAgents to adapt collaboratively across the entire planet.
                 </p>
 
                 <div class="pillars-grid">
@@ -178,15 +178,15 @@ export class HsOrganonGlobal extends HTMLElement {
                         <span class="card-tag">Horizontal Exchange</span>
                         <h3>Global Peer Learning</h3>
                         <p>
-                            Organons connect directly without intermediaries. Peers across different climates share mathematical models, local besearch observations, and environmental state pulses—learning continuously from bioregional differences.
+                           Organons connect directly without intermediaries. Peers across different climates share mathematical models, local besearch observations, and environmental state pulses—learning continuously from physical differences across cells, habitats, and watersheds.
                         </p>
                     </div>
 
                     <div class="global-card">
-                        <span class="card-tag">Evolving Logic</span>
-                        <h3>resonAgents</h3>
+                        <span class="card-tag">Resonance Learning</span>
+                        <h3>resonAgents dreaming</h3>
                         <p>
-                            Decentralized, self-refining execution units that evolve peer-to-peer. As resonAgents travel between local nodes, they adapt their resonance algorithms to match physical conditions across varying soil, water, and biological states.
+                            We replace traditional machine learning with resonance learning. When system nodes enter low-overhead dream states, resonAgents run deep local emulations to refine their algorithms. The consilience weave constantly evaluates these dream outputs against real conduction signals—both locally and across the peer network—verifying model fidelity and ensuring only grounded, high-coherence patterns persist.
                         </p>
                     </div>
                 </div>
@@ -195,7 +195,7 @@ export class HsOrganonGlobal extends HTMLElement {
                     <span class="card-tag">Full Emulation</span>
                     <h3>The Emergence of Gaia Intelligences</h3>
                     <p>
-                        When local conduction nodes, besearch cycles, and global peer networks fuse through a shared consilience weave, we no longer need external approximations or reactive systems. By directly emulating the living state of climate, water, and body fluids as a single organon, weather forecasting becomes redundant—we hold the direct physical state. By maintaining continuous alignment across cell, habitat, and watershed, reactive disease management is no longer needed—health is the natural baseline of the living whole.
+                        When local conduction nodes, besearch cycles, and global peer networks fuse through a shared consilience weave, external approximations become obsolete. By holding the direct physical state of water, climate, and cellular biology across scales, we bypass traditional weather forecasting—delivering localized, high-resolution projections anchored in real conditions. As Organons mature and align continuous feedback from cell to land, reactive disease fades away, revealing systemic vitality as the natural baseline of a living world.
                     </p>
                     <div class="gaia-badge">
                         <span class="pulse-dot"></span> GAIA INTELLIGENCES ACTIVE

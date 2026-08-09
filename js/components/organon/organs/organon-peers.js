@@ -149,7 +149,7 @@ export class HsOrganonPeers extends HTMLElement {
 
                     <div class="peer-card">
                         <span class="peer-role">Peer 03 — Conduction</span>
-                        <h3></h3>
+                        <h3>Organon Architect</h3>
                         <p>
                             Builds tiny conduction applications, hardware streams, and Bluetooth that flows conduction data to peers. Contributes code and fixes directly to HOP and BentoBoxDS to keep the network aligned, secured and data flowing.
                         </p>

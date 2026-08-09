@@ -210,10 +210,36 @@ export class HsOrganonBesearch extends HTMLElement {
                             <span class="domain-chip">Nutritional Yield</span>
                         </div>
                     </div>
+                    <div class="device-card besearch-card">
+                        <span class="cycle-tag">Domain 05 — Energy & Charnge</span>
+                        <h3>Mitochondria, Microgrids & Solar Cycles</h3>
+                        <p>
+                            Observing energy dynamics across all scales of the Organon. Tracks cellular ATP production and mitochondrial charge within the human body alongside local solar generation, battery storage, forest biomass, and regional fuel cycles. Mapping these energy flows reveals how cellular vitality directly aligns with daily solar availability and local energy resilience.
+                        </p>
+                        <div class="domain-list">
+                            <span class="domain-chip">Soil Microbiome</span>
+                            <span class="domain-chip">Mineral Density</span>
+                            <span class="domain-chip">Root Hydrology</span>
+                            <span class="domain-chip">Nutritional Yield</span>
+                        </div>
+                    </div>
+                    <div class="device-card besearch-card">
+                        <span class="cycle-tag">Domain 06 — Consciousness</span>
+                        <h3>Mind, Field & Coherence</h3>
+                        <p>
+                            Explores the intersection of mind, environment, and collective perception. Tracks how intentional practices, placebo responses, shared rituals, and deep connection to living systems—like the woodland fungal networks—alter physiological coherence and local resonance. Validates how mental state, human warmth, and spirit directly shape biological and community health.
+                        </p>
+                        <div class="domain-list">
+                            <span class="domain-chip">Soil Microbiome</span>
+                            <span class="domain-chip">Mineral Density</span>
+                            <span class="domain-chip">Root Hydrology</span>
+                            <span class="domain-chip">Nutritional Yield</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="interconnection-banner">
-                    <strong>The Interconnected Whole:</strong> These domains are not studied in isolation. Water quality shapes soil mineral absorption; soil health dictates food nutritional density; food and air quality tune immune and cardiac rhythms. Besearch cycles synthesize all four domains through a shared local <em>resonancePulse</em>, kept scientifically honest by the <em>consilience weave</em>.
+                    <strong>The Interconnected Whole:</strong> These five domains function as a continuous system. Water quality shapes soil mineral absorption; soil health dictates food nutritional density; solar and environmental energy drive cellular mitochondrial output; and air quality tunes respiratory rhythms. Besearch cycles synthesize these streams through a shared local <em>resonancePulse</em>, kept scientifically honest by the <em>consilience weave</em>.
                 </div>
             </div>
         `;
