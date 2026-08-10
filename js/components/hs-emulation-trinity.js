@@ -846,7 +846,7 @@ export class HsEmulationTrinity extends HTMLElement {
                                 Learn More <span>&rarr;</span>
                             </button>
                             <button class="join-community">
-                                JOIN HOP community on Keet.io
+                                JOIN HOP community
                             </button>
                         </div>
                     </div>
@@ -863,7 +863,7 @@ export class HsEmulationTrinity extends HTMLElement {
                                 Learn More <span>&rarr;</span>
                             </button>
                             <button class="join-community">
-                                JOIN HOP community on Keet.io
+                                JOIN HOP community
                             </button>
                         </div>
                     </div>
@@ -880,7 +880,7 @@ export class HsEmulationTrinity extends HTMLElement {
                                 Learn More <span>&rarr;</span>
                             </button>
                             <button class="join-community">
-                                JOIN HOP community on Keet.io
+                                JOIN HOP community
                             </button>
                         </div>
                     </div>
