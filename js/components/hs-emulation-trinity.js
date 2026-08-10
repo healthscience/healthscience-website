@@ -27,7 +27,6 @@ export class HsEmulationTrinity extends HTMLElement {
         if (!region) return;
         this.activeOrganon = region;
 
-        // Shadow DOM summary updates only
         const tabs = this.shadowRoot.querySelectorAll('.organon-tab');
         const panels = this.shadowRoot.querySelectorAll('.organon-panel');
         const mapNodes = this.shadowRoot.querySelectorAll('.map-node');
@@ -36,7 +35,6 @@ export class HsEmulationTrinity extends HTMLElement {
         panels.forEach(p => p.classList.toggle('active', p.getAttribute('data-region') === region));
         mapNodes.forEach(n => n.classList.toggle('active', n.getAttribute('data-region') === region));
 
-        // Close any full organon detail view
         const subOrganons = document.querySelectorAll('.sub-organon-panel');
         subOrganons.forEach(el => el.classList.remove('active'));
     }
@@ -52,10 +50,107 @@ export class HsEmulationTrinity extends HTMLElement {
         });
     }
 
+    openCommunityModal() {
+        const dialog = this.shadowRoot.getElementById('community-dialog');
+        if (dialog) {
+            dialog.showModal(); // Opens directly into the browser's native top layer
+        }
+    }
+
+    closeCommunityModal() {
+        const dialog = this.shadowRoot.getElementById('community-dialog');
+        if (dialog) {
+            dialog.close();
+        }
+    }
+
+    copyKeetKey() {
+        
+        // Look inside global modal first, then shadow root
+        const modal = document.getElementById('global-community-modal') || this.shadowRoot;
+        const keyInput = modal.querySelector('#keet-key-input');
+        const btn = modal.querySelector('#copy-btn');
+
+        if (!keyInput || !btn) {
+            console.error('[HsEmulationTrinity] Missing keyInput or copyBtn element!');
+            return;
+        }
+
+        const originalText = btn.innerText;
+
+        const feedback = () => {
+            btn.innerText = 'Copied!';
+            btn.style.background = '#34d399';
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.background = '#10b981';
+            }, 2000);
+        };
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(keyInput.value)
+                .then(() => {
+                    feedback();
+                })
+                .catch(err => {
+                    console.error('[HsEmulationTrinity] Clipboard write error:', err);
+                });
+        } else {
+            keyInput.select();
+            document.execCommand('copy');
+            feedback();
+        }
+    }
+
+    closeCommunityModal() {
+        const modal = this.shadowRoot.getElementById('community-modal');
+        if (modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+    copyKeetKey() {
+        const keyInput = this.shadowRoot.getElementById('keet-key-input');
+        const btn = this.shadowRoot.getElementById('copy-btn');
+        if (!keyInput || !btn) {
+            console.error('[HsEmulationTrinity] Missing keyInput or copyBtn element!');
+            return;
+        }
+
+        const originalText = btn.innerText;
+
+        const feedback = () => {
+            btn.innerText = 'Copied!';
+            btn.style.background = '#34d399';
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.background = '#10b981';
+            }, 2000);
+        };
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(keyInput.value)
+                .then(() => {
+                    feedback();
+                })
+                .catch(err => {
+                    console.error('[HsEmulationTrinity] Clipboard write error:', err);
+                });
+        } else {
+            keyInput.select();
+            document.execCommand('copy');
+            feedback();
+        }
+    }
+
     attachEventListeners() {
         const tabs = this.shadowRoot.querySelectorAll('.organon-tab');
         const mapNodes = this.shadowRoot.querySelectorAll('.map-node');
         const learnMoreBtns = this.shadowRoot.querySelectorAll('.learn-more-btn');
+        const joinCommunityBtns = this.shadowRoot.querySelectorAll('.join-community');
+        const modalCloseBtn = this.shadowRoot.querySelector('.modal-close');
+        const modalOverlay = this.shadowRoot.getElementById('community-modal');
+        const copyBtn = this.shadowRoot.getElementById('copy-btn');
 
         tabs.forEach(tab => {
             tab.addEventListener('click', (e) => {
@@ -69,7 +164,6 @@ export class HsEmulationTrinity extends HTMLElement {
             });
         });
 
-        // "Learn More" buttons navigate to the full organon detail view
         learnMoreBtns.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 const region = e.currentTarget.getAttribute('data-region');
@@ -82,6 +176,34 @@ export class HsEmulationTrinity extends HTMLElement {
                 }
             });
         });
+
+        // Community Modal triggers
+        joinCommunityBtns.forEach((btn, index) => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation(); // Prevents top-level routing interference
+                this.openCommunityModal();
+            });
+        });
+
+        if (modalCloseBtn) {
+            modalCloseBtn.addEventListener('click', () => this.closeCommunityModal());
+        } else {
+            console.warn('[HsEmulationTrinity] .modal-close button not found');
+        }
+
+        if (modalOverlay) {
+            modalOverlay.addEventListener('click', (e) => {
+                if (e.target === modalOverlay) this.closeCommunityModal();
+            });
+        } else {
+            console.warn('[HsEmulationTrinity] #community-modal overlay not found');
+        }
+
+        if (copyBtn) {
+            copyBtn.addEventListener('click', () => this.copyKeetKey());
+        } else {
+            console.warn('[HsEmulationTrinity] #copy-btn not found');
+        }
     }
 
     render() { 
@@ -215,7 +337,7 @@ export class HsEmulationTrinity extends HTMLElement {
             }
 
             .call-to-download a {
-                display: inline-flex; /* Required for align-items and gap to function */
+                display: inline-flex;
                 align-items: center;
                 gap: 0.6rem;
                 font-family: var(--font-mono);
@@ -226,7 +348,7 @@ export class HsEmulationTrinity extends HTMLElement {
                 background: rgba(0, 0, 0, 0.45);
                 border-radius: 999px;
                 border: 1px solid rgba(227, 179, 65, 0.25);
-                text-decoration: none; /* Removes default anchor underline */
+                text-decoration: none;
                 cursor: pointer;
                 transition: all 0.25s ease;
             }
@@ -387,6 +509,7 @@ export class HsEmulationTrinity extends HTMLElement {
                 display: flex;
                 align-items: center;
                 gap: 1rem;
+                flex-wrap: wrap;
             }
 
             .learn-more-btn {
@@ -412,6 +535,184 @@ export class HsEmulationTrinity extends HTMLElement {
                 box-shadow: 0 0 20px rgba(91, 192, 164, 0.4);
                 transform: translateX(4px);
             }
+
+            .join-community {
+                font-family: var(--font-mono);
+                font-size: 0.85rem;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                background: rgba(227, 179, 65, 0.1);
+                color: var(--color-amber);
+                border: 1px solid rgba(227, 179, 65, 0.4);
+                padding: 0.75rem 1.8rem;
+                border-radius: 999px;
+                cursor: pointer;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.6rem;
+                transition: all 0.3s ease;
+            }
+
+            .join-community:hover {
+                background: var(--color-amber);
+                color: var(--bg-loam);
+                box-shadow: 0 0 20px rgba(227, 179, 65, 0.4);
+            }
+
+            /* --- COMMUNITY MODAL STYLES --- */
+            dialog::backdrop {
+                background: rgba(0, 0, 0, 0.85);
+                backdrop-filter: blur(6px);
+            }
+
+            dialog {
+                background: #111827;
+                color: #f9fafb;
+                border: 1px solid var(--border-organic);
+                border-radius: 16px;
+                padding: 24px;
+                max-width: 540px;
+                width: 90%;
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            }
+
+            .modal-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100vw;
+                height: 100vh;
+                background: rgba(0, 0, 0, 0.85);
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /* Maximize z-index and force GPU layer */
+                z-index: 2147483647; 
+                transform: translateZ(0);
+            }
+
+            .modal-content {
+                background: #111827;
+                color: #f9fafb;
+                border: 1px solid var(--border-organic);
+                border-radius: 16px;
+                padding: 24px;
+                max-width: 540px;
+                width: 90%;
+                position: relative;
+                box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            }
+
+            .modal-close {
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                background: transparent;
+                border: none;
+                color: #9ca3af;
+                font-size: 24px;
+                cursor: pointer;
+            }
+            .modal-close:hover { color: #ffffff; }
+
+            .modal-subtitle {
+                color: #9ca3af;
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+
+            .conduit-card {
+                background: #1f2937;
+                border: 1px solid #4b5563;
+                border-radius: 8px;
+                padding: 16px;
+                margin-bottom: 16px;
+            }
+            .conduit-card p {
+                font-size: 13px;
+                color: #d1d5db;
+                margin: 8px 0;
+            }
+
+            .conduit-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .badge {
+                background: #059669;
+                color: #ecfdf5;
+                font-size: 11px;
+                padding: 2px 8px;
+                border-radius: 12px;
+                font-weight: bold;
+            }
+            .badge.secondary {
+                background: #4f46e5;
+            }
+
+            .copy-box {
+                display: flex;
+                gap: 8px;
+                margin-top: 10px;
+            }
+
+            .copy-box input {
+                flex: 1;
+                background: #111827;
+                border: 1px solid #374151;
+                color: #9ca3af;
+                padding: 8px 12px;
+                border-radius: 6px;
+                font-size: 12px;
+                font-family: var(--font-mono);
+            }
+
+            .copy-box button {
+                background: #10b981;
+                color: #064e3b;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 6px;
+                font-weight: bold;
+                cursor: pointer;
+                white-space: nowrap;
+                transition: background 0.2s ease;
+            }
+            .copy-box button:hover { background: #34d399; }
+
+            .conduit-footer {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 12px;
+                font-size: 12px;
+                color: #9ca3af;
+            }
+            .conduit-footer a {
+                color: #38bdf8;
+                text-decoration: none;
+            }
+            .conduit-footer a:hover { text-decoration: underline; }
+
+            .btn-discord {
+                display: block;
+                text-align: center;
+                background: #5865f2;
+                color: #ffffff;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 6px;
+                font-weight: bold;
+                font-size: 14px;
+                margin-top: 10px;
+                transition: background 0.2s ease;
+            }
+            .btn-discord:hover { background: #4752c4; }
 
             /* --- FOOTER CTA BOX --- */
             .cta-box { 
@@ -480,7 +781,6 @@ export class HsEmulationTrinity extends HTMLElement {
                     <h2>The Organons</h2>
                 </div>
 
-
                 <!-- Bioregional Map -->
                 <div class="map-container">
                     <svg class="earth-svg" viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg">
@@ -524,7 +824,6 @@ export class HsEmulationTrinity extends HTMLElement {
                     </svg>
                 </div>
 
-
                 <!-- Region Selector Tabs -->
                 <div class="organon-tabs">
                     <button class="organon-tab active" data-region="finland">Finland</button>
@@ -546,12 +845,15 @@ export class HsEmulationTrinity extends HTMLElement {
                             <button class="learn-more-btn" data-region="finland">
                                 Learn More <span>&rarr;</span>
                             </button>
+                            <button class="join-community">
+                                JOIN HOP community on Keet.io
+                            </button>
                         </div>
                     </div>
 
                     <div class="organon-panel" data-region="scotland">
                         <span class="panel-watershed">Caledonian Highland Waters &bull; Tay & Spey Watersheds</span>
-                        <h3>Scotland Organon</h3>
+                        <h3>NE Scotland Organon</h3>
                         <p>Focused on peatland rewetting, ancient pinewood restoration, and riverine ecosystem telemetry. Conduction sensors track watershed acidity and salmon migration corridors, reflecting mountain-to-sea vital forces.</p>
                         <div class="cta-quote">
                             "Rewilding the Scottish highlands through high-density ecological telemetry and community stewardship."
@@ -560,19 +862,25 @@ export class HsEmulationTrinity extends HTMLElement {
                             <button class="learn-more-btn" data-region="scotland">
                                 Learn More <span>&rarr;</span>
                             </button>
+                            <button class="join-community">
+                                JOIN HOP community on Keet.io
+                            </button>
                         </div>
                     </div>
 
                     <div class="organon-panel" data-region="andes">
                         <span class="panel-watershed">Northern Andean Cloud Forests &bull; Chicamocha Canyon</span>
-                        <h3>Andes (Barichara) Organon</h3>
-                        <p>Restoring tropical dry forest hydrology, aquifer recharge, and terraced soil biology. Sensor meshes measure microclimate humidity and subterranean aquifers across deep canyon ecosystems.</p>
+                        <h3>Northern Andes (Barichara) Organon</h3>
+                        <p>Support work of <a href="https://medium.com/@joe_brewer/a-framework-for-large-scale-regeneration-in-the-northern-andes-9eda1d387be8">Bioregional Learning Center</a> restoring tropical dry forest hydrology, aquifer recharge, and terraced soil biology. Sensor meshes measure microclimate humidity and subterranean aquifers across deep canyon ecosystems.</p>
                         <div class="cta-quote">
                             "Bridging indigenous earth-knowledges with peer-to-peer planetary sensing in high-altitude watersheds."
                         </div>
                         <div class="panel-actions">
                             <button class="learn-more-btn" data-region="andes">
                                 Learn More <span>&rarr;</span>
+                            </button>
+                            <button class="join-community">
+                                JOIN HOP community on Keet.io
                             </button>
                         </div>
                     </div>
@@ -588,10 +896,58 @@ export class HsEmulationTrinity extends HTMLElement {
                             <button class="learn-more-btn" data-region="beems">
                                 Learn More <span>&rarr;</span>
                             </button>
+                            <button class="join-community">
+                                JOIN HOP community
+                            </button>
                         </div>
                     </div>
                 </div>
             </section>
+
+            <dialog id="community-dialog">
+                <form method="dialog">
+                    <button class="modal-close">&times;</button>
+                </form>
+                
+                <h2>Join the HOP Community</h2>
+                <p class="modal-subtitle">Connect with local peers via decentralized P2P chat or our public hub.</p>
+
+                <!-- Option 1: Keet Room Key -->
+                <div class="conduit-card">
+                    <div class="conduit-header">
+                        <strong>Keet P2P Room Key</strong>
+                        <span class="badge">Decentralized</span>
+                    </div>
+                    <p>Copy the room key below and paste it directly into your Keet desktop or mobile app:</p>
+                    
+                    <div class="copy-box">
+                        <input 
+                            type="text" 
+                            id="keet-key-input" 
+                            readonly 
+                            value="keet://chat/gfoi6w57791ijgwjfozph5utf6eghzrwjju8c8todksb1oso8e4neb6e5k79ypr3ykydds8b1t3cu15and4im4zqi3psdx6ys56cs45dioauaxmuyaiy16u9setdq38ar9fm37njd95m5n9za4r8tdwkrzpuryedjazzxxnjak6kc8ywp4f1r7t8us6swya" 
+                        />
+                        <button id="copy-btn">Copy Key</button>
+                    </div>
+
+                    <div class="conduit-footer">
+                        <span>Don't have Keet installed?</span>
+                        <a href="https://keet.io" target="_blank" rel="noopener noreferrer">Download Keet.io &rarr;</a>
+                    </div>
+                </div>
+
+                <!-- Option 2: Discord Hub -->
+                <div class="conduit-card secondary">
+                    <div class="conduit-header">
+                        <strong>Public Onboarding Hub</strong>
+                        <span class="badge secondary">Discord</span>
+                    </div>
+                    <p>For general inquiries, browser-based chat, and public onboarding:</p>
+                    <a href="https://discord.gg/EuMYA6vQ6" target="_blank" rel="noopener noreferrer" class="btn-discord">
+                        Join HOP Discord Server
+                    </a>
+                </div>
+            </dialog>
 
             <!-- Component Footer CTA -->
             <div class="cta-box">

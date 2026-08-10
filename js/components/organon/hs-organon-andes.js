@@ -167,7 +167,7 @@ export class HsOrganonAndes extends HTMLElement {
         <div class="organon-node-container">
             <header class="watershed-header">
                 <span class="watershed-badge">Peers — Conduction — Watershed</span>
-                <h2>Andes Organon</h2>
+                <h2>Northern Andes Organon</h2>
                 <p class="lead-text">
                     This Andes Organon brings human health and land vitality into continuous, real-time harmony. By pulsing human biopotentials and ground telemetry into a local solar-cycle orrery, the node emulates the metabolic interplay between the body, shelter microclimates, and the many watersheds. This turns raw biological and environmental signals into direct, actionable health feedback—grounding daily vitality in the living rhythms of the local landscape.
                 </p>

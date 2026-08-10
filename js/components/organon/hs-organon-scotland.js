@@ -167,13 +167,13 @@ export class HsOrganonscotland extends HTMLElement {
         <div class="organon-node-container">
             <header class="watershed-header">
                 <span class="watershed-badge">Peers — Conduction — Dee, Don, Esk, Tay Watersheds</span>
-                <h2>scotland Organon</h2>
+                <h2>NE Scotland Organon</h2>
                 <p class="lead-text">
                     This NE Scotland Organon brings human health and land vitality into continuous, real-time harmony. By pulsing human biopotentials and ground telemetry into a local solar-cycle orrery, the node emulates the metabolic interplay between the body, shelter microclimates, and the many watershed. This turns raw biological and environmental signals into direct, actionable health feedback—grounding daily vitality in the living rhythms of the local landscape.
                 </p>
                 <div class="header-cta-bar">
                     <button id="jump-needs-btn" class="cta-btn-amber" type="button">
-                        <span>Mitä pitää tehdä &bull; What Needs Done</span> &darr;
+                        <span>What Needs Done</span> &darr;
                     </button>
                 </div>
             </header>

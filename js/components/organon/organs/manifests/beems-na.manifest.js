@@ -12,26 +12,26 @@ export const BeemsOrganon = {
 
     // 2. PEER COHORT & LOCAL ROLES (The People)
     peerCohort: {
-        focusArea: "Nordic Winter Resilience & Autonomic Coherence",
+        focusArea: "",
         pipelineStage: "Story -> Interplay -> Emulation",
         openRoles: [
             {
-                title: "Bioregional Data Steward",
-                finnishTitle: "Vesistöalueen Ankkuri",
+                title: "Community Educator",
+                finnishTitle: "",
                 deficit: "High Need",
-                summary: "Grounding the peer cohort across the Baltic/Lake District watershed. Guiding local peers in cloud-free sensor pairing and Heli solar time synchrony."
+                summary: "Organizes hands-on local meets across villages, towns, and coastal cities. Onboards new peers to BentoBoxDS and conduction apps, facilitates story sharing, and keeps community feedback loops active"
             },
             {
-                title: "Hardware & Sensor Bridge",
-                finnishTitle: "Laitteistosillan Rakentaja",
+                title: "Science Besearcher",
+                finnishTitle: "",
                 deficit: "Active Need",
-                summary: "Embedded electronics technician to flash Movesense open firmware, calibrate 8-electrode bio-impedance scales, and verify direct BLE conduction to local gateways."
+                summary: "Defines the initial Organon emulation goals and sets the sequence for launching local besearch cycles. Tracks model fidelity across air, soil, water, energy, and biological streams."
             },
             {
-                title: "Core Seed Node Operator",
-                finnishTitle: "Siemensolmun Ylläpitäjä",
+                title: "Organon Architect",
+                finnishTitle: "",
                 deficit: "Seeding",
-                summary: "Maintaining an always-on local Hypercore/Hyperswarm peer node synchronized to local solar time, ensuring data conduction remains resilient without servers."
+                summary: "Flashes Movesense open firmware, calibrates 8-electrode bio-impedance scales, and builds pure JavaScript runtimes in BentoBoxDS to ensure direct BLE conduction from physical sensors to conduction apps."
             }
         ]
     }

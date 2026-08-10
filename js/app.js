@@ -66,11 +66,14 @@ class StateController {
             'beebee', 'heli', 'glossary', 'maths',
             'organon-primer', 'organon-peers', 'organon-conduction', 'organon-besearch', 'organon-resonance'
         ];
+
         this.init();
     }
 
     init() {
-        window.addEventListener('hashchange', () => this.handleRoute());
+        window.addEventListener('hashchange', () => {
+            this.handleRoute();
+        });
         window.addEventListener('open-glossary', () => { window.location.hash = '#glossary'; });
         window.addEventListener('open-maths', () => { window.location.hash = '#maths'; });
         window.addEventListener('close', () => {
@@ -90,6 +93,7 @@ class StateController {
         const hash = window.location.hash.slice(1) || 'emulation';
         let [lens, ...rest] = hash.split('/');
         
+
         if (lens.includes('?')) {
             lens = lens.split('?')[0];
         }
@@ -99,6 +103,7 @@ class StateController {
         } else if (this.lenses.includes(lens)) {
             this.setLens(lens, rest.join('/')); 
         } else {
+            console.warn(`[StateController] Unknown lens "${lens}", falling back to #emulation`);
             window.location.hash = '#emulation';
         }
     }
@@ -142,7 +147,9 @@ class StateController {
 
             if (isTargetLens) {
                 el.classList.add('active');
-                if (el.onActivate) el.onActivate(sub);
+                if (el.onActivate) {
+                    el.onActivate(sub);
+                }
             } else {
                 el.classList.remove('active');
             }

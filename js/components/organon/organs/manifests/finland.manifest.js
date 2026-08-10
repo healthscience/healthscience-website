@@ -40,22 +40,22 @@ export const FinlandOrganon = {
         pipelineStage: "Story -> Interplay -> Emulation",
         openRoles: [
             {
-                title: "Bioregional Data Steward",
+                title: "Community Educator",
                 finnishTitle: "Vesistöalueen Ankkuri",
                 deficit: "High Need",
-                summary: "Grounding the peer cohort across the Baltic/Lake District watershed. Guiding local peers in cloud-free sensor pairing and Heli solar time synchrony."
+                summary: "Organizes hands-on local meets across villages, towns, and coastal cities. Onboards new peers to BentoBoxDS and conduction apps, facilitates story sharing, and keeps community feedback loops active."
             },
             {
-                title: "Hardware & Sensor Bridge",
+                title: "Science Besearcher",
                 finnishTitle: "Laitteistosillan Rakentaja",
                 deficit: "Active Need",
-                summary: "Embedded electronics technician to flash Movesense open firmware, calibrate 8-electrode bio-impedance scales, and verify direct BLE conduction to local gateways."
+                summary: "Defines the initial Organon emulation goals and sets the sequence for launching local besearch cycles. Tracks model fidelity across air, soil, water, energy, and biological streams."
             },
             {
-                title: "Core Seed Node Operator",
+                title: "Organon Architect",
                 finnishTitle: "Siemensolmun Ylläpitäjä",
                 deficit: "Seeding",
-                summary: "Maintaining an always-on local Hypercore/Hyperswarm peer node synchronized to local solar time, ensuring data conduction remains resilient without servers."
+                summary: "Flashes Movesense open firmware, calibrates 8-electrode bio-impedance scales, and builds pure JavaScript runtimes in BentoBoxDS to ensure direct BLE conduction from physical sensors to conduction apps."
             }
         ]
     }
