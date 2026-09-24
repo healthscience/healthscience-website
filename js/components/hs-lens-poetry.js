@@ -701,7 +701,7 @@ class HsLensPoetry extends HTMLElement {
 
             <!-- SMALL INTELLIGENCES -->
             <section id="intelligences">
-                <h2>The Intelligences of the Small: ReasonanceLearning</h2>
+                <h2>The Intelligences of the Small: Reasonance Learning</h2>
                 <p class="serif" style="margin-bottom: 3rem;">
                     "Our approach is a decentralized biological metabolism. It is intelligences at the scale of the cell, the peer, community and the bioregional weave."
                 </p>
