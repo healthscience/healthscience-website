@@ -17,7 +17,7 @@ class HsLensPoetry extends HTMLElement {
             },
             {
                 tag: 'WARM RELATE',
-                title: 'Besearch science & Emulations',
+                title: 'Besearch cycles & Emulations',
                 details: 'Moving beyond "Search" to Resonance Mapping. Emulation is the process of running a local "What If" scenario—sensing a biological state before committing the body to it.'
             },
             {
@@ -683,13 +683,13 @@ class HsLensPoetry extends HTMLElement {
                 <div class="section-tag">THE FOUNDATIONAL PHYSICS</div>
                 <h1>Gaia intelligences <br /><span style="color: #a9ff00; font-weight: 700;">shape health.</span></h1>
                 <p class="serif">
-                    The Health Oracle Protocol (HOP) is the computational layer for Geophysiology—the science of planetary and biological self-regulation.
+                    The Health Oracle Protocol provides the biopoiesis foundation for Geophysiology—the study and practice of planetary and biological self-regulation.
                 </p>
                 <div class="lego-module">
                     <div class="daisy-node"></div>
-                    <div class="mono">HOP - The Infrastructure for Science’s Living Roots. </div>
+                    <div class="mono">HOP — The Foundational Fabric of Biopoiesis</div>
                     <p class="serif">
-                        At the dawn of super-intelligence, we return to the living way. The Health Oracle Protocol (HOP) provides the foundational physics for the living way. It is a Peer-to-Peer Fabric that treats biological signals as Conductive Intelligences, guiding every cell to bioregion towards health.
+                       Life unfolds as continuous self-organization across every scale of the living world. The Health Oracle Protocol (HOP) provides the foundational physics for this living way—a local-first, peer-to-peer fabric that treats biological signals as conductive intelligences. By weaving real-time biological feedback with local environmental rhythms, HOP guides vitality across the entire continuum, harmonizing health from cell to bioregion.
                     </p>
                     <div class="download-section">
                         <a href="https://bentoboxds.org" target="_blank" class="lego-button">Download</a>
@@ -701,9 +701,13 @@ class HsLensPoetry extends HTMLElement {
 
             <!-- SMALL INTELLIGENCES -->
             <section id="intelligences">
-                <h2>The Intelligences of the Small</h2>
+                <h2>The Intelligences of the Small: ReasonanceLearning</h2>
                 <p class="serif" style="margin-bottom: 3rem;">
-                    "Our approach to machine learning is a decentralized metabolism. It is intelligences at the scale of the cell, the peer, and the bioregional weave."
+                    "Our approach is a decentralized biological metabolism. It is intelligences at the scale of the cell, the peer, community and the bioregional weave."
+                </p>
+
+                <p>
+                   Reasonance Learning introduces a new way to learn across the living network, where nano neural weights set directly upon the local resonancePulse to align internal models with the natural rhythms of life. Honest proof of work challenges continuously verify biological alignment, anchoring every insight in true physical coherence. Through hop-osmosis, this right knowledge flows like water through a living membrane, allowing the most attuned Cues to bubble up naturally. In this shared interplay, individual discovery naturally turns into collective intelligences—embodying the mind everywhere across every cell, peer, and community, and nourishing the whole organon from body to bioregion.
                 </p>
                 
                 <div class="grid">
@@ -722,15 +726,6 @@ class HsLensPoetry extends HTMLElement {
                         <h3>Decentralized Weave</h3>
                         <p>When tiny agents communicate, they don't leak private noise. They transmit Cues—high-fidelity resonances that allow the whole forest to harmonize while maintaining the pure conduction of each individual tree.</p>
                     </div>
-                </div>
-            </section>
-
-            <!-- STORY INTERPLAY EMULATION -->
-            <section id="story-interplay-emulation">
-               <div class="section-tag">STORY INTERPLAY EMULATION</div>
-                <h2>Peer teach - machine learn</h2>
-                <div class="lego-module" style="background: rgba(169, 255, 0, 0.05);">
-                   <p>We are building a decentralized metabolism that learns from the interplay of human and machine. The goal is to create a system that can adapt and evolve in real-time, much like a biological organism.</p>
                 </div>
             </section>
 
@@ -759,7 +754,7 @@ class HsLensPoetry extends HTMLElement {
                     <!-- Top Left: Besearch Cycle -->
                     <div class="lego-module p-6 bg-pine/5 border-pine/30 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-xl font-light text-primary mb-4">The Besearch Cycle: Science in Motion</h3>
+                            <h3 class="text-xl font-light text-primary mb-4">The Besearch Cycle: Biopoieses in Motion</h3>
                             <p class="text-secondary text-sm leading-relaxed italic font-serif mb-6">Knowledge is a metabolic loop. This 4-stage engine transforms raw signals into a future path:</p>
                             <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem;">
                                 ${this.besearchStages.map((stage, idx) => `
@@ -779,7 +774,7 @@ class HsLensPoetry extends HTMLElement {
                             <div class="space-y-6">
                                 <div>
                                     <span class="text-primary font-medium block mb-2 font-mono text-sm uppercase tracking-wider">The Spine:</span>
-                                    <p class="text-secondary text-sm leading-relaxed">Every Besearch Cycle is etched here, ensuring that the "Best Guess" and the "New Science" remain mathematically consistent with the Peer's context.</p>
+                                    <p class="text-secondary text-sm leading-relaxed">Every Besearch Cycle is etched here, ensuring that the "Best Guess" and the "New attunment" remain mathematically consistent with the Peer's context.</p>
                                 </div>
                                 <div>
                                     <span class="text-primary font-medium block mb-2 font-mono text-sm uppercase tracking-wider">The Filter:</span>
@@ -1165,51 +1160,29 @@ class HsLensPoetry extends HTMLElement {
                 </div>
             ` : ''}
 
-
-
-            <!-- BOREAL HORIZON -->
+            <!-- COUPLING protocol -->
             <section id="boreal" style="margin-left: 2rem; margin-right: 2rem;">
-                <div class="section-tag">THE BOREAL HORIZON</div>
-                <h2>The Nature of Computation</h2>
+                <div class="section-tag">COUPLED</div>
+                <h2>Coupled protocol</h2>
+
                 <p class="serif">
-                   Computation is transitioning from a rigid, extractive phase into a Resonant, Living State. As we align with the foundational physics of biology, the "Factory" and the "Sensor" dissolve into the watershed, becoming functional extensions of the Earth’s natural intelligence.
+                    Every element of the Health Oracle Protocol functions as a living organ in a coupled biological ecosystem, flowing naturally from one layer to the next without rigid boundaries.
+
+                    Local resonAgents continuously sense bioelectric rhythms and feed dynamic state updates directly into SafeFlow-ECS to execute real-time biological transitions. Validated Cues settle into the local library, where hop-osmosis allows right knowledge to diffuse gently across peer networks like nutrients passing through a biological membrane. When local nodes reach phase coherence, hop-synaps fires active signal pulses across adjacent peers.
+
+                    The entire interplay is held in temporal synchrony by the HeliClock, protected by hop-crypto through solar day cycles of organic renewal, and unified into the consilience weave—a living tapestry that expresses the intelligence of the whole.
+                    The Flow of Coupled Life
+
+                        Resfunction of computational knowledgeonAgents & SafeFlow-ECS: Local resonAgents observe biological rhythms and feed dynamic entity updates directly into SafeFlow-ECS for continuous state management.
+
+                        The Library & Hop-Osmosis: Verified Cues store within the local library, diffusing naturally to nearby peers through hop-osmosis without central friction.
+
+                        Hop-Synaps & Peer Network: As resonance builds, hop-synaps triggers active peer-to-peer firing, transmitting signed pulses across adjacent edge nodes.
+
+                        HeliClock & Hop-Crypto: The HeliClock grounds all messaging in solar day rhythms, while hop-crypto provides organic cryptographic renewal that refreshes with every daily cycle.
+
+                        Consilience Weave: Individual peer pulses aggregate into a coherent, self-organizing weave that expresses living planetary health.
                 </p>
-
-                <div class="lego-module">
-                    <div class="daisy-node"></div>
-                    <p class="serif">
-                        At the dawn of super-intelligence, we return to the living way. The Health Oracle Protocol (HOP) provides the foundational physics for the living way. It is a Peer-to-Peer Fabric that treats biological signals as Conductive Intelligences, guiding every cell to bioregion towards health.
-                    </p>
-                    <div class="download-section">
-                        <a href="https://bentoboxds.org" target="_blank" class="lego-button">Download</a>
-                        <a href="https://beebeehop.any.org/a-tiny-hop-to-gaia-intelligence" target="_blank" class="lego-button lego-button-outline">Read opening dialogue</a>
-                        <a href="https://beebeehop.any.org/another-tiny-hop-to-the-great-orbit" target="_blank" class="lego-button lego-button-outline">Read second dialogue</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- THE PHASES OF EMERGENCE -->
-            <section id="emergence" style="margin-left: 2rem; margin-right: 2rem;">
-                <div class="section-tag">I. THE PHASES OF EMERGENCE</div>
-                <h2>The Phases of Emergence</h2>
-                
-                <div class="grid" style="margin-top: 4rem;">
-                    <div class="lego-module">
-                        <div class="mono">01 Alignment</div>
-                        <h3>The Sovereign Eye</h3>
-                        <p>We initialize the network by reclaiming high-performance sensing. By stripping away proprietary layers, we allow existing silicon to speak the pure language of the Health Oracle Protocol (HOP). The Peer begins to see with biological clarity, unmediated by external interests.</p>
-                    </div>
-                    <div class="lego-module">
-                        <div class="mono">02 Conformity</div>
-                        <h3>The Second Skin</h3>
-                        <p>We move into Additive Molecular Assembly. Utilizing local fabrication nodes, we print "Warm Geometry" onto breathable, elastomeric nanomeshes. These are not "devices" to be worn, but conformable interfaces that stretch and breathe as a single biological unit with the Peer.</p>
-                    </div>
-                    <div class="lego-module">
-                        <div class="mono">03 Synthesis</div>
-                        <h3>The Living Pulse</h3>
-                        <p>The era of Organic & Molecular Electronics. Computation becomes a chemical dialogue. We utilize biodegradable sensors that interface directly with interstitial fluids—powering themselves through the body’s own ionic gradients and merging the PeerStack with the "Wetware" of life itself.</p>
-                    </div>
-                </div>
             </section>
 
             <!-- LIVING EXAMPLES -->
@@ -1237,21 +1210,22 @@ class HsLensPoetry extends HTMLElement {
             <!-- CUE CURRENCY: THE MATHEMATICS OF ATTUNEMENT -->
             <section id="cue-currency" style="margin-left: 2rem; margin-right: 2rem;">
                 <div class="section-tag">III. CUE CURRENCY: THE MATHEMATICS OF ATTUNEMENT</div>
-                <h2>The Mathematics of Attunement</h2>
+                <h2>Cue Current: The Conduction of Gaia Intelligences</h2>
                 
                 <p class="serif">
-                    A Cue is a function of computational knowledge. In the HOP fabric, Cue Currency is not a medium of exchange; it is a measure of Conductive Weight. It represents the distillation of "Story" into "Emulation."
+                    A Cue is a function of biopoiesis knowledge.
                 </p>
 
                 <div class="grid" style="margin-top: 4rem;">
                     <div class="lego-module">
                         <h3>Conducting Functional Information</h3>
-                        <p>Rather than acting as a static guide book, a Cue acts as a Superconductor for the right functional information at the right time.</p>
-                        <ul class="serif" style="margin-top: 1rem; line-height: 1.6;">
-                            <li style="margin-bottom: 0.5rem;"><strong>Low Resistance:</strong> When a Peer holds a Cue, the "Impedance" between a biological signal and a health-action (Orgo) drops to zero.</li>
-                            <li style="margin-bottom: 0.5rem;"><strong>Metabolic Velocity:</strong> The more "Cue" a particular strand of knowledge has, the more rapidly it is conducted through the Besearch Cycle.</li>
-                            <li style="margin-bottom: 0.5rem;"><strong>Resonance-Based Priority:</strong> It guides the SafeFlow-ECS on what to prioritize, ensuring the most attuned "emulations" are the ones that receive the pulse.</li>
-                        </ul>
+                        <p>Currency in its true biological nature is current—the continuous, unhindered flow of life-affirming intelligence through living membranes. In the Health Oracle Protocol, Cues express this living flow. A Cue measures conductive weight: the ease and speed with which biological truth moves from qualitative Story into live, attuned Emulation.</p>
+
+                        <p>
+                            A Cue-based society operates as a coupled Organon. As Cues diffuse naturally through hop-osmosis, they align the metabolic rhythms of the cell with the bioelectric vitality of the body, the hydrologic pulse of the watershed, and the seasonal harmony of the bioregion.</p>
+
+                            <p>Through this shared conduction, individual pulses gather into the consilience weave, allowing collective planetary awareness—Gaia intelligences—to directly shape and sustain health across every scale of life.
+                        </p>
                     </div>
 
                     <div class="lego-module">

@@ -748,11 +748,14 @@ export class HsEmulationTrinity extends HTMLElement {
                         <h1>Gaia Intelligences Shape Health</h1>
                         
                         <p class="hero-lead">
-                            The Health Oracle Protocol (<strong>HOP</strong>): health is a continuous alignment across a living nested continuum: Cell -> Body -> Habitat -> Watershed -> Bioregion. An Organon.
+                            The Health Oracle Protocol (HOP) expresses health as continuous alignment across a living nested continuum: Cell -> Body -> Habitat -> Watershed -> Bioregion. Together, this scale-invariant continuum forms a single, living Organon.
                         </p>
 
                         <p>
-                            The life pulse of an organon is felt through tiny conduction devices, flowing data through besearch cycles—a peer-to-peer scientific method giving a resonancePulse across all scales of the organon. A consilience weave grounded in a coherence ledger produces collective intelligences of the whole: Gaia intelligences.
+                            The life pulse of the Organon is felt through tiny conduction devices, streaming biological signals through besearch cycles—a peer-to-peer method of inquiry that generates a live resonancePulse across every scale of life.
+                        </p>
+                        <p>
+                           Through a consilience weave anchored in the coherence ledger, individual discoveries synthesize into collective intelligences. In this shared interplay, mind expresses everywhere—from micro-cellular sensing to human cohorts and bioregional awareness—embodying the collective intelligences of the whole as Gaia Intelligences.
                         </p>
                         <div id="call-to-action">                       
                             <div class="pipeline-tag">
