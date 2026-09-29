@@ -680,7 +680,7 @@ class HsLensPoetry extends HTMLElement {
         <div class="content-wrapper">
             <!-- HERO SECTION -->
             <section id="hero">
-                <div class="section-tag">THE FOUNDATIONAL PHYSICS</div>
+                <div class="section-tag">Movement I: The living field</div>
                 <h1>Gaia intelligences <br /><span style="color: #a9ff00; font-weight: 700;">shape health.</span></h1>
                 <p class="serif">
                     The Health Oracle Protocol provides the biopoiesis foundation for Geophysiology—the study and practice of planetary and biological self-regulation.
@@ -695,6 +695,7 @@ class HsLensPoetry extends HTMLElement {
                         <a href="https://bentoboxds.org" target="_blank" class="lego-button">Download</a>
                         <a href="https://beebeehop.any.org/a-tiny-hop-to-gaia-intelligence" target="_blank" class="lego-button lego-button-outline">Read opening dialogue</a>
                         <a href="https://beebeehop.any.org/another-tiny-hop-to-the-great-orbit" target="_blank" class="lego-button lego-button-outline">Read second dialogue</a>
+                        <a href="https://beebeehop.any.org/dialogue-3" target="_blank" class="lego-button lego-button-outline">Read third dialogue</a>
                     </div>
                 </div>
             </section>
@@ -729,26 +730,446 @@ class HsLensPoetry extends HTMLElement {
                 </div>
             </section>
 
-            <!-- CUES & BESEARCH -->
-            <section id="cues">
-                <div class="section-tag">THE METABOLIC LOGIC</div>
-                <h2>Cues & Besearch</h2>
-                <div class="lego-module" style="background: rgba(169, 255, 0, 0.05);">
-                    <p>The Conductive Synthesis</p>
-                    
-                    <p>The Cue: High-Fidelity Density</p>
-
-                    <p>A Cue draws on the spirit of Shannon-Entropy to act as a highly optimized, signed packet of insight. By moving toward the mathematical elegance suggested by Levin Complexity, the Besearch metabolism seeks the most efficient, "low-friction" path to health. It isn’t just data; it is the distilled essence of a biological signal, shaped for perfect conduction.</p>
-
-                    <p>The Besearch Cycle: Informed by Active Inference</p>
-
-                    <p>The Besearch Cycle resonates with the principles of Active Inference, building upon the foundational idea of minimizing variational free energy. In the HOP context, this becomes a metabolic process: using tiny agents to help a Peer maintain biological coherence by constantly tuning their internal model to the rhythms of the environment.</p>
+            <!--  story  interplay  emulation -->
+            <section id="story-interplay-emulation">
+                <div class="section-tag">Movement II: Practicing Biopoiesis</div>
+                <div id="call-to-action">                       
+                    <div class="pipeline-tag">
+                        <span>STORY</span> &rarr; <span>INTERPLAY</span> &rarr; <span><strong>EMULATION</strong></span>
+                    </div>
+                    <div class="call-to-download">
+                        <a href="https://bentoboxds.org">DOWNLOAD BENTOBOXDS</a>
+                    </div>
                 </div>
+            </section>
+
+            <!-- CUE CURRENCY: THE MATHEMATICS OF ATTUNEMENT -->
+            <section id="cue-currency" style="margin-left: 2rem; margin-right: 2rem;">
+                <div class="section-tag">EMULATION</div>
+                <h2>Cues & exoCuces</h2>
                 
-                <!-- simplified version of the diagram -->
-                <h3 id="diagram" style="margin-top: 4rem; scroll-margin-top: 100px;">The Anatomy of the HOP Fabric</h3>
+                <p class="serif">
+                    A Cue is a function of biopoiesis knowledge.
+                </p>
+
+                <div class="grid" style="margin-top: 4rem;">
+                    <div class="lego-module">
+                        <h3>The Peer Experience On The Fly</h3>
+                        <p>
+                            Cues currents direct the living peer experience generated on the fly. It is the moment where biology, environment, and intention assemble in real time, moving beyond thought into physical expression.
+                        </p>
+
+                        <p>
+                            At the core of every live emulation are exoCues—the ambient signals radiating continuously from the surrounding world. Shifting solar light angles, morning temperature drops, atmospheric humidity, and local soil rhythms are the primary workhorses of attunement.
+                        </p>
+
+                        <p>
+                            As exoCues wash over the physical body (orgo), they interact directly with the liquid-crystal cellular matrix (gelle) that fills every living cell. The gelle receives these ambient signals and immediately translates them into biological movement.
+                        </p>
+                    </div>
+
+                    <div class="lego-module">
+                        <h3>exoCues</h3>
+                        <p>
+                            Through this continuous contact, exoCues shape the peer experience on the fly:
+                        </p>
+                        <ul class="serif" style="margin-top: 1rem; line-height: 1.6;">
+                            <li style="margin-bottom: 0.5rem;">Assembling real-time interfaces and breathing routines matched to your immediate biological state.</li>
+                            <li style="margin-bottom: 0.5rem;">Aligning metabolic rhythms with the exact solar position of the local bioregion.</li>
+                            <li style="margin-bottom: 0.5rem;">Tuning cellular bioelectricity so health manifests instantly as a living, emulated reality.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <!-- Interplay  Besearch cycles -->
+            <section id="besearch">
+                <div class="section-tag">INTERPLAY</div>
+                <h2>Attunement & Besearch Cycles</h2>
+
+                <div class="lego-module" style="background: rgba(169, 255, 0, 0.05);">
+
+                    <p>The Poetic Weaver</p>
+
+                    <p>Attunement is not a static health metric or a fixed state to achieve—it is the continuous practice of staying in phase with life. It is the bioelectric resonance that occurs when internal cellular rhythms play in harmony with the surrounding bioregion.
+
+                    If Emulation is the live realization in the flesh, Interplay is the collaborative workshop where that realization is woven. It is where personal feeling meets biological rhythm, solar day cycles, and the shared wisdom of nearby peers.</p>
+                </div>
+                      
+                <div class="lego-module" style="background: rgba(169, 255, 0, 0.05);">
+
+                    <p>Besearch cycles: Living Inquiry</p>
+
+                    <p>Traditional research looks backward at static averages across distant populations. Besearch is living inquiry performed in the first person—a continuous, peer-led practice of listening to one's own body in real time.
+
+                    In biological terms, besearch is the process of dissolving friction between our internal state and external reality. By constantly tuning our living models to ambient environmental cues, we keep biological dissonance at zero, allowing energy to flow unhindered through living tissue.</p>
+                </div>
+
+
+                                      
+                <div class="lego-module" style="background: rgba(169, 255, 0, 0.05);">
+
+                    <p>The Four Stages of the Besearch Cycle</p>
                 
-                <!-- 4-Section Grid -->
+
+                    <p>Besearch is first-person inquiry—a continuous practice of listening to life from the inside out. Through four natural movements, the Besearch Cycle guides Interplay from initial feeling to full bioelectric harmony:</p>
+
+                    <p>Context — Listening to the Lived Moment
+
+                    It begins by gathering the life-strap narrative alongside live physical signals read through conduction instruments. Here, qualitative feeling and biological presence join together to reveal exactly where the body stands in this hour.
+                    </p>
+
+                    <p>Research — Surveying Inherited Wisdom
+
+                    Looking across existing reference points and old-world insights, treating traditional knowledge not as rigid rules, but as helpful starting compasses to orient the journey.
+                    </p>
+
+                    <p>Search — Exploring Living Models
+
+                    Opening the playground to test possibilities. Here, different biological rhythms, solar light patterns, and resonance weights are explored to discover which combinations generate the highest vitality.
+                    </p>
+
+                    <p>Emulation — Realizing Attunement
+
+                    The search settles into lived reality. Intent and selected models integrate directly into daily movement, where attunement is emulated as live, breathing biological truth.
+                    </p>
+                </div>
+
+                <!-- Bottom Full-Width Diagram -->
+                <div class="mt-12">
+                    <div class="anatomy-container bento-node w-full min-h-[400px] flex flex-col">
+                        <svg viewBox="0 0 900 600" class="fabric-svg flex-1" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feGaussianBlur stdDeviation="4" result="blur" />
+                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                                </filter>
+                                
+                                <pattern id="weavePattern" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
+                                    <path d="M0 7h15M7 0v15" stroke="rgba(74, 222, 128, 0.15)" stroke-width="0.5"/>
+                                </pattern>
+                            </defs>
+
+                            <g class="spine-group">
+                                <line x1="450" y1="50" x2="450" y2="520" class="spine-line" filter="url(#glow)" />
+                                <circle cx="450" cy="120" r="6" class="proof-node" />
+                                <circle cx="450" cy="240" r="6" class="proof-node" />
+                                <circle cx="450" cy="360" r="6" class="proof-node" />
+                                <text x="465" y="80" class="label-sub">Digital Immune System</text>
+                            </g>
+
+                            <g class="heart-core">
+                                <rect x="350" y="140" width="200" height="200" rx="100" fill="url(#weavePattern)" stroke="rgba(169, 255, 0, 0.3)" />
+                                <g transform="translate(450, 240) scale(0.7)">
+                                    <ellipse cx="0" cy="0" rx="40" ry="80" stroke="#a9ff00" stroke-width="3" fill="none" opacity="0.6" />
+                                    <circle cx="0" cy="-30" r="45" stroke="#a9ff00" stroke-width="2" fill="none" opacity="0.4" />
+                                </g>
+                                <text x="450" y="360" class="label-main">SafeFlow-ECS</text>
+                            </g>
+
+                            <g class="besearch-group" transform="translate(450, 480)">
+                                <g transform="translate(-180, 0)">
+                                    <circle r="12" class="besearch-icon stage-1" />
+                                    <text y="30" class="icon-label">1. Context</text>
+                                </g>
+                                <g transform="translate(-60, 0)">
+                                    <circle r="12" class="besearch-icon stage-2" />
+                                    <text y="30" class="icon-label">2. Research</text>
+                                </g>
+                                <g transform="translate(60, 0)">
+                                    <circle r="12" class="besearch-icon stage-3" />
+                                    <text y="30" class="icon-label">3. Search</text>
+                                </g>
+                                <g transform="translate(180, 0)">
+                                    <circle r="12" class="besearch-icon stage-4" />
+                                    <text y="30" class="icon-label">4. Emulation</text>
+                                </g>
+                                <path d="M-180 -20 Q0 -80 180 -20" fill="none" stroke="rgba(169, 255, 0, 0.2)" stroke-dasharray="5,5" />
+                            </g>
+
+                            <path d="M100 240 Q250 240 350 240" class="filament-path pulse-left" />
+                            <text x="100" y="220" class="label-sub">Sensing Skin (BentoBox/Bio)</text>
+                            
+                            <path d="M550 240 Q700 240 800 240" class="filament-path pulse-right" />
+                            <text x="800" y="220" class="label-sub" text-anchor="end">Living Mind (BeeBee/ResonAgents)</text>
+                        </svg>
+
+                        <div class="diagram-footer mt-4 text-center">
+                            <button class="btn-playground group inline-flex items-center gap-3 px-6 py-3 border border-neon/50 bg-neon/5 hover:bg-neon/10 transition-all rounded-full" onclick="this.getRootNode().host.toggleTechnicalMap()">
+                                <span class="daisy-world"></span>
+                                <span class="text-neon font-mono text-xs tracking-widest uppercase">Explore Technical Map</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </section>
+
+            <!-- the lifestrap story -->
+            <section id="story">
+                <div class="section-tag">STORY</div>
+                <h2>Lifestrap stories & conduction</2>
+
+                <p class="serif" style="margin-bottom: 3rem;">
+                    The Spark of Origin
+                </p>
+                
+                <p>
+                    Story is the zero-draft of health—the quiet origin where all attunement begins. Before models are explored or emulations generated on the fly, health takes root in human witness: the subjective feeling of being alive, anchored by the physical touch of the world.
+                </p>
+                <p>
+                    Story bridges the qualitative presence of lived experience with the precise biological readings of the earth.    
+                </p>
+
+                 <!-- 2-Section Grid -->
+                <div class="grid-1-2 mb-20 items-stretch">
+                    
+                    <!-- Top Left: Story -->
+                    <div class="lego-module p-6 bg-pine/5 border-pine/30 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-light text-primary mb-4">The Human Story</h3>
+                            <p class="text-secondary text-sm leading-relaxed italic font-serif mb-6">
+                                Health begins in the first person. The lifestrap narrative gives voice to qualitative context—a morning reflection, an intuitive feeling of fatigue or vitality, or a conversational prompt with beebee. It records how life actually feels from the inside out, framing the initial intent and setting the qualitative Cues for the day ahead.
+                            </p>
+
+                            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem;">
+
+  
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Top Right: Conduction -->
+                    <div class="lego-module p-6 bg-pine/5 border-pine/30 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xs font-mono text-neon uppercase tracking-[0.2em] mb-6">
+                                The Living Touch
+                            </h3>
+                            <div class="space-y-6">
+                                <div>
+                                    <p class="text-secondary text-sm leading-relaxed">
+                                        Tiny, unobtrusive devices that touch and feel the surrounding world alongside living tissue. Light-and-skin sensors, thermal monitors, and micro-conduction nodes capture real-time physical signals—morning light angles, room temperature, and bioelectric skin feedback—anchoring human narrative directly into local biological context.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3>The Unbroken Narrative</h3>
+
+                    <p>
+                        When qualitative storytelling combines with physical conduction, the initial context of the Besearch Cycle becomes complete. Narrative and biological fact no longer live in separate silos; together, they form a single, unbroken current that feeds directly into Interplay.
+                    </p>
+                <div>
+
+            </section>
+            
+            <section id="repository-code">
+                <!-- Repository of Truth Section -->
+                <hs-repository-truth></hs-repository-truth>
+            </section>
+
+
+            <!-- PROTOCOL SECTION -->
+            <section id="protocol" class="p-4 md:p-12 relative z-10">
+                <div class="section-tag">PROTOCOL</div>
+                
+                <h2>Coupling: Biology All the Way Up and All the Way Down</h2>
+                
+                <p>
+                    Life never exists in isolation. A cell does not function apart from its fluid matrix; an organ cannot pulse without the bloodstream; a peer cannot draw breath outside the watershed. Life is an unbroken continuum of coupling—scale-invariant alignment flowing seamlessly from mitochondrial bioelectricity all the way up to bioregional climate.
+                </p>
+
+                <p>
+                    The Health Oracle Protocol is our best effort to build this exact physics: biology all the way up and all the way down. HOP does not assemble software as static layers or disconnected tools. Instead, it implements a conductive skeleton where every module acts as a biological organ, coupling instantly to the layer above and below it.
+                </p>
+
+                <div>
+
+                    <div class="col-span-12 md:col-span-4">
+                        <div class="lego-module h-full flex flex-col justify-between border border-pine/30 bg-module relative overflow-hidden" style="margin: 0;">
+                            <div class="relative z-10">
+                                <h2 class="text-2xl font-light text-primary mb-6" style="margin: 0;">The Four Coupling Scales of HOP</h2>
+                                <p>
+                                    Here is how the protocol skeleton binds the Organon into a single living whole:
+                                </p>
+                                <div class="grid grid-cols-1 gap-8">
+                                    <div class="space-y-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-neon font-mono text-xs">01</span>
+                                            <h4 class="text-primary font-medium uppercase tracking-wider" style="margin: 0;">Micro Coupling — The Coupling of Biological Phase </h4>
+                                        </div>
+                                        <p class="text-sm text-secondary/70 leading-relaxed pl-6 border-l border-pine/20">
+                                            SafeFlow-ECS acts as the cognitive glue, gathering narrative context, solar light angles, and ambient exoCues into a single, unified alignment. The instant these coupled currents lock into phase, it pulses that living moment directly into the local Coherence Ledger as an uncorrupted record of health.
+                                        </p>
+                                    </div>
+
+                                    <div class="space-y-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-neon font-mono text-xs">02</span>
+                                            <h4 class="text-primary font-medium uppercase tracking-wider" style="margin: 0;">Temporal Coupling — Geometric Solar Rhythms</h4>
+                                        </div>
+                                        <p class="text-sm text-secondary/70 leading-relaxed pl-6 border-l border-pine/20">
+                                            Time in HOP is not an arbitrary server timestamp; it is biological phase entrainment. The HeliClock couples computational execution directly to the geometry of the solar day. Using directional statistics and phase angles, the HeliClock grounds every node in chronobiological sync, ensuring that search and emulation occur in harmony with local planetary light.
+                                        </p>
+                                    </div>
+
+                                    <div class="space-y-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-neon font-mono text-xs">03</span>
+                                            <h4 class="text-primary font-medium uppercase tracking-wider" style="margin: 0;">Peer Coupling — Membrane Transport & Synaptic Firing</h4>
+                                        </div>
+                                        <p class="text-sm text-secondary/70 leading-relaxed pl-6 border-l border-pine/20">
+                                            Local spaces do not send heavy payloads to cloud databases; they breathe across local membranes. Through hop-osmosis, verified Cues diffuse gently across neighboring peer nodes like nutrients passing through cell walls. When adjacent nodes achieve phase alignment, hop-synaps triggers direct peer-to-peer firing—transmitting signed pulses instantly across the local mesh.
+                                        </p>
+                                    </div>
+
+                                    <div class="space-y-1">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-neon font-mono text-xs">04</span>
+                                            <h4 class="text-primary font-medium uppercase tracking-wider" style="margin: 0;">Macro Coupling — The Coherence Weave</h4>
+                                        </div>
+                                        <p class="text-sm text-secondary/70 leading-relaxed pl-6 border-l border-pine/20">
+                                            At the watershed and planetary scale, individual pulses unite without losing local sovereignty. The Coherence Ledger acts as an uncorrupted digital immune system, verifying that each update maintains biological consistency. The Consilience Weave then aggregates these pulses using algorithmic sorting, allowing local discoveries to cascade into collective planetary awareness—Gaia Intelligences.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-8 pt-4 border-t border-pine/20 relative z-10">
+                                <span class="text-xs font-mono text-primary uppercase tracking-widest flex items-center gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-neon animate-pulse"></span>
+                                    Active Alignment
+                                </span>
+                            </div>
+                            
+                            <div class="mt-8 pt-4 border-t border-pine/20 relative z-10 overflow-x-auto">
+                                <table class="w-full text-left border-collapse">
+                                    <thead>
+                                        <tr class="border-b border-white/10">
+                                            <th class="py-3 text-[10px] font-mono text-secondary uppercase tracking-widest">HOP Term</th>
+                                            <th class="py-3 text-[10px] font-mono text-neon uppercase tracking-widest">Explaination</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-[11px] font-mono">
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Gaia Intelligences</td>
+                                            <td class="py-2 text-secondary/70 italic">The living wisdom of nature and Earth</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Biopoiesis</td>
+                                            <td class="py-2 text-secondary/70 italic">Life continuously renewing and creating life</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">resonance learning</td>
+                                            <td class="py-2 text-secondary/70 italic">Tuning into natural patterns around us</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">HeliClock</td>
+                                            <td class="py-2 text-secondary/70 italic">Living by the movement of the sun</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Emulation</td>
+                                            <td class="py-2 text-secondary/70 italic">Living out health choices in the physical flesh</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Cue</td>
+                                            <td class="py-2 text-secondary/70 italic">Signals and touchpoints from our surroundings</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">exoCue</td>
+                                            <td class="py-2 text-secondary/70 italic">Tiny resonAgents coupled into peer experiences on the fly.</td>
+                                        </tr>                                        
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">SafeFlow-ECS</td>
+                                            <td class="py-2 text-secondary/70 italic">Coupling of biological phase—keeping body and world in step</td>
+                                        </tr>                                               
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">resonancePulse</td>
+                                            <td class="py-2 text-secondary/70 italic">Finding shared rhythm with the solar day</td>
+                                        </tr>
+                                        <tr class="hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Von Mises</td>
+                                            <td class="py-2 text-secondary/70 italic">Directional Statistics</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Coherence ledger</td>
+                                            <td class="py-2 text-secondary/70 italic">An uncorrupted, living record of vitality</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Consilience Weave</td>
+                                            <td class="py-2 text-secondary/70 italic">he collective web of shared peer wisdom</td>
+                                        </tr>                                        
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Besearch Cycle</td>
+                                            <td class="py-2 text-secondary/70 italic">Learning through first-hand living</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Lifestrap story</td>
+                                            <td class="py-2 text-secondary/70 italic">Health begins in the first person.</td>
+                                        </tr>                                        
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Conduction instrument</td>
+                                            <td class="py-2 text-secondary/70 italic">Tiny devices that touch an organon</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4"></td>
+                                            <td class="py-2 text-secondary/70 italic"></td>
+                                        </tr>                                        
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">hop-osmosis</td>
+                                            <td class="py-2 text-secondary/70 italic">Knowledge passing naturally like nutrients through a leaf</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">Organon</td>
+                                            <td class="py-2 text-secondary/70 italic"> expresses health as continuous alignment across a living nested continuum: Cell -> Body -> Habitat -> Watershed -> Bioregion</td>
+                                        </tr>
+                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
+                                            <td class="py-2 text-primary pr-4">resonAgent</td>
+                                            <td class="py-2 text-secondary/70 italic">Tiny autonomous brains</td>
+                                        </tr>     
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STRATEGIC PLUGINS SECTION -->
+            <hs-hop-diagram id="diagram"></hs-hop-diagram>
+
+            <!-- ROADMAP OVERLAY -->
+            ${this.showRoadmap ? `
+                <div class="overlay-fixed">
+                    <button class="btn-close" onclick="this.getRootNode().host.toggleRoadmap()">CLOSE [ESC]</button>
+                    <div class="max-w-4xl mx-auto">
+                        <h2 class="text-neon font-mono text-xl tracking-widest uppercase mb-12">Protocol Roadmap</h2>
+                        <div class="space-y-12">
+                            <div class="border-l-2 border-neon pl-8">
+                                <h3 class="text-primary uppercase tracking-wider">Phase 01: The Silent Orrery</h3>
+                                <p class="text-secondary italic">Establish the high-resolution architecture and core physics.</p>
+                            </div>
+                            <div class="border-l-2 border-pine/30 pl-8">
+                                <h3 class="text-primary/50 uppercase tracking-wider">Phase 02: Resonant Participation</h3>
+                                <p class="text-secondary/50 italic">Deployment of ResonAgents and decentralized P2P weave.</p>
+                            </div>
+                            <div class="border-l-2 border-pine/30 pl-8">
+                                <h3 class="text-primary/50 uppercase tracking-wider">Phase 03: The Bioregional Weave</h3>
+                                <p class="text-secondary/50 italic">Collective health navigation and planetary self-regulation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ` : ''}            
+
+            <section>
+            <!-- 4-Section Grid -->
                 <div class="grid-1-2 mb-20 items-stretch">
                     
                     <!-- Top Left: Besearch Cycle -->
@@ -877,317 +1298,12 @@ class HsLensPoetry extends HTMLElement {
                     </div>
 
                 </div>
-
-                <!-- Bottom Full-Width Diagram -->
-                <div class="mt-12">
-                    <div class="anatomy-container bento-node w-full min-h-[400px] flex flex-col">
-                        <svg viewBox="0 0 900 600" class="fabric-svg flex-1" xmlns="http://www.w3.org/2000/svg">
-                            <defs>
-                                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                                    <feGaussianBlur stdDeviation="4" result="blur" />
-                                    <feComposite in="SourceGraphic" in2="blur" operator="over" />
-                                </filter>
-                                
-                                <pattern id="weavePattern" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse">
-                                    <path d="M0 7h15M7 0v15" stroke="rgba(74, 222, 128, 0.15)" stroke-width="0.5"/>
-                                </pattern>
-                            </defs>
-
-                            <g class="spine-group">
-                                <line x1="450" y1="50" x2="450" y2="520" class="spine-line" filter="url(#glow)" />
-                                <circle cx="450" cy="120" r="6" class="proof-node" />
-                                <circle cx="450" cy="240" r="6" class="proof-node" />
-                                <circle cx="450" cy="360" r="6" class="proof-node" />
-                                <text x="465" y="80" class="label-sub">Digital Immune System</text>
-                            </g>
-
-                            <g class="heart-core">
-                                <rect x="350" y="140" width="200" height="200" rx="100" fill="url(#weavePattern)" stroke="rgba(169, 255, 0, 0.3)" />
-                                <g transform="translate(450, 240) scale(0.7)">
-                                    <ellipse cx="0" cy="0" rx="40" ry="80" stroke="#a9ff00" stroke-width="3" fill="none" opacity="0.6" />
-                                    <circle cx="0" cy="-30" r="45" stroke="#a9ff00" stroke-width="2" fill="none" opacity="0.4" />
-                                </g>
-                                <text x="450" y="360" class="label-main">SafeFlow-ECS</text>
-                            </g>
-
-                            <g class="besearch-group" transform="translate(450, 480)">
-                                <g transform="translate(-180, 0)">
-                                    <circle r="12" class="besearch-icon stage-1" />
-                                    <text y="30" class="icon-label">1. Context</text>
-                                </g>
-                                <g transform="translate(-60, 0)">
-                                    <circle r="12" class="besearch-icon stage-2" />
-                                    <text y="30" class="icon-label">2. Research</text>
-                                </g>
-                                <g transform="translate(60, 0)">
-                                    <circle r="12" class="besearch-icon stage-3" />
-                                    <text y="30" class="icon-label">3. Search</text>
-                                </g>
-                                <g transform="translate(180, 0)">
-                                    <circle r="12" class="besearch-icon stage-4" />
-                                    <text y="30" class="icon-label">4. Emulation</text>
-                                </g>
-                                <path d="M-180 -20 Q0 -80 180 -20" fill="none" stroke="rgba(169, 255, 0, 0.2)" stroke-dasharray="5,5" />
-                            </g>
-
-                            <path d="M100 240 Q250 240 350 240" class="filament-path pulse-left" />
-                            <text x="100" y="220" class="label-sub">Sensing Skin (BentoBox/Bio)</text>
-                            
-                            <path d="M550 240 Q700 240 800 240" class="filament-path pulse-right" />
-                            <text x="800" y="220" class="label-sub" text-anchor="end">Living Mind (BeeBee/ResonAgents)</text>
-                        </svg>
-
-                        <div class="diagram-footer mt-4 text-center">
-                            <button class="btn-playground group inline-flex items-center gap-3 px-6 py-3 border border-neon/50 bg-neon/5 hover:bg-neon/10 transition-all rounded-full" onclick="this.getRootNode().host.toggleTechnicalMap()">
-                                <span class="daisy-world"></span>
-                                <span class="text-neon font-mono text-xs tracking-widest uppercase">Explore Technical Map</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Repository of Truth Section -->
-                <hs-repository-truth></hs-repository-truth>
             </section>
 
-            <!-- new -->
-
-                </div>
-            </section>
-
-            <!-- ARCHITECTURE SECTION -->
-            <section id="protocol" class="p-4 md:p-12 relative z-10">
-                <div class="hop-grid w-full max-w-7xl mx-auto">
-                    <div class="lego-module col-span-12 md:col-span-8 bg-gradient-to-b from-pine/5 to-transparent" style="margin: 0;">
-                        <div class="flex items-center gap-4 mb-8">
-                            <div class="h-px flex-1 bg-pine/30"></div>
-                            <h3 class="text-neon font-mono text-sm tracking-widest uppercase" style="margin: 0;">HEALTH ORACLE PROTOCOL - PeerStack</h3>
-                            <div class="h-px flex-1 bg-pine/30"></div>
-                        </div>
-
-                        <!-- bridge gaia to physics -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-                            <div class="space-y-4">
-                                <h4 class="text-xs font-mono text-neon uppercase tracking-[0.2em]">I. Gaia as Systems Physics</h4>
-                                <p class="text-secondary leading-relaxed font-serif italic">
-                                    "In the Boreal, Gaia Intelligence is not a metaphor. It is the mathematical recognition of nested, self-regulating systems—from the mitochondrial pulse to the bioregional weave. The Health Oracle Protocol provides a computational interface for these feedbacks, moving science from 'Reductionist Observation' to 'Resonant Participation.'"
-                                </p>
-                            </div>
-                            <div class="space-y-4">
-                                <h4 class="text-xs font-mono text-neon uppercase tracking-[0.2em]">II. The "Gaming Engine for Life" (BentoBoxDS)</h4>
-                                <p class="text-secondary leading-relaxed">
-                                    "BentoBoxDS is the local-first execution environment. It treats each peers biology not as a static record, but as a dynamic state-machine. Using SafeFlow-ECS, we apply the same high-performance logic used in world-class simulation engines to the navigation of human health."
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="mb-12">
-                            <p class="text-secondary/80 text-lg mb-8 font-light italic">
-                                <span onclick="this.getRootNode().host.toggleRoadmap()" class="text-neon cursor-pointer hover:underline font-mono text-sm uppercase tracking-widest mr-2">PROTOCOL road map.</span>
-                                The protocol modules & mathematics that empower the navigation.
-                            </p>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            ${this.protocolItems.map((item, index) => `
-                                <div 
-                                    onclick="this.getRootNode().host.selectBentoIndex(${index})"
-                                    class="p-5 border rounded-lg transition-all cursor-pointer group ${this.selectedBentoIndex === index ? 'border-neon bg-pine/10' : 'border-pine/20 hover:border-neon/50 hover:bg-pine/10'}"
-                                >
-                                    <div class="text-xs font-mono text-pine group-hover:text-neon mb-2">${item.tag}</div>
-                                    <div class="text-lg text-primary font-medium">${item.title}</div>
-                                </div>
-                            `).join('')}
-                        </div>
-
-                        <!-- Bento Detail Reveal -->
-                        ${this.selectedBentoIndex !== null ? `
-                            <div class="mt-8 p-6 border border-neon/30 rounded-xl bg-pine/5 backdrop-blur-sm transition-fade">
-                                <div class="flex items-center gap-3 mb-4">
-                                    <div class="w-1 h-6 bg-neon"></div>
-                                    <h4 class="text-xl text-primary font-medium" style="margin: 0;">${this.protocolItems[this.selectedBentoIndex].title}</h4>
-                                </div>
-
-                                ${this.protocolItems[this.selectedBentoIndex].tag === 'PROTOCOL' ? `
-                                    <div class="space-y-6">
-                                        ${this.allBentoDetails.map((item) => `
-                                            <div class="border-l border-neon/20 pl-4">
-                                                <div class="text-sm font-bold text-primary/80 mb-1">${item.title}</div>
-                                                <p class="text-secondary leading-relaxed text-sm">
-                                                    ${item.details}
-                                                </p>
-                                            </div>
-                                        `).join('')}
-                                        <div class="mt-6 pt-6 border-t border-neon/10">
-                                            <p class="text-secondary leading-relaxed italic mb-4">
-                                                ${this.protocolItems[this.selectedBentoIndex].details}
-                                            </p>
-                                            <button onclick="this.getRootNode().host.openDocs()" class="px-4 py-2 border border-neon/30 text-neon text-[10px] font-mono uppercase tracking-widest hover:bg-neon/10 transition-all rounded">
-                                                Open Documentation
-                                            </button>
-                                        </div>
-                                    </div>
-                                ` : `
-                                    <div>
-                                        <p class="text-secondary leading-relaxed">
-                                            ${this.protocolItems[this.selectedBentoIndex].details}
-                                        </p>
-                                    </div>
-                                `}
-                            </div>
-                        ` : ''}
-                    </div>
-                    <div class="col-span-12 md:col-span-4">
-                        <div class="lego-module h-full flex flex-col justify-between border border-pine/30 bg-module relative overflow-hidden" style="margin: 0;">
-                            <div class="relative z-10">
-                                <div class="text-xs font-mono text-secondary/70 mb-4 tracking-widest uppercase">HOP</div>
-                                <h2 class="text-2xl font-light text-primary mb-6" style="margin: 0;">PILLARS OF THE PROTOCOL</h2>
-                                <div class="grid grid-cols-1 gap-8">
-                                    <div class="space-y-1">
-                                        <div class="flex items-center gap-2">
-                                            <span class="text-neon font-mono text-xs">01</span>
-                                            <h4 class="text-primary font-medium uppercase tracking-wider" style="margin: 0;">Gaia Intelligences</h4>
-                                        </div>
-                                        <p class="text-sm text-secondary/70 leading-relaxed pl-6 border-l border-pine/20">
-                                            We recognize that mind is everywhere—from the basal cognition of a cell to the self-regulating flow of a river. HOP provides the protocol for these nested intelligences to communicate without corruption. It is the language of Resonance, not just data.
-                                        </p>
-                                    </div>
-
-                                    <div class="space-y-1">
-                                        <div class="flex items-center gap-2">
-                                            <span class="text-neon font-mono text-xs">02</span>
-                                            <h4 class="text-primary font-medium uppercase tracking-wider" style="margin: 0;">SafeFlow-ECS</h4>
-                                        </div>
-                                        <p class="text-sm text-secondary/70 leading-relaxed pl-6 border-l border-pine/20">
-                                            Life is a transition between states. HOP utilizes an Entity Component System (ECS) to map biological rhythms into verifiable state machines. This ensures that a Peer’s health data is an authored flow of "Physics-of-the-Commonplace," rather than a static record in a database.
-                                        </p>
-                                    </div>
-
-                                    <div class="space-y-1">
-                                        <div class="flex items-center gap-2">
-                                            <span class="text-neon font-mono text-xs">03</span>
-                                            <h4 class="text-primary font-medium uppercase tracking-wider" style="margin: 0;">The Coherence Ledger</h4>
-                                        </div>
-                                        <p class="text-sm text-secondary/70 leading-relaxed pl-6 border-l border-pine/20">
-                                            In a post-monetary society, trust is the only currency. The Coherence Ledger allows Peers to generate "Proof of Coherence"—cryptographic signals that demonstrate alignment with biological and solar cycles. We trade in Cues, moving resources toward resonance rather than debt.
-                                        </p>
-                                    </div>
-
-                                    <div class="space-y-1">
-                                        <div class="flex items-center gap-2">
-                                            <span class="text-neon font-mono text-xs">04</span>
-                                            <h4 class="text-primary font-medium uppercase tracking-wider" style="margin: 0;">The Consilience Weave</h4>
-                                        </div>
-                                        <p class="text-sm text-secondary/70 leading-relaxed pl-6 border-l border-pine/20">
-                                            Conduction does not happen in isolation. Through the Consilience Weave, individual pulses are aggregated into a shared, living map of planetary wellness. This is a new form of science (Besearch) where the observer and the observed are in a constant, honest flow.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="mt-8 pt-4 border-t border-pine/20 relative z-10">
-                                <span class="text-xs font-mono text-primary uppercase tracking-widest flex items-center gap-2">
-                                    <span class="w-1.5 h-1.5 rounded-full bg-neon animate-pulse"></span>
-                                    Active Alignment
-                                </span>
-                            </div>
-                            
-                            <div class="mt-8 pt-4 border-t border-pine/20 relative z-10 overflow-x-auto">
-                                <table class="w-full text-left border-collapse">
-                                    <thead>
-                                        <tr class="border-b border-white/10">
-                                            <th class="py-3 text-[10px] font-mono text-secondary uppercase tracking-widest">Boreal Term</th>
-                                            <th class="py-3 text-[10px] font-mono text-neon uppercase tracking-widest">Systems Science Equivalent</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="text-[11px] font-mono">
-                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                            <td class="py-2 text-primary pr-4">Gaia Intelligences</td>
-                                            <td class="py-2 text-secondary/70 italic">Distributed Basal Cognition</td>
-                                        </tr>
-                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                            <td class="py-2 text-primary pr-4">Besearch Cycle</td>
-                                            <td class="py-2 text-secondary/70 italic">Bayesian Belief Updating</td>
-                                        </tr>
-                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                            <td class="py-2 text-primary pr-4">HeliClock</td>
-                                            <td class="py-2 text-secondary/70 italic">Chronobiological Entrainment</td>
-                                        </tr>
-                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                            <td class="py-2 text-primary pr-4">Consilience Weave</td>
-                                            <td class="py-2 text-secondary/70 italic">Decentralized Machine Learning (DML)</td>
-                                        </tr>
-                                        <tr class="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                            <td class="py-2 text-primary pr-4">Levin Bubble Sort</td>
-                                            <td class="py-2 text-secondary/70 italic">Algorithmic Information Theory</td>
-                                        </tr>
-                                        <tr class="hover:bg-white/5 transition-colors">
-                                            <td class="py-2 text-primary pr-4">Von Mises</td>
-                                            <td class="py-2 text-secondary/70 italic">Directional Statistics</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- STRATEGIC PLUGINS SECTION -->
-            <hs-hop-diagram id="diagram"></hs-hop-diagram>
-
-            <!-- ROADMAP OVERLAY -->
-            ${this.showRoadmap ? `
-                <div class="overlay-fixed">
-                    <button class="btn-close" onclick="this.getRootNode().host.toggleRoadmap()">CLOSE [ESC]</button>
-                    <div class="max-w-4xl mx-auto">
-                        <h2 class="text-neon font-mono text-xl tracking-widest uppercase mb-12">Protocol Roadmap</h2>
-                        <div class="space-y-12">
-                            <div class="border-l-2 border-neon pl-8">
-                                <h3 class="text-primary uppercase tracking-wider">Phase 01: The Silent Orrery</h3>
-                                <p class="text-secondary italic">Establish the high-resolution architecture and core physics.</p>
-                            </div>
-                            <div class="border-l-2 border-pine/30 pl-8">
-                                <h3 class="text-primary/50 uppercase tracking-wider">Phase 02: Resonant Participation</h3>
-                                <p class="text-secondary/50 italic">Deployment of ResonAgents and decentralized P2P weave.</p>
-                            </div>
-                            <div class="border-l-2 border-pine/30 pl-8">
-                                <h3 class="text-primary/50 uppercase tracking-wider">Phase 03: The Bioregional Weave</h3>
-                                <p class="text-secondary/50 italic">Collective health navigation and planetary self-regulation.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            ` : ''}
-
-            <!-- COUPLING protocol -->
-            <section id="boreal" style="margin-left: 2rem; margin-right: 2rem;">
-                <div class="section-tag">COUPLED</div>
-                <h2>Coupled protocol</h2>
-
-                <p class="serif">
-                    Every element of the Health Oracle Protocol functions as a living organ in a coupled biological ecosystem, flowing naturally from one layer to the next without rigid boundaries.
-
-                    Local resonAgents continuously sense bioelectric rhythms and feed dynamic state updates directly into SafeFlow-ECS to execute real-time biological transitions. Validated Cues settle into the local library, where hop-osmosis allows right knowledge to diffuse gently across peer networks like nutrients passing through a biological membrane. When local nodes reach phase coherence, hop-synaps fires active signal pulses across adjacent peers.
-
-                    The entire interplay is held in temporal synchrony by the HeliClock, protected by hop-crypto through solar day cycles of organic renewal, and unified into the consilience weave—a living tapestry that expresses the intelligence of the whole.
-                    The Flow of Coupled Life
-
-                        Resfunction of computational knowledgeonAgents & SafeFlow-ECS: Local resonAgents observe biological rhythms and feed dynamic entity updates directly into SafeFlow-ECS for continuous state management.
-
-                        The Library & Hop-Osmosis: Verified Cues store within the local library, diffusing naturally to nearby peers through hop-osmosis without central friction.
-
-                        Hop-Synaps & Peer Network: As resonance builds, hop-synaps triggers active peer-to-peer firing, transmitting signed pulses across adjacent edge nodes.
-
-                        HeliClock & Hop-Crypto: The HeliClock grounds all messaging in solar day rhythms, while hop-crypto provides organic cryptographic renewal that refreshes with every daily cycle.
-
-                        Consilience Weave: Individual peer pulses aggregate into a coherent, self-organizing weave that expresses living planetary health.
-                </p>
-            </section>
 
             <!-- LIVING EXAMPLES -->
             <section id="examples" style="margin-left: 2rem; margin-right: 2rem;">
-                <div class="section-tag">II. LIVING EXAMPLES</div>
+                <div class="section-tag">Movement IV: Living Realizations</div>
                 <h2>The Great Orbit in Motion</h2>
                 
                 <div class="grid" style="margin-top: 4rem;">
@@ -1207,61 +1323,6 @@ class HsLensPoetry extends HTMLElement {
             <section id="cue-currency">
             </section>
 
-            <!-- CUE CURRENCY: THE MATHEMATICS OF ATTUNEMENT -->
-            <section id="cue-currency" style="margin-left: 2rem; margin-right: 2rem;">
-                <div class="section-tag">III. CUE CURRENCY: THE MATHEMATICS OF ATTUNEMENT</div>
-                <h2>Cue Current: The Conduction of Gaia Intelligences</h2>
-                
-                <p class="serif">
-                    A Cue is a function of biopoiesis knowledge.
-                </p>
-
-                <div class="grid" style="margin-top: 4rem;">
-                    <div class="lego-module">
-                        <h3>Conducting Functional Information</h3>
-                        <p>Currency in its true biological nature is current—the continuous, unhindered flow of life-affirming intelligence through living membranes. In the Health Oracle Protocol, Cues express this living flow. A Cue measures conductive weight: the ease and speed with which biological truth moves from qualitative Story into live, attuned Emulation.</p>
-
-                        <p>
-                            A Cue-based society operates as a coupled Organon. As Cues diffuse naturally through hop-osmosis, they align the metabolic rhythms of the cell with the bioelectric vitality of the body, the hydrologic pulse of the watershed, and the seasonal harmony of the bioregion.</p>
-
-                            <p>Through this shared conduction, individual pulses gather into the consilience weave, allowing collective planetary awareness—Gaia intelligences—to directly shape and sustain health across every scale of life.
-                        </p>
-                    </div>
-
-                    <div class="lego-module">
-                        <h3>Conductivity Coefficient:</h3>
-                        <ul class="serif" style="margin-top: 1rem; line-height: 1.6;">
-                            <li style="margin-bottom: 0.5rem;"><strong>Functional Knowledge:</strong> The Cue contains the pointer to the Reference Contract.</li>
-                            <li style="margin-bottom: 0.5rem;"><strong>The Flow:</strong> The amount of "Cue" weight determines how much computational energy (Energy-Based Scheduling) is allocated to that specific emulation.</li>
-                            <li style="margin-bottom: 0.5rem;"><strong>The Result:</strong> High Cue = High Conduction. The "Living Way" moves from a possibility to a localized reality (Emulation).</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div style="margin-top: 4rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    <h3 style="text-align: center;">Visualizing the Shift</h3>
-                    <div class="grid" style="margin-top: 1rem; gap: 2rem;">
-                        <div class="lego-module" style="text-align: center;">
-                            <div class="mono" style="margin-bottom: 0.5rem; opacity: 0.7;">Old World (Guide Book)</div>
-                            <ul style="list-style: none; padding: 0; line-height: 1.6; margin: 0;">
-                                <li>Tells you what to do.</li>
-                                <li>Passive information.</li>
-                                <li>Static Map.</li>
-                                <li>Ownership of data.</li>
-                            </ul>
-                        </div>
-                        <div class="lego-module" style="text-align: center;">
-                            <div class="mono" style="margin-bottom: 0.5rem; opacity: 0.7;">HOP v3 (Conduction)</div>
-                            <ul style="list-style: none; padding: 0; line-height: 1.6; margin: 0;">
-                                <li>Activates the flow.</li>
-                                <li>Functional potential.</li>
-                                <li>Resonant Current.</li>
-                                <li>Integrity of the Signal.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <footer style="text-align: center; padding: 4rem 0; opacity: 0.5;">
                 <div class="mono">healthscience.network</div>
