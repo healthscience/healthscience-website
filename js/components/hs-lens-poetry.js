@@ -3,10 +3,10 @@ class HsLensPoetry extends HTMLElement {
         super();
         this.attachShadow({ mode: 'open' });
         this.besearchStages = [
-            { name: 'Context', details: 'Initial biological and environmental signal capture.' },
-            { name: 'Research', details: 'Active Inference processing via ResonAgents.' },
-            { name: 'Search', details: 'NEAT-HOP exploration for optimal health paths.' },
-            { name: 'Emulation', details: 'Implementation of chosen cues in the Peer context.' }
+            { name: 'Context', details: 'Gathering your current body signals and local environment.' },
+            { name: 'Research', details: 'Tuning internal models using local reasoners (resonAgents).' },
+            { name: 'Search', details: 'Exploring natural paths toward biological balance.' },
+            { name: 'Emulation', details: 'Putting chosen Cues into real-world living practice.' }
         ];
 
         this.protocolItems = [
@@ -1167,16 +1167,70 @@ class HsLensPoetry extends HTMLElement {
                     </div>
                 </div>
             ` : ''}            
-
+            
+            <!-- parts of HOP -->
             <section>
             <!-- 4-Section Grid -->
                 <div class="grid-1-2 mb-20 items-stretch">
+
+
+                <!-- BentoBoxDS -->
+                    <div class="lego-module p-6 bg-pine/5 border-pine/30 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-light text-primary mb-6">BentoBoxDS</h3>
+                            <div class="space-y-6">
+                                <p class="text-secondary text-sm leading-relaxed">
+                                    A tool to <a href="https://bentoboxds.org">download</a>. and practice biopoieses. Attune health through emulations based on alignment with place on Earth.
+                                </p>
+                                <div class="pl-4 border-l-2 border-neon/30 space-y-6">
+                                    <div class="space-y-2">
+                                        <span class="text-primary font-medium block font-mono text-xs uppercase">Attunement:</span> 
+                                        <p class="text-xs text-secondary/80 leading-relaxed">
+                                          BentoBoxDS brings health into active daily presence through attunement, turning natural solar rhythms into a lived experience. Grounded by simple sensors that touch the biological world, guided through personal besearch cycles, and rooted in biopoiesis, health expresses as a natural score woven directly into daily living. 
+                                        </p>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <span class="text-primary font-medium block font-mono text-xs uppercase">Conduction Instruments:</span>
+                                        <p class="text-xs text-secondary/80 leading-relaxed">
+                                          Grounded by conduction instruments that touch and feel the biological world, guided through dynamic besearch cycles, and rooted in the deep foundation of biopoiesis, health expresses as the natural score woven directly into the living way.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right  cues -->
+                    <div class="lego-module p-6 bg-pine/5 border-pine/30 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-light text-primary mb-6">Cues & The Common Library</h3>
+                            <div class="space-y-6">
+                                <p class="text-secondary text-sm leading-relaxed italic font-serif">
+                                    Cues are how health knowledge is seen, felt, and practiced.
+                                </p>
+                                <div class="pl-4 border-l-2 border-neon/30 space-y-6">
+                                    <div class="space-y-2">
+                                        <span class="text-primary font-medium block font-mono text-xs uppercase tracking-wider">exoCues:</span> 
+                                        <p class="text-xs text-secondary/80 leading-relaxed">
+                                            exoCues do the work to couple together and shape the peer experience on the fly.
+                                        </p>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <span class="text-primary font-medium block font-mono text-xs uppercase tracking-wider">collective intelligences:</span>
+                                        <p class="text-xs text-secondary/80 leading-relaxed">
+                                           A peer learns much alone, but community wisdom deepens understanding. All shared Cues and exoCues sit in a common open library, while your personal health data remains strictly private on your own device.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
                     <!-- Top Left: Besearch Cycle -->
                     <div class="lego-module p-6 bg-pine/5 border-pine/30 flex flex-col justify-between">
                         <div>
                             <h3 class="text-xl font-light text-primary mb-4">The Besearch Cycle: Biopoieses in Motion</h3>
-                            <p class="text-secondary text-sm leading-relaxed italic font-serif mb-6">Knowledge is a metabolic loop. This 4-stage engine transforms raw signals into a future path:</p>
+                            <p class="text-secondary text-sm leading-relaxed italic font-serif mb-6">Knowledge is a living loop. This 4-stage engine turns raw everyday signals into a clear path forward:</p>
                             <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem;">
                                 ${this.besearchStages.map((stage, idx) => `
                                     <div class="p-3 border border-pine/20 rounded bg-forest/20">
@@ -1188,52 +1242,13 @@ class HsLensPoetry extends HTMLElement {
                         </div>
                     </div>
 
-                    <!-- Top Right: Coherence Ledger -->
-                    <div class="lego-module p-6 bg-pine/5 border-pine/30 flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xs font-mono text-neon uppercase tracking-[0.2em] mb-6">The Coherence Ledger: A Digital Immune System</h3>
-                            <div class="space-y-6">
-                                <div>
-                                    <span class="text-primary font-medium block mb-2 font-mono text-sm uppercase tracking-wider">The Spine:</span>
-                                    <p class="text-secondary text-sm leading-relaxed">Every Besearch Cycle is etched here, ensuring that the "Best Guess" and the "New attunment" remain mathematically consistent with the Peer's context.</p>
-                                </div>
-                                <div>
-                                    <span class="text-primary font-medium block mb-2 font-mono text-sm uppercase tracking-wider">The Filter:</span>
-                                    <p class="text-secondary text-sm leading-relaxed">By requiring a baseline of evidence for every update, the Ledger prevents uncorrupted data from entering the weave, maintaining a sovereign sanctuary for the cell.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bottom Left: Consilience Weave -->
-                    <div class="lego-module p-6 bg-pine/5 border-pine/30 flex flex-col justify-between">
-                        <div>
-                            <h3 class="text-xl font-light text-primary mb-6">The Consilience Weave: Cascades & Balance</h3>
-                            <div class="space-y-6">
-                                <p class="text-secondary text-sm leading-relaxed">
-                                    To ensure the Fabric remains stable, the Consilience Weave utilizes a sophisticated cascade of updates.
-                                </p>
-                                <div class="pl-4 border-l-2 border-neon/30 space-y-6">
-                                    <div class="space-y-2">
-                                        <span class="text-primary font-medium block font-mono text-xs uppercase">Levin Bubble Sort (v2):</span> 
-                                        <p class="text-xs text-secondary/80 leading-relaxed">In the browser-based environment, a Levin-inspired sort prioritizes the most "nutritional" and coherent Cues, ensuring the most relevant medicine rises to the surface.</p>
-                                    </div>
-                                    <div class="space-y-2">
-                                        <span class="text-primary font-medium block font-mono text-xs uppercase">Controlled Feedback:</span>
-                                        <p class="text-xs text-secondary/80 leading-relaxed">The math of the Weave allows for a rapid cascade of updates across the Peer network without running out of control. It prevents the endless feedback loops that plague centralized systems.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Bottom Right: SafeFlow-ECS Resonance -->
                     <div class="lego-module p-6 bg-pine/5 border-pine/30 flex flex-col justify-between">
                         <div>
                             <h3 class="text-xl font-light text-primary mb-6">SafeFlow-ECS Resonance</h3>
                             <div class="space-y-6">
                                 <p class="text-secondary text-sm leading-relaxed italic font-serif">
-                                    The high-frequency pulse of biological conductivity. SafeFlow-ECS manages the transition between states, ensuring that every biological signal is resonant with the Peer's intent.
+                                    The cognitive glue of the protocol. SafeFlow-ECS gathers your story, environmental exoCues, and sun cycles into a single, unified alignment. The moment these forces lock into phase, it pulses that living moment directly into your local Coherence Ledger as an uncorrupted entry of vitality.
                                 </p>
                                 <div class="pl-4 border-l-2 border-neon/30 space-y-6">
                                     <div class="space-y-2">
@@ -1252,10 +1267,10 @@ class HsLensPoetry extends HTMLElement {
                     <!-- Section 5: The HeliClock -->
                     <div class="lego-module p-6 bg-pine/5 border-pine/30 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-xl font-light text-primary mb-6">The HeliClock: The Mathematics of Resonance</h3>
+                            <h3 class="text-xl font-light text-primary mb-6">The HeliClock: Digital Solar Clock</h3>
                             <div class="space-y-6">
                                 <p class="text-secondary text-sm leading-relaxed italic font-serif">
-                                    At the center of every Besearch Cycle sits the HeliClock. This is the peg we’ve driven deep into the ground of geometry. It provides the rhythmic baseline for the entire protocol.
+                                    The HeliClock is the timing anchor driven deep into solar geometry. Instead of relying on linear clock ticks, it tracks the circular phase of biological rhythms relative to the sun, ensuring your practice stays harmonized with natural daily cycles.
                                 </p>
                                 <div class="pl-4 border-l-2 border-neon/30 space-y-6">
                                     <div class="space-y-2">
@@ -1271,10 +1286,50 @@ class HsLensPoetry extends HTMLElement {
                         </div>
                     </div>
 
+
+                    <!-- Top Right: Coherence Ledger -->
+                    <div class="lego-module p-6 bg-pine/5 border-pine/30 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xs font-mono text-neon uppercase tracking-[0.2em] mb-6">The Coherence Ledger: Your Digital Immune Spine</h3>
+                            <div class="space-y-6">
+                                <div>
+                                    <span class="text-primary font-medium block mb-2 font-mono text-sm uppercase tracking-wider">The Spine:</span>
+                                    <p class="text-secondary text-sm leading-relaxed">Every completed Besearch Cycle is etched here, keeping your current understanding mathematically rooted in your actual living context.</p>
+                                </div>
+                                <div>
+                                    <span class="text-primary font-medium block mb-2 font-mono text-sm uppercase tracking-wider">The Filter:</span>
+                                    <p class="text-secondary text-sm leading-relaxed">By requiring verified evidence for every update, the ledger filters out unverified noise, maintaining a sovereign sanctuary for your health.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Left: Consilience Weave -->
+                    <div class="lego-module p-6 bg-pine/5 border-pine/30 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-light text-primary mb-6">The Consilience Weave & P2P Osmosis</h3>
+                            <div class="space-y-6">
+                                <p class="text-secondary text-sm leading-relaxed">
+                                    To keep shared knowledge balanced across communities without central servers, the protocol uses gentle network sorting:
+                                </p>
+                                <div class="pl-4 border-l-2 border-neon/30 space-y-6">
+                                    <div class="space-y-2">
+                                        <span class="text-primary font-medium block font-mono text-xs uppercase">Structured Trees (Hyperbees):</span> 
+                                        <p class="text-xs text-secondary/80 leading-relaxed">Data lives in a neat cryptographic tree on your device, allowing instant local search without exposing your personal life to the network.</p>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <span class="text-primary font-medium block font-mono text-xs uppercase">Identity current</span>
+                                        <p class="text-xs text-secondary/80 leading-relaxed">a Key—a mathematical root of existence that gives you total, direct ownership of your data and your instrument.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Section 6: The Conductive Skeleton -->
                     <div class="lego-module p-6 bg-pine/5 border-pine/30 flex flex-col justify-between">
                         <div>
-                            <h3 class="text-xl font-light text-primary mb-6">The Conductive Skeleton: Cryptography as Skin</h3>
+                            <h3 class="text-xl font-light text-primary mb-6">The Conductive Skeleton (Cryptography as Skin)</h3>
                             <div class="space-y-6">
                                 <p class="text-secondary text-sm leading-relaxed italic font-serif">
                                     The Fabric of Gaia Intelligence is held together by a Conductive Skeleton of mathematics. This isn't about "security" in the old defensive sense—it is about Signal Integrity and Identity.
@@ -1310,12 +1365,12 @@ class HsLensPoetry extends HTMLElement {
                     <div class="lego-module">
                         <div class="mono">Case Study 01</div>
                         <h3>Direct Neural Resonance</h3>
-                        <p>A Peer anchors a Molecular Life-Strap—a conformable, organic thin-film that resonates with the Vagus Nerve. There is no "proxy" or statistical guessing; the sensor listens to the electrophysiological truth of the neural pulse. Computation happens at the chemical interface, providing a real-time map of the body’s inner horizon.</p>
+                        <p>A peer begins the morning by stepping into the solar dawn and dipping their face into cool water. The vagus nerve responds instantly—heart rate settles, bioelectric currents align, and the chemical truth of the neural pulse flows naturally through the body. A lightweight conduction instrument resting against the skin listens to this living shift directly at the interface. The instant the body enters phase alignment, safeflow-ecs catches the pulse and records the entry cleanly into the local Coherence Ledger. Vitality is experienced as immediate, present truth, rooted entirely in home and place.</p>
                     </div>
                     <div class="lego-module">
                         <div class="mono">Case Study 02</div>
                         <h3>Watershed Cultivation</h3>
-                        <p>Small, solar-glazed fabrication nodes are integrated into the local bioregion like fruit-bearing trees. They do not "mass-produce"; they cultivate on-demand. When a Peer’s ResonAgent identifies a metabolic requirement, the node pulls a signed Reference Contract from the Library and assembles a biodegradable nutrient-delivery patch, perfectly tuned to the Peer’s unique biological coordinates.</p>
+                        <p>Health flows naturally from the land, the solar day, and the local water table. Scattered across the watershed sit small, solar-glazed community nodes—quiet workshops integrated into the landscape like fruit-bearing trees. When a peer’s resonAgents register a unique metabolic need during a Besearch Cycle, the node draws a signed reference from the open library. It crafts a simple, biodegradable nutrient preparation, attuned precisely to the peer's biological coordinates and the local seasonal soil. Knowledge and nourishment diffuse gently like water downstream through hop-osmosis, enriching the entire collective weave.</p>
                     </div>
                 </div>
             </section>
